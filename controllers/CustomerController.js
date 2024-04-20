@@ -19,11 +19,11 @@ $('#btnSaveCustomer').click(function () {
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(customerObj),
-        success: function (data) {
-            alert("Customer Saved Successfully...!");
+        success: function (resp) {
+            successAlert(resp);
         },
-        error: function (xhr, status, error) {
-            alert("Customer Saved Error...!");
+        error: function (resp) {
+            errorAlert(resp);
         }
     });
 });
