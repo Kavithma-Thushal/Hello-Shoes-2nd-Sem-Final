@@ -1,4 +1,4 @@
-$('#btn').click(function () {
+$('#btnSaveCustomer').click(function () {
     Swal.fire({
         position: 'bottom-end',
         icon: 'success',
