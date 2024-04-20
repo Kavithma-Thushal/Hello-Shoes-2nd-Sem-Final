@@ -26,8 +26,8 @@ Pair this frontend with our backend APIs to experience a seamless and responsive
 ## Usage
 
 1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-Pvt-Ltd-FrontEnd.git`
-2. Run the application `./mvnw spring-boot:run`
-3. Access the application `http://localhost:8080`
+2. Navigate to the project directory `cd Hello-Shoes-Pvt-Ltd-FrontEnd`
+3. Open the `index.html` file in your preferred web browser
 
 ⭐️If you hava any bugs or issues ,If you want to explain code please contact me on :<br/>
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/><br/>
