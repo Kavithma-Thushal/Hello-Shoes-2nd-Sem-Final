@@ -29,6 +29,10 @@ Pair this frontend with our backend APIs to experience a seamless and responsive
 2. Navigate to the project directory `cd Hello-Shoes-Pvt-Ltd-FrontEnd`
 3. Open the `index.html` file in your preferred web browser
 
+## Version
+
+1.0.0
+
 ⭐️If you hava any bugs or issues ,If you want to explain code please contact me on :<br/>
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/><br/>
 
