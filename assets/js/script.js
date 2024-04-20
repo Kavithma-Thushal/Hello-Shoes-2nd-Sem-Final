@@ -1,3 +1,5 @@
+const baseURL = "http://localhost:8080/shoes/api/v1/";
+
 /** Save Customer **/
 $('#btnSaveCustomer').click(function () {
     let cusId = $('#txtCustomerId').val();
@@ -13,7 +15,7 @@ $('#btnSaveCustomer').click(function () {
     }
 
     $.ajax({
-        url: 'http://localhost:8080/shoes/api/v1/customers',
+        url: baseURL + 'customers',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(customerObj),
