@@ -76,8 +76,8 @@
         <input id="txtItemPicture" class="form-control mb-3" type="text" placeholder="Item Picture">
         <input id="txtItemCategory" class="form-control mb-3" type="text" placeholder="Item Category">
         <input id="txtItemSize" class="form-control mb-3" type="text" placeholder="Item Size">
-        <input id="txtSupplierCode" class="form-control mb-3" type="text" placeholder="Supplier Code">
-        <input id="txtSupplierName" class="form-control mb-3" type="text" placeholder="Supplier Name">
+        <input id="txtSupplierIdd" class="form-control mb-3" type="text" placeholder="Supplier Code">
+        <input id="txtSupplierNamee" class="form-control mb-3" type="text" placeholder="Supplier Name">
         <input id="txtUnitPriceSale" class="form-control mb-3" type="text" placeholder="Unit Price - Sale">
         <input id="txtUnitPriceBuy" class="form-control mb-3" type="text" placeholder="Unit Price - Buy">
         <input id="txtExpectedProfit" class="form-control mb-3" type="text" placeholder="Expected Profit">
@@ -86,11 +86,31 @@
         <button id="btnAddItem" type="button" class="btn btn-primary">Add Item</button>
     </form>
 
+    <!-- Supplier Management -->
+    <form>
+        <h2>Supplier Management</h2>
+        <input id="txtSupplierId" class="form-control mb-3" type="text" placeholder="Supplier ID">
+        <input id="txtSupplierName" class="form-control mb-3" type="text" placeholder="Supplier Name">
+        <input id="txtSupplierCategory" class="form-control mb-3" type="text" placeholder="Supplier Category">
+        <input id="txtSupplierAddressLine1" class="form-control mb-3" type="text" placeholder="Supplier Address Line1">
+        <input id="txtSupplierAddressLine2" class="form-control mb-3" type="text" placeholder="Supplier Address Line2">
+        <input id="txtSupplierAddressLine3" class="form-control mb-3" type="text" placeholder="Supplier Address Line3">
+        <input id="txtSupplierAddressLine4" class="form-control mb-3" type="text" placeholder="Supplier Address Line4">
+        <input id="txtSupplierAddressLine5" class="form-control mb-3" type="text" placeholder="Supplier Address Line5">
+        <input id="txtSupplierAddressLine6" class="form-control mb-3" type="text" placeholder="Supplier Address Line6">
+        <input id="txtSupplierContactNo1" class="form-control mb-3" type="text" placeholder="Supplier Contact No. 1">
+        <input id="txtSupplierContactNo2" class="form-control mb-3" type="text" placeholder="Supplier Contact No. 2">
+        <input id="txtSupplierEmail" class="form-control mb-3" type="text" placeholder="Supplier Email">
+        <button id="btnSaveSupplier" type="button" class="btn btn-primary">Save Supplier</button>
+    </form>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@latest/dist/sweetalert2.min.js"></script>
     <script src="controllers/CustomerController.js"></script>
     <script src="controllers/ItemController.js"></script>
+    <script src="controllers/SupplierController.js"></script>
     <script src="util/alerts.js"></script>
 </body>
 
