@@ -6,7 +6,7 @@ $('#btnAddItem').click(function () {
         picture: $('#txtItemPicture').val(),
         category: $('#txtItemCategory').val(),
         size: $('#txtItemSize').val(),
-        supplierCode: $('#txtSupplierIdd').val(),
+        supplierId: $('#txtSupplierIdd').val(),
         supplierName: $('#txtSupplierNamee').val(),
         unitPriceSale: $('#txtUnitPriceSale').val(),
         unitPriceBuy: $('#txtUnitPriceBuy').val(),
