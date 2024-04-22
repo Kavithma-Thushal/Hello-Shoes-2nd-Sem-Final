@@ -17,7 +17,7 @@ $('#btnSaveCustomer').click(function () {
         addressLine5: $('#txtCustomerAddressLine5').val(),
         contactNo: $('#txtCustomerContactNo').val(),
         email: $('#txtCustomerEmail').val(),
-        recentDate: $('#txtCustomerRecentDate').val(),
+        recentDate: $('#txtCustomerRecentDate').val()
     };
 
     $.ajax({
