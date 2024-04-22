@@ -1,6 +1,6 @@
 /** Add Item **/
 $('#btnAddItem').click(function () {
-    let itemObj = {
+    const itemObj = {
         code: $('#txtItemCode').val(),
         description: $('#txtItemDescription').val(),
         picture: $('#txtItemPicture').val(),
@@ -14,8 +14,6 @@ $('#btnAddItem').click(function () {
         profitMargin: $('#txtProfitMargin').val(),
         status: $('#txtStatus').val()
     };
-
-    console.log("Item Added Successfully...!");
 
     $.ajax({
         url: baseURL + 'items',

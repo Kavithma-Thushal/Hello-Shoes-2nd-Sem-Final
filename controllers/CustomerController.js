@@ -2,7 +2,7 @@ const baseURL = "http://localhost:8080/shoes/api/v1/";
 
 /** Save Customer **/
 $('#btnSaveCustomer').click(function () {
-    let customerObj = {
+    const customerObj = {
         id: $('#txtCustomerId').val(),
         name: $('#txtCustomerName').val(),
         gender: $('#txtCustomerGender').val(),
