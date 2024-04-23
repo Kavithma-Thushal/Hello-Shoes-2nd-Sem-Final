@@ -6,7 +6,7 @@ $('#btnSaveCustomer').click(function () {
         id: $('#txtCustomerId').val(),
         name: $('#txtCustomerName').val(),
         gender: $('#txtCustomerGender').val(),
-        loyaltyDate: $('#txtCustomerLoyaltyDate').val(),
+        loyaltyDate: parseInt($('#txtCustomerLoyaltyDate').val()),
         level: $('#txtCustomerLevel').val(),
         totalPoints: $('#txtCustomerTotalPoints').val(),
         dob: $('#txtCustomerDOB').val(),
@@ -17,7 +17,7 @@ $('#btnSaveCustomer').click(function () {
         addressLine5: $('#txtCustomerAddressLine5').val(),
         contactNo: $('#txtCustomerContactNo').val(),
         email: $('#txtCustomerEmail').val(),
-        recentDate: $('#txtCustomerRecentDate').val()
+        recentDate: new Date($('#txtCustomerRecentDate').val()).toISOString()
     };
 
     $.ajax({
