@@ -19,38 +19,30 @@
     <form class="col-2">
         <input id="txtCustomerId" class="form-control mb-3" type="text" placeholder="Customer ID">
         <input id="txtCustomerName" class="form-control mb-3" type="text" placeholder="Customer Name">
-
-        <div class="mb-3">
-            <select id="txtCustomerGender" class="form-select">
-                <option value="" disabled selected>Select Gender</option>
-                <option value="MALE">Male</option>
-                <option value="FEMALE">Female</option>
-                <option value="OTHER">Other</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <select id="txtCustomerLevel" class="form-select">
-                <option value="" disabled selected>Select Level</option>
-                <option value="GOLD">Gold</option>
-                <option value="SILVER">Silver</option>
-                <option value="BRONZE">Bronze</option>
-                <option value="NEW">New</option>
-            </select>
-        </div>
-
-        <input id="txtCustomerTotalPoints" class="form-control mb-3" type="text" placeholder="Customer Total Points">
-        <input id="txtCustomerLoyaltyDate" class="form-control mb-3" type="date" placeholder="Customer Loyalty Date">
+        <select id="txtCustomerGender" class="form-select mb-3">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+            <option value="OTHER">Other</option>
+        </select>
         <input id="txtCustomerDOB" class="form-control mb-3" type="date" placeholder="Customer DOB">
+        <select id="txtCustomerLevel" class="form-select mb-3">
+            <option value="" disabled selected>Select Level</option>
+            <option value="GOLD">Gold</option>
+            <option value="SILVER">Silver</option>
+            <option value="BRONZE">Bronze</option>
+            <option value="NEW">New</option>
+        </select>
+        <input id="txtCustomerLoyaltyDate" class="form-control mb-3" type="date" placeholder="Customer Loyalty Date">
+        <input id="txtCustomerTotalPoints" class="form-control mb-3" type="text" placeholder="Customer Total Points">
         <input id="txtCustomerAddressLine1" class="form-control mb-3" type="text" placeholder="Customer Address Line1">
         <input id="txtCustomerAddressLine2" class="form-control mb-3" type="text" placeholder="Customer Address Line2">
         <input id="txtCustomerAddressLine3" class="form-control mb-3" type="text" placeholder="Customer Address Line3">
         <input id="txtCustomerAddressLine4" class="form-control mb-3" type="text" placeholder="Customer Address Line4">
         <input id="txtCustomerAddressLine5" class="form-control mb-3" type="text" placeholder="Customer Address Line5">
         <input id="txtCustomerContactNo" class="form-control mb-3" type="text" placeholder="Customer Contact No.">
-        <input id="txtCustomerEmail" class="form-control mb-3" type="text" placeholder="Customer Email">
-        <input id="txtCustomerRecentDate" class="form-control mb-3" type="datetime-local"
-            placeholder="Customer Recent Date">
+        <input id="txtCustomerEmail" class="form-control mb-3" type="email" placeholder="Customer Email">
+        <input id="txtCustomerRecentDate" class="form-control mb-3" type="date" placeholder="Customer Recent Date">
         <button id="btnSaveCustomer" type="button" class="btn btn-primary">Save Customer</button>
     </form>
 
