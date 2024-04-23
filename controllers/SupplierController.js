@@ -1,6 +1,6 @@
 /** Save Supplier **/
 $('#btnSaveSupplier').click(function () {
-    const supplierObj = {
+    const supplierObject = {
         id: $('#txtSupplierId').val(),
         name: $('#txtSupplierName').val(),
         category: $('#txtSupplierCategory').val(),
@@ -19,7 +19,7 @@ $('#btnSaveSupplier').click(function () {
         url: baseURL + 'suppliers',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(supplierObj),
+        data: JSON.stringify(supplierObject),
         success: function (resp) {
             successAlert(resp);
         },

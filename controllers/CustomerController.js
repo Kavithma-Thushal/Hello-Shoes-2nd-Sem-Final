@@ -2,7 +2,7 @@ const baseURL = "http://localhost:8080/shoes/api/v1/";
 
 /** Save Customer **/
 $('#btnSaveCustomer').click(function () {
-    const customerObj = {
+    const customerObject = {
         id: $('#txtCustomerId').val(),
         name: $('#txtCustomerName').val(),
         gender: $('#txtCustomerGender').val(),
@@ -24,7 +24,7 @@ $('#btnSaveCustomer').click(function () {
         url: baseURL + 'customers',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(customerObj),
+        data: JSON.stringify(customerObject),
         success: function (resp) {
             successAlert(resp);
         },

@@ -1,6 +1,6 @@
 /** Purchase Sale **/
 $('#btnPurchaseSale').click(function () {
-    const saleobj = {
+    const saleObject = {
         orderId: $('#txtOrderId').val(),
         customerName: $('#txtCustomerNamee').val(),
         code: $('#txtItemCodee').val(),
@@ -19,7 +19,7 @@ $('#btnPurchaseSale').click(function () {
         url: baseURL + 'sales',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(saleobj),
+        data: JSON.stringify(saleObject),
         success: function (resp) {
             successAlert(resp);
         },

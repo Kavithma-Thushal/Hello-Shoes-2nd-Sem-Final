@@ -1,6 +1,6 @@
 /** Save Employee **/
 $('#btnSaveEmployee').click(function () {
-    const employeeObj = {
+    const employeeObject = {
         id: $('#txtEmployeeId').val(),
         name: $('#txtEmployeeName').val(),
         picture: $('#txtEmployeePicture').val(),
@@ -26,7 +26,7 @@ $('#btnSaveEmployee').click(function () {
         url: baseURL + 'employees',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(employeeObj),
+        data: JSON.stringify(employeeObject),
         success: function (resp) {
             successAlert(resp);
         },

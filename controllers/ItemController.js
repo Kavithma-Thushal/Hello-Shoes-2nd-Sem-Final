@@ -1,6 +1,6 @@
 /** Add Item **/
 $('#btnAddItem').click(function () {
-    const itemObj = {
+    const itemObject = {
         code: $('#txtItemCode').val(),
         description: $('#txtItemDescription').val(),
         picture: $('#txtItemPicture').val(),
@@ -19,7 +19,7 @@ $('#btnAddItem').click(function () {
         url: baseURL + 'items',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(itemObj),
+        data: JSON.stringify(itemObject),
         success: function (resp) {
             successAlert(resp);
         },
