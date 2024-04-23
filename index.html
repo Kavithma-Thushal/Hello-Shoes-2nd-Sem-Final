@@ -19,7 +19,16 @@
         <h2>Customer Management</h2>
         <input id="txtCustomerId" class="form-control mb-3" type="text" placeholder="Customer ID">
         <input id="txtCustomerName" class="form-control mb-3" type="text" placeholder="Customer Name">
-        <input id="txtCustomerGender" class="form-control mb-3" type="text" placeholder="Customer Gender">
+
+        <div class="mb-3">
+            <select id="txtCustomerGender" class="form-select">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+                <option value="OTHER">Other</option>
+            </select>
+        </div>
+
         <input id="txtCustomerLoyaltyDate" class="form-control mb-3" type="text" placeholder="Customer Loyalty Date">
         <input id="txtCustomerLevel" class="form-control mb-3" type="text" placeholder="Customer Level">
         <input id="txtCustomerTotalPoints" class="form-control mb-3" type="text" placeholder="Customer Total Points">
