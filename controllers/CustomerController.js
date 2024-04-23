@@ -6,7 +6,7 @@ $('#btnSaveCustomer').click(function () {
         id: $('#txtCustomerId').val(),
         name: $('#txtCustomerName').val(),
         gender: $('#txtCustomerGender').val(),
-        loyaltyDate: parseInt($('#txtCustomerLoyaltyDate').val()),
+        loyaltyDate: $('#txtCustomerLoyaltyDate').val(),
         level: $('#txtCustomerLevel').val(),
         totalPoints: $('#txtCustomerTotalPoints').val(),
         dob: $('#txtCustomerDOB').val(),
