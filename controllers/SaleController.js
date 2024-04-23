@@ -12,7 +12,7 @@ $('#btnPurchaseSale').click(function () {
         purchaseDate: $('#txtPurchaseDate').val(),
         paymentMethod: $('#txtPaymentMethod').val(),
         addedPoints: $('#txtAddedPoints').val(),
-        cashierName: $('#txtcashierName').val()
+        cashierName: $('#txtCashierName').val()
     };
 
     $.ajax({
