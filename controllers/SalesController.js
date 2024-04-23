@@ -1,5 +1,5 @@
-/** Purchase Sale **/
-$('#btnPurchaseSale').click(function () {
+/** Sales **/
+$('#btnPurchase').click(function () {
     const saleObject = {
         orderId: $('#txtOrderId').val(),
         customerName: $('#txtCustomerNamee').val(),
