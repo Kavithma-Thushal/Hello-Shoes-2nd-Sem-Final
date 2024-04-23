@@ -10,6 +10,7 @@ $('#btnAddItem').click(function () {
         supplierName: $('#txtSupplierNamee').val(),
         unitPriceSale: $('#txtUnitPriceSale').val(),
         unitPriceBuy: $('#txtUnitPriceBuy').val(),
+        quantity: $('#txtItemQuantity').val(),
         expectedProfit: $('#txtExpectedProfit').val(),
         profitMargin: $('#txtProfitMargin').val(),
         status: $('#txtStatus').val()
