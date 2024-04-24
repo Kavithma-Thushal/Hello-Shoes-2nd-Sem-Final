@@ -1,31 +1,38 @@
 /** Add Item **/
 $('#btnAddItem').click(function () {
-    const itemObject = {
-        code: $('#txtItemCode').val(),
-        description: $('#txtItemDescription').val(),
-        picture: $('#txtItemPicture').val(),
-        category: $('#txtItemCategory').val(),
-        size: $('#txtItemSize').val(),
-        quantity: $('#txtItemQuantity').val(),
-        supplierId: $('#txtSupplierIdd').val(),
-        supplierName: $('#txtSupplierNamee').val(),
-        unitPriceSale: $('#txtUnitPriceSale').val(),
-        unitPriceBuy: $('#txtUnitPriceBuy').val(),
-        expectedProfit: $('#txtExpectedProfit').val(),
-        profitMargin: $('#txtProfitMargin').val(),
-        status: $('#txtStatus').val()
-    };
+    const fileInput = $('#txtItemPicture')[0];
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
 
-    $.ajax({
-        url: baseURL + 'items',
-        method: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify(itemObject),
-        success: function (resp) {
-            successAlert(resp);
-        },
-        error: function (resp) {
-            errorAlert(resp);
-        }
-    });
+    reader.onload = function () {
+        const itemObject = {
+            code: $('#txtItemCode').val(),
+            description: $('#txtItemDescription').val(),
+            picture: reader.result,
+            category: $('#txtItemCategory').val(),
+            size: $('#txtItemSize').val(),
+            quantity: $('#txtItemQuantity').val(),
+            supplierId: $('#txtSupplierIdd').val(),
+            supplierName: $('#txtSupplierNamee').val(),
+            unitPriceSale: $('#txtUnitPriceSale').val(),
+            unitPriceBuy: $('#txtUnitPriceBuy').val(),
+            expectedProfit: $('#txtExpectedProfit').val(),
+            profitMargin: $('#txtProfitMargin').val(),
+            status: $('#txtStatus').val()
+        };
+
+        $.ajax({
+            url: baseURL + 'items',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(itemObject),
+            success: function (resp) {
+                successAlert(resp);
+            },
+            error: function (resp) {
+                errorAlert(resp);
+            }
+        });
+    };
 });
