@@ -11,14 +11,14 @@ $('#btnAddItem').click(function () {
             description: $('#txtItemDescription').val(),
             picture: reader.result,
             category: $('#txtItemCategory').val(),
-            size: $('#txtItemSize').val(),
-            quantity: $('#txtItemQuantity').val(),
+            size: parseInt($('#txtItemSize').val()),
+            quantity: parseInt($('#txtItemQuantity').val()),
             supplierId: $('#txtSupplierIdd').val(),
             supplierName: $('#txtSupplierNamee').val(),
-            unitPriceSale: $('#txtUnitPriceSale').val(),
-            unitPriceBuy: $('#txtUnitPriceBuy').val(),
-            expectedProfit: $('#txtExpectedProfit').val(),
-            profitMargin: $('#txtProfitMargin').val(),
+            unitPriceSale: parseFloat($('#txtUnitPriceSale').val()),
+            unitPriceBuy: parseFloat($('#txtUnitPriceBuy').val()),
+            expectedProfit: parseFloat($('#txtExpectedProfit').val()),
+            profitMargin: parseFloat($('#txtProfitMargin').val()),
             status: $('#txtStatus').val()
         };
 
