@@ -5,13 +5,13 @@ $('#btnPurchase').click(function () {
         customerName: $('#txtCustomerNamee').val(),
         code: $('#txtItemCodee').val(),
         description: $('#txtItemDescriptionn').val(),
-        size: $('#txtItemSizee').val(),
-        unitPrice: $('#txtUnitPrice').val(),
-        qty: $('#txtQty').val(),
-        totalPrice: $('#txtTotalPrice').val(),
+        size: parseInt($('#txtItemSizee').val()),
+        unitPrice: parseFloat($('#txtUnitPrice').val()),
+        qty: parseInt($('#txtQty').val()),
+        totalPrice: parseFloat($('#txtTotalPrice').val()),
         purchaseDate: new Date($('#txtPurchaseDate').val()).toISOString(),
         paymentMethod: $('#txtPaymentMethod').val(),
-        addedPoints: $('#txtAddedPoints').val(),
+        addedPoints: parseInt($('#txtAddedPoints').val()),
         cashierName: $('#txtCashierName').val()
     };
 
