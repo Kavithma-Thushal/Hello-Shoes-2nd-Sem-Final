@@ -9,7 +9,7 @@ $('#btnPurchase').click(function () {
         unitPrice: $('#txtUnitPrice').val(),
         qty: $('#txtQty').val(),
         totalPrice: $('#txtTotalPrice').val(),
-        purchaseDate: $('#txtPurchaseDate').val(),
+        purchaseDate: new Date($('#txtPurchaseDate').val()).toISOString(),
         paymentMethod: $('#txtPaymentMethod').val(),
         addedPoints: $('#txtAddedPoints').val(),
         cashierName: $('#txtCashierName').val()

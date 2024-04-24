@@ -140,8 +140,12 @@
         <input id="txtUnitPrice" class="form-control mb-3" type="text" placeholder="Unit Price">
         <input id="txtQty" class="form-control mb-3" type="text" placeholder="Qty">
         <input id="txtTotalPrice" class="form-control mb-3" type="text" placeholder="Total Price">
-        <input id="txtPurchaseDate" class="form-control mb-3" type="text" placeholder="Purchase Date">
-        <input id="txtPaymentMethod" class="form-control mb-3" type="text" placeholder="Payment Method">
+        <input id="txtPurchaseDate" class="form-control mb-3" type="datetime-local" placeholder="Purchase Date">
+        <select id="txtPaymentMethod" class="form-select mb-3">
+            <option value="" disabled selected>Select Payment Method</option>
+            <option value="CASH">Cash</option>
+            <option value="CARD">Card</option>
+        </select>
         <input id="txtAddedPoints" class="form-control mb-3" type="text" placeholder="Added Points">
         <input id="txtCashierName" class="form-control mb-3" type="text" placeholder="Cashier Name">
         <button id="btnPurchase" type="button" class="btn btn-primary">Purchase</button>
