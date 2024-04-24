@@ -93,13 +93,28 @@
     <form class="col-2">
         <input id="txtEmployeeId" class="form-control mb-3" type="text" placeholder="Employee ID">
         <input id="txtEmployeeName" class="form-control mb-3" type="text" placeholder="Employee Name">
-        <input id="txtEmployeePicture" class="form-control mb-3" type="text" placeholder="Employee Picture">
-        <input id="txtEmployeeGender" class="form-control mb-3" type="text" placeholder="Employee Gender">
-        <input id="txtEmployeeStatus" class="form-control mb-3" type="text" placeholder="Employee Status">
+        <input id="txtEmployeePicture" class="form-control mb-3" type="file" accept="image/*"
+            placeholder="Employee Picture">
+        <select id="txtEmployeeGender" class="form-select mb-3">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+            <option value="OTHER">Other</option>
+        </select>
+        <select id="txtEmployeeStatus" class="form-select mb-3">
+            <option value="" disabled selected>Select Civil Status</option>
+            <option value="SINGLE">Single</option>
+            <option value="MARRIED">Married</option>
+            <option value="DIVORCED">Divorced</option>
+        </select>
         <input id="txtEmployeeDesignation" class="form-control mb-3" type="text" placeholder="Employee Designation">
-        <input id="txtEmployeeRole" class="form-control mb-3" type="text" placeholder="Employee Role">
-        <input id="txtEmployeeDOB" class="form-control mb-3" type="text" placeholder="Employee DOB">
-        <input id="txtEmployeeJoinDate" class="form-control mb-3" type="text" placeholder="Employee Join Date">
+        <select id="txtEmployeeRole" class="form-select mb-3">
+            <option value="" disabled selected>Select Role</option>
+            <option value="ADMIN">Admin</option>
+            <option value="USER">User</option>
+        </select>
+        <input id="txtEmployeeDOB" class="form-control mb-3" type="date" placeholder="Employee DOB">
+        <input id="txtEmployeeJoinDate" class="form-control mb-3" type="date" placeholder="Employee Join Date">
         <input id="txtEmployeeBranch" class="form-control mb-3" type="text" placeholder="Employee Branch">
         <input id="txtEmployeeAddressLine1" class="form-control mb-3" type="text" placeholder="Employee Address Line1">
         <input id="txtEmployeeAddressLine2" class="form-control mb-3" type="text" placeholder="Employee Address Line2">
@@ -107,7 +122,7 @@
         <input id="txtEmployeeAddressLine4" class="form-control mb-3" type="text" placeholder="Employee Address Line4">
         <input id="txtEmployeeAddressLine5" class="form-control mb-3" type="text" placeholder="Employee Address Line5">
         <input id="txtEmployeeContactNo" class="form-control mb-3" type="text" placeholder="Employee Contact No.">
-        <input id="txtEmployeeEmail" class="form-control mb-3" type="text" placeholder="Employee Email">
+        <input id="txtEmployeeEmail" class="form-control mb-3" type="email" placeholder="Employee Email">
         <input id="txtEmployeeEmergencyGuardian" class="form-control mb-3" type="text"
             placeholder="Employee Emergency Guardian">
         <input id="txtEmployeeEmergencyNo" class="form-control mb-3" type="text" placeholder="Employee Emergency No.">
