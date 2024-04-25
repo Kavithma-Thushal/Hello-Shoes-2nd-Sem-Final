@@ -36,8 +36,8 @@ body {
 .register-container {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -400px;
+    width: 400px;
     height: 100vh;
     background-color: #ffffff;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -52,8 +52,8 @@ body {
 .login-container {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -400px;
+    width: 400px;
     height: 100vh;
     background-color: #ffffff;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);

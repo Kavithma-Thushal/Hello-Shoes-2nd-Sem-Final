@@ -8,6 +8,6 @@ $(document).click(function (event) {
     let loginContainer = $('#loginContainer');
     // Check if the click target is not within the login container
     if (!loginContainer.is(event.target) && !$('#btnLogin').is(event.target) && loginContainer.has(event.target).length === 0) {
-        loginContainer.css('right', '-300px');
+        loginContainer.css('right', '-400px');
     }
 });
