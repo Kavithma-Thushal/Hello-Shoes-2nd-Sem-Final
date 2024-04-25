@@ -13,3 +13,8 @@ body {
     color: #ffffff;
     cursor: pointer;
 }
+
+.nav-link:hover {
+    color: #ff6b15 !important;
+    transition: 0.3s;
+}
