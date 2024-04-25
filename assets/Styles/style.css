@@ -1,3 +1,15 @@
 body {
     background: linear-gradient(to right, #ffffff, #ff6b15);
 }
+
+#btnRegister {
+    background-color: #ff6b15;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#btnLogin {
+    background-color: #ff6b15;
+    color: #ffffff;
+    cursor: pointer;
+}
