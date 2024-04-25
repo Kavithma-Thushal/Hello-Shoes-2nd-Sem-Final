@@ -64,3 +64,9 @@ body {
 .login-form {
     padding: 20px;
 }
+
+.social-links {
+    position: absolute;
+    bottom: 0;
+    padding-right: 17px;
+}
