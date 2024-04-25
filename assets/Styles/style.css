@@ -14,7 +14,15 @@ body {
     cursor: pointer;
 }
 
-.nav-link:hover {
-    color: #ff6b15 !important;
-    transition: 0.3s;
+.nav-hover::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #ff6b15;
+    transition: 0.4s;
+}
+
+.nav-hover:hover::after {
+    width: 100%;
 }
