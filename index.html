@@ -64,13 +64,21 @@
                     </ul>
                 </div>
                 <form class="d-flex">
-                    <a href="pages/Management.html" target="_blank">
-                        <button id="btnRegister" class="btn" type="button">Register</button>
-                    </a>
+                    <button id="btnRegister" class="btn ms-3" type="button">Register</button>
                     <button id="btnLogin" class="btn ms-3" type="button">Login</button>
                 </form>
             </div>
         </nav>
+
+        <!-- Register -->
+        <div id="registerContainer" class="register-container">
+            <div class="register-form">
+                <h2>Register Now</h2>
+                <input id="registerName" class="form-control mb-3" type="text" placeholder="Name" />
+                <input id="registerRole" class="form-control mb-3" type="text" placeholder="Role" />
+                <button id="registerBtn" class="btn btn-primary">Register</button>
+            </div>
+        </div>
 
         <!-- Login -->
         <div id="loginContainer" class="login-container">
@@ -86,6 +94,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@latest/dist/sweetalert2.min.js"></script>
+    <script src="controllers/RegisterController.js"></script>
     <script src="controllers/LoginController.js"></script>
     <script src="controllers/CustomerController.js"></script>
     <script src="controllers/ItemController.js"></script>
