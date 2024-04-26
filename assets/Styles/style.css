@@ -28,10 +28,6 @@ body {
     width: 100%;
 }
 
-.bi-caret-down-fill {
-    font-size: 0.7rem;
-}
-
 /* Register */
 .register-container {
     position: fixed;
