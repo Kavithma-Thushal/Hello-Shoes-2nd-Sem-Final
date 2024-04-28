@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(to right, #ffffff, #ff6b15);
+}
+
 .notifications {
     font-size: 25px;
     color: #fff;
