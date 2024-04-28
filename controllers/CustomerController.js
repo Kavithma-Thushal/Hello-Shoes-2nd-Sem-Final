@@ -5,7 +5,7 @@ $('#btnSaveCustomer').click(function () {
         name: $('#txtCustomerName').val(),
         gender: $('#txtCustomerGender').val(),
         dob: $('#txtCustomerDOB').val(),
-        level: $('#txtCustomerLevel').val(),
+        level: $('#txtCustomerLoyaltyLevel').val(),
         loyaltyDate: $('#txtCustomerLoyaltyDate').val(),
         totalPoints: parseInt($('#txtCustomerTotalPoints').val()),
         addressLine1: $('#txtCustomerAddressLine1').val(),
