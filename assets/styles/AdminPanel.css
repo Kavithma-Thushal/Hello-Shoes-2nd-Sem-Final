@@ -2,6 +2,10 @@ body {
     background: linear-gradient(to right, #ffffff, #ff6b15);
 }
 
+.txt-admin {
+    margin-left: 670px;
+}
+
 .notifications {
     font-size: 25px;
     color: #fff;
@@ -33,10 +37,7 @@ body {
     background-color: #495057;
 }
 
-.txt-center {
-    margin-left: 670px;
-}
-
+/* Customer Management */
 .txt-customer {
     margin-left: 290px;
 }
