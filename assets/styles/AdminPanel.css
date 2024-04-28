@@ -6,3 +6,17 @@ body {
     font-size: 25px;
     color: #fff;
 }
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    color: #fff;
+}
+
+.nav-hover:hover {
+    background-color: #495057;
+}
