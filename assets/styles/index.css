@@ -2,19 +2,7 @@ body {
     background: linear-gradient(to right, #ffffff, #ff6b15);
 }
 
-#btnRegister {
-    background-color: #ff6b15;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#btnLogin {
-    background-color: #ff6b15;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-/* Navigation */
+/* Navigation-Hover */
 .nav-hover::after {
     content: '';
     display: block;
@@ -26,6 +14,13 @@ body {
 
 .nav-hover:hover::after {
     width: 100%;
+}
+
+#btnRegister,
+#btnLogin {
+    background-color: #ff6b15;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* Register */
