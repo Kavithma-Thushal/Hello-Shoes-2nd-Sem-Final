@@ -51,3 +51,11 @@ body {
     margin: 20px;
     margin-left: 275px;
 }
+
+.customer-table-head {
+    background-color: black;
+}
+
+.customer-footer {
+    margin-left: 200px;
+}
