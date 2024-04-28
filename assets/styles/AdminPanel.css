@@ -17,6 +17,18 @@ body {
     color: #fff;
 }
 
+.nav-link {
+    padding: 0.7rem 3rem;
+}
+
+.drop-down {
+    margin-left: 65px;
+}
+
 .nav-hover:hover {
     background-color: #495057;
+}
+
+.txt-center {
+    margin-left: 650px;
 }
