@@ -3,7 +3,7 @@ body {
 }
 
 .txt-admin {
-    margin-left: 670px;
+    margin-left: 100px;
 }
 
 .notifications {
@@ -22,11 +22,11 @@ body {
 }
 
 .nav-link {
-    padding: 0.7rem 3.5rem;
+    padding: 0.7rem 2rem;
 }
 
 .drop-down {
-    margin-left: 65px;
+    margin-left: 50px;
 }
 
 .dropdown-item {
@@ -38,6 +38,10 @@ body {
 }
 
 /* Customer Management */
+.txt-hamburger {
+    margin-left: 250px;
+}
+
 .txt-customer {
     margin-left: 290px;
 }
