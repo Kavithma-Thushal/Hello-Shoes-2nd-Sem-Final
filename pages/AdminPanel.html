@@ -17,7 +17,14 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <h1 class="text-light"><i class="bi bi-list txt-hamburger"></i></h1>
+                <div class="d-flex align-items-center">
+                    <img src="../assets/img/logo/Logo.png" height="40" alt="Nav-Logo">
+                    <a class="navbar-brand fs-4 ms-3" href="#">Hello <span style="color: #ff6b15;">Shoes</span></a>
+                    <!-- <h2 class="text-light ms-5" id="sidebarToggle" role="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
+                        <i class="bi bi-list txt-hamburger"></i>
+                    </h2> -->
+                </div>
                 <h2 class="text-light txt-admin">Admin Panel</h2>
                 <form class="d-flex">
                     <div class="dropdown">
@@ -60,45 +67,45 @@
         </nav>
 
         <!-- Sidebar -->
-        <nav class="sidebar navbar-dark bg-dark">
-            <img class="m-4" src="../assets/img/logo/Logo.png" height="40" alt="Nav-Logo">
-            <a class="navbar-brand fs-4" href="#">Hello <span style="color: #ff6b15;">Shoes</span></a>
-            <ul class="navbar-nav mt-3">
-                <li class="nav-item">
-                    <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"><i
-                            class="bi bi-speedometer2 me-3"></i>Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
-                        data-bs-toggle="collapse" data-bs-target="#branchesDropdown" aria-expanded="false">
-                        <i class="bi bi-kanban me-3"></i>Manage
-                    </a>
-                    <ul class="collapse drop-down" id="branchesDropdown">
-                        <li><a class="dropdown-item" href="#">Customers</a></li>
-                        <li><a class="dropdown-item" href="#">Shoes</a></li>
-                        <li><a class="dropdown-item" href="#">Suppliers</a></li>
-                        <li><a class="dropdown-item" href="#">Employees</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
-                        data-bs-toggle="collapse" data-bs-target="#servicesDropdown" aria-expanded="false">
-                        <i class="bi bi-layout-text-window-reverse me-3"></i>Details
-                    </a>
-                    <ul class="collapse drop-down" id="servicesDropdown">
-                        <li><a class="dropdown-item" href="#">Payment</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active nav-hover" aria-current="page" href="#"><i
-                            class="bi bi-cart-check me-3"></i>Purchase</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active nav-hover" aria-current="page" href="#"><i
-                            class="bi bi-box-arrow-in-left me-3"></i>Logout</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="sidebar navbar-dark bg-dark" id="sidebar">
+            <nav class="sidebar navbar-dark bg-dark">
+                <ul class="navbar-nav mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-speedometer2 me-3"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
+                            data-bs-toggle="collapse" data-bs-target="#branchesDropdown" aria-expanded="false">
+                            <i class="bi bi-kanban me-3"></i>Manage
+                        </a>
+                        <ul class="collapse drop-down" id="branchesDropdown">
+                            <li><a class="dropdown-item" href="#">Customers</a></li>
+                            <li><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li><a class="dropdown-item" href="#">Suppliers</a></li>
+                            <li><a class="dropdown-item" href="#">Employees</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
+                            data-bs-toggle="collapse" data-bs-target="#servicesDropdown" aria-expanded="false">
+                            <i class="bi bi-layout-text-window-reverse me-3"></i>Details
+                        </a>
+                        <ul class="collapse drop-down" id="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Payment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-cart-check me-3"></i>Purchase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-box-arrow-in-left me-3"></i>Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
