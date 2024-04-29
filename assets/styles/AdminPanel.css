@@ -50,6 +50,18 @@ body {
 .manage-table {
     margin-right: 20px;
     margin-left: 275px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.table th,
+.table td {
+    padding-right: 100px;
 }
 
 .manage-footer {
