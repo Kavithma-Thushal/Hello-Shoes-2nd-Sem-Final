@@ -37,25 +37,21 @@ body {
     background-color: #495057;
 }
 
-/* Customer Management */
-.txt-customer {
+/* Manage */
+.manage-header {
     margin-left: 290px;
 }
 
-.customer {
+.manage {
     margin: 20px;
     margin-left: 275px;
 }
 
-.customer-table {
+.manage-table {
     margin-right: 20px;
     margin-left: 275px;
 }
 
-.customer-table-head {
-    background-color: black;
-}
-
-.customer-footer {
+.manage-footer {
     margin-left: 200px;
 }
