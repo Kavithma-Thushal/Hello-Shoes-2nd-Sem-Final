@@ -1,0 +1,9 @@
+function showCustomerManagement() {
+    $("#customerManagement").css("display", "block");
+    $("#inventoryManagement").css("display", "none");
+}
+
+function showInventoryManagement() {
+    $("#customerManagement").css("display", "none");
+    $("#inventoryManagement").css("display", "block");
+}
