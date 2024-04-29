@@ -1,9 +1,20 @@
-function showCustomerManagement() {
-    $("#customerManagement").css("display", "block");
-    $("#inventoryManagement").css("display", "none");
+function hideAllSections() {
+    $("#customerSection").css("display", "none");
+    $("#inventorySection").css("display", "none");
+    $("#supplierSection").css("display", "none");
 }
 
-function showInventoryManagement() {
-    $("#customerManagement").css("display", "none");
-    $("#inventoryManagement").css("display", "block");
+function customerSection() {
+    hideAllSections();
+    $("#customerSection").css("display", "block");
+}
+
+function inventorySection() {
+    hideAllSections();
+    $("#inventorySection").css("display", "block");
+}
+
+function supplierSection() {
+    hideAllSections();
+    $("#supplierSection").css("display", "block");
 }

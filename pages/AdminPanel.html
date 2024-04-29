@@ -80,9 +80,9 @@
                             <i class="bi bi-kanban me-3"></i>Manage
                         </a>
                         <ul class="collapse drop-down" id="branchesDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="showCustomerManagement()">Customers</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="showInventoryManagement()">Shoes</a></li>
-                            <li><a class="dropdown-item" href="#">Suppliers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="customerSection()">Customers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="inventorySection()">Shoes</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="supplierSection()">Suppliers</a></li>
                             <li><a class="dropdown-item" href="#">Employees</a></li>
                         </ul>
                     </li>
@@ -110,7 +110,7 @@
 
     <main>
         <!-- Customer Management -->
-        <section id="customerManagement" style="display: none;">
+        <section id="customerSection" style="display: none;">
             <h2 class="mt-3 manage-header">Customer Management</h2>
             <div class="row manage mb-2">
                 <div class="col-4">
@@ -255,7 +255,7 @@
         </section>
 
         <!-- Inventory Management -->
-        <section id="inventoryManagement" style="display: none;">
+        <section id="inventorySection" style="display: none;">
             <h2 class="mt-3 manage-header">Inventory Management</h2>
             <div class="row manage mb-2">
                 <div class="col-4">
@@ -357,6 +357,129 @@
                                 <td>Rubber Shoes</td>
                                 <td>500</td>
                                 <td>1200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center manage-footer">
+                    <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
+                        <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
+                            target="_blank">Kavithma Thushal</a>
+                    </h6>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Supplier Management -->
+        <section id="supplierSection" style="display: none;">
+            <h2 class="mt-3 manage-header">Supplier Management</h2>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierId">Supplier ID</label>
+                    <input id="txtSupplierId" class="form-control" type="text" placeholder="Supplier ID">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierName">Supplier Name</label>
+                    <input id="txtSupplierName" class="form-control" type="text" placeholder="Supplier Name">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierCategory">Select Category</label>
+                    <select id="txtSupplierCategory" class="form-select">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="INTERNATIONAL">International</option>
+                        <option value="LOCAL">Local</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine1">Supplier Address Line 1</label>
+                    <input id="txtSupplierAddressLine1" class="form-control" type="text"
+                        placeholder="Supplier Address Line 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine2">Supplier Address Line 2</label>
+                    <input id="txtSupplierAddressLine2" class="form-control" type="text"
+                        placeholder="Supplier Address Line 2">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine3">Supplier Address Line 3</label>
+                    <input id="txtSupplierAddressLine3" class="form-control" type="text"
+                        placeholder="Supplier Address Line 3">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine4">Supplier Address Line 4</label>
+                    <input id="txtSupplierAddressLine4" class="form-control" type="text"
+                        placeholder="Supplier Address Line 4">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine5">Supplier Address Line 5</label>
+                    <input id="txtSupplierAddressLine5" class="form-control" type="text"
+                        placeholder="Supplier Address Line 5">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine6">Supplier Address Line 6</label>
+                    <input id="txtSupplierAddressLine6" class="form-control" type="text"
+                        placeholder="Supplier Address Line 6">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierContactNo1">Supplier Contact No. 1</label>
+                    <input id="txtSupplierContactNo1" class="form-control" type="text"
+                        placeholder="Supplier Contact No. 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierContactNo2">Supplier Contact No. 2</label>
+                    <input id="txtSupplierContactNo2" class="form-control" type="text"
+                        placeholder="Supplier Contact No. 2">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierEmail">Supplier Email</label>
+                    <input id="txtSupplierEmail" class="form-control" type="email" placeholder="Supplier Email">
+                </div>
+            </div>
+            <div class="row manage">
+                <div class="col-3">
+                    <button id="btnSaveSupplier" type="button" class="btn btn-primary w-100">Save Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnSearchSupplier" type="button" class="btn btn-success w-100">Search Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnUpdateSupplier" type="button" class="btn btn-warning w-100">Update Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnDeleteSupplier" type="button" class="btn btn-danger w-100">Delete Supplier</button>
+                </div>
+            </div>
+            <div class="row manage-table">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="text-light table-dark">
+                            <tr>
+                                <th scope="col">Supplier ID</th>
+                                <th scope="col">Supplier Name</th>
+                                <th scope="col">Supplier Address</th>
+                                <th scope="col">Supplier Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S00-001</td>
+                                <td>Jagath</td>
+                                <td>Colombo</td>
+                                <td>0786378349</td>
+                            </tr>
+                            <tr>
+                                <td>S00-002</td>
+                                <td>Saman</td>
+                                <td>Jaffna</td>
+                                <td>0918934783</td>
                             </tr>
                         </tbody>
                     </table>
