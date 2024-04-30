@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="icon" href="../assets/img/logo/Logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@latest/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../assets/styles/CustomerUserPanel.css">
+    <title>Hello Shoes (PVT). LTD</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h2 class="text-light txt-admin">Customer User Panel</h2>
+                <form class="d-flex">
+                    <div class="dropdown">
+                        <i class="bi bi-bell notifications mt-2 me-4" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Notification 1</a></li>
+                            <li><a class="dropdown-item" href="#">Notification 2</a></li>
+                            <li><a class="dropdown-item" href="#">Notification 3</a></li>
+                            <li><a class="dropdown-item" href="#">Notification 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <i class="bi bi-chat-left fa-message notifications mt-2 me-4" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Message 1</a></li>
+                            <li><a class="dropdown-item" href="#">Message 2</a></li>
+                            <li><a class="dropdown-item" href="#">Message 3</a></li>
+                            <li><a class="dropdown-item" href="#">Message 4</a></li>
+                        </ul>
+                    </div>
+                    <img class="rounded-circle mt-1 me-3" src="../assets/img/logo/Admin.jpg" height="40" alt="Admin">
+                    <div class="dropdown">
+                        <h6 class="text-light dropdown-toggle mt-2 me-4" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Kavithma Thushal</h6>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-3"></i>My Profile</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-3"></i>Account Setting</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-3"></i>Need
+                                    Help?</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left me-3"></i>Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <nav class="sidebar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="d-flex mt-3">
+                    <img src="../assets/img/logo/Logo.png" height="40" alt="Nav-Logo">
+                    <a class="navbar-brand fs-4 ms-3" href="#">Hello <span style="color: #ff6b15;">Shoes</span></a>
+                    <!-- <h2 class="text-light ms-5" id="sidebarToggle" role="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
+                        <i class="bi bi-list txt-hamburger"></i>
+                    </h2> -->
+                </div>
+                <ul class="navbar-nav mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-speedometer2 me-3"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
+                            data-bs-toggle="collapse" data-bs-target="#branchesDropdown" aria-expanded="false">
+                            <i class="bi bi-kanban me-3"></i>Manage
+                        </a>
+                        <ul class="collapse drop-down" id="branchesDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="customerSection()">Customers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="inventorySection()">Shoes</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="supplierSection()">Suppliers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="employeeSection()">Employees</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
+                            data-bs-toggle="collapse" data-bs-target="#servicesDropdown" aria-expanded="false">
+                            <i class="bi bi-layout-text-window-reverse me-3"></i>Details
+                        </a>
+                        <ul class="collapse drop-down" id="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Payment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-cart-check me-3"></i>Purchase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-hover" aria-current="page" href="#"><i
+                                class="bi bi-box-arrow-in-left me-3"></i>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Customer Management -->
+        <section id="customerSection" style="display: none;">
+            <h2 class="mt-3 manage-header">Customer Management</h2>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtCustomerId">Customer ID</label>
+                    <input id="txtCustomerId" class="form-control" type="text" placeholder="Customer ID">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerName">Customer Name</label>
+                    <input id="txtCustomerName" class="form-control" type="text" placeholder="Customer Name">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerGender">Customer Gender</label>
+                    <select id="txtCustomerGender" class="form-select">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtCustomerDOB">Customer DOB</label>
+                    <input id="txtCustomerDOB" class="form-control" type="date" placeholder="Customer DOB">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerLoyaltyLevel">Customer Loyalty Level</label>
+                    <select id="txtCustomerLoyaltyLevel" class="form-select">
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="GOLD">Gold</option>
+                        <option value="SILVER">Silver</option>
+                        <option value="BRONZE">Bronze</option>
+                        <option value="NEW">New</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerLoyaltyDate">Customer Loyalty Date</label>
+                    <input id="txtCustomerLoyaltyDate" class="form-control" type="date"
+                        placeholder="Customer Loyalty Date">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtCustomerTotalPoints">Customer Total Points</label>
+                    <input id="txtCustomerTotalPoints" class="form-control" type="text"
+                        placeholder="Customer Total Points">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerAddressLine1">Customer Address Line 1</label>
+                    <input id="txtCustomerAddressLine1" class="form-control" type="text"
+                        placeholder="Customer Address Line 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerAddressLine2">Customer Address Line 2</label>
+                    <input id="txtCustomerAddressLine2" class="form-control" type="text"
+                        placeholder="Customer Address Line 2">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtCustomerAddressLine3">Customer Address Line 3</label>
+                    <input id="txtCustomerAddressLine3" class="form-control" type="text"
+                        placeholder="Customer Address Line 3">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerAddressLine4">Customer Address Line 4</label>
+                    <input id="txtCustomerAddressLine4" class="form-control" type="text"
+                        placeholder="Customer Address Line 4">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerAddressLine5">Customer Address Line 5</label>
+                    <input id="txtCustomerAddressLine5" class="form-control" type="text"
+                        placeholder="Customer Address Line 5">
+                </div>
+            </div>
+            <div class="row manage mb-4">
+                <div class="col-4">
+                    <label for="txtCustomerContactNo">Customer Contact No.</label>
+                    <input id="txtCustomerContactNo" class="form-control mb-3" type="text"
+                        placeholder="Customer Contact No.">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerEmail">Customer Email</label>
+                    <input id="txtCustomerEmail" class="form-control mb-3" type="email" placeholder="Customer Email">
+                </div>
+                <div class="col-4">
+                    <label for="txtCustomerRecentDate">Customer Recent Date</label>
+                    <input id="txtCustomerRecentDate" class="form-control mb-3" type="datetime-local"
+                        placeholder="Customer Recent Date">
+                </div>
+            </div>
+            <div class="row manage">
+                <div class="col-3">
+                    <button id="btnSaveCustomer" type="button" class="btn btn-primary w-100">Save Customer</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnSearchCustomer" type="button" class="btn btn-success w-100">Search Customer</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnUpdateCustomer" type="button" class="btn btn-warning w-100">Update Customer</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnDeleteCustomer" type="button" class="btn btn-danger w-100">Delete Customer</button>
+                </div>
+            </div>
+            <div class="row manage-table">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="text-light table-dark">
+                            <tr>
+                                <th scope="col">Customer ID</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Customer Gender</th>
+                                <th scope="col">Customer DOB</th>
+                                <th scope="col">Customer Loyalty Level</th>
+                                <th scope="col">Customer Loyalty Date</th>
+                                <th scope="col">Customer Address Line 1</th>
+                                <th scope="col">Customer Address Line 2</th>
+                                <th scope="col">Customer Address Line 3</th>
+                                <th scope="col">Customer Address Line 4</th>
+                                <th scope="col">Customer Address Line 5</th>
+                                <th scope="col">Customer Contact No.</th>
+                                <th scope="col">Customer Email</th>
+                                <th scope="col">Customer Recent Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>C00-001</td>
+                                <td>Kamal</td>
+                                <td>Male</td>
+                                <td>2001-05-20</td>
+                                <td>GOLD</td>
+                                <td>2020-04-20</td>
+                                <td>170</td>
+                                <td>Sirimal Uyana</td>
+                                <td>Galle</td>
+                                <td>Sri Lanka</td>
+                                <td>80000</td>
+                                <td>0786723672</td>
+                                <td>kamal@gmail.com</td>
+                                <td>2024-03-20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center manage-footer">
+                    <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
+                        <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
+                            target="_blank">Kavithma Thushal</a>
+                    </h6>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Inventory Management -->
+        <section id="inventorySection" style="display: none;">
+            <h2 class="mt-3 manage-header">Inventory Management</h2>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtItemCode">Shoe Code</label>
+                    <input id="txtItemCode" class="form-control" type="text" placeholder="Shoe Code">
+                </div>
+                <div class="col-4">
+                    <label for="txtItemDescription">Shoe Description</label>
+                    <input id="txtItemDescription" class="form-control" type="text" placeholder="Shoe Description">
+                </div>
+                <div class="col-4">
+                    <label for="txtItemPicture">Shoe Picture</label>
+                    <input id="txtItemPicture" class="form-control" type="file" accept="image/*"
+                        placeholder="Shoe Picture">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtItemCategory">Shoe Category</label>
+                    <input id="txtItemCategory" class="form-control" type="text" placeholder="Shoe Category">
+                </div>
+                <div class="col-4">
+                    <label for="txtItemSize">Shoe Size</label>
+                    <input id="txtItemSize" class="form-control" type="text" placeholder="Shoe Size">
+                </div>
+                <div class="col-4">
+                    <label for="txtItemQuantity">Shoe Quantity</label>
+                    <input id="txtItemQuantity" class="form-control" type="text" placeholder="Shoe Quantity">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierIdd">Supplier Id</label>
+                    <input id="txtSupplierIdd" class="form-control" type="text" placeholder="Supplier Id">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierNamee">Supplier Name</label>
+                    <input id="txtSupplierNamee" class="form-control" type="text" placeholder="Supplier Name">
+                </div>
+                <div class="col-4">
+                    <label for="txtUnitPriceSale">Unit Price - Sale</label>
+                    <input id="txtUnitPriceSale" class="form-control" type="text" placeholder="Unit Price - Sale">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtUnitPriceBuy">Unit Price - Buy</label>
+                    <input id="txtUnitPriceBuy" class="form-control" type="text" placeholder="Unit Price - Buy">
+                </div>
+                <div class="col-4">
+                    <label for="txtExpectedProfit">Expected Profit</label>
+                    <input id="txtExpectedProfit" class="form-control" type="text" placeholder="Expected Profit">
+                </div>
+                <div class="col-4">
+                    <label for="txtProfitMargin">Profit Margin</label>
+                    <input id="txtProfitMargin" class="form-control" type="text" placeholder="Profit Margin">
+                </div>
+            </div>
+            <div class="row manage mb-4">
+                <div class="col-4">
+                    <label for="txtStatus">Stock Status</label>
+                    <input id="txtStatus" class="form-control mb-3" type="text" placeholder="Stock Status">
+                </div>
+            </div>
+            <div class="row manage">
+                <div class="col-3">
+                    <button id="btnAddItem" type="button" class="btn btn-primary w-100">Add Shoe</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnSearchItem" type="button" class="btn btn-success w-100">Search Shoe</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnUpdateItem" type="button" class="btn btn-warning w-100">Update Shoe</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnDeleteItem" type="button" class="btn btn-danger w-100">Delete Shoe</button>
+                </div>
+            </div>
+            <div class="row manage-table">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="text-light table-dark">
+                            <tr>
+                                <th scope="col">Shoe Code</th>
+                                <th scope="col">Shoe Description</th>
+                                <th scope="col">Shoe Picture</th>
+                                <th scope="col">Shoe Category</th>
+                                <th scope="col">Shoe Size</th>
+                                <th scope="col">Shoe Quantity</th>
+                                <th scope="col">Supplier Id</th>
+                                <th scope="col">Supplier Name</th>
+                                <th scope="col">Unit Price - Sale</th>
+                                <th scope="col">Unit Price - Buy</th>
+                                <th scope="col">Expected Profit</th>
+                                <th scope="col">Profit Margin</th>
+                                <th scope="col">Stock Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>I00-001</td>
+                                <td>Leather Shoes</td>
+                                <td>Picture of Shoe</td>
+                                <td>Leather</td>
+                                <td>32</td>
+                                <td>600</td>
+                                <td>S00-001</td>
+                                <td>Nimal</td>
+                                <td>2500</td>
+                                <td>2000</td>
+                                <td>500</td>
+                                <td>10%</td>
+                                <td>Available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center manage-footer">
+                    <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
+                        <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
+                            target="_blank">Kavithma Thushal</a>
+                    </h6>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Supplier Management -->
+        <section id="supplierSection" style="display: none;">
+            <h2 class="mt-3 manage-header">Supplier Management</h2>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierId">Supplier ID</label>
+                    <input id="txtSupplierId" class="form-control" type="text" placeholder="Supplier ID">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierName">Supplier Name</label>
+                    <input id="txtSupplierName" class="form-control" type="text" placeholder="Supplier Name">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierCategory">Select Category</label>
+                    <select id="txtSupplierCategory" class="form-select">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="INTERNATIONAL">International</option>
+                        <option value="LOCAL">Local</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine1">Supplier Address Line 1</label>
+                    <input id="txtSupplierAddressLine1" class="form-control" type="text"
+                        placeholder="Supplier Address Line 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine2">Supplier Address Line 2</label>
+                    <input id="txtSupplierAddressLine2" class="form-control" type="text"
+                        placeholder="Supplier Address Line 2">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine3">Supplier Address Line 3</label>
+                    <input id="txtSupplierAddressLine3" class="form-control" type="text"
+                        placeholder="Supplier Address Line 3">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine4">Supplier Address Line 4</label>
+                    <input id="txtSupplierAddressLine4" class="form-control" type="text"
+                        placeholder="Supplier Address Line 4">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine5">Supplier Address Line 5</label>
+                    <input id="txtSupplierAddressLine5" class="form-control" type="text"
+                        placeholder="Supplier Address Line 5">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierAddressLine6">Supplier Address Line 6</label>
+                    <input id="txtSupplierAddressLine6" class="form-control" type="text"
+                        placeholder="Supplier Address Line 6">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtSupplierContactNo1">Supplier Contact No. 1</label>
+                    <input id="txtSupplierContactNo1" class="form-control" type="text"
+                        placeholder="Supplier Contact No. 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierContactNo2">Supplier Contact No. 2</label>
+                    <input id="txtSupplierContactNo2" class="form-control" type="text"
+                        placeholder="Supplier Contact No. 2">
+                </div>
+                <div class="col-4">
+                    <label for="txtSupplierEmail">Supplier Email</label>
+                    <input id="txtSupplierEmail" class="form-control" type="email" placeholder="Supplier Email">
+                </div>
+            </div>
+            <div class="row manage">
+                <div class="col-3">
+                    <button id="btnSaveSupplier" type="button" class="btn btn-primary w-100">Save Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnSearchSupplier" type="button" class="btn btn-success w-100">Search Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnUpdateSupplier" type="button" class="btn btn-warning w-100">Update Supplier</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnDeleteSupplier" type="button" class="btn btn-danger w-100">Delete Supplier</button>
+                </div>
+            </div>
+            <div class="row manage-table">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="text-light table-dark">
+                            <tr>
+                                <th scope="col">Supplier ID</th>
+                                <th scope="col">Supplier Name</th>
+                                <th scope="col">Supplier Category</th>
+                                <th scope="col">Supplier Address Link 1</th>
+                                <th scope="col">Supplier Address Link 2</th>
+                                <th scope="col">Supplier Address Link 3</th>
+                                <th scope="col">Supplier Address Link 4</th>
+                                <th scope="col">Supplier Address Link 5</th>
+                                <th scope="col">Supplier Address Link 6</th>
+                                <th scope="col">Contact 1</th>
+                                <th scope="col">Contact 2</th>
+                                <th scope="col">Supplier Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S00-001</td>
+                                <td>Jagath</td>
+                                <td>Local</td>
+                                <td>168</td>
+                                <td>Watareka Road</td>
+                                <td>Galle</td>
+                                <td>Sourthern</td>
+                                <td>80000</td>
+                                <td>Sri Lanka</td>
+                                <td>0774578239</td>
+                                <td>0786734893</td>
+                                <td>jagath@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center manage-footer">
+                    <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
+                        <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
+                            target="_blank">Kavithma Thushal</a>
+                    </h6>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Employee Management -->
+        <section id="employeeSection" style="display: none;">
+            <h2 class="mt-3 manage-header">Employee Management</h2>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtEmployeeId">Employee ID</label>
+                    <input id="txtEmployeeId" class="form-control" type="text" placeholder="Employee ID">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeName">Employee Name</label>
+                    <input id="txtEmployeeName" class="form-control" type="text" placeholder="Employee Name">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeePicture">Employee Picture</label>
+                    <input id="txtEmployeePicture" class="form-control" type="file" accept="image/*"
+                        placeholder="Employee Picture">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtEmployeeGender">Select Gender</label>
+                    <select id="txtEmployeeGender" class="form-select">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeStatus">Select Civil Status</label>
+                    <select id="txtEmployeeStatus" class="form-select">
+                        <option value="" disabled selected>Select Civil Status</option>
+                        <option value="SINGLE">Single</option>
+                        <option value="MARRIED">Married</option>
+                        <option value="DIVORCED">Divorced</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeDesignation">Employee Designation</label>
+                    <input id="txtEmployeeDesignation" class="form-control" type="text"
+                        placeholder="Employee Designation">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtEmployeeRole">Select Role</label>
+                    <select id="txtEmployeeRole" class="form-select">
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="USER">User</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeDOB">Employee DOB</label>
+                    <input id="txtEmployeeDOB" class="form-control" type="date" placeholder="Employee DOB">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeJoinDate">Employee Join Date</label>
+                    <input id="txtEmployeeJoinDate" class="form-control" type="date" placeholder="Employee Join Date">
+                </div>
+            </div>
+            <div class="row manage mb-2">
+                <div class="col-4">
+                    <label for="txtEmployeeBranch">Employee Branch</label>
+                    <input id="txtEmployeeBranch" class="form-control" type="text" placeholder="Employee Branch">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeAddressLine1">Employee Address Line 1</label>
+                    <input id="txtEmployeeAddressLine1" class="form-control" type="text"
+                        placeholder="Employee Address Line 1">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeAddressLine2">Employee Address Line 2</label>
+                    <input id="txtEmployeeAddressLine2" class="form-control" type="text"
+                        placeholder="Employee Address Line 2">
+                </div>
+            </div>
+            <div class="row manage mb-4">
+                <div class="col-4">
+                    <label for="txtEmployeeAddressLine3">Employee Address Line 3</label>
+                    <input id="txtEmployeeAddressLine3" class="form-control" type="text"
+                        placeholder="Employee Address Line 3">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeAddressLine4">Employee Address Line 4</label>
+                    <input id="txtEmployeeAddressLine4" class="form-control" type="text"
+                        placeholder="Employee Address Line 4">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeAddressLine5">Employee Address Line 5</label>
+                    <input id="txtEmployeeAddressLine5" class="form-control" type="text"
+                        placeholder="Employee Address Line 5">
+                </div>
+            </div>
+            <div class="row manage mb-4">
+                <div class="col-4">
+                    <label for="txtEmployeeContactNo">Employee Contact No.</label>
+                    <input id="txtEmployeeContactNo" class="form-control" type="text"
+                        placeholder="Employee Contact No.">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeEmail">Employee Email</label>
+                    <input id="txtEmployeeEmail" class="form-control" type="email" placeholder="Employee Email">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmployeeEmergencyGuardian">Employee Emergency Guardian</label>
+                    <input id="txtEmployeeEmergencyGuardian" class="form-control" type="text"
+                        placeholder="Employee Emergency Guardian">
+                </div>
+            </div>
+            <div class="row manage mb-4">
+                <div class="col-4">
+                    <label for="txtEmployeeEmergencyNo">Employee Emergency No.</label>
+                    <input id="txtEmployeeEmergencyNo" class="form-control" type="text"
+                        placeholder="Employee Emergency No.">
+                </div>
+            </div>
+            <div class="row manage">
+                <div class="col-3">
+                    <button id="btnSaveEmployee" type="button" class="btn btn-primary w-100">Save Employee</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnSearchEmployee" type="button" class="btn btn-success w-100">Search Employee</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnUpdateEmployee" type="button" class="btn btn-warning w-100">Update Employee</button>
+                </div>
+                <div class="col-3">
+                    <button id="btnDeleteEmployee" type="button" class="btn btn-danger w-100">Delete Employee</button>
+                </div>
+            </div>
+            <div class="row manage-table">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="text-light table-dark">
+                            <tr>
+                                <th scope="col">Employee ID</th>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Employee Picture</th>
+                                <th scope="col">Employee Gender</th>
+                                <th scope="col">Employee Civil Status</th>
+                                <th scope="col">Employee Designation</th>
+                                <th scope="col">Employee Role</th>
+                                <th scope="col">Employee DOB</th>
+                                <th scope="col">Employee Join Date</th>
+                                <th scope="col">Employee Branch</th>
+                                <th scope="col">Employee Address Line 1</th>
+                                <th scope="col">Employee Address Line 2</th>
+                                <th scope="col">Employee Address Line 3</th>
+                                <th scope="col">Employee Address Line 4</th>
+                                <th scope="col">Employee Address Line 5</th>
+                                <th scope="col">Employee Contact No.</th>
+                                <th scope="col">Employee Email</th>
+                                <th scope="col">Employee Emergency Guardian</th>
+                                <th scope="col">Employee Emergency No.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>E00-001</td>
+                                <td>Chamara</td>
+                                <td>Picture of Employee</td>
+                                <td>MALE</td>
+                                <td>SINGLE</td>
+                                <td>Sweeper</td>
+                                <td>User</td>
+                                <td>1989-04-24</td>
+                                <td>2010-06-24</td>
+                                <td>Colombo</td>
+                                <td>168</td>
+                                <td>Watareka</td>
+                                <td>Galle</td>
+                                <td>Southern</td>
+                                <td>80000</td>
+                                <td>0778923782</td>
+                                <td>chamara@gmail.com</td>
+                                <td>Father</td>
+                                <td>0918934783</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center manage-footer">
+                    <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
+                        <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
+                            target="_blank">Kavithma Thushal</a>
+                    </h6>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@latest/dist/sweetalert2.min.js"></script>
+    <script src="../controllers/CustomerUserPanelController.js"></script>
+    <script src="../controllers/CustomerController.js"></script>
+    <script src="../controllers/InventoryController.js"></script>
+    <script src="../controllers/SupplierController.js"></script>
+    <script src="../controllers/EmployeeController.js"></script>
+    <script src="../util/spa.js"></script>
+    <script src="../util/baseURL.js"></script>
+    <script src="../util/alerts.js"></script>
+</body>
+
+</html>
