@@ -1,6 +1,6 @@
 function hideAllSections() {
     $("#customerSection").css("display", "none");
-    $("#inventorySection").css("display", "none");
+    $("#shoesSection").css("display", "none");
     $("#supplierSection").css("display", "none");
     $("#employeeSection").css("display", "none");
 }
@@ -10,9 +10,9 @@ function customerSection() {
     $("#customerSection").css("display", "block");
 }
 
-function inventorySection() {
+function shoesSection() {
     hideAllSections();
-    $("#inventorySection").css("display", "block");
+    $("#shoesSection").css("display", "block");
 }
 
 function supplierSection() {
