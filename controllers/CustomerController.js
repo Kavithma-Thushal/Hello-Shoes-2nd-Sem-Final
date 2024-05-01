@@ -32,6 +32,23 @@ $('#btnSaveCustomer').click(function () {
     });
 });
 
+/** Search Customer **/
+$('#btnSearchCustomer').click(function () {
+    let id = $("#txtCustomerId").val();
+
+    $.ajax({
+        url: baseURL + 'customer/searchCustomer/' + id,
+        method: 'GET',
+        contentType: 'application/json',
+        success: function (resp) {
+            console.log("Customer Searched Successfully...!");
+        },
+        error: function (resp) {
+            errorAlert(resp);
+        }
+    });
+});
+
 /** Update Customer **/
 $('#btnUpdateCustomer').click(function () {
     const customerObject = {
@@ -66,3 +83,19 @@ $('#btnUpdateCustomer').click(function () {
     });
 });
 
+/** Delete Customer **/
+$('#btnDeleteCustomer').click(function () {
+    let id = $("#txtCustomerId").val();
+
+    $.ajax({
+        url: baseURL + 'customer/' + id,
+        method: 'DELETE',
+        contentType: 'application/json',
+        success: function (resp) {
+            successAlert(resp);
+        },
+        error: function (resp) {
+            errorAlert(resp);
+        }
+    });
+});
