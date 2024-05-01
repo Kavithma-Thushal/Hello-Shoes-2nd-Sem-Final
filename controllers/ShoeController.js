@@ -23,7 +23,7 @@ $('#btnAddItem').click(function () {
         };
 
         $.ajax({
-            url: baseURL + 'items',
+            url: baseURL + 'item',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(itemObject),
