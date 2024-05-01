@@ -1,5 +1,5 @@
-/** Add Shoe **/
-$('#btnAddShoe').click(function () {
+/** Add Item **/
+$('#btnAddItem').click(function () {
     const fileInput = $('#txtItemPicture')[0];
     const file = fileInput.files[0];
     const reader = new FileReader();
