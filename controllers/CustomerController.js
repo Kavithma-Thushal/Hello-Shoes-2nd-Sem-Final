@@ -19,7 +19,7 @@ $('#btnSaveCustomer').click(function () {
     };
 
     $.ajax({
-        url: baseURL + 'customers',
+        url: baseURL + 'customer',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(customerObject),
