@@ -1,3 +1,5 @@
+// const baseURL = "http://localhost:8080/shoes/api/v1/";
+
 /** Add Shoe **/
 $('#btnAddItem').click(function () {
     const fileInput = $('#txtItemPicture')[0];

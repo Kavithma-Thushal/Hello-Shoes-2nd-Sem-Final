@@ -1,3 +1,5 @@
+// const baseURL = "http://localhost:8080/shoes/api/v1/";
+
 /** Save Employee **/
 $('#btnSaveEmployee').click(function () {
     const fileInput = $('#txtEmployeePicture')[0];

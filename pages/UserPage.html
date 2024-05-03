@@ -210,6 +210,7 @@
                                 <th scope="col">Customer DOB</th>
                                 <th scope="col">Customer Loyalty Level</th>
                                 <th scope="col">Customer Loyalty Date</th>
+                                <th scope="col">Customer Total Points</th>
                                 <th scope="col">Customer Address Line 1</th>
                                 <th scope="col">Customer Address Line 2</th>
                                 <th scope="col">Customer Address Line 3</th>
@@ -220,24 +221,7 @@
                                 <th scope="col">Customer Recent Date</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>C00-001</td>
-                                <td>Kamal</td>
-                                <td>Male</td>
-                                <td>2001-05-20</td>
-                                <td>GOLD</td>
-                                <td>2020-04-20</td>
-                                <td>170</td>
-                                <td>Sirimal Uyana</td>
-                                <td>Galle</td>
-                                <td>Sri Lanka</td>
-                                <td>80000</td>
-                                <td>0786723672</td>
-                                <td>kamal@gmail.com</td>
-                                <td>2024-03-20</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="tblCustomers"></tbody>
                     </table>
                 </div>
             </div>
@@ -717,7 +701,6 @@
     <script src="../controllers/SupplierController.js"></script>
     <script src="../controllers/EmployeeController.js"></script>
     <script src="../util/spa.js"></script>
-    <script src="../util/baseURL.js"></script>
     <script src="../util/alerts.js"></script>
 </body>
 
