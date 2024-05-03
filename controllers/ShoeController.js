@@ -133,7 +133,7 @@ function loadAllShoes() {
                 row.append($("<td>").append($("<img>", {
                     src: shoe.picture,
                     alt: "Shoe Image",
-                    style: "max-width: 100px; max-height: 100px;"
+                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
                 })));
                 row.append($("<td>").text(shoe.category));
                 row.append($("<td>").text(shoe.size));
