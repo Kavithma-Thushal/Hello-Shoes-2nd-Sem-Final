@@ -33,6 +33,7 @@ $('#btnAddShoe').click(function () {
             data: JSON.stringify(shoeObject),
             success: function (resp) {
                 successAlert(resp);
+                loadAllShoes();
             },
             error: function (resp) {
                 errorAlert(resp);
@@ -89,6 +90,7 @@ $('#btnUpdateShoe').click(function () {
             data: JSON.stringify(itemObject),
             success: function (resp) {
                 successAlert(resp);
+                loadAllShoes();
             },
             error: function (resp) {
                 errorAlert(resp);
@@ -107,6 +109,7 @@ $('#btnDeleteShoe').click(function () {
         contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
+            loadAllShoes();
         },
         error: function (resp) {
             errorAlert(resp);
@@ -119,35 +122,32 @@ function loadAllShoes() {
     $.ajax({
         url: baseURL + "shoe/loadAllShoes",
         method: "GET",
-        contentType: "application/json",
         dataType: "json",
         success: function (resp) {
             $("#tblShoes").empty();
 
-            for (let i of resp.data) {
-                let code = i.code;
-                let description = i.description;
-                // let picture = i.picture;
-                let category = i.category;
-                let size = i.size;
-                let quantity = i.quantity;
-                let supplierId = i.supplierId;
-                let supplierName = i.supplierName;
-                let unitPriceSale = i.unitPriceSale;
-                let unitPriceBuy = i.unitPriceBuy;
-                let expectedProfit = i.expectedProfit;
-                let profitMargin = i.profitMargin;
-                let status = i.status;
+            resp.data.forEach(function (shoe) {
+                let row = $("<tr>");
+                row.append($("<td>").text(shoe.code));
+                row.append($("<td>").text(shoe.description));
+                row.append($("<td>").append($("<img>", {
+                    src: shoe.picture,
+                    alt: "Shoe Image",
+                    style: "max-width: 100px; max-height: 100px;"
+                })));
+                row.append($("<td>").text(shoe.category));
+                row.append($("<td>").text(shoe.size));
+                row.append($("<td>").text(shoe.quantity));
+                row.append($("<td>").text(shoe.supplierId));
+                row.append($("<td>").text(shoe.supplierName));
+                row.append($("<td>").text(shoe.unitPriceSale));
+                row.append($("<td>").text(shoe.unitPriceBuy));
+                row.append($("<td>").text(shoe.expectedProfit));
+                row.append($("<td>").text(shoe.profitMargin));
+                row.append($("<td>").text(shoe.status));
 
-                let row = "<tr><td>" + code + "</td><td>" + description + /*"</td><td>" + picture +*/ "</td><td>" + category + "</td><td>" + size +
-                    "</td><td>" + quantity + "</td><td>" + supplierId + "</td><td>" + supplierName + "</td><td>" + unitPriceSale + "</td><td>" +
-                    unitPriceBuy + "</td><td>" + expectedProfit + "</td><td>" + profitMargin + "</td><td>" + status + "</td></tr>"
                 $("#tblShoes").append(row);
-            }
-            // clearInputFields();
-            // checkValidity(customerValidations);
-            // tableListener();
-            // generateCustomerId();
+            });
         },
         error: function (error) {
             console.log("Load All Shoes Error : " + error);
