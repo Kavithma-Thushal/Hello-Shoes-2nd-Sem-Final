@@ -64,6 +64,10 @@ body {
     padding-right: 100px;
 }
 
+.table-cursor tbody tr {
+    cursor: pointer;
+}
+
 .manage-footer {
     margin-left: 200px;
 }

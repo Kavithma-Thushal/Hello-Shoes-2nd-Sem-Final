@@ -142,11 +142,54 @@ function loadAllCustomers() {
             }
             // clearInputFields();
             // checkValidity(customerValidations);
-            // tableListener();
+            tableListener();
             // generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Customers Error : " + error);
         }
+    });
+}
+
+// Table Listener
+function tableListener() {
+    $("#tblCustomers>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let gender = $(this).children().eq(2).text();
+        let dob = $(this).children().eq(3).text();
+        let level = $(this).children().eq(4).text();
+        let loyaltyDate = $(this).children().eq(5).text();
+        let totalPoints = $(this).children().eq(6).text();
+        let addressLine1 = $(this).children().eq(7).text();
+        let addressLine2 = $(this).children().eq(8).text();
+        let addressLine3 = $(this).children().eq(9).text();
+        let addressLine4 = $(this).children().eq(10).text();
+        let addressLine5 = $(this).children().eq(11).text();
+        let contactNo = $(this).children().eq(12).text();
+        let email = $(this).children().eq(13).text();
+        let recentDate = $(this).children().eq(14).text();
+
+        let customerRecentDate = recentDate.replace(/(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}).*/, "$1T$2");
+
+        $("#txtCustomerId").val(id);
+        $("#txtCustomerName").val(name);
+        $("#txtCustomerGender").val(gender);
+        $("#txtCustomerDOB").val(dob);
+        $("#txtCustomerLoyaltyLevel").val(level);
+        $("#txtCustomerLoyaltyDate").val(loyaltyDate);
+        $("#txtCustomerTotalPoints").val(totalPoints);
+        $("#txtCustomerAddressLine1").val(addressLine1);
+        $("#txtCustomerAddressLine2").val(addressLine2);
+        $("#txtCustomerAddressLine3").val(addressLine3);
+        $("#txtCustomerAddressLine4").val(addressLine4);
+        $("#txtCustomerAddressLine5").val(addressLine5);
+        $("#txtCustomerContactNo").val(contactNo);
+        $("#txtCustomerEmail").val(email);
+        $("#txtCustomerRecentDate").val(customerRecentDate);
+
+        // $("#btnSaveCustomer").attr('disabled', true);
+        // $("#btnUpdateCustomer").attr('disabled', false);
+        // $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
