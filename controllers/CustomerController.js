@@ -29,6 +29,7 @@ $('#btnSaveCustomer').click(function () {
         data: JSON.stringify(customerObject),
         success: function (resp) {
             successAlert(resp);
+            loadAllCustomers();
         },
         error: function (resp) {
             errorAlert(resp);
@@ -80,6 +81,7 @@ $('#btnUpdateCustomer').click(function () {
         data: JSON.stringify(customerObject),
         success: function (resp) {
             successAlert(resp);
+            loadAllCustomers();
         },
         error: function (resp) {
             errorAlert(resp);
@@ -97,6 +99,7 @@ $('#btnDeleteCustomer').click(function () {
         contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
+            loadAllCustomers();
         },
         error: function (resp) {
             errorAlert(resp);
