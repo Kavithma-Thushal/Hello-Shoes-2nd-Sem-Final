@@ -134,7 +134,10 @@ function loadAllCustomers() {
                 let email = i.email;
                 let recentDate = i.recentDate;
 
-                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + gender + "</td><td>" + dob + "</td><td>" + level + "</td><td>" + loyaltyDate + "</td><td>" + totalPoints + "</td><td>" + addressLine1 + "</td><td>" + addressLine2 + "</td><td>" + addressLine3 + "</td><td>" + addressLine4 + "</td><td>" + addressLine5 + "</td><td>" + contactNo + "</td><td>" + email + "</td><td>" + recentDate + "</td></tr>"
+                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + gender + "</td><td>" + dob + "</td><td>" + level + "</td><td>" +
+                    loyaltyDate + "</td><td>" + totalPoints + "</td><td>" + addressLine1 + "</td><td>" + addressLine2 + "</td><td>" +
+                    addressLine3 + "</td><td>" + addressLine4 + "</td><td>" + addressLine5 + "</td><td>" + contactNo + "</td><td>" + email +
+                    "</td><td>" + recentDate + "</td></tr>"
                 $("#tblCustomers").append(row);
             }
             // clearInputFields();
