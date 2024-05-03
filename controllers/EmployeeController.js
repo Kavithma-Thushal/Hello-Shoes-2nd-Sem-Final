@@ -1,4 +1,4 @@
-// const baseURL = "http://localhost:8080/shoes/api/v1/";
+loadAllEmployees();
 
 /** Save Employee **/
 $('#btnSaveEmployee').click(function () {
@@ -37,6 +37,7 @@ $('#btnSaveEmployee').click(function () {
             data: JSON.stringify(employeeObject),
             success: function (resp) {
                 successAlert(resp);
+                loadAllEmployees();
             },
             error: function (resp) {
                 errorAlert(resp);
@@ -99,6 +100,7 @@ $('#btnUpdateEmployee').click(function () {
             data: JSON.stringify(employeeObject),
             success: function (resp) {
                 successAlert(resp);
+                loadAllEmployees();
             },
             error: function (resp) {
                 errorAlert(resp);
@@ -117,9 +119,54 @@ $('#btnDeleteEmployee').click(function () {
         contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
+            loadAllEmployees();
         },
         error: function (resp) {
             errorAlert(resp);
         }
     });
 });
+
+/** LoadAll Employee **/
+function loadAllEmployees() {
+    $.ajax({
+        url: baseURL + "employee/loadAllEmployees",
+        method: "GET",
+        dataType: "json",
+        success: function (resp) {
+            $("#tblEmployees").empty();
+
+            resp.data.forEach(function (i) {
+                let row = $("<tr>");
+                row.append($("<td>").text(i.id));
+                row.append($("<td>").text(i.name));
+                row.append($("<td>").append($("<img>", {
+                    src: i.picture,
+                    alt: "Employee Image",
+                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
+                })));
+                row.append($("<td>").text(i.gender));
+                row.append($("<td>").text(i.status));
+                row.append($("<td>").text(i.designation));
+                row.append($("<td>").text(i.role));
+                row.append($("<td>").text(i.dob));
+                row.append($("<td>").text(i.joinDate));
+                row.append($("<td>").text(i.branch));
+                row.append($("<td>").text(i.addressLine1));
+                row.append($("<td>").text(i.addressLine2));
+                row.append($("<td>").text(i.addressLine3));
+                row.append($("<td>").text(i.addressLine4));
+                row.append($("<td>").text(i.addressLine5));
+                row.append($("<td>").text(i.contactNo));
+                row.append($("<td>").text(i.email));
+                row.append($("<td>").text(i.emergencyGuardian));
+                row.append($("<td>").text(i.emergencyNo));
+
+                $("#tblEmployees").append(row);
+            });
+        },
+        error: function (error) {
+            console.log("Load All Employees Error : " + error);
+        }
+    });
+}
