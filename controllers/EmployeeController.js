@@ -125,7 +125,7 @@ $('#btnDeleteEmployee').click(function () {
     });
 });
 
-/** LoadAll Employee **/
+/** LoadAll Employees **/
 function loadAllEmployees() {
     $.ajax({
         url: baseURL + "employee/loadAllEmployees",
@@ -161,9 +161,62 @@ function loadAllEmployees() {
 
                 $("#tblEmployees").append(row);
             });
+            // clearInputFields();
+            // checkValidity(customerValidations);
+            employeeTableListener();
+            // generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Employees Error : " + error);
         }
+    });
+}
+
+/** Customer Table Listner **/
+function employeeTableListener() {
+    $("#tblEmployees>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let picture = $(this).children().eq(2).text();
+        let gender = $(this).children().eq(3).text();
+        let civilStatus = $(this).children().eq(4).text();
+        let designation = $(this).children().eq(5).text();
+        let role = $(this).children().eq(6).text();
+        let dob = $(this).children().eq(7).text();
+        let joinDate = $(this).children().eq(8).text();
+        let branch = $(this).children().eq(9).text();
+        let addressLine1 = $(this).children().eq(10).text();
+        let addressLine2 = $(this).children().eq(11).text();
+        let addressLine3 = $(this).children().eq(12).text();
+        let addressLine4 = $(this).children().eq(13).text();
+        let addressLine5 = $(this).children().eq(14).text();
+        let contactNo = $(this).children().eq(15).text();
+        let email = $(this).children().eq(16).text();
+        let emergencyGuardian = $(this).children().eq(17).text();
+        let emergencyNo = $(this).children().eq(1).text();
+
+        $("#txtEmpId").val(id);
+        $("#txtEmpName").val(name);
+        $("#txtEmpPicture").val(picture);
+        $("#txtEmpGender").val(gender);
+        $("#txtEmpStatus").val(civilStatus);
+        $("#txtEmpDesignation").val(designation);
+        $("#txtEmpRole").val(role);
+        $("#txtEmpDOB").val(dob);
+        $("#txtEmpJoinDate").val(joinDate);
+        $("#txtEmpBranch").val(branch);
+        $("#txtEmpAddressLine1").val(addressLine1);
+        $("#txtEmpAddressLine2").val(addressLine2);
+        $("#txtEmpAddressLine3").val(addressLine3);
+        $("#txtEmpAddressLine4").val(addressLine4);
+        $("#txtEmpAddressLine5").val(addressLine5);
+        $("#txtEmpContactNo").val(contactNo);
+        $("#txtEmpEmail").val(email);
+        $("#txtEmpEmergencyGuardian").val(emergencyGuardian);
+        $("#txtEmpEmergencyNo").val(emergencyNo);
+
+        // $("#btnSaveCustomer").attr('disabled', true);
+        // $("#btnUpdateCustomer").attr('disabled', false);
+        // $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
