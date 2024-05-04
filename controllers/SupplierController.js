@@ -126,11 +126,46 @@ function loadAllSuppliers() {
             }
             // clearInputFields();
             // checkValidity(customerValidations);
-            // tableListener();
+            tableListener();
             // generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Suppliers Error : " + error);
         }
+    });
+}
+
+/** Table Listner **/
+function tableListener() {
+    $("#tblSuppliers>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let category = $(this).children().eq(2).text();
+        let addressLine1 = $(this).children().eq(3).text();
+        let addressLine2 = $(this).children().eq(4).text();
+        let addressLine3 = $(this).children().eq(5).text();
+        let addressLine4 = $(this).children().eq(6).text();
+        let addressLine5 = $(this).children().eq(7).text();
+        let addressLine6 = $(this).children().eq(8).text();
+        let contactNo1 = $(this).children().eq(9).text();
+        let contactNo2 = $(this).children().eq(10).text();
+        let email = $(this).children().eq(11).text();
+
+        $("#txtSupId").val(id);
+        $("#txtSupName").val(name);
+        $("#txtSupCategory").val(category);
+        $("#txtSupAddressLine1").val(addressLine1);
+        $("#txtSupAddressLine2").val(addressLine2);
+        $("#txtSupAddressLine3").val(addressLine3);
+        $("#txtSupAddressLine4").val(addressLine4);
+        $("#txtSupAddressLine5").val(addressLine5);
+        $("#txtSupAddressLine6").val(addressLine6);
+        $("#txtSupContactNo1").val(contactNo1);
+        $("#txtSupContactNo2").val(contactNo2);
+        $("#txtSupEmail").val(email);
+
+        // $("#btnSaveCustomer").attr('disabled', true);
+        // $("#btnUpdateCustomer").attr('disabled', false);
+        // $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
