@@ -126,7 +126,7 @@ function loadAllSuppliers() {
             }
             // clearInputFields();
             // checkValidity(customerValidations);
-            tableListener();
+            supplierTableListener();
             // generateCustomerId();
         },
         error: function (error) {
@@ -136,7 +136,7 @@ function loadAllSuppliers() {
 }
 
 /** Table Listner **/
-function tableListener() {
+function supplierTableListener() {
     $("#tblSuppliers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();

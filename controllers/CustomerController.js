@@ -138,7 +138,7 @@ function loadAllCustomers() {
             }
             // clearInputFields();
             // checkValidity(customerValidations);
-            tableListener();
+            customerTableListener();
             // generateCustomerId();
         },
         error: function (error) {
@@ -148,7 +148,7 @@ function loadAllCustomers() {
 }
 
 /** Table Listner **/
-function tableListener() {
+function customerTableListener() {
     $("#tblCustomers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
