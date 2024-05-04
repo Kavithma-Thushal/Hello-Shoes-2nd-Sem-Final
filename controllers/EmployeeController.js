@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8080/shoes/api/v1/";
+var baseURL = "http://localhost:8080/shoes/api/v1/";
 
 loadAllEmployees();
 
