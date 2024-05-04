@@ -8,6 +8,6 @@ $(document).click(function (event) {
     let registerContainer = $('#registerContainer');
     // Check if the click target is not within the register container
     if (!registerContainer.is(event.target) && !$('#btnRegister').is(event.target) && registerContainer.has(event.target).length === 0) {
-        registerContainer.css('right', '-400px');
+        registerContainer.css('right', '-1000px');
     }
 });
