@@ -2,49 +2,48 @@ loadAllSuppliers();
 
 /** Save Supplier **/
 $('#btnSaveSupplier').click(function () {
-    const supplierObject = {
-        id: $('#txtSupplierId').val(),
-        name: $('#txtSupplierName').val(),
-        category: $('#txtSupplierCategory').val(),
-        addressLine1: $('#txtSupplierAddressLine1').val(),
-        addressLine2: $('#txtSupplierAddressLine2').val(),
-        addressLine3: $('#txtSupplierAddressLine3').val(),
-        addressLine4: $('#txtSupplierAddressLine4').val(),
-        addressLine5: $('#txtSupplierAddressLine5').val(),
-        addressLine6: $('#txtSupplierAddressLine6').val(),
-        contactNo1: $('#txtSupplierContactNo1').val(),
-        contactNo2: $('#txtSupplierContactNo2').val(),
-        email: $('#txtSupplierEmail').val()
+    const supplierObj = {
+        id: $('#txtSupId').val(),
+        name: $('#txtSupName').val(),
+        category: $('#txtSupCategory').val(),
+        addressLine1: $('#txtSupAddressLine1').val(),
+        addressLine2: $('#txtSupAddressLine2').val(),
+        addressLine3: $('#txtSupAddressLine3').val(),
+        addressLine4: $('#txtSupAddressLine4').val(),
+        addressLine5: $('#txtSupAddressLine5').val(),
+        addressLine6: $('#txtSupAddressLine6').val(),
+        contactNo1: $('#txtSupContactNo1').val(),
+        contactNo2: $('#txtSupContactNo2').val(),
+        email: $('#txtSupEmail').val()
     };
 
     $.ajax({
         url: baseURL + 'supplier',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(supplierObject),
+        data: JSON.stringify(supplierObj),
         success: function (resp) {
             successAlert(resp);
             loadAllSuppliers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
 
 /** Search Supplier **/
 $('#btnSearchSupplier').click(function () {
-    let id = $("#txtSupplierId").val();
+    let id = $("#txtSupId").val();
 
     $.ajax({
         url: baseURL + 'supplier/searchSupplier/' + id,
         method: 'GET',
-        contentType: 'application/json',
         success: function (resp) {
-            console.log("Supplier Searched Successfully...!");
+            alert("Supplier Searched Successfully...!");
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -52,18 +51,18 @@ $('#btnSearchSupplier').click(function () {
 /** Update Supplier **/
 $('#btnUpdateSupplier').click(function () {
     const supplierObject = {
-        id: $('#txtSupplierId').val(),
-        name: $('#txtSupplierName').val(),
-        category: $('#txtSupplierCategory').val(),
-        addressLine1: $('#txtSupplierAddressLine1').val(),
-        addressLine2: $('#txtSupplierAddressLine2').val(),
-        addressLine3: $('#txtSupplierAddressLine3').val(),
-        addressLine4: $('#txtSupplierAddressLine4').val(),
-        addressLine5: $('#txtSupplierAddressLine5').val(),
-        addressLine6: $('#txtSupplierAddressLine6').val(),
-        contactNo1: $('#txtSupplierContactNo1').val(),
-        contactNo2: $('#txtSupplierContactNo2').val(),
-        email: $('#txtSupplierEmail').val()
+        id: $('#txtSupId').val(),
+        name: $('#txtSupName').val(),
+        category: $('#txtSupCategory').val(),
+        addressLine1: $('#txtSupAddressLine1').val(),
+        addressLine2: $('#txtSupAddressLine2').val(),
+        addressLine3: $('#txtSupAddressLine3').val(),
+        addressLine4: $('#txtSupAddressLine4').val(),
+        addressLine5: $('#txtSupAddressLine5').val(),
+        addressLine6: $('#txtSupAddressLine6').val(),
+        contactNo1: $('#txtSupContactNo1').val(),
+        contactNo2: $('#txtSupContactNo2').val(),
+        email: $('#txtSupEmail').val()
     };
 
     $.ajax({
@@ -75,26 +74,25 @@ $('#btnUpdateSupplier').click(function () {
             successAlert(resp);
             loadAllSuppliers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
 
 /** Delete Supplier **/
 $('#btnDeleteSupplier').click(function () {
-    let id = $("#txtSupplierId").val();
+    let id = $("#txtSupId").val();
 
     $.ajax({
         url: baseURL + 'supplier/' + id,
         method: 'DELETE',
-        contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
             loadAllSuppliers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -104,7 +102,6 @@ function loadAllSuppliers() {
     $.ajax({
         url: baseURL + "supplier/loadAllSuppliers",
         method: "GET",
-        dataType: "json",
         success: function (resp) {
             $("#tblSuppliers").empty();
 
