@@ -21,7 +21,7 @@ $('#btnAddShoe').click(function () {
             unitPriceBuy: parseFloat($('#txtUnitPriceBuy').val()),
             expectedProfit: parseFloat($('#txtExpectedProfit').val()),
             profitMargin: parseFloat($('#txtProfitMargin').val()),
-            status: $('#txtStockStatus').val()
+            stockStatus: $('#txtStockStatus').val()
         };
 
         $.ajax({
@@ -77,7 +77,7 @@ $('#btnUpdateShoe').click(function () {
             unitPriceBuy: parseFloat($('#txtUnitPriceBuy').val()),
             expectedProfit: parseFloat($('#txtExpectedProfit').val()),
             profitMargin: parseFloat($('#txtProfitMargin').val()),
-            status: $('#txtStockStatus').val()
+            stockStatus: $('#txtStockStatus').val()
         };
 
         $.ajax({
@@ -139,7 +139,7 @@ function loadAllShoes() {
                 row.append($("<td>").text(i.unitPriceBuy));
                 row.append($("<td>").text(i.expectedProfit));
                 row.append($("<td>").text(i.profitMargin));
-                row.append($("<td>").text(i.status));
+                row.append($("<td>").text(i.stockStatus));
 
                 $("#tblShoes").append(row);
             });
