@@ -10,7 +10,7 @@ $('#btnSaveEmployee').click(function () {
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const employeeObj = {
+        let employeeObj = {
             id: $('#txtEmpId').val(),
             name: $('#txtEmpName').val(),
             picture: reader.result,
@@ -72,7 +72,7 @@ $('#btnUpdateEmployee').click(function () {
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const employeeObj = {
+        let employeeObj = {
             id: $('#txtEmpId').val(),
             name: $('#txtEmpName').val(),
             picture: reader.result,

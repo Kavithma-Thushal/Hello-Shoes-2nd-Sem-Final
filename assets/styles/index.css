@@ -36,10 +36,6 @@ body {
     transition: right 0.3s ease;
 }
 
-.register-form {
-    padding: 20px;
-}
-
 /* Login */
 .login-container {
     position: fixed;

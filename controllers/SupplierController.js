@@ -4,7 +4,7 @@ loadAllSuppliers();
 
 /** Save Supplier **/
 $('#btnSaveSupplier').click(function () {
-    const supplierObj = {
+    let supplierObj = {
         id: $('#txtSupId').val(),
         name: $('#txtSupName').val(),
         category: $('#txtSupCategory').val(),
@@ -52,7 +52,7 @@ $('#btnSearchSupplier').click(function () {
 
 /** Update Supplier **/
 $('#btnUpdateSupplier').click(function () {
-    const supplierObject = {
+    let supplierObject = {
         id: $('#txtSupId').val(),
         name: $('#txtSupName').val(),
         category: $('#txtSupCategory').val(),

@@ -4,7 +4,7 @@ loadAllCustomers();
 
 /** Save Customer **/
 $('#btnSaveCustomer').click(function () {
-    const customerObj = {
+    let customerObj = {
         id: $('#txtCusId').val(),
         name: $('#txtCusName').val(),
         gender: $('#txtCusGender').val(),
@@ -55,7 +55,7 @@ $('#btnSearchCustomer').click(function () {
 
 /** Update Customer **/
 $('#btnUpdateCustomer').click(function () {
-    const customerObj = {
+    let customerObj = {
         id: $('#txtCusId').val(),
         name: $('#txtCusName').val(),
         gender: $('#txtCusGender').val(),

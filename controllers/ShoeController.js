@@ -10,7 +10,7 @@ $('#btnAddShoe').click(function () {
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const shoeObj = {
+        let shoeObj = {
             code: $('#txtShoeCode').val(),
             description: $('#txtShoeDescription').val(),
             picture: reader.result,
@@ -66,7 +66,7 @@ $('#btnUpdateShoe').click(function () {
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const shoeObj = {
+        let shoeObj = {
             code: $('#txtShoeCode').val(),
             description: $('#txtShoeDescription').val(),
             picture: reader.result,
