@@ -121,24 +121,12 @@
                         </div>
                         <div class="col-lg-6 col-xl-3 mb-2">
                             <div class="card sectionBorder">
-                                <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Items
+                                <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Shoes
                                 </div>
                                 <div class="card-body d-flex justify-content-around align-items-center">
-                                    <div class="dash-tile-icon"><i class="bi bi-boxes"></i></div>
+                                    <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
                                     <div class="dash-tile-text text-black-50">
-                                        <h1 id="txtItemsCount">00</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xl-3 mb-2">
-                            <div class="card sectionBorder">
-                                <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Orders
-                                </div>
-                                <div class="card-body d-flex justify-content-around align-items-center">
-                                    <div class="dash-tile-icon"><i class="bi bi-cart-fill"></i></div>
-                                    <div class="dash-tile-text text-black-50">
-                                        <h1 id="txtOrderCount">00</h1>
+                                        <h1 id="txtShoeCount">00</h1>
                                     </div>
                                 </div>
                             </div>
@@ -146,11 +134,25 @@
                         <div class="col-lg-6 col-xl-3 mb-2">
                             <div class="card sectionBorder">
                                 <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
-                                    Settings</div>
+                                    Suppliers
+                                </div>
                                 <div class="card-body d-flex justify-content-around align-items-center">
-                                    <div class="dash-tile-icon" style=""><i class="bi bi-gear-wide-connected"></i></div>
-                                    <div>
-                                        <button class="btn btn-danger">New</button>
+                                    <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
+                                    <div class="dash-tile-text text-black-50">
+                                        <h1 id="txtSupplierCount">00</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-3 mb-2">
+                            <div class="card sectionBorder">
+                                <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
+                                    Employees
+                                </div>
+                                <div class="card-body d-flex justify-content-around align-items-center">
+                                    <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
+                                    <div class="dash-tile-text text-black-50">
+                                        <h1 id="txtEmployeeCount">00</h1>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +302,7 @@
             <div class="row manage">
                 <div class="col-4">
                     <label for="txtShoeCode">Shoe Code</label>
-                    <input id="txtShoeCode" class="form-control" type="text">
+                    <input id="txtShoeCode" class="form-control" type="text" disabled>
                 </div>
                 <div class="col-4">
                     <label for="txtShoeDescription">Shoe Description</label>
@@ -413,7 +415,7 @@
             <div class="row manage">
                 <div class="col-4">
                     <label for="txtSupId">Supplier ID</label>
-                    <input id="txtSupId" class="form-control" type="text">
+                    <input id="txtSupId" class="form-control" type="text" disabled>
                 </div>
                 <div class="col-4">
                     <label for="txtSupName">Supplier Name</label>
@@ -523,7 +525,7 @@
             <div class="row manage">
                 <div class="col-4">
                     <label for="txtEmpId">Employee ID</label>
-                    <input id="txtEmpId" class="form-control" type="text">
+                    <input id="txtEmpId" class="form-control" type="text" disabled>
                 </div>
                 <div class="col-4">
                     <label for="txtEmpName">Employee Name</label>

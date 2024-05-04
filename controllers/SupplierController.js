@@ -129,7 +129,8 @@ function loadAllSuppliers() {
             // clearInputFields();
             // checkValidity(customerValidations);
             supplierTableListener();
-            // generateCustomerId();
+            generateSupplierId();
+            supplierCount();
         },
         error: function (error) {
             console.log("Load All Suppliers Error : " + error);
@@ -169,5 +170,43 @@ function supplierTableListener() {
         // $("#btnSaveCustomer").attr('disabled', true);
         // $("#btnUpdateCustomer").attr('disabled', false);
         // $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/** Generate SupplierId **/
+function generateSupplierId() {
+    $("#txtSupId").val("S00-001");
+    $.ajax({
+        url: baseURL + "supplier/generateSupplierId",
+        method: "GET",
+        success: function (resp) {
+            let id = resp.generatedId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtSupId").val("S00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtSupId").val("S00-0" + tempId);
+            } else {
+                $("#txtSupId").val("S00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Supplier ID : ", error);
+        }
+    });
+}
+
+/** Supplier Count **/
+function supplierCount() {
+    $.ajax({
+        url: baseURL + "supplier/supplierCount",
+        method: "GET",
+        success: function (resp) {
+            $("#txtSupplierCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Supplier Count Error : ", error);
+        }
     });
 }

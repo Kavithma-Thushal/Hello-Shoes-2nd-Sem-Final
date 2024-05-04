@@ -166,7 +166,8 @@ function loadAllEmployees() {
             // clearInputFields();
             // checkValidity(customerValidations);
             employeeTableListener();
-            // generateCustomerId();
+            generateEmployeeId();
+            employeeCount();
         },
         error: function (error) {
             console.log("Load All Employees Error : " + error);
@@ -220,5 +221,43 @@ function employeeTableListener() {
         // $("#btnSaveCustomer").attr('disabled', true);
         // $("#btnUpdateCustomer").attr('disabled', false);
         // $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/** Generate EmployeeId **/
+function generateEmployeeId() {
+    $("#txtEmpId").val("E00-001");
+    $.ajax({
+        url: baseURL + "employee/generateEmployeeId",
+        method: "GET",
+        success: function (resp) {
+            let id = resp.generatedId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtEmpId").val("E00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtEmpId").val("E00-0" + tempId);
+            } else {
+                $("#txtEmpId").val("E00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Employee ID : ", error);
+        }
+    });
+}
+
+/** Employee Count **/
+function employeeCount() {
+    $.ajax({
+        url: baseURL + "employee/employeeCount",
+        method: "GET",
+        success: function (resp) {
+            $("#txtEmployeeCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Employee Count Error : ", error);
+        }
     });
 }

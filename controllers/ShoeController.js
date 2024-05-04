@@ -148,7 +148,8 @@ function loadAllShoes() {
             // clearInputFields();
             // checkValidity(customerValidations);
             shoeTableListener();
-            // generateCustomerId();
+            generateShoeCode();
+            shoeCount();
         },
         error: function (error) {
             console.log("Load All Shoes Error : " + error);
@@ -190,5 +191,43 @@ function shoeTableListener() {
         // $("#btnSaveCustomer").attr('disabled', true);
         // $("#btnUpdateCustomer").attr('disabled', false);
         // $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/** Generate ShoeCode **/
+function generateShoeCode() {
+    $("#txtShoeCode").val("I00-001");
+    $.ajax({
+        url: baseURL + "shoe/generateShoeCode",
+        method: "GET",
+        success: function (resp) {
+            let id = resp.generatedId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtShoeCode").val("I00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtShoeCode").val("I00-0" + tempId);
+            } else {
+                $("#txtShoeCode").val("I00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Shoe Code : ", error);
+        }
+    });
+}
+
+/** Shoe Count **/
+function shoeCount() {
+    $.ajax({
+        url: baseURL + "shoe/shoeCount",
+        method: "GET",
+        success: function (resp) {
+            $("#txtShoeCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Shoe Count Error : ", error);
+        }
     });
 }
