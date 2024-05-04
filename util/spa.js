@@ -3,6 +3,7 @@ function hideAllSections() {
     $("#shoeSection").css("display", "none");
     $("#supplierSection").css("display", "none");
     $("#employeeSection").css("display", "none");
+    $("#adminDashboardSection").css("display", "none");
 }
 
 function customerSection() {
@@ -23,4 +24,9 @@ function supplierSection() {
 function employeeSection() {
     hideAllSections();
     $("#employeeSection").css("display", "block");
+}
+
+function adminDashboardSection() {
+    hideAllSections();
+    $("#adminDashboardSection").css("display", "block");
 }

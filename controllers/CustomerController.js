@@ -140,6 +140,7 @@ function loadAllCustomers() {
             // checkValidity(customerValidations);
             customerTableListener();
             generateCustomerId();
+            customerCount();
         },
         error: function (error) {
             console.log("Load All Customers Error : " + error);
@@ -197,7 +198,7 @@ function generateCustomerId() {
         url: baseURL + "customer/generateCustomerId",
         method: "GET",
         success: function (resp) {
-            let id = resp.generateCustomerId;
+            let id = resp.generatedId;
             let tempId = parseInt(id.split("-")[1]);
             tempId = tempId + 1;
             if (tempId <= 9) {
@@ -210,6 +211,20 @@ function generateCustomerId() {
         },
         error: function (error) {
             console.log("Fail to Generate Customer ID : ", error);
+        }
+    });
+}
+
+/** Customer Count **/
+function customerCount() {
+    $.ajax({
+        url: baseURL + "customer/customerCount",
+        method: "GET",
+        success: function (resp) {
+            $("#txtCustomerCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Customer Count Error : ", error);
         }
     });
 }

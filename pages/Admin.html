@@ -67,8 +67,8 @@
                 </div>
                 <ul class="navbar-nav mt-3">
                     <li class="nav-item">
-                        <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"><i
-                                class="bi bi-speedometer2 me-3"></i>Dashboard</a>
+                        <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"
+                            onclick="adminDashboardSection()"><i class="bi bi-speedometer2 me-3"></i>Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
@@ -102,6 +102,13 @@
     </header>
 
     <main>
+        <!-- Admin Dashboard -->
+        <section id="adminDashboardSection" style="display: none;">
+            <div>
+                <h1 id="txtCustomerCount" style="margin-left: 500px;">00</h1>
+            </div>
+        </section>
+
         <!-- Customer Management -->
         <section id="customerSection" style="display: none;">
             <h2 class="mt-3 manage-header">Customer Management</h2>
