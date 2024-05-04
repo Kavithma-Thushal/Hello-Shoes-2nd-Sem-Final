@@ -147,7 +147,7 @@ function loadAllCustomers() {
     });
 }
 
-/** Table Listner **/
+/** Customer Table Listner **/
 function customerTableListener() {
     $("#tblCustomers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();

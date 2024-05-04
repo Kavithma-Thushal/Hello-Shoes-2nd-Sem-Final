@@ -135,7 +135,7 @@ function loadAllSuppliers() {
     });
 }
 
-/** Table Listner **/
+/** Supplier Table Listner **/
 function supplierTableListener() {
     $("#tblSuppliers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();

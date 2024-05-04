@@ -143,9 +143,50 @@ function loadAllShoes() {
 
                 $("#tblShoes").append(row);
             });
+            // clearInputFields();
+            // checkValidity(customerValidations);
+            shoeTableListener();
+            // generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Shoes Error : " + error);
         }
+    });
+}
+
+/** Shoe Table Listner **/
+function shoeTableListener() {
+    $("#tblShoes>tr").on("click", function () {
+        let code = $(this).children().eq(0).text();
+        let description = $(this).children().eq(1).text();
+        let picture = $(this).children().eq(2).text();
+        let category = $(this).children().eq(3).text();
+        let size = $(this).children().eq(4).text();
+        let quantity = $(this).children().eq(5).text();
+        let supplierId = $(this).children().eq(6).text();
+        let supplierName = $(this).children().eq(7).text();
+        let unitPriceSale = $(this).children().eq(8).text();
+        let unitPriceBuy = $(this).children().eq(9).text();
+        let expectedProfit = $(this).children().eq(10).text();
+        let profitMargin = $(this).children().eq(11).text();
+        let stockStatus = $(this).children().eq(12).text();
+
+        $("#txtShoeCode").val(code);
+        $("#txtShoeDescription").val(description);
+        $("#txtShoePicture").val(picture);
+        $("#txtShoeCategory").val(category);
+        $("#txtShoeSize").val(size);
+        $("#txtShoeQuantity").val(quantity);
+        $("#txtSupIdd").val(supplierId);
+        $("#txtSupNamee").val(supplierName);
+        $("#txtUnitPriceSale").val(unitPriceSale);
+        $("#txtUnitPriceBuy").val(unitPriceBuy);
+        $("#txtExpectedProfit").val(expectedProfit);
+        $("#txtProfitMargin").val(profitMargin);
+        $("#txtStockStatus").val(stockStatus);
+
+        // $("#btnSaveCustomer").attr('disabled', true);
+        // $("#btnUpdateCustomer").attr('disabled', false);
+        // $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
