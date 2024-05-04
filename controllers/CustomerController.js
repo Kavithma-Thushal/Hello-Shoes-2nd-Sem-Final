@@ -139,7 +139,7 @@ function loadAllCustomers() {
             // clearInputFields();
             // checkValidity(customerValidations);
             customerTableListener();
-            // generateCustomerId();
+            generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Customers Error : " + error);
@@ -187,5 +187,29 @@ function customerTableListener() {
         // $("#btnSaveCustomer").attr('disabled', true);
         // $("#btnUpdateCustomer").attr('disabled', false);
         // $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/** Generate CustomerId **/
+function generateCustomerId() {
+    $("#txtCusId").val("C00-001");
+    $.ajax({
+        url: baseURL + "customer/generateCustomerId",
+        method: "GET",
+        success: function (resp) {
+            let id = resp.generateCustomerId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtCusId").val("C00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtCusId").val("C00-0" + tempId);
+            } else {
+                $("#txtCusId").val("C00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Customer ID : ", error);
+        }
     });
 }
