@@ -2,45 +2,45 @@ loadAllEmployees();
 
 /** Save Employee **/
 $('#btnSaveEmployee').click(function () {
-    const fileInput = $('#txtEmployeePicture')[0];
+    const fileInput = $('#txtEmpPicture')[0];
     const file = fileInput.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const employeeObject = {
-            id: $('#txtEmployeeId').val(),
-            name: $('#txtEmployeeName').val(),
+        const employeeObj = {
+            id: $('#txtEmpId').val(),
+            name: $('#txtEmpName').val(),
             picture: reader.result,
-            gender: $('#txtEmployeeGender').val(),
-            status: $('#txtEmployeeStatus').val(),
-            designation: $('#txtEmployeeDesignation').val(),
-            role: $('#txtEmployeeRole').val(),
-            dob: $('#txtEmployeeDOB').val(),
-            joinDate: $('#txtEmployeeJoinDate').val(),
-            branch: $('#txtEmployeeBranch').val(),
-            addressLine1: $('#txtEmployeeAddressLine1').val(),
-            addressLine2: $('#txtEmployeeAddressLine2').val(),
-            addressLine3: $('#txtEmployeeAddressLine3').val(),
-            addressLine4: $('#txtEmployeeAddressLine4').val(),
-            addressLine5: $('#txtEmployeeAddressLine5').val(),
-            contactNo: $('#txtEmployeeContactNo').val(),
-            email: $('#txtEmployeeEmail').val(),
-            emergencyGuardian: $('#txtEmployeeEmergencyGuardian').val(),
-            emergencyNo: $('#txtEmployeeEmergencyNo').val()
+            gender: $('#txtEmpGender').val(),
+            civilStatus: $('#txtEmpStatus').val(),
+            designation: $('#txtEmpDesignation').val(),
+            role: $('#txtEmpRole').val(),
+            dob: $('#txtEmpDOB').val(),
+            joinDate: $('#txtEmpJoinDate').val(),
+            branch: $('#txtEmpBranch').val(),
+            addressLine1: $('#txtEmpAddressLine1').val(),
+            addressLine2: $('#txtEmpAddressLine2').val(),
+            addressLine3: $('#txtEmpAddressLine3').val(),
+            addressLine4: $('#txtEmpAddressLine4').val(),
+            addressLine5: $('#txtEmpAddressLine5').val(),
+            contactNo: $('#txtEmpContactNo').val(),
+            email: $('#txtEmpEmail').val(),
+            emergencyGuardian: $('#txtEmpEmergencyGuardian').val(),
+            emergencyNo: $('#txtEmpEmergencyNo').val()
         };
 
         $.ajax({
             url: baseURL + 'employee',
             method: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify(employeeObject),
+            data: JSON.stringify(employeeObj),
             success: function (resp) {
                 successAlert(resp);
                 loadAllEmployees();
             },
-            error: function (resp) {
-                errorAlert(resp);
+            error: function (error) {
+                errorAlert(error);
             }
         });
     };
@@ -48,62 +48,61 @@ $('#btnSaveEmployee').click(function () {
 
 /** Search Employee **/
 $('#btnSearchEmployee').click(function () {
-    let id = $("#txtEmployeeId").val();
+    let id = $("#txtEmpId").val();
 
     $.ajax({
         url: baseURL + 'employee/searchEmployee/' + id,
         method: 'GET',
-        contentType: 'application/json',
         success: function (resp) {
-            console.log("Employee Searched Successfully...!");
+            alert("Employee Searched Successfully...!");
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
 
 /** Update Employee **/
 $('#btnUpdateEmployee').click(function () {
-    const fileInput = $('#txtEmployeePicture')[0];
+    const fileInput = $('#txtEmpPicture')[0];
     const file = fileInput.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
 
     reader.onload = function () {
-        const employeeObject = {
-            id: $('#txtEmployeeId').val(),
-            name: $('#txtEmployeeName').val(),
+        const employeeObj = {
+            id: $('#txtEmpId').val(),
+            name: $('#txtEmpName').val(),
             picture: reader.result,
-            gender: $('#txtEmployeeGender').val(),
-            status: $('#txtEmployeeStatus').val(),
-            designation: $('#txtEmployeeDesignation').val(),
-            role: $('#txtEmployeeRole').val(),
-            dob: $('#txtEmployeeDOB').val(),
-            joinDate: $('#txtEmployeeJoinDate').val(),
-            branch: $('#txtEmployeeBranch').val(),
-            addressLine1: $('#txtEmployeeAddressLine1').val(),
-            addressLine2: $('#txtEmployeeAddressLine2').val(),
-            addressLine3: $('#txtEmployeeAddressLine3').val(),
-            addressLine4: $('#txtEmployeeAddressLine4').val(),
-            addressLine5: $('#txtEmployeeAddressLine5').val(),
-            contactNo: $('#txtEmployeeContactNo').val(),
-            email: $('#txtEmployeeEmail').val(),
-            emergencyGuardian: $('#txtEmployeeEmergencyGuardian').val(),
-            emergencyNo: $('#txtEmployeeEmergencyNo').val()
+            gender: $('#txtEmpGender').val(),
+            civilStatus: $('#txtEmpStatus').val(),
+            designation: $('#txtEmpDesignation').val(),
+            role: $('#txtEmpRole').val(),
+            dob: $('#txtEmpDOB').val(),
+            joinDate: $('#txtEmpJoinDate').val(),
+            branch: $('#txtEmpBranch').val(),
+            addressLine1: $('#txtEmpAddressLine1').val(),
+            addressLine2: $('#txtEmpAddressLine2').val(),
+            addressLine3: $('#txtEmpAddressLine3').val(),
+            addressLine4: $('#txtEmpAddressLine4').val(),
+            addressLine5: $('#txtEmpAddressLine5').val(),
+            contactNo: $('#txtEmpContactNo').val(),
+            email: $('#txtEmpEmail').val(),
+            emergencyGuardian: $('#txtEmpEmergencyGuardian').val(),
+            emergencyNo: $('#txtEmpEmergencyNo').val()
         };
 
         $.ajax({
             url: baseURL + 'employee',
             method: 'PUT',
             contentType: 'application/json',
-            data: JSON.stringify(employeeObject),
+            data: JSON.stringify(employeeObj),
             success: function (resp) {
                 successAlert(resp);
                 loadAllEmployees();
             },
-            error: function (resp) {
-                errorAlert(resp);
+            error: function (error) {
+                errorAlert(error);
             }
         });
     };
@@ -111,18 +110,17 @@ $('#btnUpdateEmployee').click(function () {
 
 /** Delete Employee **/
 $('#btnDeleteEmployee').click(function () {
-    let id = $("#txtEmployeeId").val();
+    let id = $("#txtEmpId").val();
 
     $.ajax({
         url: baseURL + 'employee/' + id,
         method: 'DELETE',
-        contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
             loadAllEmployees();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -132,7 +130,6 @@ function loadAllEmployees() {
     $.ajax({
         url: baseURL + "employee/loadAllEmployees",
         method: "GET",
-        dataType: "json",
         success: function (resp) {
             $("#tblEmployees").empty();
 
@@ -146,7 +143,7 @@ function loadAllEmployees() {
                     style: "max-width: 100px; max-height: 100px; border-radius:10px"
                 })));
                 row.append($("<td>").text(i.gender));
-                row.append($("<td>").text(i.status));
+                row.append($("<td>").text(i.civilStatus));
                 row.append($("<td>").text(i.designation));
                 row.append($("<td>").text(i.role));
                 row.append($("<td>").text(i.dob));
