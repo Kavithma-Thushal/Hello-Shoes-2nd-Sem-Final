@@ -31,8 +31,8 @@ $('#btnSaveCustomer').click(function () {
             successAlert(resp);
             loadAllCustomers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -47,8 +47,8 @@ $('#btnSearchCustomer').click(function () {
         success: function (resp) {
             alert("Customer Searched Successfully...!");
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -82,8 +82,8 @@ $('#btnUpdateCustomer').click(function () {
             successAlert(resp);
             loadAllCustomers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
@@ -99,8 +99,8 @@ $('#btnDeleteCustomer').click(function () {
             successAlert(resp);
             loadAllCustomers();
         },
-        error: function (resp) {
-            errorAlert(resp);
+        error: function (error) {
+            errorAlert(error);
         }
     });
 });
