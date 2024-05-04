@@ -4,29 +4,29 @@ loadAllCustomers();
 
 /** Save Customer **/
 $('#btnSaveCustomer').click(function () {
-    const customerObject = {
-        id: $('#txtCustomerId').val(),
-        name: $('#txtCustomerName').val(),
-        gender: $('#txtCustomerGender').val(),
-        dob: $('#txtCustomerDOB').val(),
-        level: $('#txtCustomerLoyaltyLevel').val(),
-        loyaltyDate: $('#txtCustomerLoyaltyDate').val(),
-        totalPoints: parseInt($('#txtCustomerTotalPoints').val()),
-        addressLine1: $('#txtCustomerAddressLine1').val(),
-        addressLine2: $('#txtCustomerAddressLine2').val(),
-        addressLine3: $('#txtCustomerAddressLine3').val(),
-        addressLine4: $('#txtCustomerAddressLine4').val(),
-        addressLine5: $('#txtCustomerAddressLine5').val(),
-        contactNo: $('#txtCustomerContactNo').val(),
-        email: $('#txtCustomerEmail').val(),
-        recentDate: new Date($('#txtCustomerRecentDate').val()).toISOString()
+    const customerObj = {
+        id: $('#txtCusId').val(),
+        name: $('#txtCusName').val(),
+        gender: $('#txtCusGender').val(),
+        dob: $('#txtCusDOB').val(),
+        loyaltyLevel: $('#txtLoyaltyLevel').val(),
+        loyaltyDate: $('#txtLoyaltyDate').val(),
+        totalPoints: parseInt($('#txtTotalPoints').val()),
+        addressLine1: $('#txtCusAddressLine1').val(),
+        addressLine2: $('#txtCusAddressLine2').val(),
+        addressLine3: $('#txtCusAddressLine3').val(),
+        addressLine4: $('#txtCusAddressLine4').val(),
+        addressLine5: $('#txtCusAddressLine5').val(),
+        contactNo: $('#txtCusContactNo').val(),
+        email: $('#txtCusEmail').val(),
+        recentDate: new Date($('#txtRecentDate').val()).toISOString()
     };
 
     $.ajax({
         url: baseURL + 'customer',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify(customerObject),
+        data: JSON.stringify(customerObj),
         success: function (resp) {
             successAlert(resp);
             loadAllCustomers();
@@ -39,14 +39,13 @@ $('#btnSaveCustomer').click(function () {
 
 /** Search Customer **/
 $('#btnSearchCustomer').click(function () {
-    let id = $("#txtCustomerId").val();
+    let id = $("#txtCusId").val();
 
     $.ajax({
         url: baseURL + 'customer/searchCustomer/' + id,
         method: 'GET',
-        contentType: 'application/json',
         success: function (resp) {
-            console.log("Customer Searched Successfully...!");
+            alert("Customer Searched Successfully...!");
         },
         error: function (resp) {
             errorAlert(resp);
@@ -56,29 +55,29 @@ $('#btnSearchCustomer').click(function () {
 
 /** Update Customer **/
 $('#btnUpdateCustomer').click(function () {
-    const customerObject = {
-        id: $('#txtCustomerId').val(),
-        name: $('#txtCustomerName').val(),
-        gender: $('#txtCustomerGender').val(),
-        dob: $('#txtCustomerDOB').val(),
-        level: $('#txtCustomerLoyaltyLevel').val(),
-        loyaltyDate: $('#txtCustomerLoyaltyDate').val(),
-        totalPoints: parseInt($('#txtCustomerTotalPoints').val()),
-        addressLine1: $('#txtCustomerAddressLine1').val(),
-        addressLine2: $('#txtCustomerAddressLine2').val(),
-        addressLine3: $('#txtCustomerAddressLine3').val(),
-        addressLine4: $('#txtCustomerAddressLine4').val(),
-        addressLine5: $('#txtCustomerAddressLine5').val(),
-        contactNo: $('#txtCustomerContactNo').val(),
-        email: $('#txtCustomerEmail').val(),
-        recentDate: new Date($('#txtCustomerRecentDate').val()).toISOString()
+    const customerObj = {
+        id: $('#txtCusId').val(),
+        name: $('#txtCusName').val(),
+        gender: $('#txtCusGender').val(),
+        dob: $('#txtCusDOB').val(),
+        loyaltyLevel: $('#txtLoyaltyLevel').val(),
+        loyaltyDate: $('#txtLoyaltyDate').val(),
+        totalPoints: parseInt($('#txtTotalPoints').val()),
+        addressLine1: $('#txtCusAddressLine1').val(),
+        addressLine2: $('#txtCusAddressLine2').val(),
+        addressLine3: $('#txtCusAddressLine3').val(),
+        addressLine4: $('#txtCusAddressLine4').val(),
+        addressLine5: $('#txtCusAddressLine5').val(),
+        contactNo: $('#txtCusContactNo').val(),
+        email: $('#txtCusEmail').val(),
+        recentDate: new Date($('#txtRecentDate').val()).toISOString()
     };
 
     $.ajax({
         url: baseURL + 'customer',
         method: 'PUT',
         contentType: 'application/json',
-        data: JSON.stringify(customerObject),
+        data: JSON.stringify(customerObj),
         success: function (resp) {
             successAlert(resp);
             loadAllCustomers();
@@ -91,12 +90,11 @@ $('#btnUpdateCustomer').click(function () {
 
 /** Delete Customer **/
 $('#btnDeleteCustomer').click(function () {
-    let id = $("#txtCustomerId").val();
+    let id = $("#txtCusId").val();
 
     $.ajax({
         url: baseURL + 'customer/' + id,
         method: 'DELETE',
-        contentType: 'application/json',
         success: function (resp) {
             successAlert(resp);
             loadAllCustomers();
@@ -112,8 +110,6 @@ function loadAllCustomers() {
     $.ajax({
         url: baseURL + "customer/loadAllCustomers",
         method: "GET",
-        contentType: "application/json",
-        dataType: "json",
         success: function (resp) {
             $("#tblCustomers").empty();
 
@@ -122,7 +118,7 @@ function loadAllCustomers() {
                 let name = i.name;
                 let gender = i.gender;
                 let dob = i.dob;
-                let level = i.level;
+                let loyaltyLevel = i.loyaltyLevel;
                 let loyaltyDate = i.loyaltyDate;
                 let totalPoints = i.totalPoints;
                 let addressLine1 = i.addressLine1;
@@ -134,7 +130,7 @@ function loadAllCustomers() {
                 let email = i.email;
                 let recentDate = i.recentDate;
 
-                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + gender + "</td><td>" + dob + "</td><td>" + level + "</td><td>" +
+                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + gender + "</td><td>" + dob + "</td><td>" + loyaltyLevel + "</td><td>" +
                     loyaltyDate + "</td><td>" + totalPoints + "</td><td>" + addressLine1 + "</td><td>" + addressLine2 + "</td><td>" +
                     addressLine3 + "</td><td>" + addressLine4 + "</td><td>" + addressLine5 + "</td><td>" + contactNo + "</td><td>" + email +
                     "</td><td>" + recentDate + "</td></tr>"
@@ -151,14 +147,14 @@ function loadAllCustomers() {
     });
 }
 
-// Table Listener
+/** Table Listner **/
 function tableListener() {
     $("#tblCustomers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
         let gender = $(this).children().eq(2).text();
         let dob = $(this).children().eq(3).text();
-        let level = $(this).children().eq(4).text();
+        let loyaltyLevel = $(this).children().eq(4).text();
         let loyaltyDate = $(this).children().eq(5).text();
         let totalPoints = $(this).children().eq(6).text();
         let addressLine1 = $(this).children().eq(7).text();
@@ -172,21 +168,21 @@ function tableListener() {
 
         let customerRecentDate = recentDate.replace(/(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}).*/, "$1T$2");
 
-        $("#txtCustomerId").val(id);
-        $("#txtCustomerName").val(name);
-        $("#txtCustomerGender").val(gender);
-        $("#txtCustomerDOB").val(dob);
-        $("#txtCustomerLoyaltyLevel").val(level);
-        $("#txtCustomerLoyaltyDate").val(loyaltyDate);
-        $("#txtCustomerTotalPoints").val(totalPoints);
-        $("#txtCustomerAddressLine1").val(addressLine1);
-        $("#txtCustomerAddressLine2").val(addressLine2);
-        $("#txtCustomerAddressLine3").val(addressLine3);
-        $("#txtCustomerAddressLine4").val(addressLine4);
-        $("#txtCustomerAddressLine5").val(addressLine5);
-        $("#txtCustomerContactNo").val(contactNo);
-        $("#txtCustomerEmail").val(email);
-        $("#txtCustomerRecentDate").val(customerRecentDate);
+        $("#txtCusId").val(id);
+        $("#txtCusName").val(name);
+        $("#txtCusGender").val(gender);
+        $("#txtCusDOB").val(dob);
+        $("#txtLoyaltyLevel").val(loyaltyLevel);
+        $("#txtLoyaltyDate").val(loyaltyDate);
+        $("#txtTotalPoints").val(totalPoints);
+        $("#txtCusAddressLine1").val(addressLine1);
+        $("#txtCusAddressLine2").val(addressLine2);
+        $("#txtCusAddressLine3").val(addressLine3);
+        $("#txtCusAddressLine4").val(addressLine4);
+        $("#txtCusAddressLine5").val(addressLine5);
+        $("#txtCusContactNo").val(contactNo);
+        $("#txtCusEmail").val(email);
+        $("#txtRecentDate").val(customerRecentDate);
 
         // $("#btnSaveCustomer").attr('disabled', true);
         // $("#btnUpdateCustomer").attr('disabled', false);
