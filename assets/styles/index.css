@@ -27,8 +27,8 @@ body {
 .register-container {
     position: fixed;
     top: 0;
-    right: -1000px;
-    width: 1000px;
+    right: -400px;
+    width: 400px;
     height: 100vh;
     overflow-y: auto;
     background-color: #ffffff;

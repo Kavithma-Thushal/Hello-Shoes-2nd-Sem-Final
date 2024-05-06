@@ -22,11 +22,16 @@ $('#btnSaveCustomer').click(function () {
         recentDate: new Date($('#txtRecentDate').val()).toISOString()
     };
 
+    var jwtToken = getCookie('jwtToken');
+
     $.ajax({
         url: baseURL + 'customer',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(customerObj),
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             successAlert(resp);
             loadAllCustomers();
@@ -227,4 +232,10 @@ function customerCount() {
             console.log("Customer Count Error : ", error);
         }
     });
+}
+
+function getCookie(token) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${token}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }

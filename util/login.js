@@ -1,3 +1,5 @@
+var baseURL = "http://localhost:8080/shoes/api/v1/";
+
 // Open the login container
 $('#btnLogin').click(function () {
     $('#loginContainer').css('right', '0');
@@ -10,4 +12,29 @@ $(document).click(function (event) {
     if (!loginContainer.is(event.target) && !$('#btnLogin').is(event.target) && loginContainer.has(event.target).length === 0) {
         loginContainer.css('right', '-400px');
     }
+});
+
+// User Login Using JWT Token
+$(document).ready(function () {
+    $('#loginForm').submit(function (event) {
+        event.preventDefault();
+
+        let username = $('#username').val();
+        let password = $('#password').val();
+
+        $.ajax({
+            type: 'POST',
+            url: baseURL + 'v1/auth/signin',
+            contentType: 'application/json',
+            data: JSON.stringify({ username: username, password: password }),
+            success: function (resp) {
+                console.log("User Login Successfully...!");
+                document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
+                // window.location.href = 'Customer.html';
+            },
+            error: function (error) {
+                console.log("User Login Error...!");
+            }
+        });
+    });
 });

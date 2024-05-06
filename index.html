@@ -80,130 +80,29 @@
 
         <!-- Register -->
         <div id="registerContainer" class="register-container">
-            <div class="ps-4 pe-4">
-                <h2 class="text-center mt-3 mb-5">Register Now</h2>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpId">Employee ID</label>
-                        <input id="txtEmpId" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpName">Employee Name</label>
-                        <input id="txtEmpName" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpPicture">Employee Picture</label>
-                        <input id="txtEmpPicture" class="form-control" type="file" accept="image/*">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpGender">Select Gender</label>
-                        <select id="txtEmpGender" class="form-select">
-                            <option value="" disabled selected></option>
-                            <option value="MALE">Male</option>
-                            <option value="FEMALE">Female</option>
-                            <option value="OTHER">Other</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpStatus">Civil Status</label>
-                        <select id="txtEmpStatus" class="form-select">
-                            <option value="" disabled selected></option>
-                            <option value="SINGLE">Single</option>
-                            <option value="MARRIED">Married</option>
-                            <option value="DIVORCED">Divorced</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpDesignation">Designation</label>
-                        <input id="txtEmpDesignation" class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpRole">Select Role</label>
-                        <select id="txtEmpRole" class="form-select">
-                            <option value="" disabled selected></option>
-                            <option value="ADMIN">Admin</option>
-                            <option value="USER">User</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpDOB">Employee DOB</label>
-                        <input id="txtEmpDOB" class="form-control" type="date">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpJoinDate">Join Date</label>
-                        <input id="txtEmpJoinDate" class="form-control" type="date">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpBranch">Employee Branch</label>
-                        <input id="txtEmpBranch" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpAddressLine1">Address Line 1</label>
-                        <input id="txtEmpAddressLine1" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpAddressLine2">Address Line 2</label>
-                        <input id="txtEmpAddressLine2" class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpAddressLine3">Address Line 3</label>
-                        <input id="txtEmpAddressLine3" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpAddressLine4">Address Line 4</label>
-                        <input id="txtEmpAddressLine4" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpAddressLine5">Address Line 5</label>
-                        <input id="txtEmpAddressLine5" class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpContactNo">Contact No.</label>
-                        <input id="txtEmpContactNo" class="form-control" type="text">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpEmail">Employee Email</label>
-                        <input id="txtEmpEmail" class="form-control" type="email">
-                    </div>
-                    <div class="col-4">
-                        <label for="txtEmpEmergencyGuardian">Emergency Guardian</label>
-                        <input id="txtEmpEmergencyGuardian" class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="row manage mb-3">
-                    <div class="col-4">
-                        <label for="txtEmpEmergencyNo">Emergency No.</label>
-                        <input id="txtEmpEmergencyNo" class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <button id="btnCancelRegister" type="button" class="btn btn-danger">Cancel</button>
-                    <button id="btnSaveEmployee" type="button" class="btn btn-primary">Register</button>
-                </div>
-            </div>
+            <h2 class="text-center mt-5">Register Now</h2>
+            <form class="p-5" id="registerForm">
+                <input class="form-control" type="text" id="firstName" placeholder="First Name" required><br>
+                <input class="form-control" type="text" id="lastName" placeholder="Last Name" required><br>
+                <input class="form-control" type="text" id="email" placeholder="Email" required><br>
+                <input class="form-control" type="text" id="username" placeholder="User Name" required><br>
+                <input class="form-control" type="password" id="password" placeholder="Password" required><br>
+                <input class="form-control" type="text" id="role" placeholder="Role" required><br>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
         </div>
 
         <!-- Login -->
         <div id="loginContainer" class="login-container">
-            <div class="login-form">
+            <form id="loginForm" class="login-form">
                 <h2 class="text-center m-5">Login</h2>
                 <select id="adminoruser" class="form-select mb-4">
                     <option value="" disabled selected>Select Role</option>
                     <option value="ADMIN">ADMIN</option>
                     <option value="REGULAR">USER</option>
                 </select>
-                <input id="username" class="form-control mt-3 mb-3" type="text" placeholder="Username" />
-                <input id="password" class="form-control mt-4 mb-3" type="password" placeholder="Password" />
+                <input id="username" class="form-control mt-3 mb-3" type="text" placeholder="Username" required />
+                <input id="password" class="form-control mt-4 mb-3" type="password" placeholder="Password" required />
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="form-check">
                         <input id="rememberMe" class="form-check-input" type="checkbox" />
@@ -211,19 +110,18 @@
                     </div>
                     <a href="#" class="forgot-password-link text-decoration-none">Forgot Password?</a>
                 </div>
-                <a href="pages/Admin.html">
-                    <button class="btn btn-primary w-100 mb-3">Login</button>
-                </a>
+                <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
                 <div class="d-flex justify-content-between align-items-center">
                     <label>Not a Member ?</label>
                     <a href="#" class="text-decoration-none">Register Now</a>
                 </div>
+                <p id="signinMessage"></p>
                 <div class="social-links">
                     <button class="btn btn-outline-danger w-100 mb-3">Continue with Google</button>
                     <button class="btn btn-outline-danger w-100 mb-3">Continue with Facebook</button>
                     <button class="btn btn-outline-danger w-100 mb-3">Continue with Twitter</button>
                 </div>
-            </div>
+            </form>
         </div>
     </header>
 
