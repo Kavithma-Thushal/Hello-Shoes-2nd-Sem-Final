@@ -34,10 +34,10 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify(signInObj),
             success: function (resp) {
-                console.log("User Registered Successfully...!");
+                successAlert("User Registered Successfully...!");
             },
             error: function (error) {
-                console.log("User Registered Error...!");
+                errorAlert("User Registered Error...!");
             }
         });
     });

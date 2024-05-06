@@ -1,4 +1,5 @@
 var baseURL = "http://localhost:8080/shoes/api/v1/";
+var jwtToken = getCookie('jwtToken');
 
 loadAllSuppliers();
 
@@ -24,12 +25,15 @@ $('#btnSaveSupplier').click(function () {
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(supplierObj),
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllSuppliers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -41,11 +45,14 @@ $('#btnSearchSupplier').click(function () {
     $.ajax({
         url: baseURL + 'supplier/searchSupplier/' + id,
         method: 'GET',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             alert("Supplier Searched Successfully...!");
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -72,12 +79,15 @@ $('#btnUpdateSupplier').click(function () {
         method: 'PUT',
         contentType: 'application/json',
         data: JSON.stringify(supplierObject),
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllSuppliers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -89,12 +99,15 @@ $('#btnDeleteSupplier').click(function () {
     $.ajax({
         url: baseURL + 'supplier/' + id,
         method: 'DELETE',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllSuppliers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -104,6 +117,9 @@ function loadAllSuppliers() {
     $.ajax({
         url: baseURL + "supplier/loadAllSuppliers",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#tblSuppliers").empty();
 
@@ -179,6 +195,9 @@ function generateSupplierId() {
     $.ajax({
         url: baseURL + "supplier/generateSupplierId",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             let id = resp.generatedId;
             let tempId = parseInt(id.split("-")[1]);
@@ -202,6 +221,9 @@ function supplierCount() {
     $.ajax({
         url: baseURL + "supplier/supplierCount",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#txtSupplierCount").text(resp.count);
         },
@@ -209,4 +231,10 @@ function supplierCount() {
             console.log("Supplier Count Error : ", error);
         }
     });
+}
+
+function getCookie(token) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${token}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }

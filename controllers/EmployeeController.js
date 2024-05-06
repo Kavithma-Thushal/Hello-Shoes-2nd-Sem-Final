@@ -1,4 +1,5 @@
 var baseURL = "http://localhost:8080/shoes/api/v1/";
+var jwtToken = getCookie('jwtToken');
 
 loadAllEmployees();
 
@@ -37,12 +38,15 @@ $('#btnSaveEmployee').click(function () {
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(employeeObj),
+            headers: {
+                Authorization: 'Bearer ' + jwtToken
+            },
             success: function (resp) {
-                successAlert(resp);
+                successAlert(resp.message);
                 loadAllEmployees();
             },
             error: function (error) {
-                errorAlert(error);
+                errorAlert(error.responseJSON.message);
             }
         });
     };
@@ -55,11 +59,14 @@ $('#btnSearchEmployee').click(function () {
     $.ajax({
         url: baseURL + 'employee/searchEmployee/' + id,
         method: 'GET',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             alert("Employee Searched Successfully...!");
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -99,12 +106,15 @@ $('#btnUpdateEmployee').click(function () {
             method: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(employeeObj),
+            headers: {
+                Authorization: 'Bearer ' + jwtToken
+            },
             success: function (resp) {
-                successAlert(resp);
+                successAlert(resp.message);
                 loadAllEmployees();
             },
             error: function (error) {
-                errorAlert(error);
+                errorAlert(error.responseJSON.message);
             }
         });
     };
@@ -117,12 +127,15 @@ $('#btnDeleteEmployee').click(function () {
     $.ajax({
         url: baseURL + 'employee/' + id,
         method: 'DELETE',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllEmployees();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -132,6 +145,9 @@ function loadAllEmployees() {
     $.ajax({
         url: baseURL + "employee/loadAllEmployees",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#tblEmployees").empty();
 
@@ -230,6 +246,9 @@ function generateEmployeeId() {
     $.ajax({
         url: baseURL + "employee/generateEmployeeId",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             let id = resp.generatedId;
             let tempId = parseInt(id.split("-")[1]);
@@ -253,6 +272,9 @@ function employeeCount() {
     $.ajax({
         url: baseURL + "employee/employeeCount",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#txtEmployeeCount").text(resp.count);
         },
@@ -260,4 +282,10 @@ function employeeCount() {
             console.log("Employee Count Error : ", error);
         }
     });
+}
+
+function getCookie(token) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${token}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }

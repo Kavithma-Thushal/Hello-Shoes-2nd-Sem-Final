@@ -87,7 +87,11 @@
                 <input class="form-control" type="text" id="email" placeholder="Email" required><br>
                 <input class="form-control" type="text" id="username" placeholder="User Name" required><br>
                 <input class="form-control" type="password" id="password" placeholder="Password" required><br>
-                <input class="form-control" type="text" id="role" placeholder="Role" required><br>
+                <select id="role" class="form-select mb-4">
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="REGULAR">USER</option>
+                </select>
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
@@ -96,13 +100,9 @@
         <div id="loginContainer" class="login-container">
             <form id="loginForm" class="login-form">
                 <h2 class="text-center m-5">Login</h2>
-                <select id="adminoruser" class="form-select mb-4">
-                    <option value="" disabled selected>Select Role</option>
-                    <option value="ADMIN">ADMIN</option>
-                    <option value="REGULAR">USER</option>
-                </select>
                 <input id="loginUsername" class="form-control mt-3 mb-3" type="text" placeholder="Username" required />
-                <input id="loginPassword" class="form-control mt-4 mb-3" type="password" placeholder="Password" required />
+                <input id="loginPassword" class="form-control mt-4 mb-3" type="password" placeholder="Password"
+                    required />
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="form-check">
                         <input id="rememberMe" class="form-check-input" type="checkbox" />

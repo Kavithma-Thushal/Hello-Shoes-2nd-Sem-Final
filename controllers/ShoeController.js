@@ -1,4 +1,5 @@
 var baseURL = "http://localhost:8080/shoes/api/v1/";
+var jwtToken = getCookie('jwtToken');
 
 loadAllShoes();
 
@@ -31,12 +32,15 @@ $('#btnAddShoe').click(function () {
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(shoeObj),
+            headers: {
+                Authorization: 'Bearer ' + jwtToken
+            },
             success: function (resp) {
-                successAlert(resp);
+                successAlert(resp.message);
                 loadAllShoes();
             },
             error: function (error) {
-                errorAlert(error);
+                errorAlert(error.responseJSON.message);
             }
         });
     };
@@ -49,11 +53,14 @@ $('#btnSearchShoe').click(function () {
     $.ajax({
         url: baseURL + 'shoe/searchShoe/' + code,
         method: 'GET',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             alert("Shoe Searched Successfully...!");
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -87,12 +94,15 @@ $('#btnUpdateShoe').click(function () {
             method: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(shoeObj),
+            headers: {
+                Authorization: 'Bearer ' + jwtToken
+            },
             success: function (resp) {
-                successAlert(resp);
+                successAlert(resp.message);
                 loadAllShoes();
             },
             error: function (error) {
-                errorAlert(error);
+                errorAlert(error.responseJSON.message);
             }
         });
     };
@@ -105,12 +115,15 @@ $('#btnDeleteShoe').click(function () {
     $.ajax({
         url: baseURL + 'shoe/' + code,
         method: 'DELETE',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllShoes();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -120,6 +133,9 @@ function loadAllShoes() {
     $.ajax({
         url: baseURL + "shoe/loadAllShoes",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#tblShoes").empty();
 
@@ -200,6 +216,9 @@ function generateShoeCode() {
     $.ajax({
         url: baseURL + "shoe/generateShoeCode",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             let id = resp.generatedId;
             let tempId = parseInt(id.split("-")[1]);
@@ -223,6 +242,9 @@ function shoeCount() {
     $.ajax({
         url: baseURL + "shoe/shoeCount",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#txtShoeCount").text(resp.count);
         },
@@ -230,4 +252,10 @@ function shoeCount() {
             console.log("Shoe Count Error : ", error);
         }
     });
+}
+
+function getCookie(token) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${token}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }

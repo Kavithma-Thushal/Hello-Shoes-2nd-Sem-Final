@@ -28,12 +28,12 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify({ username: username, password: password }),
             success: function (resp) {
-                console.log("User Login Successfully...!");
+                successAlert("User Login Successfully...!");
                 document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
                 window.location.href = './pages/Admin.html';
             },
             error: function (error) {
-                console.log("User Login Error...!");
+                errorAlert("User Login Error...!");
             }
         });
     });

@@ -1,4 +1,5 @@
 var baseURL = "http://localhost:8080/shoes/api/v1/";
+var jwtToken = getCookie('jwtToken');
 
 loadAllCustomers();
 
@@ -22,8 +23,6 @@ $('#btnSaveCustomer').click(function () {
         recentDate: new Date($('#txtRecentDate').val()).toISOString()
     };
 
-    var jwtToken = getCookie('jwtToken');
-
     $.ajax({
         url: baseURL + 'customer',
         method: 'POST',
@@ -33,11 +32,11 @@ $('#btnSaveCustomer').click(function () {
             Authorization: 'Bearer ' + jwtToken
         },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllCustomers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -49,11 +48,14 @@ $('#btnSearchCustomer').click(function () {
     $.ajax({
         url: baseURL + 'customer/searchCustomer/' + id,
         method: 'GET',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             alert("Customer Searched Successfully...!");
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -83,12 +85,15 @@ $('#btnUpdateCustomer').click(function () {
         method: 'PUT',
         contentType: 'application/json',
         data: JSON.stringify(customerObj),
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllCustomers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -100,12 +105,15 @@ $('#btnDeleteCustomer').click(function () {
     $.ajax({
         url: baseURL + 'customer/' + id,
         method: 'DELETE',
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
-            successAlert(resp);
+            successAlert(resp.message);
             loadAllCustomers();
         },
         error: function (error) {
-            errorAlert(error);
+            errorAlert(error.responseJSON.message);
         }
     });
 });
@@ -115,6 +123,9 @@ function loadAllCustomers() {
     $.ajax({
         url: baseURL + "customer/loadAllCustomers",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#tblCustomers").empty();
 
@@ -202,6 +213,9 @@ function generateCustomerId() {
     $.ajax({
         url: baseURL + "customer/generateCustomerId",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             let id = resp.generatedId;
             let tempId = parseInt(id.split("-")[1]);
@@ -225,6 +239,9 @@ function customerCount() {
     $.ajax({
         url: baseURL + "customer/customerCount",
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
         success: function (resp) {
             $("#txtCustomerCount").text(resp.count);
         },
