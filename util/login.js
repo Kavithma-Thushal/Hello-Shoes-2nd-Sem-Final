@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: baseURL + 'v1/auth/signin',
+            url: baseURL + 'auth/signin',
             contentType: 'application/json',
             data: JSON.stringify({ username: username, password: password }),
             success: function (resp) {
