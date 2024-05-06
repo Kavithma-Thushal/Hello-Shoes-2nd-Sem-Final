@@ -30,7 +30,7 @@ $(document).ready(function () {
             success: function (resp) {
                 console.log("User Login Successfully...!");
                 document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
-                // window.location.href = 'Customer.html';
+                window.location.href = './pages/Admin.html';
             },
             error: function (error) {
                 console.log("User Login Error...!");
