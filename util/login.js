@@ -19,8 +19,8 @@ $(document).ready(function () {
     $('#loginForm').submit(function (event) {
         event.preventDefault();
 
-        let username = $('#username').val();
-        let password = $('#password').val();
+        let username = $('#loginUsername').val();
+        let password = $('#loginPassword').val();
 
         $.ajax({
             type: 'POST',
