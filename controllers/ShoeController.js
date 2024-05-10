@@ -1,6 +1,3 @@
-var baseURL = "http://localhost:8080/shoes/api/v1/";
-var jwtToken = getCookie('jwtToken');
-
 loadAllShoes();
 
 /** Add Shoe **/
@@ -252,10 +249,4 @@ function shoeCount() {
             console.log("Shoe Count Error : ", error);
         }
     });
-}
-
-function getCookie(token) {
-    var value = `; ${document.cookie}`;
-    var parts = value.split(`; ${token}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
 }

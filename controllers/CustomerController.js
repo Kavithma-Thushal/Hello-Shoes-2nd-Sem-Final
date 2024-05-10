@@ -1,4 +1,4 @@
-var baseURL = "http://localhost:8080/shoes/api/v1/";
+let baseURL = "http://localhost:8080/shoes/api/v1/";
 var jwtToken = getCookie('jwtToken');
 
 loadAllCustomers();
