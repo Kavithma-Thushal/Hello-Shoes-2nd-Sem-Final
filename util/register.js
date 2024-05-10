@@ -10,11 +10,7 @@ $(document).ready(function () {
 
     // Close the register container when clicking outside of it
     $(document).on('click', function (event) {
-        if (
-            !registerContainer.is(event.target) &&
-            !registerButton.is(event.target) &&
-            registerContainer.has(event.target).length === 0
-        ) {
+        if (!registerContainer.is(event.target) && !registerButton.is(event.target) && registerContainer.has(event.target).length === 0) {
             registerContainer.css('right', '-400px');
         }
     });
@@ -23,7 +19,7 @@ $(document).ready(function () {
     $('#registerForm').submit(function (event) {
         event.preventDefault();
 
-        let formData = {
+        let registerObj = {
             firstName: $('#firstName').val(),
             lastName: $('#lastName').val(),
             email: $('#email').val(),
@@ -36,7 +32,7 @@ $(document).ready(function () {
             type: 'POST',
             url: baseURL + 'auth/signup',
             contentType: 'application/json',
-            data: JSON.stringify(formData),
+            data: JSON.stringify(registerObj),
             success: function (resp) {
                 successAlert("User Registered Successfully...!");
             },
