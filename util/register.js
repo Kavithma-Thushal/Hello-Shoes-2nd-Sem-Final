@@ -15,8 +15,7 @@ $(document).on('click', function (event) {
 });
 
 // User Register Using JWT Token
-$('#registerForm').submit(function (event) {
-    event.preventDefault();
+$('#register').click(function () {
 
     let registerObj = {
         firstName: $('#firstName').val(),

@@ -1,5 +1,6 @@
 let baseURL = "http://localhost:8080/shoes/api/v1/";
-var jwtToken = getCookie('jwtToken');
+let jwtToken = localStorage.getItem('jwtToken');
+// let jwtToken = getCookie('jwtToken');
 
 loadAllCustomers();
 

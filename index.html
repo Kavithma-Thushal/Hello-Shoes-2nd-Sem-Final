@@ -81,7 +81,7 @@
         <!-- Register -->
         <div id="registerContainer" class="register-container">
             <h2 class="text-center mt-5">Register Now</h2>
-            <form id="registerForm" class="p-5">
+            <form class="p-5">
                 <input class="form-control" type="text" id="firstName" placeholder="First Name" required><br>
                 <input class="form-control" type="text" id="lastName" placeholder="Last Name" required><br>
                 <input class="form-control" type="text" id="email" placeholder="Email" required><br>
@@ -92,13 +92,13 @@
                     <option value="ADMIN">ADMIN</option>
                     <option value="USER">USER</option>
                 </select>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button id="register" type="button" class="btn btn-primary">Register</button>
             </form>
         </div>
 
         <!-- Login -->
         <div id="loginContainer" class="login-container">
-            <form id="loginForm" class="login-form">
+            <form class="login-form">
                 <h2 class="text-center m-5">Login</h2>
                 <input id="loginUsername" class="form-control mt-3 mb-3" type="text" placeholder="Username" required />
                 <input id="loginPassword" class="form-control mt-4 mb-3" type="password" placeholder="Password"
@@ -110,7 +110,7 @@
                     </div>
                     <a href="#" class="forgot-password-link text-decoration-none">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                <button id="login" type="button" class="btn btn-primary w-100 mb-3">Login</button>
                 <div class="d-flex justify-content-between align-items-center">
                     <label>Not a Member ?</label>
                     <a href="#" class="text-decoration-none">Register Now</a>

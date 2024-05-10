@@ -2,7 +2,7 @@ let loginContainer = $('#loginContainer');
 let loginButton = $('#btnLogin');
 
 // Open the login container
-loginButton.click(function (event) {
+loginButton.click(function () {
     loginContainer.css('right', '0');
 });
 
@@ -14,8 +14,7 @@ $(document).click(function (event) {
 });
 
 // User Login Using JWT Token
-$('#loginForm').submit(function (event) {
-    event.preventDefault();
+$('#login').click(function () {
 
     let loginObj = {
         username: $('#loginUsername').val(),
@@ -29,7 +28,8 @@ $('#loginForm').submit(function (event) {
         data: JSON.stringify(loginObj),
         success: function (resp) {
             successAlert("User Login Successfully...!");
-            document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
+            localStorage.setItem('jwtToken', resp.token);
+            // document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
             window.location.href = './pages/Admin.html';
         },
         error: function (error) {
