@@ -29,7 +29,7 @@ $('#login').click(function () {
         success: function (resp) {
             successAlert("User Login Successfully...!");
             localStorage.setItem('jwtToken', resp.token);
-            // document.cookie = `jwtToken=${resp.token}; path=/; max-age=86400`;
+            // document.cookie = `jwtToken=${resp.token}; path=/;`;
             window.location.href = './pages/Admin.html';
         },
         error: function (error) {
