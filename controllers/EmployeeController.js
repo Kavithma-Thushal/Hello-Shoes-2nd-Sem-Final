@@ -343,7 +343,7 @@ function clearEmployeeInputFields() {
     $('#txtEmpEmergencyNo').val("");
 
     $('#txtSearchEmployee').val("");
-    // $("#btnSaveEmployee").attr('disabled', true);
+    $("#btnSaveEmployee").attr('disabled', true);
     $("#btnUpdateEmployee").attr('disabled', true);
     $("#btnDeleteEmployee").attr('disabled', true);
 }
