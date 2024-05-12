@@ -34,8 +34,8 @@ $('#login').click(function () {
         data: JSON.stringify(loginObj),
         success: function (resp) {
             successAlert("User Login Successfully...!");
-            localStorage.setItem('jwtToken', resp.token);
-            // document.cookie = `jwtToken=${resp.token}; path=/;`;
+            // localStorage.setItem('jwtToken', resp.token);
+            document.cookie = `jwtToken=${resp.token}; path=/;`;
             window.location.href = './pages/Admin.html';
         },
         error: function (error) {

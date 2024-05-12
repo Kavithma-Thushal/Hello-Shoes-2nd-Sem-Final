@@ -5,8 +5,8 @@
  **/
 
 let baseURL = "http://localhost:8080/shoes/api/v1/";
-let jwtToken = localStorage.getItem('jwtToken');
-// let jwtToken = getCookie('jwtToken');
+// let jwtToken = localStorage.getItem('jwtToken');
+let jwtToken = getCookie('jwtToken');
 
 loadAllCustomers();
 
@@ -59,10 +59,18 @@ $('#btnSearchCustomer').click(function () {
             Authorization: 'Bearer ' + jwtToken
         },
         success: function (resp) {
-            alert("Customer Searched Successfully...!");
+            $("#tblCustomers").empty();
+            let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.gender + "</td><td>" + resp.dob + "</td><td>" +
+                resp.loyaltyLevel + "</td><td>" + resp.loyaltyDate + "</td><td>" + resp.totalPoints + "</td><td>" + resp.addressLine1 +
+                "</td><td>" + resp.addressLine2 + "</td><td>" + resp.addressLine3 + "</td><td>" + resp.addressLine4 + "</td><td>" +
+                resp.addressLine5 + "</td><td>" + resp.contactNo + "</td><td>" + resp.email + "</td><td>" + resp.recentDate + "</td></tr>"
+            $("#tblCustomers").append(row);
+            clearCustomerInputFields();
+            customerTableListener();
         },
         error: function (error) {
-            errorAlert(error.responseJSON.message);
+            emptyMessage(error.responseJSON.message);
+            loadAllCustomers();
         }
     });
 });
@@ -164,7 +172,7 @@ function loadAllCustomers() {
                     "</td><td>" + recentDate + "</td></tr>"
                 $("#tblCustomers").append(row);
             }
-            clearInputFields();
+            clearCustomerInputFields();
             // checkValidity(customerValidations);
             customerTableListener();
             generateCustomerId();
@@ -264,7 +272,7 @@ function customerTableListener() {
 }
 
 /** Clear Input Fields **/
-function clearInputFields() {
+function clearCustomerInputFields() {
     $("#txtCusName").focus();
     $('#txtCusName').val("");
     $('#txtCusGender').val("");
