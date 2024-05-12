@@ -69,11 +69,22 @@ function searchShoe() {
         },
         success: function (resp) {
             $("#tblShoes").empty();
-            let row = "<tr><td>" + resp.code + "</td><td>" + resp.description + "</td><td>" + resp.picture + "</td><td>" + resp.category +
-                "</td><td>" + resp.size + "</td><td>" + resp.quantity + "</td><td>" + resp.supplierId + "</td><td>" + resp.supplierName +
-                "</td><td>" + resp.unitPriceSale + "</td><td>" + resp.unitPriceBuy + "</td><td>" + resp.expectedProfit + "</td><td>" +
-                resp.profitMargin + "</td><td>" + "</td><td>" + resp.stockStatus + "</td></tr>"
+            let row = $("<tr>");
+            row.append($("<td>").text(resp.code));
+            row.append($("<td>").text(resp.description));
+            row.append($("<td>").append($("<img>", { src: resp.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+            row.append($("<td>").text(resp.category));
+            row.append($("<td>").text(resp.size));
+            row.append($("<td>").text(resp.quantity));
+            row.append($("<td>").text(resp.supplierId));
+            row.append($("<td>").text(resp.supplierName));
+            row.append($("<td>").text(resp.unitPriceSale));
+            row.append($("<td>").text(resp.unitPriceBuy));
+            row.append($("<td>").text(resp.expectedProfit));
+            row.append($("<td>").text(resp.profitMargin));
+            row.append($("<td>").text(resp.stockStatus));
             $("#tblShoes").append(row);
+
             clearShoeInputFields();
             shoeTableListener();
         },
@@ -167,11 +178,7 @@ function loadAllShoes() {
                 let row = $("<tr>");
                 row.append($("<td>").text(i.code));
                 row.append($("<td>").text(i.description));
-                row.append($("<td>").append($("<img>", {
-                    src: i.picture,
-                    alt: "Shoe Image",
-                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
-                })));
+                row.append($("<td>").append($("<img>", { src: i.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
                 row.append($("<td>").text(i.category));
                 row.append($("<td>").text(i.size));
                 row.append($("<td>").text(i.quantity));
