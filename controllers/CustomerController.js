@@ -125,6 +125,7 @@ $('#btnDeleteCustomer').click(function () {
     });
 });
 
+/** ClearAll Customers **/
 $('#btnClearAllCustomers').click(function () {
     loadAllCustomers();
 });
