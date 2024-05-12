@@ -281,7 +281,6 @@ function customerTableListener() {
 
 /** Clear Customer Input Fields **/
 function clearCustomerInputFields() {
-    $("#txtCusName").focus();
     $('#txtCusName').val("");
     $('#txtCusGender').val("");
     $('#txtCusDOB').val("");

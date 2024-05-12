@@ -323,7 +323,6 @@ function employeeTableListener() {
 
 /** Clear Shoe Input Fields **/
 function clearEmployeeInputFields() {
-    $("#txtEmpName").focus();
     $('#txtEmpName').val("");
     $('#txtEmpPicture').val("");
     $('#txtEmpGender').val("");

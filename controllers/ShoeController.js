@@ -287,7 +287,6 @@ function shoeTableListener() {
 
 /** Clear Shoe Input Fields **/
 function clearShoeInputFields() {
-    $("#txtShoeDescription").focus();
     $('#txtShoeDescription').val("");
     $('#txtShoePicture').val("");
     $('#txtShoeCategory').val("");

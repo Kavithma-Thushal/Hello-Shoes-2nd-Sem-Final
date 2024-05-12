@@ -259,7 +259,6 @@ function supplierTableListener() {
 
 /** Clear Supplier Input Fields **/
 function clearSuppliersInputFields() {
-    $("#txtSupId").focus();
     $('#txtSupName').val("");
     $('#txtSupCategory').val("");
     $('#txtSupAddressLine1').val("");
