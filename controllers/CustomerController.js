@@ -279,7 +279,7 @@ function customerTableListener() {
     });
 }
 
-/** Clear Input Fields **/
+/** Clear Customer Input Fields **/
 function clearCustomerInputFields() {
     $("#txtCusName").focus();
     $('#txtCusName').val("");

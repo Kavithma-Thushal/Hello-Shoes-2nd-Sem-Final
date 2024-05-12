@@ -278,7 +278,7 @@ function shoeTableListener() {
     });
 }
 
-/** Clear Input Fields **/
+/** Clear Shoe Input Fields **/
 function clearShoeInputFields() {
     $("#txtShoeDescription").focus();
     $('#txtShoeDescription').val("");
