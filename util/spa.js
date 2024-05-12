@@ -1,3 +1,9 @@
+/**
+ * @author : Kavithma Thushal
+ * @project : Hello-Shoes-FrontEnd
+ * @since : 2:02 PM - 4/20/2024
+ **/
+
 function hideAllSections() {
     $("#adminDashboardSection").css("display", "none");
     $("#customerSection").css("display", "none");
