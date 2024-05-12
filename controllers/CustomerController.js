@@ -50,7 +50,7 @@ $('#btnSaveCustomer').click(function () {
 
 /** Search Customer **/
 $('#btnSearchCustomer').click(function () {
-    let id = $("#txtCusId").val();
+    let id = $("#txtSearchCusId").val();
 
     $.ajax({
         url: baseURL + 'customer/searchCustomer/' + id,
@@ -282,7 +282,6 @@ function clearInputFields() {
     $('#txtRecentDate').val("");
 
     $("#btnSaveCustomer").attr('disabled', true);
-    $("#btnSearchCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
 }
