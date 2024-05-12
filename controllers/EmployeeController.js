@@ -57,7 +57,15 @@ $('#btnSaveEmployee').click(function () {
 
 /** Search Employee **/
 $('#btnSearchEmployee').click(function () {
-    let id = $("#txtEmpId").val();
+    searchEmployee();
+});
+$("#txtSearchEmployee").on("keypress", function (event) {
+    if (event.which === 13) {
+        searchEmployee();
+    }
+});
+function searchEmployee() {
+    let id = $("#txtSearchEmployee").val();
 
     $.ajax({
         url: baseURL + 'employee/searchEmployee/' + id,
@@ -66,13 +74,38 @@ $('#btnSearchEmployee').click(function () {
             Authorization: 'Bearer ' + jwtToken
         },
         success: function (resp) {
-            alert("Employee Searched Successfully...!");
+            $("#tblEmployees").empty();
+            let row = $("<tr>");
+            row.append($("<td>").text(resp.id));
+            row.append($("<td>").text(resp.name));
+            row.append($("<td>").append($("<img>", { src: resp.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+            row.append($("<td>").text(resp.gender));
+            row.append($("<td>").text(resp.civilStatus));
+            row.append($("<td>").text(resp.designation));
+            row.append($("<td>").text(resp.role));
+            row.append($("<td>").text(resp.dob));
+            row.append($("<td>").text(resp.joinDate));
+            row.append($("<td>").text(resp.branch));
+            row.append($("<td>").text(resp.addressLine1));
+            row.append($("<td>").text(resp.addressLine2));
+            row.append($("<td>").text(resp.addressLine3));
+            row.append($("<td>").text(resp.addressLine4));
+            row.append($("<td>").text(resp.addressLine5));
+            row.append($("<td>").text(resp.contactNo));
+            row.append($("<td>").text(resp.email));
+            row.append($("<td>").text(resp.emergencyGuardian));
+            row.append($("<td>").text(resp.emergencyNo));
+            $("#tblEmployees").append(row);
+
+            clearEmployeeInputFields();
+            employeeTableListener();
         },
         error: function (error) {
-            errorAlert(error.responseJSON.message);
+            emptyMessage(error.responseJSON.message);
+            loadAllEmployees();
         }
     });
-});
+}
 
 /** Update Employee **/
 $('#btnUpdateEmployee').click(function () {
@@ -143,6 +176,11 @@ $('#btnDeleteEmployee').click(function () {
     });
 });
 
+/** ClearAll Employees **/
+$('#btnClearAllEmployees').click(function () {
+    loadAllEmployees();
+});
+
 /** LoadAll Employees **/
 function loadAllEmployees() {
     $.ajax({
@@ -158,11 +196,7 @@ function loadAllEmployees() {
                 let row = $("<tr>");
                 row.append($("<td>").text(i.id));
                 row.append($("<td>").text(i.name));
-                row.append($("<td>").append($("<img>", {
-                    src: i.picture,
-                    alt: "Employee Image",
-                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
-                })));
+                row.append($("<td>").append($("<img>", { src: i.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
                 row.append($("<td>").text(i.gender));
                 row.append($("<td>").text(i.civilStatus));
                 row.append($("<td>").text(i.designation));
@@ -182,7 +216,7 @@ function loadAllEmployees() {
 
                 $("#tblEmployees").append(row);
             });
-            // clearInputFields();
+            clearEmployeeInputFields();
             // checkValidity(customerValidations);
             employeeTableListener();
             generateEmployeeId();
@@ -194,7 +228,51 @@ function loadAllEmployees() {
     });
 }
 
-/** Customer Table Listner **/
+/** Generate EmployeeId **/
+function generateEmployeeId() {
+    $("#txtEmpId").val("E00-001");
+    $.ajax({
+        url: baseURL + "employee/generateEmployeeId",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            let id = resp.generatedId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtEmpId").val("E00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtEmpId").val("E00-0" + tempId);
+            } else {
+                $("#txtEmpId").val("E00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Employee ID : ", error);
+        }
+    });
+}
+
+/** Employee Count **/
+function employeeCount() {
+    $.ajax({
+        url: baseURL + "employee/employeeCount",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#txtEmployeeCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Employee Count Error : ", error);
+        }
+    });
+}
+
+/** Employee Table Listner **/
 function employeeTableListener() {
     $("#tblEmployees>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
@@ -243,46 +321,30 @@ function employeeTableListener() {
     });
 }
 
-/** Generate EmployeeId **/
-function generateEmployeeId() {
-    $("#txtEmpId").val("E00-001");
-    $.ajax({
-        url: baseURL + "employee/generateEmployeeId",
-        method: "GET",
-        headers: {
-            Authorization: 'Bearer ' + jwtToken
-        },
-        success: function (resp) {
-            let id = resp.generatedId;
-            let tempId = parseInt(id.split("-")[1]);
-            tempId = tempId + 1;
-            if (tempId <= 9) {
-                $("#txtEmpId").val("E00-00" + tempId);
-            } else if (tempId <= 99) {
-                $("#txtEmpId").val("E00-0" + tempId);
-            } else {
-                $("#txtEmpId").val("E00-" + tempId);
-            }
-        },
-        error: function (error) {
-            console.log("Fail to Generate Employee ID : ", error);
-        }
-    });
-}
+/** Clear Shoe Input Fields **/
+function clearEmployeeInputFields() {
+    $("#txtEmpName").focus();
+    $('#txtEmpName').val("");
+    $('#txtEmpPicture').val("");
+    $('#txtEmpGender').val("");
+    $('#txtEmpStatus').val("");
+    $('#txtEmpDesignation').val("");
+    $('#txtEmpRole').val("");
+    $('#txtEmpDOB').val("");
+    $('#txtEmpJoinDate').val("");
+    $('#txtEmpBranch').val("");
+    $('#txtEmpAddressLine1').val("");
+    $('#txtEmpAddressLine2').val("");
+    $('#txtEmpAddressLine3').val("");
+    $('#txtEmpAddressLine4').val("");
+    $('#txtEmpAddressLine5').val("");
+    $('#txtEmpContactNo').val("");
+    $('#txtEmpEmail').val("");
+    $('#txtEmpEmergencyGuardian').val("");
+    $('#txtEmpEmergencyNo').val("");
 
-/** Employee Count **/
-function employeeCount() {
-    $.ajax({
-        url: baseURL + "employee/employeeCount",
-        method: "GET",
-        headers: {
-            Authorization: 'Bearer ' + jwtToken
-        },
-        success: function (resp) {
-            $("#txtEmployeeCount").text(resp.count);
-        },
-        error: function (error) {
-            console.log("Employee Count Error : ", error);
-        }
-    });
+    $('#txtSearchEmployee').val("");
+    // $("#btnSaveEmployee").attr('disabled', true);
+    $("#btnUpdateEmployee").attr('disabled', true);
+    $("#btnDeleteEmployee").attr('disabled', true);
 }
