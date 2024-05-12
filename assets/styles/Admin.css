@@ -95,3 +95,17 @@ body {
     margin-left: 270px;
     padding-right: 30px;
 }
+
+/* Custom styles for SweetAlert2 */
+.swal2-popup {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal2-title {
+    font-size: 20px;
+}
+
+.swal2-icon {
+    font-size: 20px;
+}
