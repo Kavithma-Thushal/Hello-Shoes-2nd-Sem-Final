@@ -295,7 +295,7 @@ function clearShoeInputFields() {
     $('#txtStockStatus').val("");
 
     $('#txtSearchShoe').val("");
-    // $("#btnAddShoe").attr('disabled', true);
+    $("#btnAddShoe").attr('disabled', true);
     $("#btnUpdateShoe").attr('disabled', true);
     $("#btnDeleteShoe").attr('disabled', true);
 }
