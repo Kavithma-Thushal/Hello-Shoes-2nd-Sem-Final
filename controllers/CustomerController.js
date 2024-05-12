@@ -125,6 +125,10 @@ $('#btnDeleteCustomer').click(function () {
     });
 });
 
+$('#btnClearAllCustomers').click(function () {
+    loadAllCustomers();
+});
+
 /** LoadAll Customers **/
 function loadAllCustomers() {
     $.ajax({
@@ -159,7 +163,7 @@ function loadAllCustomers() {
                     "</td><td>" + recentDate + "</td></tr>"
                 $("#tblCustomers").append(row);
             }
-            // clearInputFields();
+            clearInputFields();
             // checkValidity(customerValidations);
             customerTableListener();
             generateCustomerId();
@@ -167,6 +171,50 @@ function loadAllCustomers() {
         },
         error: function (error) {
             console.log("Load All Customers Error : " + error);
+        }
+    });
+}
+
+/** Customer Count **/
+function customerCount() {
+    $.ajax({
+        url: baseURL + "customer/customerCount",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#txtCustomerCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Customer Count Error : ", error);
+        }
+    });
+}
+
+/** Generate CustomerId **/
+function generateCustomerId() {
+    $("#txtCusId").val("C00-001");
+    $.ajax({
+        url: baseURL + "customer/generateCustomerId",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            let id = resp.generatedId;
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtCusId").val("C00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtCusId").val("C00-0" + tempId);
+            } else {
+                $("#txtCusId").val("C00-" + tempId);
+            }
+        },
+        error: function (error) {
+            console.log("Fail to Generate Customer ID : ", error);
         }
     });
 }
@@ -214,48 +262,28 @@ function customerTableListener() {
     });
 }
 
-/** Generate CustomerId **/
-function generateCustomerId() {
-    $("#txtCusId").val("C00-001");
-    $.ajax({
-        url: baseURL + "customer/generateCustomerId",
-        method: "GET",
-        headers: {
-            Authorization: 'Bearer ' + jwtToken
-        },
-        success: function (resp) {
-            let id = resp.generatedId;
-            let tempId = parseInt(id.split("-")[1]);
-            tempId = tempId + 1;
-            if (tempId <= 9) {
-                $("#txtCusId").val("C00-00" + tempId);
-            } else if (tempId <= 99) {
-                $("#txtCusId").val("C00-0" + tempId);
-            } else {
-                $("#txtCusId").val("C00-" + tempId);
-            }
-        },
-        error: function (error) {
-            console.log("Fail to Generate Customer ID : ", error);
-        }
-    });
-}
+/** Clear Input Fields **/
+function clearInputFields() {
+    $("#txtCusName").focus();
+    $('#txtCusName').val("");
+    $('#txtCusGender').val("");
+    $('#txtCusDOB').val("");
+    $('#txtLoyaltyLevel').val("");
+    $('#txtLoyaltyDate').val("");
+    $('#txtTotalPoints').val("");
+    $('#txtCusAddressLine1').val("");
+    $('#txtCusAddressLine2').val("");
+    $('#txtCusAddressLine3').val("");
+    $('#txtCusAddressLine4').val("");
+    $('#txtCusAddressLine5').val("");
+    $('#txtCusContactNo').val("");
+    $('#txtCusEmail').val("");
+    $('#txtRecentDate').val("");
 
-/** Customer Count **/
-function customerCount() {
-    $.ajax({
-        url: baseURL + "customer/customerCount",
-        method: "GET",
-        headers: {
-            Authorization: 'Bearer ' + jwtToken
-        },
-        success: function (resp) {
-            $("#txtCustomerCount").text(resp.count);
-        },
-        error: function (error) {
-            console.log("Customer Count Error : ", error);
-        }
-    });
+    $("#btnSaveCustomer").attr('disabled', true);
+    $("#btnSearchCustomer").attr('disabled', true);
+    $("#btnUpdateCustomer").attr('disabled', true);
+    $("#btnDeleteCustomer").attr('disabled', true);
 }
 
 function getCookie(token) {
