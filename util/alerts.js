@@ -27,7 +27,7 @@ function errorAlert(resp) {
 function emptyMessage(resp) {
     let timerInterval
     Swal.fire({
-        title: resp + ' Empty Result...!',
+        title: resp,
         html: 'I will close in <b></b> milliseconds.',
         timer: 2000,
         timerProgressBar: true,

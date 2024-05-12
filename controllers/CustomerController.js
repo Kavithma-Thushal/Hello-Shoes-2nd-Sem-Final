@@ -50,7 +50,15 @@ $('#btnSaveCustomer').click(function () {
 
 /** Search Customer **/
 $('#btnSearchCustomer').click(function () {
-    let id = $("#txtSearchCusId").val();
+    searchCustomer();
+});
+$("#txtSearchCustomer").on("keypress", function (event) {
+    if (event.which === 13) {
+        searchCustomer();
+    }
+});
+function searchCustomer() {
+    let id = $("#txtSearchCustomer").val();
 
     $.ajax({
         url: baseURL + 'customer/searchCustomer/' + id,
@@ -73,7 +81,7 @@ $('#btnSearchCustomer').click(function () {
             loadAllCustomers();
         }
     });
-});
+}
 
 /** Update Customer **/
 $('#btnUpdateCustomer').click(function () {
@@ -184,23 +192,6 @@ function loadAllCustomers() {
     });
 }
 
-/** Customer Count **/
-function customerCount() {
-    $.ajax({
-        url: baseURL + "customer/customerCount",
-        method: "GET",
-        headers: {
-            Authorization: 'Bearer ' + jwtToken
-        },
-        success: function (resp) {
-            $("#txtCustomerCount").text(resp.count);
-        },
-        error: function (error) {
-            console.log("Customer Count Error : ", error);
-        }
-    });
-}
-
 /** Generate CustomerId **/
 function generateCustomerId() {
     $("#txtCusId").val("C00-001");
@@ -224,6 +215,23 @@ function generateCustomerId() {
         },
         error: function (error) {
             console.log("Fail to Generate Customer ID : ", error);
+        }
+    });
+}
+
+/** Customer Count **/
+function customerCount() {
+    $.ajax({
+        url: baseURL + "customer/customerCount",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#txtCustomerCount").text(resp.count);
+        },
+        error: function (error) {
+            console.log("Customer Count Error : ", error);
         }
     });
 }
@@ -289,11 +297,13 @@ function clearCustomerInputFields() {
     $('#txtCusEmail').val("");
     $('#txtRecentDate').val("");
 
+    $('#txtSearchCustomer').val("");
     $("#btnSaveCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
 }
 
+/** Token stored in Cookie **/
 function getCookie(token) {
     var value = `; ${document.cookie}`;
     var parts = value.split(`; ${token}=`);

@@ -51,7 +51,15 @@ $('#btnAddShoe').click(function () {
 
 /** Search Shoe **/
 $('#btnSearchShoe').click(function () {
-    let code = $("#txtShoeCode").val();
+    searchShoe();
+});
+$("#txtSearchShoe").on("keypress", function (event) {
+    if (event.which === 13) {
+        searchShoe();
+    }
+});
+function searchShoe() {
+    let code = $("#txtSearchShoe").val();
 
     $.ajax({
         url: baseURL + 'shoe/searchShoe/' + code,
@@ -60,13 +68,21 @@ $('#btnSearchShoe').click(function () {
             Authorization: 'Bearer ' + jwtToken
         },
         success: function (resp) {
-            alert("Shoe Searched Successfully...!");
+            $("#tblShoes").empty();
+            let row = "<tr><td>" + resp.code + "</td><td>" + resp.description + "</td><td>" + resp.picture + "</td><td>" + resp.category +
+                "</td><td>" + resp.size + "</td><td>" + resp.quantity + "</td><td>" + resp.supplierId + "</td><td>" + resp.supplierName +
+                "</td><td>" + resp.unitPriceSale + "</td><td>" + resp.unitPriceBuy + "</td><td>" + resp.expectedProfit + "</td><td>" +
+                resp.profitMargin + "</td><td>" + "</td><td>" + resp.stockStatus + "</td></tr>"
+            $("#tblShoes").append(row);
+            clearShoeInputFields();
+            shoeTableListener();
         },
         error: function (error) {
-            errorAlert(error.responseJSON.message);
+            emptyMessage(error.responseJSON.message);
+            loadAllShoes();
         }
     });
-});
+}
 
 /** Update Shoe **/
 $('#btnUpdateShoe').click(function () {
@@ -131,6 +147,11 @@ $('#btnDeleteShoe').click(function () {
     });
 });
 
+/** ClearAll Shoes **/
+$('#btnClearAllShoes').click(function () {
+    loadAllShoes();
+});
+
 /** LoadAll Shoes **/
 function loadAllShoes() {
     $.ajax({
@@ -164,7 +185,7 @@ function loadAllShoes() {
 
                 $("#tblShoes").append(row);
             });
-            // clearInputFields();
+            clearShoeInputFields();
             // checkValidity(customerValidations);
             shoeTableListener();
             generateShoeCode();
@@ -173,43 +194,6 @@ function loadAllShoes() {
         error: function (error) {
             console.log("Load All Shoes Error : " + error);
         }
-    });
-}
-
-/** Shoe Table Listner **/
-function shoeTableListener() {
-    $("#tblShoes>tr").on("click", function () {
-        let code = $(this).children().eq(0).text();
-        let description = $(this).children().eq(1).text();
-        let picture = $(this).children().eq(2).text();
-        let category = $(this).children().eq(3).text();
-        let size = $(this).children().eq(4).text();
-        let quantity = $(this).children().eq(5).text();
-        let supplierId = $(this).children().eq(6).text();
-        let supplierName = $(this).children().eq(7).text();
-        let unitPriceSale = $(this).children().eq(8).text();
-        let unitPriceBuy = $(this).children().eq(9).text();
-        let expectedProfit = $(this).children().eq(10).text();
-        let profitMargin = $(this).children().eq(11).text();
-        let stockStatus = $(this).children().eq(12).text();
-
-        $("#txtShoeCode").val(code);
-        $("#txtShoeDescription").val(description);
-        $("#txtShoePicture").val(picture);
-        $("#txtShoeCategory").val(category);
-        $("#txtShoeSize").val(size);
-        $("#txtShoeQuantity").val(quantity);
-        $("#txtSupIdd").val(supplierId);
-        $("#txtSupNamee").val(supplierName);
-        $("#txtUnitPriceSale").val(unitPriceSale);
-        $("#txtUnitPriceBuy").val(unitPriceBuy);
-        $("#txtExpectedProfit").val(expectedProfit);
-        $("#txtProfitMargin").val(profitMargin);
-        $("#txtStockStatus").val(stockStatus);
-
-        // $("#btnSaveCustomer").attr('disabled', true);
-        // $("#btnUpdateCustomer").attr('disabled', false);
-        // $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
 
@@ -255,4 +239,63 @@ function shoeCount() {
             console.log("Shoe Count Error : ", error);
         }
     });
+}
+
+/** Shoe Table Listner **/
+function shoeTableListener() {
+    $("#tblShoes>tr").on("click", function () {
+        let code = $(this).children().eq(0).text();
+        let description = $(this).children().eq(1).text();
+        let picture = $(this).children().eq(2).text();
+        let category = $(this).children().eq(3).text();
+        let size = $(this).children().eq(4).text();
+        let quantity = $(this).children().eq(5).text();
+        let supplierId = $(this).children().eq(6).text();
+        let supplierName = $(this).children().eq(7).text();
+        let unitPriceSale = $(this).children().eq(8).text();
+        let unitPriceBuy = $(this).children().eq(9).text();
+        let expectedProfit = $(this).children().eq(10).text();
+        let profitMargin = $(this).children().eq(11).text();
+        let stockStatus = $(this).children().eq(12).text();
+
+        $("#txtShoeCode").val(code);
+        $("#txtShoeDescription").val(description);
+        $("#txtShoePicture").val(picture);
+        $("#txtShoeCategory").val(category);
+        $("#txtShoeSize").val(size);
+        $("#txtShoeQuantity").val(quantity);
+        $("#txtSupIdd").val(supplierId);
+        $("#txtSupNamee").val(supplierName);
+        $("#txtUnitPriceSale").val(unitPriceSale);
+        $("#txtUnitPriceBuy").val(unitPriceBuy);
+        $("#txtExpectedProfit").val(expectedProfit);
+        $("#txtProfitMargin").val(profitMargin);
+        $("#txtStockStatus").val(stockStatus);
+
+        // $("#btnSaveCustomer").attr('disabled', true);
+        // $("#btnUpdateCustomer").attr('disabled', false);
+        // $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/** Clear Input Fields **/
+function clearShoeInputFields() {
+    $("#txtShoeDescription").focus();
+    $('#txtShoeDescription').val("");
+    $('#txtShoePicture').val("");
+    $('#txtShoeCategory').val("");
+    $('#txtShoeSize').val("");
+    $('#txtShoeQuantity').val("");
+    $('#txtSupIdd').val("");
+    $('#txtSupNamee').val("");
+    $('#txtUnitPriceSale').val("");
+    $('#txtUnitPriceBuy').val("");
+    $('#txtExpectedProfit').val("");
+    $('#txtProfitMargin').val("");
+    $('#txtStockStatus').val("");
+
+    $('#txtSearchShoe').val("");
+    // $("#btnAddShoe").attr('disabled', true);
+    $("#btnUpdateShoe").attr('disabled', true);
+    $("#btnDeleteShoe").attr('disabled', true);
 }
