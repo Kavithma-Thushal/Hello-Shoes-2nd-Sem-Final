@@ -273,7 +273,7 @@ function clearSuppliersInputFields() {
     $('#txtSupEmail').val("");
 
     $('#txtSearchSupplier').val("");
-    // $("#btnSaveSupplier").attr('disabled', true);
+    $("#btnSaveSupplier").attr('disabled', true);
     $("#btnUpdateSupplier").attr('disabled', true);
     $("#btnDeleteSupplier").attr('disabled', true);
 }
