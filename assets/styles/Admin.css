@@ -109,3 +109,9 @@ body {
 .swal2-icon {
     font-size: 20px;
 }
+
+/* Control Error */
+.control-error {
+    color: red;
+    font-size: 0.9em;
+}

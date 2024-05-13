@@ -181,7 +181,7 @@ function loadAllCustomers() {
                 $("#tblCustomers").append(row);
             }
             clearCustomerInputFields();
-            // checkValidity(customerValidations);
+            checkValidity(customerValidations);
             customerTableListener();
             generateCustomerId();
             customerCount();
@@ -307,4 +307,80 @@ function getCookie(token) {
     var value = `; ${document.cookie}`;
     var parts = value.split(`; ${token}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+/** Customer Validations **/
+let regExCusName = /^[A-z ]{3,20}$/;
+let regExTotalPoints = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExAddressLine1 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExContactNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+let regExCusEmail = /^[A-Z a-z 0-9 !#$%&'*+/=?^_`{|}~-]+@gmail\.[A-Z a-z]+$/;
+
+let customerValidations = [];
+customerValidations.push({
+    reg: regExCusName,
+    field: $('#txtCusName'),
+    error: 'Customer name must be between 3-20 characters'
+});
+customerValidations.push({
+    reg: regExTotalPoints,
+    field: $('#txtTotalPoints'),
+    error: 'Total Points must have 1 digits with 2 decimal places'
+});
+customerValidations.push({
+    reg: regExAddressLine1,
+    field: $('#txtCusAddressLine1'),
+    error: 'Customer address line 1 must be between 4-30 characters'
+});
+customerValidations.push({
+    reg: regExAddressLine2,
+    field: $('#txtCusAddressLine2'),
+    error: 'Customer address line 2 must be between 4-30 characters'
+});
+customerValidations.push({
+    reg: regExAddressLine3,
+    field: $('#txtCusAddressLine3'),
+    error: 'Customer address line 3 must be between 4-30 characters'
+});
+customerValidations.push({
+    reg: regExAddressLine4,
+    field: $('#txtCusAddressLine4'),
+    error: 'Customer address line 4 must be between 4-30 characters'
+});
+customerValidations.push({
+    reg: regExAddressLine5,
+    field: $('#txtCusAddressLine5'),
+    error: 'Customer address line 5 must be between 4-30 characters'
+});
+customerValidations.push({
+    reg: regExContactNo,
+    field: $('#txtCusContactNo'),
+    error: 'Contact.No must match the pattern 07#-#######'
+});
+customerValidations.push({
+    reg: regExCusEmail,
+    field: $('#txtCusEmail'),
+    error: 'Customer email must match the pattern helloshoes@gmail.com'
+});
+
+/** Check Customer Validations **/
+$("#txtCusName,#txtTotalPoints,#txtCusAddressLine1,#txtCusAddressLine2,#txtCusAddressLine3,#txtCusAddressLine4,#txtCusAddressLine5,#txtCusContactNo,#txtCusEmail").on('keyup', function (event) {
+    checkValidity(customerValidations);
+});
+
+/** Disable/Enable Buttons **/
+function setButtonState(value) {
+    if (value > 0) {
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnDeleteCustomer").attr('disabled', true);
+    } else {
+        $("#btnSaveCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
+    }
 }
