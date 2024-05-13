@@ -312,12 +312,12 @@ function getCookie(token) {
 /** Customer Validations **/
 let regExCusName = /^[A-Za-z ]{4,20}$/;
 let regExTotalPoints = /^\d+$/;
-let regExAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
-let regExAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExContactNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+let regExCusAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
+let regExCusAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExCusAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExCusAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExCusAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExCusContactNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
 let regExCusEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
 let customerValidations = [];
@@ -332,32 +332,32 @@ customerValidations.push({
     error: 'Total Points must have integer value'
 });
 customerValidations.push({
-    reg: regExAddressLine1,
+    reg: regExCusAddressLine1,
     field: $('#txtCusAddressLine1'),
     error: 'Building No must be between 2-30 characters'
 });
 customerValidations.push({
-    reg: regExAddressLine2,
+    reg: regExCusAddressLine2,
     field: $('#txtCusAddressLine2'),
     error: 'Main Lane must be between 4-30 characters'
 });
 customerValidations.push({
-    reg: regExAddressLine3,
+    reg: regExCusAddressLine3,
     field: $('#txtCusAddressLine3'),
     error: 'Main City must be between 4-30 characters'
 });
 customerValidations.push({
-    reg: regExAddressLine4,
+    reg: regExCusAddressLine4,
     field: $('#txtCusAddressLine4'),
     error: 'Main State must be between 4-30 characters'
 });
 customerValidations.push({
-    reg: regExAddressLine5,
+    reg: regExCusAddressLine5,
     field: $('#txtCusAddressLine5'),
     error: 'Postal Code must be between 4-30 characters'
 });
 customerValidations.push({
-    reg: regExContactNo,
+    reg: regExCusContactNo,
     field: $('#txtCusContactNo'),
     error: 'Contact.No must match the pattern 07#-#######'
 });
