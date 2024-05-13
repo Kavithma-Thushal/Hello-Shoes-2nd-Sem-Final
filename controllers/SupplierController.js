@@ -167,7 +167,7 @@ function loadAllSuppliers() {
                 $("#tblSuppliers").append(row);
             }
             clearSuppliersInputFields();
-            // checkValidity(customerValidations);
+            checkSupplierValidity(supplierValidations);
             supplierTableListener();
             generateSupplierId();
             supplierCount();
@@ -275,4 +275,98 @@ function clearSuppliersInputFields() {
     $("#btnSaveSupplier").attr('disabled', true);
     $("#btnUpdateSupplier").attr('disabled', true);
     $("#btnDeleteSupplier").attr('disabled', true);
+}
+
+/** Supplier Validations **/
+let regExSupName = /^[A-Za-z ]{4,20}$/;
+let regExSupAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
+let regExSupAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExSupAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExSupAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExSupAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExSupAddressLine6 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExSupContactNo1 = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+let regExSupContactNo2 = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+let regExSupEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+let supplierValidations = [];
+supplierValidations.push({
+    reg: regExSupName,
+    field: $('#txtSupName'),
+    error: 'Supplier Name must be between 4-20 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine1,
+    field: $('#txtSupAddressLine1'),
+    error: 'Building No must be between 2-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine2,
+    field: $('#txtSupAddressLine2'),
+    error: 'Main Lane must be between 4-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine3,
+    field: $('#txtSupAddressLine3'),
+    error: 'Main City must be between 4-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine4,
+    field: $('#txtSupAddressLine4'),
+    error: 'Main State must be between 4-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine5,
+    field: $('#txtSupAddressLine5'),
+    error: 'Postal Code must be between 4-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupAddressLine6,
+    field: $('#txtSupAddressLine6'),
+    error: 'Origin Country must be between 4-30 characters'
+});
+supplierValidations.push({
+    reg: regExSupContactNo1,
+    field: $('#txtSupContactNo1'),
+    error: 'Contact.No must match the pattern 07#-#######'
+});
+supplierValidations.push({
+    reg: regExSupContactNo2,
+    field: $('#txtSupContactNo2'),
+    error: 'Contact.No must match the pattern 07#-#######'
+});
+supplierValidations.push({
+    reg: regExSupEmail,
+    field: $('#txtSupEmail'),
+    error: 'Invalid Email. Please enter valid email'
+});
+
+/** Check Customer Validity **/
+$("#txtSupName,#txtSupAddressLine1,#txtSupAddressLine2,#txtSupAddressLine3,#txtSupAddressLine4,#txtSupAddressLine5,#txtSupAddressLine6,#txtSupContactNo1,#txtSupContactNo2,#txtSupEmail").on('keyup', function () {
+    checkSupplierValidity(supplierValidations);
+});
+function checkSupplierValidity(object) {
+    let errorCount = 0;
+    for (let validation of object) {
+        if (check(validation.reg, validation.field)) {
+            textSuccess(validation.field, "");
+        } else {
+            errorCount = errorCount + 1;
+            textError(validation.field, validation.error);
+        }
+    }
+    setSupplierButtonState(errorCount);
+}
+
+/** Disable/Enable Buttons **/
+function setSupplierButtonState(value) {
+    if (value > 0) {
+        $("#btnSaveSupplier").attr('disabled', true);
+        $("#btnUpdateSupplier").attr('disabled', true);
+        $("#btnDeleteSupplier").attr('disabled', true);
+    } else {
+        $("#btnSaveSupplier").attr('disabled', false);
+        $("#btnUpdateSupplier").attr('disabled', false);
+        $("#btnDeleteSupplier").attr('disabled', false);
+    }
 }

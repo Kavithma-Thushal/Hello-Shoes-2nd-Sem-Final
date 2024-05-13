@@ -368,7 +368,7 @@ customerValidations.push({
 });
 
 /** Check Customer Validity **/
-$("#txtCusName,#txtTotalPoints,#txtCusAddressLine1,#txtCusAddressLine2,#txtCusAddressLine3,#txtCusAddressLine4,#txtCusAddressLine5,#txtCusContactNo,#txtCusEmail").on('keyup', function (event) {
+$("#txtCusName,#txtTotalPoints,#txtCusAddressLine1,#txtCusAddressLine2,#txtCusAddressLine3,#txtCusAddressLine4,#txtCusAddressLine5,#txtCusContactNo,#txtCusEmail").on('keyup', function () {
     checkCustomerValidity(customerValidations);
 });
 function checkCustomerValidity(object) {

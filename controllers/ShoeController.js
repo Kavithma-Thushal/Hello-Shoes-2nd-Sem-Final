@@ -365,7 +365,7 @@ shoeValidations.push({
 });
 
 /** Check Customer Validations **/
-$("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function (event) {
+$("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function () {
     checkShoeValidity(shoeValidations);
 });
 function checkShoeValidity(object) {
