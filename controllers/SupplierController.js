@@ -341,7 +341,7 @@ supplierValidations.push({
     error: 'Invalid Email. Please enter valid email'
 });
 
-/** Check Customer Validity **/
+/** Check Supplier Validity **/
 $("#txtSupName,#txtSupAddressLine1,#txtSupAddressLine2,#txtSupAddressLine3,#txtSupAddressLine4,#txtSupAddressLine5,#txtSupAddressLine6,#txtSupContactNo1,#txtSupContactNo2,#txtSupEmail").on('keyup', function () {
     checkSupplierValidity(supplierValidations);
 });

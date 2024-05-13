@@ -217,7 +217,7 @@ function loadAllEmployees() {
                 $("#tblEmployees").append(row);
             });
             clearEmployeeInputFields();
-            // checkValidity(customerValidations);
+            checkEmployeeValidity(employeeValidations);
             employeeTableListener();
             generateEmployeeId();
             employeeCount();
@@ -346,4 +346,110 @@ function clearEmployeeInputFields() {
     $("#btnSaveEmployee").attr('disabled', true);
     $("#btnUpdateEmployee").attr('disabled', true);
     $("#btnDeleteEmployee").attr('disabled', true);
+}
+
+/** Employee Validations **/
+let regExEmpName = /^[A-Za-z ]{4,20}$/;
+let regExDesignation = /^[A-Za-z ]{4,20}$/;
+let regExEmpBranch = /^[A-Za-z ]{4,20}$/;
+let regExEmpAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
+let regExEmpAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExEmpAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExEmpAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExEmpAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExEmpContactNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+let regExEmpEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+let regExEmergencyGuardian = /^[A-Za-z ]{4,20}$/;
+let regExEmergencyNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
+
+let employeeValidations = [];
+employeeValidations.push({
+    reg: regExEmpName,
+    field: $('#txtEmpName'),
+    error: 'Employee Name must be between 4-20 characters'
+});
+employeeValidations.push({
+    reg: regExDesignation,
+    field: $('#txtEmpDesignation'),
+    error: 'Designation must be between 4-20 characters'
+});
+employeeValidations.push({
+    reg: regExEmpBranch,
+    field: $('#txtEmpBranch'),
+    error: 'Employee Branch must be between 4-20 characters'
+});
+employeeValidations.push({
+    reg: regExEmpAddressLine1,
+    field: $('#txtEmpAddressLine1'),
+    error: 'Building No must be between 2-30 characters'
+});
+employeeValidations.push({
+    reg: regExEmpAddressLine2,
+    field: $('#txtEmpAddressLine2'),
+    error: 'Main Lane must be between 4-30 characters'
+});
+employeeValidations.push({
+    reg: regExEmpAddressLine3,
+    field: $('#txtEmpAddressLine3'),
+    error: 'Main City must be between 4-30 characters'
+});
+employeeValidations.push({
+    reg: regExEmpAddressLine4,
+    field: $('#txtEmpAddressLine4'),
+    error: 'Main State must be between 4-30 characters'
+});
+employeeValidations.push({
+    reg: regExEmpAddressLine5,
+    field: $('#txtEmpAddressLine5'),
+    error: 'Postal Code must be between 4-30 characters'
+});
+employeeValidations.push({
+    reg: regExEmpContactNo,
+    field: $('#txtEmpContactNo'),
+    error: 'Contact.No must match the pattern 07#-#######'
+});
+employeeValidations.push({
+    reg: regExEmpEmail,
+    field: $('#txtEmpEmail'),
+    error: 'Invalid Email. Please enter valid email'
+});
+employeeValidations.push({
+    reg: regExEmergencyGuardian,
+    field: $('#txtEmpEmergencyGuardian'),
+    error: 'Emergency Guardian must be between 4-20 characters'
+});
+employeeValidations.push({
+    reg: regExEmergencyNo,
+    field: $('#txtEmpEmergencyNo'),
+    error: 'Emergency.No must match the pattern 07#-#######'
+});
+
+/** Check Employee Validity **/
+$("#txtEmpName,#txtEmpDesignation,#txtEmpBranch,#txtEmpAddressLine1,#txtEmpAddressLine2,#txtEmpAddressLine3,#txtEmpAddressLine4,#txtEmpAddressLine5,#txtEmpContactNo,#txtEmpEmail,#txtEmpEmergencyGuardian,#txtEmpEmergencyNo").on('keyup', function () {
+    checkEmployeeValidity(employeeValidations);
+});
+function checkEmployeeValidity(object) {
+    let errorCount = 0;
+    for (let validation of object) {
+        if (check(validation.reg, validation.field)) {
+            textSuccess(validation.field, "");
+        } else {
+            errorCount = errorCount + 1;
+            textError(validation.field, validation.error);
+        }
+    }
+    setEmployeeButtonState(errorCount);
+}
+
+/** Disable/Enable Buttons **/
+function setEmployeeButtonState(value) {
+    if (value > 0) {
+        $("#btnSaveEmployee").attr('disabled', true);
+        $("#btnUpdateEmployee").attr('disabled', true);
+        $("#btnDeleteEmployee").attr('disabled', true);
+    } else {
+        $("#btnSaveEmployee").attr('disabled', false);
+        $("#btnUpdateEmployee").attr('disabled', false);
+        $("#btnDeleteEmployee").attr('disabled', false);
+    }
 }
