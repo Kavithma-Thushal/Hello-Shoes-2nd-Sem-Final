@@ -308,14 +308,14 @@ function clearShoeInputFields() {
 
 /** Shoe Validations **/
 let regExShoeDescription = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExShoeSize = /^[0-9]{1,}[.]?[0-9]{2}$/;
-let regExShoeQty = /^[0-9]{1,}$/;
+let regExShoeSize = /^\d{2}$/;
+let regExShoeQty = /^\d+$/;
 let regExSupIdd = /^(S00-)[0-9]{3}$/;
 let regExSupNamee = /^[A-Za-z ]{4,20}$/;
-let regExUnitPrice_Sale = /^[0-9]{1,}[.]?[0-9]{2}$/;
-let regExUnitPrice_Buy = /^[0-9]{1,}[.]?[0-9]{2}$/;
-let regExExpectedProfit = /^[0-9]{1,}[.]?[0-9]{2}$/;
-let regExProfitMargin = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExUnitPrice_Sale = /^\d{2,}(\.\d{2})?$/;
+let regExUnitPrice_Buy = /^\d{2,}(\.\d{2})?$/;
+let regExExpectedProfit = /^\d{2,}(\.\d{2})?$/;
+let regExProfitMargin = /^\d{2,}(\.\d{2})?$/;
 
 let shoeValidations = [];
 shoeValidations.push({
@@ -326,12 +326,12 @@ shoeValidations.push({
 shoeValidations.push({
     reg: regExShoeSize,
     field: $('#txtShoeSize'),
-    error: 'Shoe Size must have 1 digits with 2 decimal places'
+    error: 'Shoe Size must have integer value'
 });
 shoeValidations.push({
     reg: regExShoeQty,
     field: $('#txtShoeQuantity'),
-    error: 'Shoe Qty must have 1 digits'
+    error: 'Shoe Qty must have integer value'
 });
 shoeValidations.push({
     reg: regExSupIdd,
@@ -346,22 +346,22 @@ shoeValidations.push({
 shoeValidations.push({
     reg: regExUnitPrice_Sale,
     field: $('#txtUnitPriceSale'),
-    error: 'Unit Price-Sale must have 1 digits with 2 decimal places'
+    error: 'Unit Price-Sale must have double value'
 });
 shoeValidations.push({
     reg: regExUnitPrice_Buy,
     field: $('#txtUnitPriceBuy'),
-    error: 'Unit Price-Buy must have 1 digits with 2 decimal places'
+    error: 'Unit Price-Buy must have double value'
 });
 shoeValidations.push({
     reg: regExExpectedProfit,
     field: $('#txtExpectedProfit'),
-    error: 'Exted Profit must have 1 digits with 2 decimal places'
+    error: 'Exted Profit must have double value'
 });
 shoeValidations.push({
     reg: regExProfitMargin,
     field: $('#txtProfitMargin'),
-    error: 'Profit Margin must have 1 digits with 2 decimal places'
+    error: 'Profit Margin must have double value'
 });
 
 /** Check Customer Validations **/

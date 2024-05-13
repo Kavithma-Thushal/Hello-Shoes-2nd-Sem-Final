@@ -311,7 +311,7 @@ function getCookie(token) {
 
 /** Customer Validations **/
 let regExCusName = /^[A-Za-z ]{4,20}$/;
-let regExTotalPoints = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExTotalPoints = /^\d+$/;
 let regExAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
 let regExAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
@@ -329,7 +329,7 @@ customerValidations.push({
 customerValidations.push({
     reg: regExTotalPoints,
     field: $('#txtTotalPoints'),
-    error: 'Total Points must have 1 digits with 2 decimal places'
+    error: 'Total Points must have integer value'
 });
 customerValidations.push({
     reg: regExAddressLine1,
