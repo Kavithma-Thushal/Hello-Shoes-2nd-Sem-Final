@@ -324,7 +324,7 @@ let customerValidations = [];
 customerValidations.push({
     reg: regExCusName,
     field: $('#txtCusName'),
-    error: 'Customer name must be between 4-20 characters'
+    error: 'Customer Name must be between 4-20 characters'
 });
 customerValidations.push({
     reg: regExTotalPoints,

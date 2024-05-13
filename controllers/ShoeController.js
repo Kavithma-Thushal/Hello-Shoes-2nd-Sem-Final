@@ -193,7 +193,7 @@ function loadAllShoes() {
                 $("#tblShoes").append(row);
             });
             clearShoeInputFields();
-            // checkValidity(customerValidations);
+            checkValidity(shoeValidations);
             shoeTableListener();
             generateShoeCode();
             shoeCount();
@@ -304,4 +304,80 @@ function clearShoeInputFields() {
     $("#btnAddShoe").attr('disabled', true);
     $("#btnUpdateShoe").attr('disabled', true);
     $("#btnDeleteShoe").attr('disabled', true);
+}
+
+/** Shoe Validations **/
+let regExShoeDescription = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExShoeSize = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExShoeQty = /^[0-9]{1,}$/;
+let regExSupIdd = /^(S00-)[0-9]{3}$/;
+let regExSupNamee = /^[A-Za-z ]{4,20}$/;
+let regExUnitPrice_Sale = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExUnitPrice_Buy = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExExpectedProfit = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExProfitMargin = /^[0-9]{1,}[.]?[0-9]{2}$/;
+
+let shoeValidations = [];
+shoeValidations.push({
+    reg: regExShoeDescription,
+    field: $('#txtShoeDescription'),
+    error: 'Shoe Description must be between 4-20 characters'
+});
+shoeValidations.push({
+    reg: regExShoeSize,
+    field: $('#txtShoeSize'),
+    error: 'Shoe Size must have 1 digits with 2 decimal places'
+});
+shoeValidations.push({
+    reg: regExShoeQty,
+    field: $('#txtShoeQuantity'),
+    error: 'Shoe Qty must have 1 digits'
+});
+shoeValidations.push({
+    reg: regExSupIdd,
+    field: $('#txtSupIdd'),
+    error: 'Supplier ID must match the pattern S00-001'
+});
+shoeValidations.push({
+    reg: regExSupNamee,
+    field: $('#txtSupNamee'),
+    error: 'Supplier Name must be between 4-30 characters'
+});
+shoeValidations.push({
+    reg: regExUnitPrice_Sale,
+    field: $('#txtUnitPriceSale'),
+    error: 'Unit Price-Sale must have 1 digits with 2 decimal places'
+});
+shoeValidations.push({
+    reg: regExUnitPrice_Buy,
+    field: $('#txtUnitPriceBuy'),
+    error: 'Unit Price-Buy must have 1 digits with 2 decimal places'
+});
+shoeValidations.push({
+    reg: regExExpectedProfit,
+    field: $('#txtExpectedProfit'),
+    error: 'Exted Profit must have 1 digits with 2 decimal places'
+});
+shoeValidations.push({
+    reg: regExProfitMargin,
+    field: $('#txtProfitMargin'),
+    error: 'Profit Margin must have 1 digits with 2 decimal places'
+});
+
+/** Check Customer Validations **/
+$("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function (event) {
+    checkValidity(shoeValidations);
+});
+
+/** Disable/Enable Buttons **/
+function setButtonState(value) {
+    if (value > 0) {
+        $("#btnAddShoe").attr('disabled', true);
+        $("#btnUpdateShoe").attr('disabled', true);
+        $("#btnDeleteShoe").attr('disabled', true);
+    } else {
+        $("#btnAddShoe").attr('disabled', false);
+        $("#btnUpdateShoe").attr('disabled', false);
+        $("#btnDeleteShoe").attr('disabled', false);
+    }
 }
