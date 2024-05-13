@@ -312,13 +312,13 @@ function getCookie(token) {
 /** Customer Validations **/
 let regExCusName = /^[A-z ]{3,20}$/;
 let regExTotalPoints = /^[0-9]{1,}[.]?[0-9]{2}$/;
-let regExAddressLine1 = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
 let regExAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExContactNo = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
-let regExCusEmail = /^[A-Z a-z 0-9 !#$%&'*+/=?^_`{|}~-]+@gmail\.[A-Z a-z]+$/;
+let regExCusEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
 let customerValidations = [];
 customerValidations.push({
@@ -334,27 +334,27 @@ customerValidations.push({
 customerValidations.push({
     reg: regExAddressLine1,
     field: $('#txtCusAddressLine1'),
-    error: 'Customer address line 1 must be between 4-30 characters'
+    error: 'Building No must be between 2-30 characters'
 });
 customerValidations.push({
     reg: regExAddressLine2,
     field: $('#txtCusAddressLine2'),
-    error: 'Customer address line 2 must be between 4-30 characters'
+    error: 'Main Lane must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExAddressLine3,
     field: $('#txtCusAddressLine3'),
-    error: 'Customer address line 3 must be between 4-30 characters'
+    error: 'Main City must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExAddressLine4,
     field: $('#txtCusAddressLine4'),
-    error: 'Customer address line 4 must be between 4-30 characters'
+    error: 'Main State must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExAddressLine5,
     field: $('#txtCusAddressLine5'),
-    error: 'Customer address line 5 must be between 4-30 characters'
+    error: 'Postal Code must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExContactNo,
@@ -364,7 +364,7 @@ customerValidations.push({
 customerValidations.push({
     reg: regExCusEmail,
     field: $('#txtCusEmail'),
-    error: 'Customer email must match the pattern helloshoes@gmail.com'
+    error: 'Invalid Email. Please enter valid email'
 });
 
 /** Check Customer Validations **/
