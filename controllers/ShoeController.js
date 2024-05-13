@@ -193,7 +193,7 @@ function loadAllShoes() {
                 $("#tblShoes").append(row);
             });
             clearShoeInputFields();
-            checkValidity(shoeValidations);
+            checkShoeValidity(shoeValidations);
             shoeTableListener();
             generateShoeCode();
             shoeCount();
@@ -366,11 +366,23 @@ shoeValidations.push({
 
 /** Check Customer Validations **/
 $("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function (event) {
-    checkValidity(shoeValidations);
+    checkShoeValidity(shoeValidations);
 });
+function checkShoeValidity(object) {
+    let errorCount = 0;
+    for (let validation of object) {
+        if (check(validation.reg, validation.field)) {
+            textSuccess(validation.field, "");
+        } else {
+            errorCount = errorCount + 1;
+            textError(validation.field, validation.error);
+        }
+    }
+    setShoeButtonState(errorCount);
+}
 
 /** Disable/Enable Buttons **/
-function setButtonState(value) {
+function setShoeButtonState(value) {
     if (value > 0) {
         $("#btnAddShoe").attr('disabled', true);
         $("#btnUpdateShoe").attr('disabled', true);

@@ -181,7 +181,7 @@ function loadAllCustomers() {
                 $("#tblCustomers").append(row);
             }
             clearCustomerInputFields();
-            checkValidity(customerValidations);
+            checkCustomerValidity(customerValidations);
             customerTableListener();
             generateCustomerId();
             customerCount();
@@ -367,13 +367,25 @@ customerValidations.push({
     error: 'Invalid Email. Please enter valid email'
 });
 
-/** Check Customer Validations **/
+/** Check Customer Validity **/
 $("#txtCusName,#txtTotalPoints,#txtCusAddressLine1,#txtCusAddressLine2,#txtCusAddressLine3,#txtCusAddressLine4,#txtCusAddressLine5,#txtCusContactNo,#txtCusEmail").on('keyup', function (event) {
-    checkValidity(customerValidations);
+    checkCustomerValidity(customerValidations);
 });
+function checkCustomerValidity(object) {
+    let errorCount = 0;
+    for (let validation of object) {
+        if (check(validation.reg, validation.field)) {
+            textSuccess(validation.field, "");
+        } else {
+            errorCount = errorCount + 1;
+            textError(validation.field, validation.error);
+        }
+    }
+    setCustomerButtonState(errorCount);
+}
 
 /** Disable/Enable Buttons **/
-function setButtonState(value) {
+function setCustomerButtonState(value) {
     if (value > 0) {
         $("#btnSaveCustomer").attr('disabled', true);
         $("#btnUpdateCustomer").attr('disabled', true);

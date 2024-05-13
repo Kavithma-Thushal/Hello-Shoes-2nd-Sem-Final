@@ -4,19 +4,6 @@
  * @since : 2:02 PM - 4/20/2024
  **/
 
-function checkValidity(object) {
-    let errorCount = 0;
-    for (let validation of object) {
-        if (check(validation.reg, validation.field)) {
-            textSuccess(validation.field, "");
-        } else {
-            errorCount = errorCount + 1;
-            textError(validation.field, validation.error);
-        }
-    }
-    setButtonState(errorCount);
-}
-
 function check(regex, txtField) {
     let inputValue = txtField.val();
     return regex.test(inputValue) ? true : false;
