@@ -310,7 +310,7 @@ function getCookie(token) {
 }
 
 /** Customer Validations **/
-let regExCusName = /^[A-z ]{3,20}$/;
+let regExCusName = /^[A-Za-z ]{4,20}$/;
 let regExTotalPoints = /^[0-9]{1,}[.]?[0-9]{2}$/;
 let regExAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
 let regExAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
@@ -324,7 +324,7 @@ let customerValidations = [];
 customerValidations.push({
     reg: regExCusName,
     field: $('#txtCusName'),
-    error: 'Customer name must be between 3-20 characters'
+    error: 'Customer name must be between 4-20 characters'
 });
 customerValidations.push({
     reg: regExTotalPoints,
