@@ -27,7 +27,6 @@ $('#register').click(function () {
         firstName: $('#firstName').val(),
         lastName: $('#lastName').val(),
         email: $('#email').val(),
-        username: $('#username').val(),
         password: $('#password').val(),
         role: $('#role').val(),
     };

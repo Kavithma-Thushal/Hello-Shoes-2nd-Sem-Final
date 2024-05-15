@@ -23,7 +23,7 @@ $(document).click(function (event) {
 $('#login').click(function () {
 
     let loginObj = {
-        username: $('#loginUsername').val(),
+        email: $('#loginEmail').val(),
         password: $('#loginPassword').val(),
     };
 
