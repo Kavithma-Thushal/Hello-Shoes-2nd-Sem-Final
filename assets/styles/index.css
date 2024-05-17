@@ -4,10 +4,6 @@
  * @since : 2:02 PM - 4/20/2024
  **/
 
-body {
-    background: linear-gradient(to right, #ffffff, #ff6b15);
-}
-
 /* Navigation-Hover */
 .nav-hover::after {
     content: '';

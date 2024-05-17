@@ -1,0 +1,113 @@
+/**
+ * @author : Kavithma Thushal
+ * @project : Hello-Shoes-FrontEnd
+ * @since : 2:02 PM - 4/20/2024
+ **/
+
+.txt-admin {
+    margin-left: 670px;
+}
+
+.notifications {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    color: #fff;
+}
+
+.nav-link {
+    padding: 0.7rem 2rem;
+}
+
+.drop-down {
+    margin-left: 50px;
+}
+
+.dropdown-item {
+    padding: 5px;
+}
+
+.nav-hover:hover {
+    background-color: #495057;
+}
+
+/* Manage */
+.manage-header {
+    margin-left: 290px;
+}
+
+.manage {
+    margin: 20px;
+    margin-left: 275px;
+}
+
+.manage-table {
+    margin-right: 20px;
+    margin-left: 275px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.table th,
+.table td {
+    padding-right: 100px;
+}
+
+.table-cursor tbody tr {
+    cursor: pointer;
+}
+
+.manage-footer {
+    margin-left: 200px;
+}
+
+.sectionBorder {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    border-radius: 8px;
+}
+
+.dash-tile-icon {
+    font-size: 4.5em;
+}
+
+.card-header {
+    color: white !important;
+}
+
+.card-section {
+    margin-left: 270px;
+    padding-right: 30px;
+}
+
+/* Custom styles for SweetAlert2 */
+.swal2-popup {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal2-title {
+    font-size: 20px;
+}
+
+.swal2-icon {
+    font-size: 20px;
+}
+
+/* Control Error */
+.control-error {
+    color: red;
+    font-size: 0.9em;
+}
