@@ -24,12 +24,23 @@ function previewImage(event, previewId) {
     }
 }
 
-/** Remove Preview when clicking the Add Shoe **/
-$('#btnAddShoe').on('click', function () {
-    const fileInput = $('#txtShoePicture');
+/** Remove Image Preview **/
+function removePreviewImage(fileInputId, previewId) {
+    const fileInput = $(`#${fileInputId}`);
     fileInput.val('');
 
-    const preview = $('#shoeImagePreview');
+    const preview = $(`#${previewId}`);
     preview.hide();
     preview.attr('src', '#');
+}
+
+/** When Clicking the Add Shoe **/
+$('#btnAddShoe').on('click', function () {
+    removePreviewImage('txtShoePicture', 'shoeImagePreview');
 });
+
+/** When Clicking the Save Employee **/
+$('#btnSaveEmployee').on('click', function () {
+    removePreviewImage('txtEmpPicture', 'empImagePreview');
+});
+
