@@ -358,7 +358,6 @@ function clearEmployeeInputFields() {
 
 /** Employee Validations **/
 let regExEmpName = /^[A-Za-z ]{4,20}$/;
-let regExEmpBranch = /^[A-Za-z ]{4,20}$/;
 let regExEmpAddressLine1 = /^[A-Za-z0-9/, -]{2,30}$/;
 let regExEmpAddressLine2 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExEmpAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
@@ -374,11 +373,6 @@ employeeValidations.push({
     reg: regExEmpName,
     field: $('#txtEmpName'),
     error: 'Employee Name must be between 4-20 characters'
-});
-employeeValidations.push({
-    reg: regExEmpBranch,
-    field: $('#txtEmpBranch'),
-    error: 'Employee Branch must be between 4-20 characters'
 });
 employeeValidations.push({
     reg: regExEmpAddressLine1,
@@ -427,7 +421,7 @@ employeeValidations.push({
 });
 
 /** Check Employee Validity **/
-$("#txtEmpName,#txtEmpBranch,#txtEmpAddressLine1,#txtEmpAddressLine2,#txtEmpAddressLine3,#txtEmpAddressLine4,#txtEmpAddressLine5,#txtEmpContactNo,#txtEmpEmail,#txtEmpEmergencyGuardian,#txtEmpEmergencyNo").on('keyup', function () {
+$("#txtEmpName,#txtEmpAddressLine1,#txtEmpAddressLine2,#txtEmpAddressLine3,#txtEmpAddressLine4,#txtEmpAddressLine5,#txtEmpContactNo,#txtEmpEmail,#txtEmpEmergencyGuardian,#txtEmpEmergencyNo").on('keyup', function () {
     checkEmployeeValidity(employeeValidations);
 });
 
