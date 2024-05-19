@@ -37,6 +37,7 @@
 
 .nav-hover:hover {
     background-color: #495057;
+    border-radius: 10px;
 }
 
 /* Manage */
@@ -61,8 +62,7 @@
     white-space: nowrap;
 }
 
-.table th,
-.table td {
+.table th, .table td {
     padding-right: 100px;
 }
 
@@ -92,7 +92,7 @@
     padding-right: 30px;
 }
 
-/* Custom styles for SweetAlert2 */
+/* SweetAlert2 */
 .swal2-popup {
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;

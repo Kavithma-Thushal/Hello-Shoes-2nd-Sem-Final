@@ -4,13 +4,13 @@
  * @since : 2:02 PM - 4/20/2024
  **/
 
-/* Navigation-Hover */
+/* Nav-Item-Hover */
 .nav-hover::after {
     content: '';
     display: block;
     width: 0%;
     height: 2px;
-    background-color: #ff6b15;
+    background-color: #ff8d29;
     transition: 0.4s;
 }
 
@@ -18,9 +18,8 @@
     width: 100%;
 }
 
-#btnRegister,
-#btnLogin {
-    background-color: #ff6b15;
+#btnRegister, #btnLogin {
+    background-color: #ff8d29;
     color: #ffffff;
     cursor: pointer;
 }
@@ -60,7 +59,7 @@
     padding-right: 17px;
 }
 
-/* Custom styles for SweetAlert2 */
+/* SweetAlert2 */
 .swal2-popup {
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;

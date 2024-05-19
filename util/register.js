@@ -8,19 +8,19 @@ let baseURL = "http://localhost:8080/shoes/api/v1/";
 let registerContainer = $('#registerContainer');
 let registerButton = $('#btnRegister');
 
-// Open the register container
+/** Open the Register Container **/
 registerButton.click(function () {
     registerContainer.css('right', '0');
 });
 
-// Close the register container when clicking outside of it
+/** Close the register container when clicking outside of it **/
 $(document).on('click', function (event) {
     if (!registerContainer.is(event.target) && !registerButton.is(event.target) && registerContainer.has(event.target).length === 0) {
         registerContainer.css('right', '-400px');
     }
 });
 
-// User Register Using JWT Token
+ /** User Register Using JWT Token **/
 $('#register').click(function () {
 
     let registerObj = {
@@ -37,10 +37,10 @@ $('#register').click(function () {
         contentType: 'application/json',
         data: JSON.stringify(registerObj),
         success: function (resp) {
-            successAlert("User Registered Successfully...!");
+            successAlert("Registered Successfully...!");
         },
         error: function (error) {
-            errorAlert("User Registered Error...!");
+            errorAlert("Registered Error...!");
         }
     });
 });

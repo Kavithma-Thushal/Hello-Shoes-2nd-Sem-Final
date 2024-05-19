@@ -50,6 +50,8 @@ $("#txtSearchSupplier").on("keypress", function (event) {
         searchSupplier();
     }
 });
+
+/** Search Supplier Method **/
 function searchSupplier() {
     let id = $("#txtSearchSupplier").val();
 
@@ -222,7 +224,7 @@ function supplierCount() {
     });
 }
 
-/** Supplier Table Listner **/
+/** Supplier Table Listener **/
 function supplierTableListener() {
     $("#tblSuppliers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
@@ -345,6 +347,8 @@ supplierValidations.push({
 $("#txtSupName,#txtSupAddressLine1,#txtSupAddressLine2,#txtSupAddressLine3,#txtSupAddressLine4,#txtSupAddressLine5,#txtSupAddressLine6,#txtSupContactNo1,#txtSupContactNo2,#txtSupEmail").on('keyup', function () {
     checkSupplierValidity(supplierValidations);
 });
+
+/** Supplier Validity Method **/
 function checkSupplierValidity(object) {
     let errorCount = 0;
     for (let validation of object) {
@@ -358,7 +362,7 @@ function checkSupplierValidity(object) {
     setSupplierButtonState(errorCount);
 }
 
-/** Disable/Enable Buttons **/
+/** Disable/Enable Supplier Buttons **/
 function setSupplierButtonState(value) {
     if (value > 0) {
         $("#btnSaveSupplier").attr('disabled', true);

@@ -7,19 +7,19 @@
 let loginContainer = $('#loginContainer');
 let loginButton = $('#btnLogin');
 
-// Open the login container
+/** Open the Login Container **/
 loginButton.click(function () {
     loginContainer.css('right', '0');
 });
 
-// Close the login container when clicking outside of it
+ /** Close the login container when clicking outside of it **/
 $(document).click(function (event) {
     if (!loginContainer.is(event.target) && !loginButton.is(event.target) && loginContainer.has(event.target).length === 0) {
         loginContainer.css('right', '-400px');
     }
 });
 
-// User Login Using JWT Token
+ /** User Login Using JWT Token **/
 $('#login').click(function () {
 
     let loginObj = {
@@ -33,13 +33,13 @@ $('#login').click(function () {
         contentType: 'application/json',
         data: JSON.stringify(loginObj),
         success: function (resp) {
-            successAlert("User Login Successfully...!");
-            // localStorage.setItem('jwtToken', resp.token);
-            document.cookie = `jwtToken=${resp.token}; path=/;`;
+            successAlert("Login Successfully...!");
+            // localStorage.setItem('jwtToken', resp.token);    // Chromr
+            document.cookie = `jwtToken=${resp.token}; path=/;`;    // Firefox
             window.location.href = './pages/AdminPanel.html';
         },
         error: function (error) {
-            errorAlert("User Login Error...!");
+            errorAlert("Login Error...!");
         }
     });
 });

@@ -5,8 +5,8 @@
  **/
 
 let baseURL = "http://localhost:8080/shoes/api/v1/";
-// let jwtToken = localStorage.getItem('jwtToken');
-let jwtToken = getCookie('jwtToken');
+// let jwtToken = localStorage.getItem('jwtToken'); // Chrome
+let jwtToken = getCookie('jwtToken'); // Firefox
 
 loadAllCustomers();
 
@@ -57,6 +57,8 @@ $("#txtSearchCustomer").on("keypress", function (event) {
         searchCustomer();
     }
 });
+
+/** Search Customer Method **/
 function searchCustomer() {
     let id = $("#txtSearchCustomer").val();
 
@@ -236,7 +238,7 @@ function customerCount() {
     });
 }
 
-/** Customer Table Listner **/
+/** Customer Table Listener **/
 function customerTableListener() {
     $("#tblCustomers>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
@@ -302,13 +304,6 @@ function clearCustomerInputFields() {
     $("#btnDeleteCustomer").attr('disabled', true);
 }
 
-/** Token stored in Cookie **/
-function getCookie(token) {
-    var value = `; ${document.cookie}`;
-    var parts = value.split(`; ${token}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
 /** Customer Validations **/
 let regExCusName = /^[A-Za-z ]{4,20}$/;
 let regExTotalPoints = /^\d+$/;
@@ -371,6 +366,8 @@ customerValidations.push({
 $("#txtCusName,#txtTotalPoints,#txtCusAddressLine1,#txtCusAddressLine2,#txtCusAddressLine3,#txtCusAddressLine4,#txtCusAddressLine5,#txtCusContactNo,#txtCusEmail").on('keyup', function () {
     checkCustomerValidity(customerValidations);
 });
+
+/** Customer Validity Method **/
 function checkCustomerValidity(object) {
     let errorCount = 0;
     for (let validation of object) {
@@ -384,7 +381,7 @@ function checkCustomerValidity(object) {
     setCustomerButtonState(errorCount);
 }
 
-/** Disable/Enable Buttons **/
+/** Disable/Enable Customer Buttons **/
 function setCustomerButtonState(value) {
     if (value > 0) {
         $("#btnSaveCustomer").attr('disabled', true);
@@ -395,4 +392,11 @@ function setCustomerButtonState(value) {
         $("#btnUpdateCustomer").attr('disabled', false);
         $("#btnDeleteCustomer").attr('disabled', false);
     }
+}
+
+/** Token stored in Cookie **/
+function getCookie(token) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${token}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }

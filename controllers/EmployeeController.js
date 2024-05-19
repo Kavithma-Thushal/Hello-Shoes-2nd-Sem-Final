@@ -64,6 +64,8 @@ $("#txtSearchEmployee").on("keypress", function (event) {
         searchEmployee();
     }
 });
+
+/** Search Employee Method **/
 function searchEmployee() {
     let id = $("#txtSearchEmployee").val();
 
@@ -78,7 +80,10 @@ function searchEmployee() {
             let row = $("<tr>");
             row.append($("<td>").text(resp.id));
             row.append($("<td>").text(resp.name));
-            row.append($("<td>").append($("<img>", { src: resp.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+            row.append($("<td>").append($("<img>", {
+                src: resp.picture,
+                style: "max-width: 100px; max-height: 100px; border-radius:10px"
+            })));
             row.append($("<td>").text(resp.gender));
             row.append($("<td>").text(resp.civilStatus));
             row.append($("<td>").text(resp.designation));
@@ -196,7 +201,10 @@ function loadAllEmployees() {
                 let row = $("<tr>");
                 row.append($("<td>").text(i.id));
                 row.append($("<td>").text(i.name));
-                row.append($("<td>").append($("<img>", { src: i.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+                row.append($("<td>").append($("<img>", {
+                    src: i.picture,
+                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
+                })));
                 row.append($("<td>").text(i.gender));
                 row.append($("<td>").text(i.civilStatus));
                 row.append($("<td>").text(i.designation));
@@ -272,7 +280,7 @@ function employeeCount() {
     });
 }
 
-/** Employee Table Listner **/
+/** Employee Table Listener **/
 function employeeTableListener() {
     $("#tblEmployees>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
@@ -321,7 +329,7 @@ function employeeTableListener() {
     });
 }
 
-/** Clear Shoe Input Fields **/
+/** Clear Employee Input Fields **/
 function clearEmployeeInputFields() {
     $('#txtEmpName').val("");
     $('#txtEmpPicture').val("");
@@ -428,6 +436,8 @@ employeeValidations.push({
 $("#txtEmpName,#txtEmpDesignation,#txtEmpBranch,#txtEmpAddressLine1,#txtEmpAddressLine2,#txtEmpAddressLine3,#txtEmpAddressLine4,#txtEmpAddressLine5,#txtEmpContactNo,#txtEmpEmail,#txtEmpEmergencyGuardian,#txtEmpEmergencyNo").on('keyup', function () {
     checkEmployeeValidity(employeeValidations);
 });
+
+/** Employee Validity Method **/
 function checkEmployeeValidity(object) {
     let errorCount = 0;
     for (let validation of object) {
@@ -441,7 +451,7 @@ function checkEmployeeValidity(object) {
     setEmployeeButtonState(errorCount);
 }
 
-/** Disable/Enable Buttons **/
+/** Disable/Enable Employee Buttons **/
 function setEmployeeButtonState(value) {
     if (value > 0) {
         $("#btnSaveEmployee").attr('disabled', true);

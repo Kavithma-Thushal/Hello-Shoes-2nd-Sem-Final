@@ -58,6 +58,8 @@ $("#txtSearchShoe").on("keypress", function (event) {
         searchShoe();
     }
 });
+
+/** Search Shoe Method **/
 function searchShoe() {
     let code = $("#txtSearchShoe").val();
 
@@ -72,7 +74,10 @@ function searchShoe() {
             let row = $("<tr>");
             row.append($("<td>").text(resp.code));
             row.append($("<td>").text(resp.description));
-            row.append($("<td>").append($("<img>", { src: resp.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+            row.append($("<td>").append($("<img>", {
+                src: resp.picture,
+                style: "max-width: 100px; max-height: 100px; border-radius:10px"
+            })));
             row.append($("<td>").text(resp.category));
             row.append($("<td>").text(resp.size));
             row.append($("<td>").text(resp.quantity));
@@ -178,7 +183,10 @@ function loadAllShoes() {
                 let row = $("<tr>");
                 row.append($("<td>").text(i.code));
                 row.append($("<td>").text(i.description));
-                row.append($("<td>").append($("<img>", { src: i.picture, style: "max-width: 100px; max-height: 100px; border-radius:10px" })));
+                row.append($("<td>").append($("<img>", {
+                    src: i.picture,
+                    style: "max-width: 100px; max-height: 100px; border-radius:10px"
+                })));
                 row.append($("<td>").text(i.category));
                 row.append($("<td>").text(i.size));
                 row.append($("<td>").text(i.quantity));
@@ -248,7 +256,7 @@ function shoeCount() {
     });
 }
 
-/** Shoe Table Listner **/
+/** Shoe Table Listener **/
 function shoeTableListener() {
     $("#tblShoes>tr").on("click", function () {
         let code = $(this).children().eq(0).text();
@@ -364,10 +372,12 @@ shoeValidations.push({
     error: 'Profit Margin must have double value'
 });
 
-/** Check Customer Validations **/
+/** Check Shoe Validations **/
 $("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function () {
     checkShoeValidity(shoeValidations);
 });
+
+/** Shoe Validations Method **/
 function checkShoeValidity(object) {
     let errorCount = 0;
     for (let validation of object) {
@@ -381,7 +391,7 @@ function checkShoeValidity(object) {
     setShoeButtonState(errorCount);
 }
 
-/** Disable/Enable Buttons **/
+/** Disable/Enable Shoe Buttons **/
 function setShoeButtonState(value) {
     if (value > 0) {
         $("#btnAddShoe").attr('disabled', true);
