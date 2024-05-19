@@ -171,7 +171,7 @@
     <section id="customerSection" style="display: none;">
         <h2 class="mt-3 manage-header">Customer Management</h2>
 
-        <!-- Search Customer -->
+        <!-- Customer Search -->
         <div class="row manage">
             <div class="col-4">
                 <div class="input-group">
@@ -185,96 +185,100 @@
         </div>
 
         <!-- Customer Form -->
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtCusId">Customer ID</label>
-                <input id="txtCusId" class="form-control" type="text" disabled>
+        <section>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtCusId">Customer ID</label>
+                    <input id="txtCusId" class="form-control" type="text" disabled>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusName">Customer Name</label>
+                    <input id="txtCusName" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusGender">Select Gender</label>
+                    <select id="txtCusGender" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtCusName">Customer Name</label>
-                <input id="txtCusName" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtCusDOB">Customer DOB</label>
+                    <input id="txtCusDOB" class="form-control" type="date">
+                </div>
+                <div class="col-4">
+                    <label for="txtLoyaltyLevel">Loyalty Level</label>
+                    <select id="txtLoyaltyLevel" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="GOLD">Gold</option>
+                        <option value="SILVER">Silver</option>
+                        <option value="BRONZE">Bronze</option>
+                        <option value="NEW">New</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtLoyaltyDate">Loyalty Date</label>
+                    <input id="txtLoyaltyDate" class="form-control" type="date">
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtCusGender">Select Gender</label>
-                <select id="txtCusGender" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="MALE">Male</option>
-                    <option value="FEMALE">Female</option>
-                    <option value="OTHER">Other</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtTotalPoints">Total Points</label>
+                    <input id="txtTotalPoints" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusAddressLine1">Building No</label>
+                    <input id="txtCusAddressLine1" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusAddressLine2">Main Lane</label>
+                    <input id="txtCusAddressLine2" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtCusDOB">Customer DOB</label>
-                <input id="txtCusDOB" class="form-control" type="date">
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtCusAddressLine3">Main City</label>
+                    <input id="txtCusAddressLine3" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusAddressLine4">Main State</label>
+                    <input id="txtCusAddressLine4" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusAddressLine5">Postal Code</label>
+                    <input id="txtCusAddressLine5" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtLoyaltyLevel">Loyalty Level</label>
-                <select id="txtLoyaltyLevel" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="GOLD">Gold</option>
-                    <option value="SILVER">Silver</option>
-                    <option value="BRONZE">Bronze</option>
-                    <option value="NEW">New</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtRecentDate">Recent Date</label>
+                    <input id="txtRecentDate" class="form-control mb-3" type="datetime-local">
+                </div>
+                <div class="col-4">
+                    <label for="txtCusContactNo">Contact No</label>
+                    <input id="txtCusContactNo" class="form-control mb-3" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtCusEmail">Customer Email</label>
+                    <input id="txtCusEmail" class="form-control mb-3" type="email">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtLoyaltyDate">Loyalty Date</label>
-                <input id="txtLoyaltyDate" class="form-control" type="date">
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtTotalPoints">Total Points</label>
-                <input id="txtTotalPoints" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtCusAddressLine1">Building No</label>
-                <input id="txtCusAddressLine1" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtCusAddressLine2">Main Lane</label>
-                <input id="txtCusAddressLine2" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtCusAddressLine3">Main City</label>
-                <input id="txtCusAddressLine3" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtCusAddressLine4">Main State</label>
-                <input id="txtCusAddressLine4" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtCusAddressLine5">Postal Code</label>
-                <input id="txtCusAddressLine5" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtRecentDate">Recent Date</label>
-                <input id="txtRecentDate" class="form-control mb-3" type="datetime-local">
-            </div>
-            <div class="col-4">
-                <label for="txtCusContactNo">Contact No</label>
-                <input id="txtCusContactNo" class="form-control mb-3" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtCusEmail">Customer Email</label>
-                <input id="txtCusEmail" class="form-control mb-3" type="email">
-                <span class="control-error"></span>
-            </div>
-        </div>
+        </section>
+
+        <!-- Customer Buttons -->
         <div class="row manage  mt-4 mb-5">
             <div class="col-3">
                 <button id="btnSaveCustomer" type="button" class="btn btn-primary w-100">Save Customer</button>
@@ -289,6 +293,8 @@
                 <button id="btnClearAllCustomers" type="button" class="btn btn-secondary w-100">Clear All</button>
             </div>
         </div>
+
+        <!-- Customer Table -->
         <div class="row manage-table">
             <div class="col-12">
                 <table class="table table-cursor">
@@ -315,21 +321,13 @@
                 </table>
             </div>
         </div>
-        <footer>
-            <div class="text-center manage-footer  mt-4 mb-4">
-                <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
-                    <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
-                       target="_blank">Kavithma Thushal</a>
-                </h6>
-            </div>
-        </footer>
     </section>
 
     <!-- Shoes Management -->
     <section id="shoeSection" style="display: none;">
         <h2 class="mt-3 manage-header">Shoes Management</h2>
 
-        <!-- Search Shoe -->
+        <!-- Shoe Search -->
         <div class="row manage">
             <div class="col-4">
                 <div class="input-group">
@@ -343,98 +341,102 @@
         </div>
 
         <!-- Shoe Form -->
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtShoeCode">Shoe Code</label>
-                <input id="txtShoeCode" class="form-control" type="text" disabled>
+        <section>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtShoeCode">Shoe Code</label>
+                    <input id="txtShoeCode" class="form-control" type="text" disabled>
+                </div>
+                <div class="col-4">
+                    <label for="txtShoeDescription">Shoe Description</label>
+                    <input id="txtShoeDescription" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtShoePicture">Shoe Picture</label>
+                    <input id="txtShoePicture" class="form-control" type="file" accept="image/*"
+                           onchange="previewImage(event)">
+                    <img id="shoeImagePreview" src="#" alt="Shoe Image Preview" class="sectionBorder"
+                         style="display: none; margin-top: -170px; max-width: 100px;">
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtShoeDescription">Shoe Description</label>
-                <input id="txtShoeDescription" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtShoeCategory">Select Category</label>
+                    <select id="txtShoeCategory" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="MEN">Men</option>
+                        <option value="WOMEN">Women</option>
+                        <option value="KIDS">Kids</option>
+                        <option value="FORMAL">Formal</option>
+                        <option value="CASUAL">Casual</option>
+                        <option value="SPORTS">Sports</option>
+                        <option value="BOOTS">Boots</option>
+                        <option value="SLIPPERS">Slippers</option>
+                        <option value="SOCKS">Socks</option>
+                        <option value="SHAMPOO">Shoe Shampoo</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtShoeSize">Shoe Size</label>
+                    <input id="txtShoeSize" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtShoeQuantity">Shoe Qty</label>
+                    <input id="txtShoeQuantity" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtShoePicture">Shoe Picture</label>
-                <input id="txtShoePicture" class="form-control" type="file" accept="image/*"
-                       onchange="previewImage(event)">
-                <img id="shoeImagePreview" src="#" alt="Shoe Image Preview" class="sectionBorder"
-                     style="display: none; margin-top: -170px; max-width: 100px;">
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtSupIdd">Supplier ID</label>
+                    <input id="txtSupIdd" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupNamee">Supplier Name</label>
+                    <input id="txtSupNamee" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtUnitPriceSale">Unit Price - Sale</label>
+                    <input id="txtUnitPriceSale" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtShoeCategory">Select Category</label>
-                <select id="txtShoeCategory" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="MEN">Men</option>
-                    <option value="WOMEN">Women</option>
-                    <option value="KIDS">Kids</option>
-                    <option value="FORMAL">Formal</option>
-                    <option value="CASUAL">Casual</option>
-                    <option value="SPORTS">Sports</option>
-                    <option value="BOOTS">Boots</option>
-                    <option value="SLIPPERS">Slippers</option>
-                    <option value="SOCKS">Socks</option>
-                    <option value="SHAMPOO">Shoe Shampoo</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtUnitPriceBuy">Unit Price - Buy</label>
+                    <input id="txtUnitPriceBuy" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtExpectedProfit">Expected Profit</label>
+                    <input id="txtExpectedProfit" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtStockStatus">Stock Status</label>
+                    <select id="txtStockStatus" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="AVAILABLE">Available</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="LOW">Low</option>
+                        <option value="OUT_OF_STOCK">Out of Stock</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtShoeSize">Shoe Size</label>
-                <input id="txtShoeSize" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtProfitMargin">Profit Margin</label>
+                    <input id="txtProfitMargin" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtShoeQuantity">Shoe Qty</label>
-                <input id="txtShoeQuantity" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtSupIdd">Supplier ID</label>
-                <input id="txtSupIdd" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupNamee">Supplier Name</label>
-                <input id="txtSupNamee" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtUnitPriceSale">Unit Price - Sale</label>
-                <input id="txtUnitPriceSale" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtUnitPriceBuy">Unit Price - Buy</label>
-                <input id="txtUnitPriceBuy" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtExpectedProfit">Expected Profit</label>
-                <input id="txtExpectedProfit" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtStockStatus">Stock Status</label>
-                <select id="txtStockStatus" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="AVAILABLE">Available</option>
-                    <option value="MEDIUM">Medium</option>
-                    <option value="LOW">Low</option>
-                    <option value="OUT_OF_STOCK">Out of Stock</option>
-                </select>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtProfitMargin">Profit Margin</label>
-                <input id="txtProfitMargin" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
+        </section>
+
+        <!-- Shoe Buttons -->
         <div class="row manage mt-4 mb-5">
             <div class="col-3">
                 <button id="btnAddShoe" type="button" class="btn btn-primary w-100">Add Shoe</button>
@@ -449,6 +451,8 @@
                 <button id="btnClearAllShoes" type="button" class="btn btn-secondary w-100">Clear All</button>
             </div>
         </div>
+
+        <!-- Shoe Table -->
         <div class="row manage-table">
             <div class="col-12">
                 <table class="table table-cursor">
@@ -473,21 +477,13 @@
                 </table>
             </div>
         </div>
-        <footer>
-            <div class="text-center manage-footer  mt-4 mb-4">
-                <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
-                    <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
-                       target="_blank">Kavithma Thushal</a>
-                </h6>
-            </div>
-        </footer>
     </section>
 
     <!-- Supplier Management -->
     <section id="supplierSection" style="display: none;">
         <h2 class="mt-3 manage-header">Supplier Management</h2>
 
-        <!-- Search Supplier -->
+        <!-- Supplier Search -->
         <div class="row manage">
             <div class="col-4">
                 <div class="input-group">
@@ -501,76 +497,80 @@
         </div>
 
         <!-- Supplier Form -->
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtSupId">Supplier ID</label>
-                <input id="txtSupId" class="form-control" type="text" disabled>
+        <section>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtSupId">Supplier ID</label>
+                    <input id="txtSupId" class="form-control" type="text" disabled>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupName">Supplier Name</label>
+                    <input id="txtSupName" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupCategory">Select Category</label>
+                    <select id="txtSupCategory" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="INTERNATIONAL">International</option>
+                        <option value="LOCAL">Local</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtSupName">Supplier Name</label>
-                <input id="txtSupName" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtSupAddressLine1">Building No</label>
+                    <input id="txtSupAddressLine1" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupAddressLine2">Main Lane</label>
+                    <input id="txtSupAddressLine2" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupAddressLine3">Main City</label>
+                    <input id="txtSupAddressLine3" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtSupCategory">Select Category</label>
-                <select id="txtSupCategory" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="INTERNATIONAL">International</option>
-                    <option value="LOCAL">Local</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtSupAddressLine4">Main State</label>
+                    <input id="txtSupAddressLine4" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupAddressLine5">Postal Code</label>
+                    <input id="txtSupAddressLine5" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupAddressLine6">Origin Country</label>
+                    <input id="txtSupAddressLine6" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtSupAddressLine1">Building No</label>
-                <input id="txtSupAddressLine1" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtSupContactNo1">Contact No.1</label>
+                    <input id="txtSupContactNo1" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupContactNo2">Contact No.2</label>
+                    <input id="txtSupContactNo2" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtSupEmail">Supplier Email</label>
+                    <input id="txtSupEmail" class="form-control" type="email">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtSupAddressLine2">Main Lane</label>
-                <input id="txtSupAddressLine2" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupAddressLine3">Main City</label>
-                <input id="txtSupAddressLine3" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtSupAddressLine4">Main State</label>
-                <input id="txtSupAddressLine4" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupAddressLine5">Postal Code</label>
-                <input id="txtSupAddressLine5" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupAddressLine6">Origin Country</label>
-                <input id="txtSupAddressLine6" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtSupContactNo1">Contact No.1</label>
-                <input id="txtSupContactNo1" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupContactNo2">Contact No.2</label>
-                <input id="txtSupContactNo2" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtSupEmail">Supplier Email</label>
-                <input id="txtSupEmail" class="form-control" type="email">
-                <span class="control-error"></span>
-            </div>
-        </div>
+        </section>
+
+        <!-- Supplier Buttons -->
         <div class="row manage mt-5 mb-5">
             <div class="col-3">
                 <button id="btnSaveSupplier" type="button" class="btn btn-primary w-100">Save Supplier</button>
@@ -585,6 +585,8 @@
                 <button id="btnClearAllSuppliers" type="button" class="btn btn-secondary w-100">Clear All</button>
             </div>
         </div>
+
+        <!-- Supplier Table -->
         <div class="row manage-table">
             <div class="col-12">
                 <table class="table  table-cursor">
@@ -608,21 +610,13 @@
                 </table>
             </div>
         </div>
-        <footer>
-            <div class="text-center manage-footer mt-4 mb-4">
-                <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
-                    <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
-                       target="_blank">Kavithma Thushal</a>
-                </h6>
-            </div>
-        </footer>
     </section>
 
     <!-- Employee Management -->
     <section id="employeeSection" style="display: none;">
         <h2 class="mt-3 manage-header">Employee Management</h2>
 
-        <!-- Search Employee -->
+        <!-- Employee Search -->
         <div class="row manage">
             <div class="col-4">
                 <div class="input-group">
@@ -636,143 +630,147 @@
         </div>
 
         <!-- Employee Form -->
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpId">Employee ID</label>
-                <input id="txtEmpId" class="form-control" type="text" disabled>
+        <section>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpId">Employee ID</label>
+                    <input id="txtEmpId" class="form-control" type="text" disabled>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpName">Employee Name</label>
+                    <input id="txtEmpName" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpPicture">Employee Picture</label>
+                    <input id="txtEmpPicture" class="form-control" type="file" accept="image/*">
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtEmpName">Employee Name</label>
-                <input id="txtEmpName" class="form-control" type="text">
-                <span class="control-error"></span>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpGender">Select Gender</label>
+                    <select id="txtEmpGender" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpStatus">Civil Status</label>
+                    <select id="txtEmpStatus" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="SINGLE">Single</option>
+                        <option value="MARRIED">Married</option>
+                        <option value="DIVORCED">Divorced</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpDesignation">Select Designation</label>
+                    <select id="txtEmpDesignation" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="CASHIER">Cashier</option>
+                        <option value="ASSISTANT_MANAGER">Assistant Manager</option>
+                        <option value="STORE_MANAGER">Store Manager</option>
+                        <option value="STORE_CLEANER">Store Cleaner</option>
+                        <option value="MARKETING_COORDINATOR">Marketing Coordinator</option>
+                        <option value="RETURNEE_MANAGER">Returnee Manager</option>
+                        <option value="SHOE_SPECIALIST">Shoe Specialist</option>
+                        <option value="SECURITY_GUARD">Security Guard</option>
+                        <option value="CLEANER">Cleaner</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtEmpPicture">Employee Picture</label>
-                <input id="txtEmpPicture" class="form-control" type="file" accept="image/*">
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpRole">Select Role</label>
+                    <select id="txtEmpRole" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="USER">User</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpDOB">Employee DOB</label>
+                    <input id="txtEmpDOB" class="form-control" type="date">
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpJoinDate">Join Date</label>
+                    <input id="txtEmpJoinDate" class="form-control" type="date">
+                </div>
             </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpGender">Select Gender</label>
-                <select id="txtEmpGender" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="MALE">Male</option>
-                    <option value="FEMALE">Female</option>
-                    <option value="OTHER">Other</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpBranch">Select Branch</label>
+                    <select id="txtEmpBranch" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="COLOMBO">Colombo</option>
+                        <option value="PANADURA">Panadura</option>
+                        <option value="GALLE">Galle</option>
+                        <option value="MATARA">Matara</option>
+                        <option value="AMBALANGODA">Ambalangoda</option>
+                        <option value="JAFFNA">Jaffna</option>
+                        <option value="KANDY">Kandy</option>
+                        <option value="KURUNEGALA">Kurunegala</option>
+                        <option value="BADULLA">Badulla</option>
+                        <option value="GAMPAHA">Gampaha</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpAddressLine1">Building No</label>
+                    <input id="txtEmpAddressLine1" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpAddressLine2">Main Lane</label>
+                    <input id="txtEmpAddressLine2" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtEmpStatus">Civil Status</label>
-                <select id="txtEmpStatus" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="SINGLE">Single</option>
-                    <option value="MARRIED">Married</option>
-                    <option value="DIVORCED">Divorced</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpAddressLine3">Main City</label>
+                    <input id="txtEmpAddressLine3" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpAddressLine4">Main State</label>
+                    <input id="txtEmpAddressLine4" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpAddressLine5">Postal Code</label>
+                    <input id="txtEmpAddressLine5" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtEmpDesignation">Select Designation</label>
-                <select id="txtEmpDesignation" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="CASHIER">Cashier</option>
-                    <option value="ASSISTANT_MANAGER">Assistant Manager</option>
-                    <option value="STORE_MANAGER">Store Manager</option>
-                    <option value="STORE_CLEANER">Store Cleaner</option>
-                    <option value="MARKETING_COORDINATOR">Marketing Coordinator</option>
-                    <option value="RETURNEE_MANAGER">Returnee Manager</option>
-                    <option value="SHOE_SPECIALIST">Shoe Specialist</option>
-                    <option value="SECURITY_GUARD">Security Guard</option>
-                    <option value="CLEANER">Cleaner</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpContactNo">Contact No.</label>
+                    <input id="txtEmpContactNo" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpEmail">Employee Email</label>
+                    <input id="txtEmpEmail" class="form-control" type="email">
+                    <span class="control-error"></span>
+                </div>
+                <div class="col-4">
+                    <label for="txtEmpEmergencyGuardian">Emergency Guardian</label>
+                    <input id="txtEmpEmergencyGuardian" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpRole">Select Role</label>
-                <select id="txtEmpRole" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="ADMIN">Admin</option>
-                    <option value="USER">User</option>
-                </select>
+            <div class="row manage">
+                <div class="col-4">
+                    <label for="txtEmpEmergencyNo">Emergency No.</label>
+                    <input id="txtEmpEmergencyNo" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="txtEmpDOB">Employee DOB</label>
-                <input id="txtEmpDOB" class="form-control" type="date">
-            </div>
-            <div class="col-4">
-                <label for="txtEmpJoinDate">Join Date</label>
-                <input id="txtEmpJoinDate" class="form-control" type="date">
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpBranch">Select Branch</label>
-                <select id="txtEmpBranch" class="form-select">
-                    <option value="" disabled selected></option>
-                    <option value="COLOMBO">Colombo</option>
-                    <option value="PANADURA">Panadura</option>
-                    <option value="GALLE">Galle</option>
-                    <option value="MATARA">Matara</option>
-                    <option value="AMBALANGODA">Ambalangoda</option>
-                    <option value="JAFFNA">Jaffna</option>
-                    <option value="KANDY">Kandy</option>
-                    <option value="KURUNEGALA">Kurunegala</option>
-                    <option value="BADULLA">Badulla</option>
-                    <option value="GAMPAHA">Gampaha</option>
-                </select>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpAddressLine1">Building No</label>
-                <input id="txtEmpAddressLine1" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpAddressLine2">Main Lane</label>
-                <input id="txtEmpAddressLine2" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpAddressLine3">Main City</label>
-                <input id="txtEmpAddressLine3" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpAddressLine4">Main State</label>
-                <input id="txtEmpAddressLine4" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpAddressLine5">Postal Code</label>
-                <input id="txtEmpAddressLine5" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpContactNo">Contact No.</label>
-                <input id="txtEmpContactNo" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpEmail">Employee Email</label>
-                <input id="txtEmpEmail" class="form-control" type="email">
-                <span class="control-error"></span>
-            </div>
-            <div class="col-4">
-                <label for="txtEmpEmergencyGuardian">Emergency Guardian</label>
-                <input id="txtEmpEmergencyGuardian" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
-        <div class="row manage">
-            <div class="col-4">
-                <label for="txtEmpEmergencyNo">Emergency No.</label>
-                <input id="txtEmpEmergencyNo" class="form-control" type="text">
-                <span class="control-error"></span>
-            </div>
-        </div>
+        </section>
+
+        <!-- Employee Buttons -->
         <div class="row manage  mt-5 mb-5">
             <div class="col-3">
                 <button id="btnSaveEmployee" type="button" class="btn btn-primary w-100">Save Employee</button>
@@ -787,6 +785,8 @@
                 <button id="btnClearAllEmployees" type="button" class="btn btn-secondary w-100">Clear All</button>
             </div>
         </div>
+
+        <!-- Employee Table -->
         <div class="row manage-table">
             <div class="col-12">
                 <table class="table table-cursor">
@@ -817,14 +817,6 @@
                 </table>
             </div>
         </div>
-        <footer>
-            <div class="text-center manage-footer  mt-4 mb-4">
-                <h6 class="mb-2">© 2024 All Rights Reserved, Designed By
-                    <a href="https://github.com/Kavithma-Thushal" class="text-decoration-none"
-                       target="_blank">Kavithma Thushal</a>
-                </h6>
-            </div>
-        </footer>
     </section>
 </main>
 
