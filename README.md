@@ -1,6 +1,7 @@
-# Hello Shoes (Pvt). Ltd 👟
+# Hello Shoes (PVT) LTD. 👟
 
-Discover the Hello Shoes Pvt Ltd FrontEnd repository, your gateway to our Shoe Shop Management System's user interface!
+Discover the Hello Shoes (PVT) LTD. FrontEnd repository, your gateway to our Shoe Shop Management System's user
+interface!
 This repository contains the frontend application built using modern web technologies. Our frontend
 provides an engaging and intuitive interface for customers to explore our shoe catalog, place orders, and manage their
 accounts. It also includes administrative features for managing inventory, processing orders, and analyzing sales data.
@@ -25,7 +26,7 @@ Pair this frontend with our backend APIs to experience a seamless and responsive
 
 ## Usage
 
-1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-Pvt-Ltd-FrontEnd.git`
+1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-FrontEnd.git`
 2. Navigate to the project directory `cd Hello-Shoes-Pvt-Ltd-FrontEnd`
 3. Open the `index.html` file in your preferred web browser
 
