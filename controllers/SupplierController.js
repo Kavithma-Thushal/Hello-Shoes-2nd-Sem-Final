@@ -11,7 +11,7 @@ $('#btnSaveSupplier').click(function () {
     let supplierObj = {
         id: $('#txtSupId').val(),
         name: $('#txtSupName').val(),
-        category: $('#txtSupCategory').val(),
+        supCategory: $('#txtSupCategory').val(),
         addressLine1: $('#txtSupAddressLine1').val(),
         addressLine2: $('#txtSupAddressLine2').val(),
         addressLine3: $('#txtSupAddressLine3').val(),
@@ -83,7 +83,7 @@ $('#btnUpdateSupplier').click(function () {
     let supplierObject = {
         id: $('#txtSupId').val(),
         name: $('#txtSupName').val(),
-        category: $('#txtSupCategory').val(),
+        supCategory: $('#txtSupCategory').val(),
         addressLine1: $('#txtSupAddressLine1').val(),
         addressLine2: $('#txtSupAddressLine2').val(),
         addressLine3: $('#txtSupAddressLine3').val(),
@@ -152,7 +152,7 @@ function loadAllSuppliers() {
             for (let i of resp.data) {
                 let id = i.id;
                 let name = i.name;
-                let category = i.category;
+                let category = i.supCategory;
                 let addressLine1 = i.addressLine1;
                 let addressLine2 = i.addressLine2;
                 let addressLine3 = i.addressLine3;
