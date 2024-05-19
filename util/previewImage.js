@@ -5,9 +5,9 @@
  **/
 
 /** Image Preview **/
-function previewImage(event) {
+function previewImage(event, previewId) {
     const input = event.target;
-    const preview = document.getElementById('shoeImagePreview');
+    const preview = document.getElementById(previewId);
 
     if (input.files && input.files[0]) {
         const reader = new FileReader();
@@ -24,7 +24,7 @@ function previewImage(event) {
     }
 }
 
-/** Remove Preview when click the Add Shoe **/
+/** Remove Preview when clicking the Add Shoe **/
 $('#btnAddShoe').on('click', function () {
     const fileInput = $('#txtShoePicture');
     fileInput.val('');

@@ -353,10 +353,9 @@
                     <span class="control-error"></span>
                 </div>
                 <div class="col-4">
-                    <label for="txtShoePicture">Shoe Picture</label>
-                    <input id="txtShoePicture" class="form-control" type="file" accept="image/*"
-                           onchange="previewImage(event)">
-                    <img id="shoeImagePreview" src="#" alt="Shoe Image Preview" class="sectionBorder"
+                    <input id="txtShoePicture" class="form-control mt-4" type="file" accept="image/*"
+                           onchange="previewImage(event, 'shoeImagePreview')">
+                    <img id="shoeImagePreview" src="#" alt="Shoe Preview" class="sectionBorder"
                          style="display: none; margin-top: -170px; max-width: 100px;">
                 </div>
             </div>
@@ -642,8 +641,10 @@
                     <span class="control-error"></span>
                 </div>
                 <div class="col-4">
-                    <label for="txtEmpPicture">Employee Picture</label>
-                    <input id="txtEmpPicture" class="form-control" type="file" accept="image/*">
+                    <input id="txtEmpPicture" class="form-control mt-4" type="file" accept="image/*"
+                           onchange="previewImage(event, 'empImagePreview')">
+                    <img id="empImagePreview" src="#" alt="Employee Preview" class="sectionBorder"
+                         style="display: none; margin-top: -170px; max-width: 100px;">
                 </div>
             </div>
             <div class="row manage">
