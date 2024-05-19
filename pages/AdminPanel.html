@@ -410,13 +410,19 @@
                 <span class="control-error"></span>
             </div>
             <div class="col-4">
-                <label for="txtStockStatus">Stock Status</label>
-                <input id="txtStockStatus" class="form-control mb-3" type="text">
-            </div>
-            <div class="col-4">
                 <label for="txtExpectedProfit">Expected Profit</label>
                 <input id="txtExpectedProfit" class="form-control" type="text">
                 <span class="control-error"></span>
+            </div>
+            <div class="col-4">
+                <label for="txtStockStatus">Stock Status</label>
+                <select id="txtStockStatus" class="form-select">
+                    <option value="" disabled selected></option>
+                    <option value="AVAILABLE">Available</option>
+                    <option value="MEDIUM">Medium</option>
+                    <option value="LOW">Low</option>
+                    <option value="OUT_OF_STOCK">Out of Stock</option>
+                </select>
             </div>
         </div>
         <div class="row manage">
