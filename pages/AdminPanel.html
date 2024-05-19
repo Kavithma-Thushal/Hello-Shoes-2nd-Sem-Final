@@ -355,7 +355,10 @@
             </div>
             <div class="col-4">
                 <label for="txtShoePicture">Shoe Picture</label>
-                <input id="txtShoePicture" class="form-control" type="file" accept="image/*">
+                <input id="txtShoePicture" class="form-control" type="file" accept="image/*"
+                       onchange="previewImage(event)">
+                <img id="shoeImagePreview" src="#" alt="Shoe Image Preview" class="sectionBorder"
+                     style="display: none; margin-top: -170px; max-width: 100px;">
             </div>
         </div>
         <div class="row manage">
@@ -836,6 +839,7 @@
 <script src="../util/validation.js"></script>
 <script src="../util/alerts.js"></script>
 <script src="../util/logout.js"></script>
+<script src="../util/previewImage.js"></script>
 </body>
 
 </html>
