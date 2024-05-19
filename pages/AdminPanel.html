@@ -360,9 +360,20 @@
         </div>
         <div class="row manage">
             <div class="col-4">
-                <label for="txtShoeCategory">Shoe Category</label>
-                <input id="txtShoeCategory" class="form-control" type="text">
-                <span class="control-error"></span>
+                <label for="txtShoeCategory">Select Category</label>
+                <select id="txtShoeCategory" class="form-select">
+                    <option value="" disabled selected></option>
+                    <option value="MEN">Men</option>
+                    <option value="WOMEN">Women</option>
+                    <option value="KIDS">Kids</option>
+                    <option value="FORMAL">Formal</option>
+                    <option value="CASUAL">Casual</option>
+                    <option value="SPORTS">Sports</option>
+                    <option value="BOOTS">Boots</option>
+                    <option value="SLIPPERS">Slippers</option>
+                    <option value="SOCKS">Socks</option>
+                    <option value="SHAMPOO">Shoe Shampoo</option>
+                </select>
             </div>
             <div class="col-4">
                 <label for="txtShoeSize">Shoe Size</label>

@@ -18,7 +18,7 @@ $('#btnAddShoe').click(function () {
             code: $('#txtShoeCode').val(),
             description: $('#txtShoeDescription').val(),
             picture: reader.result,
-            category: $('#txtShoeCategory').val(),
+            shoeCategory: $('#txtShoeCategory').val(),
             size: parseInt($('#txtShoeSize').val()),
             quantity: parseInt($('#txtShoeQuantity').val()),
             supplierId: $('#txtSupIdd').val(),
@@ -112,7 +112,7 @@ $('#btnUpdateShoe').click(function () {
             code: $('#txtShoeCode').val(),
             description: $('#txtShoeDescription').val(),
             picture: reader.result,
-            category: $('#txtShoeCategory').val(),
+            shoeCategory: $('#txtShoeCategory').val(),
             size: parseInt($('#txtShoeSize').val()),
             quantity: parseInt($('#txtShoeQuantity').val()),
             supplierId: $('#txtSupIdd').val(),
@@ -187,7 +187,7 @@ function loadAllShoes() {
                     src: i.picture,
                     style: "max-width: 100px; max-height: 100px; border-radius:10px"
                 })));
-                row.append($("<td>").text(i.category));
+                row.append($("<td>").text(i.shoeCategory));
                 row.append($("<td>").text(i.size));
                 row.append($("<td>").text(i.quantity));
                 row.append($("<td>").text(i.supplierId));
