@@ -822,7 +822,35 @@
 
     <!-- Purchase Order -->
     <section id="purchaseOrderSection" style="display: none">
-        <h2 class="mt-3 manage-header">Purchase Orders</h2>
+        <h2 class="mt-3 manage-header"><i class="bi bi-cart-fill"></i> Purchase Orders</h2>
+
+        <!-- Purchase Order Form -->
+        <section>
+            <div class="row manage">
+                <div class="col-3">
+                    <label for="txtSaleId">Sale ID</label>
+                    <input id="txtSaleId" class="form-control" type="text">
+                </div>
+                <div class="col-3">
+                    <label for="txtSaleDate">Sale Date</label>
+                    <input id="txtSaleDate" class="form-control" type="date">
+                </div>
+                <div class="col-3">
+                    <label for="txtCusId_PO">Customer ID</label>
+                    <select id="txtCusId_PO" class="form-select">
+                        <option value="" disabled selected></option>
+                        <option value="C00-001">C00-001</option>
+                        <option value="C00-002">C00-002</option>
+                        <option value="C00-003">C00-003</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="txtCusName_PO">Customer Name</label>
+                    <input id="txtCusName_PO" class="form-control" type="text">
+                    <span class="control-error"></span>
+                </div>
+            </div>
+        </section>
     </section>
 
     <!-- Order Details -->
