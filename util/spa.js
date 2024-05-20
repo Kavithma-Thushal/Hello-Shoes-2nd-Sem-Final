@@ -10,6 +10,8 @@ function hideAllSections() {
     $("#shoeSection").css("display", "none");
     $("#supplierSection").css("display", "none");
     $("#employeeSection").css("display", "none");
+    $("#purchaseOrderSection").css("display", "none");
+    $("#orderDetailsSection").css("display", "none");
 }
 
 function adminDashboardSection() {
@@ -35,4 +37,14 @@ function supplierSection() {
 function employeeSection() {
     hideAllSections();
     $("#employeeSection").css("display", "block");
+}
+
+function purchaseOrderSection() {
+    hideAllSections();
+    $("#purchaseOrderSection").css("display", "block");
+}
+
+function orderDetailsSection() {
+    hideAllSections();
+    $("#orderDetailsSection").css("display", "block");
 }
