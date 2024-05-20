@@ -169,34 +169,29 @@
 
     <!-- Customer Management -->
     <section id="customerSection" style="display: none;">
-        <h2 class="mt-3 manage-header">Customer Management</h2>
 
         <!-- Customer Search -->
-        <div class="row manage">
-            <div class="col-4">
-                <div class="input-group">
-                    <input id="txtSearchCustomer" class="form-control rounded-2" type="search"
-                           placeholder="Input Customer ID">
-                    <div class="input-group-append">
-                        <button id="btnSearchCustomer" type="button" class="btn btn-success ms-3">Search</button>
-                    </div>
-                </div>
+        <div class="d-flex align-items-center mt-5 mb-5 me-5 sectionBorder manage-header">
+            <h2 class="ms-3"><i class="bi bi-people-fill"></i> Customer Management</h2>
+            <div class="input-group manage ms-auto" style="width: 300px;">
+                <input id="txtSearchCustomer" class="form-control" type="search" placeholder="Input Customer ID">
+                <button id="btnSearchCustomer" type="button" class="btn btn-success ms-2">Search</button>
             </div>
         </div>
 
         <!-- Customer Form -->
-        <section>
-            <div class="row manage">
-                <div class="col-4">
+        <section class="sectionBorder manage me-5">
+            <div class="row ps-4 pe-4 pb-3 pt-3">
+                <div class="col-3">
                     <label for="txtCusId">Customer ID</label>
                     <input id="txtCusId" class="form-control" type="text" disabled>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusName">Customer Name</label>
                     <input id="txtCusName" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusGender">Select Gender</label>
                     <select id="txtCusGender" class="form-select">
                         <option value="" disabled selected></option>
@@ -205,13 +200,13 @@
                         <option value="OTHER">Other</option>
                     </select>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusDOB">Customer DOB</label>
                     <input id="txtCusDOB" class="form-control" type="date">
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row ps-4 pe-4 pb-3">
+                <div class="col-3">
                     <label for="txtLoyaltyLevel">Loyalty Level</label>
                     <select id="txtLoyaltyLevel" class="form-select">
                         <option value="" disabled selected></option>
@@ -221,56 +216,54 @@
                         <option value="NEW">New</option>
                     </select>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtLoyaltyDate">Loyalty Date</label>
                     <input id="txtLoyaltyDate" class="form-control" type="date">
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtTotalPoints">Total Points</label>
                     <input id="txtTotalPoints" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusAddressLine1">Building No</label>
                     <input id="txtCusAddressLine1" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row ps-4 pe-4 pb-3">
+                <div class="col-3">
                     <label for="txtCusAddressLine2">Main Lane</label>
                     <input id="txtCusAddressLine2" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusAddressLine3">Main City</label>
                     <input id="txtCusAddressLine3" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusAddressLine4">Main State</label>
                     <input id="txtCusAddressLine4" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusAddressLine5">Postal Code</label>
                     <input id="txtCusAddressLine5" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
             </div>
-            <div class="row manage">
-                <div class="col-4">
+            <div class="row ps-4 pe-4 pb-3">
+                <div class="col-3">
                     <label for="txtRecentDate">Recent Date</label>
                     <input id="txtRecentDate" class="form-control mb-3" type="datetime-local">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusContactNo">Contact No</label>
                     <input id="txtCusContactNo" class="form-control mb-3" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtCusEmail">Customer Email</label>
                     <input id="txtCusEmail" class="form-control mb-3" type="email">
                     <span class="control-error"></span>
@@ -279,25 +272,25 @@
         </section>
 
         <!-- Customer Buttons -->
-        <div class="row manage  mt-4 mb-5">
+        <div class="row manage mt-5 mb-5">
             <div class="col-3">
-                <button id="btnSaveCustomer" type="button" class="btn btn-primary w-100">Save Customer</button>
+                <button id="btnSaveCustomer" type="button" class="btn btn-outline-primary w-75">Save Customer</button>
             </div>
             <div class="col-3">
-                <button id="btnUpdateCustomer" type="button" class="btn btn-warning w-100">Update Customer</button>
+                <button id="btnUpdateCustomer" type="button" class="btn btn-outline-warning w-75">Update Customer</button>
             </div>
             <div class="col-3">
-                <button id="btnDeleteCustomer" type="button" class="btn btn-danger w-100">Delete Customer</button>
+                <button id="btnDeleteCustomer" type="button" class="btn btn-outline-danger w-75">Delete Customer</button>
             </div>
             <div class="col-3">
-                <button id="btnClearAllCustomers" type="button" class="btn btn-secondary w-100">Clear All</button>
+                <button id="btnClearAllCustomers" type="button" class="btn btn-outline-secondary w-75">Clear All</button>
             </div>
         </div>
 
         <!-- Customer Table -->
-        <div class="row manage-table">
+        <div class="row pt-4 p-3 mb-5 me-5 manage-table sectionBorder">
             <div class="col-12">
-                <table class="table table-cursor">
+                <table class="table table-bordered table-hover table-cursor">
                     <thead class="text-light table-dark">
                     <tr>
                         <th scope="col">Customer ID</th>
