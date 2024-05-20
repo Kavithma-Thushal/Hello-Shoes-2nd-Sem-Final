@@ -287,9 +287,9 @@ function shoeTableListener() {
         $("#txtProfitMargin").val(profitMargin);
         $("#txtStockStatus").val(stockStatus);
 
-        // $("#btnSaveCustomer").attr('disabled', true);
-        // $("#btnUpdateCustomer").attr('disabled', false);
-        // $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnAddShoe").attr('disabled', true);
+        $("#btnUpdateShoe").attr('disabled', false);
+        $("#btnDeleteShoe").attr('disabled', false);
     });
 }
 
