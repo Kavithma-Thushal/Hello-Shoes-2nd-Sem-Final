@@ -323,9 +323,9 @@ function employeeTableListener() {
         $("#txtEmpEmergencyGuardian").val(emergencyGuardian);
         $("#txtEmpEmergencyNo").val(emergencyNo);
 
-        // $("#btnSaveCustomer").attr('disabled', true);
-        // $("#btnUpdateCustomer").attr('disabled', false);
-        // $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnSaveEmployee").attr('disabled', true);
+        $("#btnUpdateEmployee").attr('disabled', false);
+        $("#btnDeleteEmployee").attr('disabled', false);
     });
 }
 

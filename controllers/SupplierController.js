@@ -253,9 +253,9 @@ function supplierTableListener() {
         $("#txtSupContactNo2").val(contactNo2);
         $("#txtSupEmail").val(email);
 
-        // $("#btnSaveCustomer").attr('disabled', true);
-        // $("#btnUpdateCustomer").attr('disabled', false);
-        // $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnSaveSupplier").attr('disabled', true);
+        $("#btnUpdateSupplier").attr('disabled', false);
+        $("#btnDeleteSupplier").attr('disabled', false);
     });
 }
 
