@@ -20,7 +20,7 @@ $('#btnAddShoe').click(function () {
             picture: reader.result,
             shoeCategory: $('#txtShoeCategory').val(),
             size: parseInt($('#txtShoeSize').val()),
-            quantity: parseInt($('#txtShoeQuantity').val()),
+            qtyOnHand: parseInt($('#txtShoeQtyOnHand').val()),
             supplierId: $('#txtSupIdd').val(),
             supplierName: $('#txtSupNamee').val(),
             unitPriceSale: parseFloat($('#txtUnitPriceSale').val()),
@@ -78,9 +78,9 @@ function searchShoe() {
                 src: resp.picture,
                 style: "max-width: 100px; max-height: 100px; border-radius:10px"
             })));
-            row.append($("<td>").text(resp.category));
+            row.append($("<td>").text(resp.shoeCategory));
             row.append($("<td>").text(resp.size));
-            row.append($("<td>").text(resp.quantity));
+            row.append($("<td>").text(resp.qtyOnHand));
             row.append($("<td>").text(resp.supplierId));
             row.append($("<td>").text(resp.supplierName));
             row.append($("<td>").text(resp.unitPriceSale));
@@ -114,7 +114,7 @@ $('#btnUpdateShoe').click(function () {
             picture: reader.result,
             shoeCategory: $('#txtShoeCategory').val(),
             size: parseInt($('#txtShoeSize').val()),
-            quantity: parseInt($('#txtShoeQuantity').val()),
+            qtyOnHand: parseInt($('#txtShoeQtyOnHand').val()),
             supplierId: $('#txtSupIdd').val(),
             supplierName: $('#txtSupNamee').val(),
             unitPriceSale: parseFloat($('#txtUnitPriceSale').val()),
@@ -189,7 +189,7 @@ function loadAllShoes() {
                 })));
                 row.append($("<td>").text(i.shoeCategory));
                 row.append($("<td>").text(i.size));
-                row.append($("<td>").text(i.quantity));
+                row.append($("<td>").text(i.qtyOnHand));
                 row.append($("<td>").text(i.supplierId));
                 row.append($("<td>").text(i.supplierName));
                 row.append($("<td>").text(i.unitPriceSale));
@@ -278,7 +278,7 @@ function shoeTableListener() {
         $("#txtShoePicture").val(picture);
         $("#txtShoeCategory").val(category);
         $("#txtShoeSize").val(size);
-        $("#txtShoeQuantity").val(quantity);
+        $("#txtShoeQtyOnHand").val(quantity);
         $("#txtSupIdd").val(supplierId);
         $("#txtSupNamee").val(supplierName);
         $("#txtUnitPriceSale").val(unitPriceSale);
@@ -299,7 +299,7 @@ function clearShoeInputFields() {
     $('#txtShoePicture').val("");
     $('#txtShoeCategory').val("");
     $('#txtShoeSize').val("");
-    $('#txtShoeQuantity').val("");
+    $('#txtShoeQtyOnHand').val("");
     $('#txtSupIdd').val("");
     $('#txtSupNamee').val("");
     $('#txtUnitPriceSale').val("");
@@ -317,7 +317,7 @@ function clearShoeInputFields() {
 /** Shoe Validations **/
 let regExShoeDescription = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExShoeSize = /^\d{2}$/;
-let regExShoeQty = /^\d+$/;
+let regExShoeQtyOnHand = /^\d+$/;
 let regExSupIdd = /^(S00-)[0-9]{3}$/;
 let regExSupNamee = /^[A-Za-z ]{4,20}$/;
 let regExUnitPrice_Sale = /^\d{2,}(\.\d{2})?$/;
@@ -337,9 +337,9 @@ shoeValidations.push({
     error: 'Shoe Size must have integer value'
 });
 shoeValidations.push({
-    reg: regExShoeQty,
-    field: $('#txtShoeQuantity'),
-    error: 'Shoe Qty must have integer value'
+    reg: regExShoeQtyOnHand,
+    field: $('#txtShoeQtyOnHand'),
+    error: 'Shoe Qty On Hand must have integer value'
 });
 shoeValidations.push({
     reg: regExSupIdd,
@@ -373,7 +373,7 @@ shoeValidations.push({
 });
 
 /** Check Shoe Validations **/
-$("#txtShoeDescription,#txtShoeSize,#txtShoeQuantity,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function () {
+$("#txtShoeDescription,#txtShoeSize,#txtShoeQtyOnHand,#txtSupIdd,#txtSupNamee,#txtUnitPriceSale,#txtUnitPriceBuy,#txtExpectedProfit,#txtProfitMargin").on('keyup', function () {
     checkShoeValidity(shoeValidations);
 });
 
