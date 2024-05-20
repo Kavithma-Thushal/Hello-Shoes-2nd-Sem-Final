@@ -28,3 +28,25 @@ function cmbLoadAllCustomers() {
         }
     });
 }
+
+/** Customer Searching Combo-Box **/
+$("#cmbCusId").click(function () {
+    let id = $("#cmbCusId").val();
+    $.ajax({
+        url: baseURL + 'customer/searchCustomer/' + id,
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#customerName").val(resp.name);
+            $("#loyaltyLevel").val(resp.loyaltyLevel);
+            $("#loyaltyDate").val(resp.loyaltyDate);
+            $("#totalPoints").val(resp.totalPoints);
+            $("#recentDate").val(resp.recentDate);
+        },
+        error: function (error) {
+            console.log(JSON.parse("Customer Combo-Box Searching Error : " + error.responseText).message);
+        }
+    });
+});
