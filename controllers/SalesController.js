@@ -5,24 +5,26 @@
  **/
 
 /** Load All Customers to Combo-Box **/
-$.ajax({
-    url: baseURL + "customer/loadAllCustomers",
-    method: "GET",
-    headers: {
-        Authorization: 'Bearer ' + jwtToken
-    },
-    success: function (resp) {
-        $("#cmbCusId").empty();
+function cmbLoadAllCustomers() {
+    $.ajax({
+        url: baseURL + "customer/loadAllCustomers",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#cmbCusId").empty();
 
-        // Add a default empty option
-        $("#cmbCusId").append('<option value="" disabled selected></option>');
+            // Add a default empty option
+            $("#cmbCusId").append('<option value="" disabled selected></option>');
 
-        for (let i of resp.data) {
-            let id = i.id;
-            $("#cmbCusId").append(`<option>${id}</option>`);
+            for (let i of resp.data) {
+                let id = i.id;
+                $("#cmbCusId").append(`<option>${id}</option>`);
+            }
+        },
+        error: function (error) {
+            console.log(JSON.parse("Load All Customers to Combo-Box Error : " + error.responseText).message);
         }
-    },
-    error: function (error) {
-        console.log(JSON.parse("Load All Customers to Combo-Box Error : " + error.responseText).message);
-    }
-});
+    });
+}
