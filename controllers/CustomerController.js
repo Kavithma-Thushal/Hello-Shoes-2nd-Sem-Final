@@ -275,9 +275,9 @@ function customerTableListener() {
         $("#txtCusEmail").val(email);
         $("#txtRecentDate").val(customerRecentDate);
 
-        // $("#btnSaveCustomer").attr('disabled', true);
-        // $("#btnUpdateCustomer").attr('disabled', false);
-        // $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
 
