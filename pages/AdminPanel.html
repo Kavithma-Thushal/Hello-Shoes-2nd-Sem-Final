@@ -290,13 +290,16 @@
                 <button id="btnSaveCustomer" type="button" class="btn btn-outline-primary w-75">Save Customer</button>
             </div>
             <div class="col-3">
-                <button id="btnUpdateCustomer" type="button" class="btn btn-outline-warning w-75">Update Customer</button>
+                <button id="btnUpdateCustomer" type="button" class="btn btn-outline-warning w-75">Update Customer
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnDeleteCustomer" type="button" class="btn btn-outline-danger w-75">Delete Customer</button>
+                <button id="btnDeleteCustomer" type="button" class="btn btn-outline-danger w-75">Delete Customer
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnClearAllCustomers" type="button" class="btn btn-outline-secondary w-75">Clear All</button>
+                <button id="btnClearAllCustomers" type="button" class="btn btn-outline-secondary w-75">Clear All
+                </button>
             </div>
         </div>
 
@@ -830,9 +833,10 @@
     <section id="purchaseOrderSection" style="display: none">
         <h2 class="mt-3 manage-header"><i class="bi bi-cart-fill"></i> Purchase Orders</h2>
 
-        <!-- Purchase Order Form -->
+        <!-- Customer Details -->
         <section style="margin-left:280px;margin-top: 20px;" class="sectionBorder me-4">
-            <div class="row p-4">
+            <h5 class="bg-primary text-white text-center p-2 d-inline-block w-100">Customer Details</h5>
+            <div class="row ps-4 pe-4 pb-3 pt-2">
                 <div class="col-3">
                     <label for="txtSalesId">Sale ID</label>
                     <input id="txtSalesId" class="form-control" type="text" disabled>
@@ -872,6 +876,11 @@
                 </div>
             </div>
         </section>
+
+        <!-- Place Order Button -->
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary m-4">Place Order</button>
+        </div>
     </section>
 
     <!-- Order Details -->
