@@ -54,6 +54,32 @@ $("#cmbCusId").click(function () {
     });
 });
 
+/** Purchase Order **/
+$('#btnPurchaseOrder').click(function () {
+
+    let purchaseOrderObj = {
+        saleId: $('#txtSalesId').val(),
+        saleDate: $('#txtSaleDate').val(),
+        cusId: $('#cmbCusId').val()
+    };
+
+    $.ajax({
+        url: baseURL + 'sales',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(purchaseOrderObj),
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            successAlert(resp.message);
+        },
+        error: function (error) {
+            errorAlert(error.responseJSON.message);
+        }
+    });
+});
+
 /** Generate SalesId **/
 function generateSalesId() {
     $("#txtSalesId").val("O00-001");

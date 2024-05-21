@@ -223,10 +223,10 @@
                     <label for="txtLoyaltyLevel">Loyalty Level</label>
                     <select id="txtLoyaltyLevel" class="form-select">
                         <option value="" disabled selected></option>
-                        <option value="GOLD">Gold</option>
-                        <option value="SILVER">Silver</option>
-                        <option value="BRONZE">Bronze</option>
                         <option value="NEW">New</option>
+                        <option value="BRONZE">Bronze</option>
+                        <option value="SILVER">Silver</option>
+                        <option value="GOLD">Gold</option>
                     </select>
                 </div>
                 <div class="col-3">
@@ -829,7 +829,7 @@
         </div>
     </section>
 
-    <!-- Purchase Order -->
+    <!-- Purchase Orders -->
     <section id="purchaseOrderSection" style="display: none">
         <h2 class="mt-3 manage-header"><i class="bi bi-cart-fill"></i> Purchase Orders</h2>
 
@@ -853,7 +853,6 @@
                 <div class="col-3">
                     <label for="customerName">Customer Name</label>
                     <input id="customerName" class="form-control" type="text">
-                    <span class="control-error"></span>
                 </div>
             </div>
             <div class="row ps-4 pe-4 pb-4">
@@ -877,9 +876,9 @@
             </div>
         </section>
 
-        <!-- Place Order Button -->
+        <!-- Purchase Order Button -->
         <div class="d-flex justify-content-end">
-            <button class="btn btn-primary m-4">Place Order</button>
+            <button id="btnPurchaseOrder" class="btn btn-primary m-4">Purchase Order</button>
         </div>
     </section>
 
