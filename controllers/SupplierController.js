@@ -287,8 +287,6 @@ let regExSupAddressLine3 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExSupAddressLine4 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExSupAddressLine5 = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExSupAddressLine6 = /^[A-Za-z0-9/, -]{4,30}$/;
-let regExSupContactNo1 = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
-let regExSupContactNo2 = /^(07(0|1|2|4|5|6|7|8)|091)[0-9]{7}$/;
 let regExSupEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
 let supplierValidations = [];
@@ -328,23 +326,13 @@ supplierValidations.push({
     error: 'Origin Country must be between 4-30 characters'
 });
 supplierValidations.push({
-    reg: regExSupContactNo1,
-    field: $('#txtSupContactNo1'),
-    error: 'Contact.No must match the pattern 07#-#######'
-});
-supplierValidations.push({
-    reg: regExSupContactNo2,
-    field: $('#txtSupContactNo2'),
-    error: 'Contact.No must match the pattern 07#-#######'
-});
-supplierValidations.push({
     reg: regExSupEmail,
     field: $('#txtSupEmail'),
     error: 'Invalid Email. Please enter valid email'
 });
 
 /** Check Supplier Validity **/
-$("#txtSupName,#txtSupAddressLine1,#txtSupAddressLine2,#txtSupAddressLine3,#txtSupAddressLine4,#txtSupAddressLine5,#txtSupAddressLine6,#txtSupContactNo1,#txtSupContactNo2,#txtSupEmail").on('keyup', function () {
+$("#txtSupName,#txtSupAddressLine1,#txtSupAddressLine2,#txtSupAddressLine3,#txtSupAddressLine4,#txtSupAddressLine5,#txtSupAddressLine6,#txtSupEmail").on('keyup', function () {
     checkSupplierValidity(supplierValidations);
 });
 
