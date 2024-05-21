@@ -54,6 +54,52 @@ $("#cmbCusId").click(function () {
     });
 });
 
+/** Load All Shoes to Combo-Box **/
+function cmbLoadAllShoes() {
+    $.ajax({
+        url: baseURL + "shoe/loadAllShoes",
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#cmbShoeCode").empty();
+
+            // Add a default empty option
+            $("#cmbShoeCode").append('<option value="" disabled selected></option>');
+
+            for (let i of resp.data) {
+                let code = i.code;
+                $("#cmbShoeCode").append(`<option>${code}</option>`);
+            }
+        },
+        error: function (error) {
+            console.log(JSON.parse("Load All Shoes to Combo-Box Error : " + error.responseText).message);
+        }
+    });
+}
+
+/** Shoe Searching Combo-Box **/
+$("#cmbShoeCode").click(function () {
+    let code = $("#cmbShoeCode").val();
+    $.ajax({
+        url: baseURL + 'shoe/searchShoe/' + code,
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + jwtToken
+        },
+        success: function (resp) {
+            $("#shoeDescription").val(resp.description);
+            $("#shoeSize").val(resp.size);
+            $("#shoeUnitPrice").val(resp.unitPriceSale);
+            $("#shoeQty").val(resp.qtyOnHand);
+        },
+        error: function (error) {
+            console.log(JSON.parse("Shoe Combo-Box Searching Error : " + error.responseText).message);
+        }
+    });
+});
+
 /** Purchase Order **/
 $('#btnPurchaseOrder').click(function () {
 
