@@ -42,8 +42,6 @@ function employeeSection() {
 function purchaseOrderSection() {
     hideAllSections();
     $("#purchaseOrderSection").css("display", "block");
-    cmbLoadAllCustomers();
-    cmbLoadAllShoes();
 }
 
 function orderDetailsSection() {
