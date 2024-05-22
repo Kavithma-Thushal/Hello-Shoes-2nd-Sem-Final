@@ -28,6 +28,20 @@
     font-size: 0.9em;
 }
 
+/* SweetAlert2 */
+.swal2-popup {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal2-title {
+    font-size: 20px;
+}
+
+.swal2-icon {
+    font-size: 20px;
+}
+
 /* Sidebar */
 .sidebar {
     position: fixed;
@@ -82,18 +96,4 @@
 
 .table-cursor tbody tr {
     cursor: pointer;
-}
-
-/* SweetAlert2 */
-.swal2-popup {
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.swal2-title {
-    font-size: 20px;
-}
-
-.swal2-icon {
-    font-size: 20px;
 }
