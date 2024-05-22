@@ -40,7 +40,11 @@
                 <input id="lastName" type="text" placeholder="Last Name" required>
                 <input id="email" type="text" placeholder="Email" required>
                 <input id="password" type="text" placeholder="Password" required>
-                <input id="role" type="text" placeholder="Role">
+                <select id="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="ADMIN">Admin</option>
+                    <option value="USER">User</option>
+                </select>
                 <button id="register" class="mt-3" type="button">Register</button>
             </form>
         </div>

@@ -76,7 +76,8 @@
     height: 100%;
 }
 
-.login-process .container input {
+.login-process .container input,
+.login-process .container select {
     background-color: #eee;
     border: none;
     margin: 8px 0;
