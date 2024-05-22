@@ -181,20 +181,20 @@
     </section>
 
     <!-- Customer Management -->
-    <section id="customerSection" style="display: none;">
+    <section id="customerSection" class="manage" style="display: none;">
 
         <!-- Customer Search -->
-        <div class="d-flex align-items-center mt-5 mb-5 me-5 sectionBorder manage-header">
-            <h2 class="ms-3"><i class="bi bi-people-fill"></i> Customer Management</h2>
-            <div class="input-group manage ms-auto" style="width: 300px;">
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-people-fill"></i> Customer Management</h2>
+            <div class="input-group ms-auto" style="width: 300px;">
                 <input id="txtSearchCustomer" class="form-control" type="search" placeholder="Input Customer ID">
                 <button id="btnSearchCustomer" type="button" class="btn btn-success ms-2">Search</button>
             </div>
         </div>
 
         <!-- Customer Form -->
-        <section class="sectionBorder manage me-5">
-            <div class="row ps-4 pe-4 pb-3 pt-3">
+        <section class="mb-4 me-5 p-4 sectionBorder">
+            <div class="row mb-3">
                 <div class="col-3">
                     <label for="txtCusId">Customer ID</label>
                     <input id="txtCusId" class="form-control" type="text" disabled>
@@ -218,7 +218,7 @@
                     <input id="txtCusDOB" class="form-control" type="date">
                 </div>
             </div>
-            <div class="row ps-4 pe-4 pb-3">
+            <div class="row mb-3">
                 <div class="col-3">
                     <label for="txtLoyaltyLevel">Loyalty Level</label>
                     <select id="txtLoyaltyLevel" class="form-select">
@@ -244,7 +244,7 @@
                     <span class="control-error"></span>
                 </div>
             </div>
-            <div class="row ps-4 pe-4 pb-3">
+            <div class="row mb-3">
                 <div class="col-3">
                     <label for="txtCusAddressLine2">Main Lane</label>
                     <input id="txtCusAddressLine2" class="form-control" type="text">
@@ -266,7 +266,7 @@
                     <span class="control-error"></span>
                 </div>
             </div>
-            <div class="row ps-4 pe-4 pb-3">
+            <div class="row">
                 <div class="col-3">
                     <label for="txtRecentDate">Recent Date</label>
                     <input id="txtRecentDate" class="form-control mb-3" type="datetime-local">
@@ -285,7 +285,7 @@
         </section>
 
         <!-- Customer Buttons -->
-        <div class="row manage mt-5 mb-5">
+        <div class="row mb-4 me-1 p-3">
             <div class="col-3">
                 <button id="btnSaveCustomer" type="button" class="btn btn-outline-primary w-75">Save Customer</button>
             </div>
@@ -304,7 +304,7 @@
         </div>
 
         <!-- Customer Table -->
-        <div class="row pt-4 p-3 mb-5 me-5 manage-table sectionBorder">
+        <div class="row mb-4 me-5" style="overflow-x: auto;max-width: 100%;">
             <div class="col-12">
                 <table class="table table-bordered table-hover table-cursor">
                     <thead class="text-light table-dark">
@@ -334,7 +334,7 @@
 
     <!-- Shoes Management -->
     <section id="shoeSection" style="display: none;">
-        <h2 class="mt-3 manage-header">Shoes Management</h2>
+        <h2 class="mt-3 manage">Shoes Management</h2>
 
         <!-- Shoe Search -->
         <div class="row manage">
@@ -489,7 +489,7 @@
 
     <!-- Supplier Management -->
     <section id="supplierSection" style="display: none;">
-        <h2 class="mt-3 manage-header">Supplier Management</h2>
+        <h2 class="mt-3 manage">Supplier Management</h2>
 
         <!-- Supplier Search -->
         <div class="row manage">
@@ -620,7 +620,7 @@
 
     <!-- Employee Management -->
     <section id="employeeSection" style="display: none;">
-        <h2 class="mt-3 manage-header">Employee Management</h2>
+        <h2 class="mt-3 manage">Employee Management</h2>
 
         <!-- Employee Search -->
         <div class="row manage">
@@ -829,12 +829,12 @@
 
     <!-- Purchase Orders -->
     <section id="purchaseOrderSection" style="display: none">
-        <h2 class="mt-3 manage-header">Purchase Orders</h2>
+        <h2 class="mt-3 manage">Purchase Orders</h2>
     </section>
 
     <!-- Order Details -->
     <section id="orderDetailsSection" style="display: none">
-        <h2 class="mt-3 manage-header">Order Details</h2>
+        <h2 class="mt-3 manage">Order Details</h2>
     </section>
 </main>
 
