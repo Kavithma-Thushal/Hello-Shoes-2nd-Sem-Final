@@ -4,13 +4,28 @@
  * @since : 2:02 PM - 4/20/2024
  **/
 
-.txt-admin {
-    margin-left: 670px;
+/* Dashboard */
+.sectionBorder {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    border-radius: 8px;
 }
 
-.notifications {
-    font-size: 20px;
-    color: #fff;
+.dash-tile-icon {
+    font-size: 4.5em;
+}
+
+.card-header {
+    color: white !important;
+}
+
+.card-section {
+    margin-left: 270px;
+    padding-right: 30px;
+}
+
+.control-error {
+    color: red;
+    font-size: 0.9em;
 }
 
 /* Sidebar */
@@ -69,28 +84,6 @@
     cursor: pointer;
 }
 
-.manage-footer {
-    margin-left: 200px;
-}
-
-.sectionBorder {
-    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
-    border-radius: 8px;
-}
-
-.dash-tile-icon {
-    font-size: 4.5em;
-}
-
-.card-header {
-    color: white !important;
-}
-
-.card-section {
-    margin-left: 270px;
-    padding-right: 30px;
-}
-
 /* SweetAlert2 */
 .swal2-popup {
     border-radius: 10px;
@@ -103,10 +96,4 @@
 
 .swal2-icon {
     font-size: 20px;
-}
-
-/* Control Error */
-.control-error {
-    color: red;
-    font-size: 0.9em;
 }
