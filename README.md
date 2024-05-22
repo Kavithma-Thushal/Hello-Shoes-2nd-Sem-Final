@@ -5,7 +5,7 @@ interface!
 This repository contains the frontend application built using modern web technologies. Our frontend
 provides an engaging and intuitive interface for customers to explore our shoe catalog, place orders, and manage their
 accounts. It also includes administrative features for managing inventory, processing orders, and analyzing sales data.
-Pair this frontend with our backend APIs to experience a seamless and responsive shoe shopping experience.
+Pair this frontend with our backend APIs to experience a seamless and responsive shoe shopping experience
 
 ## Technologies Used
 
