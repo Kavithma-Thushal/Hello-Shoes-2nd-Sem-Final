@@ -36,7 +36,7 @@ $('#login').click(function () {
             successAlert("Login Successfully...!");
             // localStorage.setItem('jwtToken', resp.token);    // Chromr
             document.cookie = `jwtToken=${resp.token}; path=/;`;    // Firefox
-            window.location.href = './pages/AdminPanel.html';
+            window.location.href = '../pages/AdminPanel.html';
         },
         error: function (error) {
             errorAlert("Login Error...!");

@@ -9,6 +9,6 @@ $(document).ready(function () {
         successAlert("User Logout Successfully...!");
         // localStorage.removeItem('jwtToken');    // Chrome
         document.cookie = 'jwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';   // FireFox
-        window.location.href = '../index.html';
+        window.location.href = '../demo.html';
     });
 });
