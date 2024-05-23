@@ -81,20 +81,18 @@
                     </a>
                     <ul class="collapse drop-down" id="branchesDropdown">
                         <li><a class="dropdown-item" href="#" onclick="customerSection()">Customer</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="shoesSection()">Shoes</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="shoesSection()">Inventory</a></li>
                         <li><a class="dropdown-item" href="#" onclick="supplierSection()">Supplier</a></li>
                         <li><a class="dropdown-item" href="#" onclick="employeeSection()">Employee</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active dropdown-toggle nav-hover" href="#" role="button"
-                       data-bs-toggle="collapse" data-bs-target="#servicesDropdown" aria-expanded="false">
-                        <i class="bi bi-layout-text-window-reverse me-3"></i>Details
-                    </a>
-                    <ul class="collapse drop-down" id="servicesDropdown">
-                        <li><a class="dropdown-item" href="#" onclick="purchaseOrderSection()">Purchase Order</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="orderDetailsSection()">Order Details</a></li>
-                    </ul>
+                    <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"
+                       onclick="purchaseOrderSection()"><i class="bi bi-cart-fill me-3"></i>Purchase Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active pe-5 nav-hover" aria-current="page" href="#"
+                       onclick="orderDetailsSection()"><i class="bi bi-cart-check-fill me-3"></i>Order Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active nav-hover" id="logout" href="#"><i
@@ -816,7 +814,7 @@
     <section id="purchaseOrderSection" class="manage" style="display: none">
         <!-- Order Search -->
         <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
-            <h2><i class="bi bi-cart-fill"></i> Order Management</h2>
+            <h2><i class="bi bi-cart-fill"></i> Purchase Order</h2>
             <div class="input-group ms-auto" style="width: 300px;">
                 <input id="txtSearchOrder" class="form-control" type="search" placeholder="Input Order ID">
                 <button id="btnSearchOrder" type="button" class="btn btn-success ms-2">Search</button>
