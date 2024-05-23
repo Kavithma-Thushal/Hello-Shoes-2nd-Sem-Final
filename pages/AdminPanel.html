@@ -108,10 +108,10 @@
 <main>
     <!-- Admin Dashboard -->
     <section id="adminDashboardSection" class="container-fluid">
-        <div class="jumbotron mt-5">
+        <div class="jumbotron">
             <div id="home-tiles">
-                <div class="row card-section">
-                    <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="row card-section mt-5">
+                    <div class="col-lg-6 col-xl-3">
                         <div class="card sectionBorder">
                             <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
                                 Customers
@@ -124,19 +124,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="col-lg-6 col-xl-3">
                         <div class="card sectionBorder">
                             <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Shoes
                             </div>
                             <div class="card-body d-flex justify-content-around align-items-center">
-                                <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
+                                <div class="dash-tile-icon"><i class="bi bi-boxes"></i></div>
                                 <div class="dash-tile-text text-black-50">
                                     <h1 id="txtShoeCount">00</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="col-lg-6 col-xl-3">
                         <div class="card sectionBorder">
                             <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
                                 Suppliers
@@ -149,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="col-lg-6 col-xl-3">
                         <div class="card sectionBorder">
                             <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
                                 Employees
@@ -162,13 +162,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-2">
+                </div>
+                <div class="row card-section mt-4">
+                    <div class="col-lg-6 col-xl-3">
                         <div class="card sectionBorder">
                             <div class="card-header font-weight-bolder" style="background-color: dodgerblue">
                                 Sales
                             </div>
                             <div class="card-body d-flex justify-content-around align-items-center">
-                                <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
+                                <div class="dash-tile-icon"><i class="bi bi-cart-fill"></i></div>
                                 <div class="dash-tile-text text-black-50">
                                     <h1 id="txtSalesCount">00</h1>
                                 </div>
@@ -193,7 +195,7 @@
         </div>
 
         <!-- Customer Form -->
-        <section class="mb-4 me-5 p-4 sectionBorder">
+        <section class="mb-3 me-5 p-4 sectionBorder">
             <div class="row mb-3">
                 <div class="col-3">
                     <label for="txtCusId">Customer ID</label>
@@ -285,7 +287,7 @@
         </section>
 
         <!-- Customer Buttons -->
-        <div class="row mb-4 me-1 p-3">
+        <div class="row mb-3 me-1 p-3">
             <div class="col-3">
                 <button id="btnSaveCustomer" type="button" class="btn btn-outline-primary w-75">Save Customer</button>
             </div>
@@ -333,43 +335,36 @@
     </section>
 
     <!-- Shoes Management -->
-    <section id="shoeSection" style="display: none;">
-        <h2 class="mt-3 manage">Shoes Management</h2>
+    <section id="shoeSection" class="manage" style="display: none;">
 
         <!-- Shoe Search -->
-        <div class="row manage">
-            <div class="col-4">
-                <div class="input-group">
-                    <input id="txtSearchShoe" class="form-control rounded-2" type="search"
-                           placeholder="Input Shoe Code">
-                    <div class="input-group-append">
-                        <button id="btnSearchShoe" type="button" class="btn btn-success ms-3">Search</button>
-                    </div>
-                </div>
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-boxes"></i> Inventory Management</h2>
+            <div class="input-group ms-auto" style="width: 300px;">
+                <input id="txtSearchShoe" class="form-control" type="search" placeholder="Input Shoe Code">
+                <button id="btnSearchShoe" type="button" class="btn btn-success ms-2">Search</button>
             </div>
         </div>
 
         <!-- Shoe Form -->
-        <section>
-            <div class="row manage">
-                <div class="col-4">
+        <section class="mb-3 me-5 p-4 sectionBorder">
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtShoeCode">Shoe Code</label>
                     <input id="txtShoeCode" class="form-control" type="text" disabled>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtShoeDescription">Shoe Description</label>
                     <input id="txtShoeDescription" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <input id="txtShoePicture" class="form-control mt-4" type="file" accept="image/*"
                            onchange="previewImage(event, 'shoeImagePreview')">
-                    <img id="shoeImagePreview" src="#" alt="Shoe Preview" class="sectionBorder"
-                         style="display: none; margin-top: -167px; max-width: 100px;">
+                    <img id="shoeImagePreview" src="#" alt="Shoe Preview"
+                         style="display: none; margin-top: -200px; max-width: 100px;">
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtShoeCategory">Select Category</label>
                     <select id="txtShoeCategory" class="form-select">
                         <option value="" disabled selected></option>
@@ -385,46 +380,46 @@
                         <option value="SHAMPOO">Shoe Shampoo</option>
                     </select>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtShoeSize">Shoe Size</label>
                     <input id="txtShoeSize" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtShoeQtyOnHand">Shoe Qty On Hand</label>
                     <input id="txtShoeQtyOnHand" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupIdd">Supplier ID</label>
                     <input id="txtSupIdd" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupNamee">Supplier Name</label>
                     <input id="txtSupNamee" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtUnitPriceSale">Unit Price - Sale</label>
                     <input id="txtUnitPriceSale" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtUnitPriceBuy">Unit Price - Buy</label>
                     <input id="txtUnitPriceBuy" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtExpectedProfit">Expected Profit</label>
                     <input id="txtExpectedProfit" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtStockStatus">Stock Status</label>
                     <select id="txtStockStatus" class="form-select">
                         <option value="" disabled selected></option>
@@ -435,8 +430,8 @@
                     </select>
                 </div>
             </div>
-            <div class="row manage">
-                <div class="col-4">
+            <div class="row">
+                <div class="col-3">
                     <label for="txtProfitMargin">Profit Margin</label>
                     <input id="txtProfitMargin" class="form-control" type="text">
                     <span class="control-error"></span>
@@ -445,25 +440,25 @@
         </section>
 
         <!-- Shoe Buttons -->
-        <div class="row manage mt-4 mb-5">
+        <div class="row mb-3 me-1 p-3">
             <div class="col-3">
-                <button id="btnAddShoe" type="button" class="btn btn-primary w-100">Add Shoe</button>
+                <button id="btnAddShoe" type="button" class="btn btn-outline-primary w-75">Add Shoe</button>
             </div>
             <div class="col-3">
-                <button id="btnUpdateShoe" type="button" class="btn btn-warning w-100">Update Shoe</button>
+                <button id="btnUpdateShoe" type="button" class="btn btn-outline-warning w-75">Update Shoe</button>
             </div>
             <div class="col-3">
-                <button id="btnDeleteShoe" type="button" class="btn btn-danger w-100">Delete Shoe</button>
+                <button id="btnDeleteShoe" type="button" class="btn btn-outline-danger w-75">Delete Shoe</button>
             </div>
             <div class="col-3">
-                <button id="btnClearAllShoes" type="button" class="btn btn-secondary w-100">Clear All</button>
+                <button id="btnClearAllShoes" type="button" class="btn btn-outline-secondary w-75">Clear All</button>
             </div>
         </div>
 
         <!-- Shoe Table -->
-        <div class="row manage-table">
+        <div class="row mb-4 me-5" style="overflow-x: auto;max-width: 100%;">
             <div class="col-12">
-                <table class="table table-cursor">
+                <table class="table table-bordered table-hover table-cursor">
                     <thead class="text-light table-dark">
                     <tr>
                         <th scope="col">Shoe Code</th>
@@ -488,35 +483,30 @@
     </section>
 
     <!-- Supplier Management -->
-    <section id="supplierSection" style="display: none;">
-        <h2 class="mt-3 manage">Supplier Management</h2>
+    <section id="supplierSection" class="manage" style="display: none;">
 
         <!-- Supplier Search -->
-        <div class="row manage">
-            <div class="col-4">
-                <div class="input-group">
-                    <input id="txtSearchSupplier" class="form-control rounded-2" type="search"
-                           placeholder="Input Supplier ID">
-                    <div class="input-group-append">
-                        <button id="btnSearchSupplier" type="button" class="btn btn-success ms-3">Search</button>
-                    </div>
-                </div>
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-people-fill"></i> Supplier Management</h2>
+            <div class="input-group ms-auto" style="width: 300px;">
+                <input id="txtSearchSupplier" class="form-control" type="search" placeholder="Input Supplier ID">
+                <button id="btnSearchSupplier" type="button" class="btn btn-success ms-2">Search</button>
             </div>
         </div>
 
         <!-- Supplier Form -->
-        <section>
-            <div class="row manage">
-                <div class="col-4">
+        <section class="mb-3 me-5 p-4 sectionBorder">
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtSupId">Supplier ID</label>
                     <input id="txtSupId" class="form-control" type="text" disabled>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupName">Supplier Name</label>
                     <input id="txtSupName" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupCategory">Select Category</label>
                     <select id="txtSupCategory" class="form-select">
                         <option value="" disabled selected></option>
@@ -524,51 +514,49 @@
                         <option value="INTERNATIONAL">International</option>
                     </select>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupAddressLine1">Building No</label>
                     <input id="txtSupAddressLine1" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtSupAddressLine2">Main Lane</label>
                     <input id="txtSupAddressLine2" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupAddressLine3">Main City</label>
                     <input id="txtSupAddressLine3" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupAddressLine4">Main State</label>
                     <input id="txtSupAddressLine4" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupAddressLine5">Postal Code</label>
                     <input id="txtSupAddressLine5" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row">
+                <div class="col-3">
                     <label for="txtSupAddressLine6">Origin Country</label>
                     <input id="txtSupAddressLine6" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupContactNo1">Contact No.1</label>
                     <input id="txtSupContactNo1" class="form-control" type="text">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupContactNo2">Contact No.2</label>
                     <input id="txtSupContactNo2" class="form-control" type="text">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtSupEmail">Supplier Email</label>
                     <input id="txtSupEmail" class="form-control" type="email">
                     <span class="control-error"></span>
@@ -577,25 +565,28 @@
         </section>
 
         <!-- Supplier Buttons -->
-        <div class="row manage mt-5 mb-5">
+        <div class="row mb-3 me-1 p-3">
             <div class="col-3">
-                <button id="btnSaveSupplier" type="button" class="btn btn-primary w-100">Save Supplier</button>
+                <button id="btnSaveSupplier" type="button" class="btn btn-outline-primary w-75">Save Supplier</button>
             </div>
             <div class="col-3">
-                <button id="btnUpdateSupplier" type="button" class="btn btn-warning w-100">Update Supplier</button>
+                <button id="btnUpdateSupplier" type="button" class="btn btn-outline-warning w-75">Update Supplier
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnDeleteSupplier" type="button" class="btn btn-danger w-100">Delete Supplier</button>
+                <button id="btnDeleteSupplier" type="button" class="btn btn-outline-danger w-75">Delete Supplier
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnClearAllSuppliers" type="button" class="btn btn-secondary w-100">Clear All</button>
+                <button id="btnClearAllSuppliers" type="button" class="btn btn-outline-secondary w-75">Clear All
+                </button>
             </div>
         </div>
 
         <!-- Supplier Table -->
-        <div class="row manage-table">
+        <div class="row mb-4 me-5" style="overflow-x: auto;max-width: 100%;">
             <div class="col-12">
-                <table class="table  table-cursor">
+                <table class="table table-bordered table-hover table-cursor">
                     <thead class="text-light table-dark">
                     <tr>
                         <th scope="col">Supplier ID</th>
@@ -619,43 +610,36 @@
     </section>
 
     <!-- Employee Management -->
-    <section id="employeeSection" style="display: none;">
-        <h2 class="mt-3 manage">Employee Management</h2>
+    <section id="employeeSection" class="manage" style="display: none;">
 
         <!-- Employee Search -->
-        <div class="row manage">
-            <div class="col-4">
-                <div class="input-group">
-                    <input id="txtSearchEmployee" class="form-control rounded-2" type="search"
-                           placeholder="Input Employee ID">
-                    <div class="input-group-append">
-                        <button id="btnSearchEmployee" type="button" class="btn btn-success ms-3">Search</button>
-                    </div>
-                </div>
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-people-fill"></i> Employee Management</h2>
+            <div class="input-group ms-auto" style="width: 300px;">
+                <input id="txtSearchEmployee" class="form-control" type="search" placeholder="Input Employee ID">
+                <button id="btnSearchEmployee" type="button" class="btn btn-success ms-2">Search</button>
             </div>
         </div>
 
         <!-- Employee Form -->
-        <section>
-            <div class="row manage">
-                <div class="col-4">
+        <section class="mb-3 me-5 p-4 sectionBorder">
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtEmpId">Employee ID</label>
                     <input id="txtEmpId" class="form-control" type="text" disabled>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpName">Employee Name</label>
                     <input id="txtEmpName" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <input id="txtEmpPicture" class="form-control mt-4" type="file" accept="image/*"
                            onchange="previewImage(event, 'empImagePreview')">
-                    <img id="empImagePreview" src="#" alt="Employee Preview" class="sectionBorder"
-                         style="display: none; margin-top: -167px; max-width: 100px;">
+                    <!--<img id="empImagePreview" src="#" alt="Employee Preview"
+                         style="display: none; margin-top: -200px; max-width: 100px;">-->
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpGender">Select Gender</label>
                     <select id="txtEmpGender" class="form-select">
                         <option value="" disabled selected></option>
@@ -664,7 +648,9 @@
                         <option value="OTHER">Other</option>
                     </select>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtEmpStatus">Civil Status</label>
                     <select id="txtEmpStatus" class="form-select">
                         <option value="" disabled selected></option>
@@ -673,7 +659,7 @@
                         <option value="DIVORCED">Divorced</option>
                     </select>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpDesignation">Select Designation</label>
                     <select id="txtEmpDesignation" class="form-select">
                         <option value="" disabled selected></option>
@@ -688,9 +674,7 @@
                         <option value="CLEANER">Cleaner</option>
                     </select>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpRole">Select Role</label>
                     <select id="txtEmpRole" class="form-select">
                         <option value="" disabled selected></option>
@@ -698,17 +682,17 @@
                         <option value="USER">User</option>
                     </select>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpDOB">Employee DOB</label>
                     <input id="txtEmpDOB" class="form-control" type="date">
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtEmpJoinDate">Join Date</label>
                     <input id="txtEmpJoinDate" class="form-control" type="date">
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpBranch">Select Branch</label>
                     <select id="txtEmpBranch" class="form-select">
                         <option value="" disabled selected></option>
@@ -724,53 +708,51 @@
                         <option value="GAMPAHA">Gampaha</option>
                     </select>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpAddressLine1">Building No</label>
                     <input id="txtEmpAddressLine1" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpAddressLine2">Main Lane</label>
                     <input id="txtEmpAddressLine2" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
             </div>
-            <div class="row manage">
-                <div class="col-4">
+            <div class="row mb-3">
+                <div class="col-3">
                     <label for="txtEmpAddressLine3">Main City</label>
                     <input id="txtEmpAddressLine3" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpAddressLine4">Main State</label>
                     <input id="txtEmpAddressLine4" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpAddressLine5">Postal Code</label>
                     <input id="txtEmpAddressLine5" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpContactNo">Contact No.</label>
                     <input id="txtEmpContactNo" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+            </div>
+            <div class="row">
+                <div class="col-3">
                     <label for="txtEmpEmail">Employee Email</label>
                     <input id="txtEmpEmail" class="form-control" type="email">
                     <span class="control-error"></span>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpEmergencyGuardian">Emergency Guardian</label>
                     <input id="txtEmpEmergencyGuardian" class="form-control" type="text">
                     <span class="control-error"></span>
                 </div>
-            </div>
-            <div class="row manage">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="txtEmpEmergencyNo">Emergency No.</label>
                     <input id="txtEmpEmergencyNo" class="form-control" type="text">
                     <span class="control-error"></span>
@@ -779,25 +761,28 @@
         </section>
 
         <!-- Employee Buttons -->
-        <div class="row manage  mt-5 mb-5">
+        <div class="row mb-3 me-1 p-3">
             <div class="col-3">
-                <button id="btnSaveEmployee" type="button" class="btn btn-primary w-100">Save Employee</button>
+                <button id="btnSaveEmployee" type="button" class="btn btn-outline-primary w-75">Save Employee</button>
             </div>
             <div class="col-3">
-                <button id="btnUpdateEmployee" type="button" class="btn btn-warning w-100">Update Employee</button>
+                <button id="btnUpdateEmployee" type="button" class="btn btn-outline-warning w-75">Update Employee
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnDeleteEmployee" type="button" class="btn btn-danger w-100">Delete Employee</button>
+                <button id="btnDeleteEmployee" type="button" class="btn btn-outline-danger w-75">Delete Employee
+                </button>
             </div>
             <div class="col-3">
-                <button id="btnClearAllEmployees" type="button" class="btn btn-secondary w-100">Clear All</button>
+                <button id="btnClearAllEmployees" type="button" class="btn btn-outline-secondary w-75">Clear All
+                </button>
             </div>
         </div>
 
         <!-- Employee Table -->
-        <div class="row manage-table">
+        <div class="row mb-4 me-5" style="overflow-x: auto;max-width: 100%;">
             <div class="col-12">
-                <table class="table table-cursor">
+                <table class="table table-bordered table-hover table-cursor">
                     <thead class="text-light table-dark">
                     <tr>
                         <th scope="col">Employee ID</th>
@@ -828,13 +813,22 @@
     </section>
 
     <!-- Purchase Orders -->
-    <section id="purchaseOrderSection" style="display: none">
-        <h2 class="mt-3 manage">Purchase Orders</h2>
+    <section id="purchaseOrderSection" class="manage" style="display: none">
+        <!-- Order Search -->
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-cart-fill"></i> Order Management</h2>
+            <div class="input-group ms-auto" style="width: 300px;">
+                <input id="txtSearchOrder" class="form-control" type="search" placeholder="Input Order ID">
+                <button id="btnSearchOrder" type="button" class="btn btn-success ms-2">Search</button>
+            </div>
+        </div>
     </section>
 
     <!-- Order Details -->
-    <section id="orderDetailsSection" style="display: none">
-        <h2 class="mt-3 manage">Order Details</h2>
+    <section id="orderDetailsSection" class="manage" style="display: none">
+        <div class="d-flex align-items-center mt-4 mb-4 me-5 p-3 sectionBorder">
+            <h2><i class="bi bi-cart-check-fill"></i> Order Details</h2>
+        </div>
     </section>
 </main>
 
