@@ -1,0 +1,165 @@
+.sectionBorder {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    border-radius: 8px;
+}
+
+#loader{
+    height: 100vh;
+    background-color:white;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    position: relative;
+    overflow-x: hidden;
+    cursor: none;
+    z-index: 20;
+}
+
+#loader>img{
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#signUpNav{
+    color: white;
+    background-color: #FFA633;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#btn-log,#signIn,#signUp,#adminLogOut,#card-payment,#userLogOut,#sendOffer,#offer-send{
+    padding: 0.593vw 1.112vw;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    display: inline-block;
+    margin: 1.853vw 0;
+    border-radius: 8px;
+    border: 0.148vw solid #FFA633;
+    background: linear-gradient(to left, #ffffff 50%, rgb(255, 166, 51) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    font-size: 0.8vw;
+}
+
+#btn-log:hover,#signIn:hover,#signUp:hover,#adminLogOut:hover,#card-payment:hover,#userLogOut:hover,#sendOffer:hover,#offer-send:hover{
+    background-position: left;
+    color: #ffffff;
+}
+
+#log-container{
+    position: relative;
+
+}
+
+.swal-modal {
+    background-color: rgba(106, 135, 135, 0.7);
+    border: 3px solid #7bb4c2;
+}
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.swal-text {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.swal-title {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.swal-button {
+    color: #ffffff;
+    background-color: #406668;
+}
+
+.swal-button:hover {
+    background-color: #7bb4c2 !important;
+}
+
+.custom-cancel-btn{
+    color: #ffffff;
+    background-color: #731010;
+}
+
+.custom-cancel-btn:hover{
+    background-color: #340606 !important;
+}
+
+.swal-icon--success:after, .swal-icon--success:before, .swal-icon--success__hide-corners{
+    display: none;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: rgb(21, 21, 21);
+    --bs-tooltip-color: rgb(123, 180, 194);
+}
+.swal2-loading{
+    left: 5vw;
+    top: 1vw;
+}
+
+.table-container {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.table-container thead {
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/*dark theam*/
+/*body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+    background: linear-gradient(103deg, #1E1E20 0%, #212121 32%);
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}*/
+
+.svg-set{
+    width:40%;
+    height:20%;
+    visibility:hidden;
+}
+.svg-set-2{
+   /* left: -5%;*/
+    position: relative;
+    width: 30%;
+    height:20%;
+    visibility:hidden;
+}
+.hit{
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    overflow: hidden;
+}

@@ -1,0 +1,45 @@
+#user-nav-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 5%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    z-index: 16;
+}
+.pay-icon{
+    padding: 0.593vw 1.112vw;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    display: inline-block;
+    margin: 1.853vw 0;
+    border-radius: 0.741vw;
+    border: 0.148vw solid #E9C54A;
+    background: linear-gradient(to left, #ffffff 50%, rgb(233, 197, 74) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    font-size: 0.8vw;
+}
+.pay-icon:hover{
+    background-position: left;
+    border: 0.148vw solid rgba(59, 59, 59, 0.8);
+}
+.blinking {
+    background-color: khaki;
+    animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background-color: khaki;
+    }
+    50% {
+        background-color: white;
+    }
+    100% {
+        background-color: khaki;
+    }
+}
+

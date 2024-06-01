@@ -1,0 +1,22 @@
+#log-in-container {
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    border-radius: 8px;
+    position: absolute;
+    top: 19vh;
+    right: 0;
+    left: 50%;
+    margin: auto;
+}
+
+.form-control:focus {
+    border-color: #FFA633;
+    box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;
+}
+
+#btnSignIn:hover {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: none !important;
+}

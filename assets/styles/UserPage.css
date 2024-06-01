@@ -1,0 +1,66 @@
+#nav-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 5%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px;
+    z-index: 10;
+}
+
+.circle {
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    animation-name: water-drop;
+    border: 2px solid red;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@keyframes water-drop {
+    0% {
+        width: 0.5vw;
+        height: 0.5vw;
+    }
+
+    50% {
+        width: 45vw;
+        height: 45vw;
+        opacity: 0;
+    }
+
+    51% {
+        border: 3px solid transparent;
+        width: 0.5vw;
+        height: 0.5vw;
+        opacity: 0;
+    }
+
+    100% {
+        border: 2px solid red;
+        width: 45vw;
+        height: 45vw;
+        opacity: 0;
+    }
+}
+.circle:nth-child(1) {
+    animation-delay: -0.5s;
+}
+.circle:nth-child(2) {
+    animation-delay: -1.5s;
+}
+.circle:nth-child(3) {
+    animation-delay: -2.5s;
+}
+.circle:nth-child(4) {
+    animation-delay: -3.5s;
+}

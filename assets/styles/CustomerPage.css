@@ -1,0 +1,41 @@
+body {
+    overflow: hidden;
+}
+
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse; /* Align stars from right to left */
+    align-items: center;
+}
+
+.star-label {
+    position: relative;
+    cursor: pointer;
+    margin-right: 2vw;
+}
+
+.star-label img {
+    position: absolute;
+    top: 12vh;
+    left: -0.9vw;
+    width: 4.4vw;
+    display: none;
+}
+
+.star-label span {
+    font-size: 3vw;
+    color: #ccc;
+    margin-right: 5px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating input[type="radio"]:checked ~ .star-label img {
+    display: block;
+}
+
+.rating input[type="radio"]:checked ~ .star-label span {
+    color: #fdd835;
+}
