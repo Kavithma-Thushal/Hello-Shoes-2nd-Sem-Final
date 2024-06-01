@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Index Refactored" />
+    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Index Refactored">
+      <change afterPath="$PROJECT_DIR$/assets/images/add-icon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/banks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/banks2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/card.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/chart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/delete3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/employee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/first-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/inventory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/nav-toggle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/nav-togglee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/profit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/resetCardgif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sendoffer.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/special-offer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sport-shoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sup.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/supplier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/total-customers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/total-employees.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/total-shoes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/total.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/users.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/walk.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +62,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets/images",
+    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,6 +73,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets\images" />
     </key>
   </component>
@@ -60,6 +95,7 @@
       <updated>1717263317962</updated>
       <workItem from="1717263319122" duration="262000" />
       <workItem from="1717263589436" duration="2103000" />
+      <workItem from="1717265778235" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="New">
       <option name="closed" value="true" />
@@ -125,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717265643750</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Index Refactored">
+      <option name="closed" value="true" />
+      <created>1717265820694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717265820694</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Index Refactored">
+      <option name="closed" value="true" />
+      <created>1717266025492</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717266025492</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
