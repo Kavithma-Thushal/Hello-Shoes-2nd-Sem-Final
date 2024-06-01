@@ -10,750 +10,2033 @@
     <meta name="owner" content="Kavithma Thushal">
     <meta name="author" content="Kavithma Thushal">
     <meta name="theme-color" content="yellow">
+    <link rel="icon" href="assets/images/favicon.png">
     <title>Hello Shoes (PVT) LTD.</title>
 
-    <link rel="icon" href="assets/images/favicon.png">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap">
-    <link rel="stylesheet" href="assets/styles/index.css">
+    <!-- Custom-CSS -->
+    <link rel="stylesheet" href="assets/styles/AdminPage.css">
+    <link rel="stylesheet" href="assets/styles/UserPage.css">
+    <link rel="stylesheet" href="assets/styles/HomePage.css">
+    <link rel="stylesheet" href="assets/styles/CustomerPage.css">
+    <link rel="stylesheet" href="assets/styles/SignUpPage.css">
+    <link rel="stylesheet" href="assets/styles/LogInPage.css">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+
+  <!-- Bootstrap5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- Sweetalert2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@4/default.css">
 </head>
 
 <body>
-<!-- Navigation -->
-<header class="header" data-header>
-    <div class="container">
-        <h1>
-            <a style="cursor: pointer;" class="logo">Hello <span class="span">Shoes</span></a>
-        </h1>
+<!-- Loading -->
+<section id="loader">
+  <img class="personal-img" src="assets/images/loading.gif" alt="loading....." >
+</section>
 
-        <nav class="navbar" data-navbar>
-            <ul class="navbar-list">
-                <li class="nav-item">
-                    <a href="#home" class="navbar-link" data-nav-link>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="navbar-link" data-nav-link>About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#shoes" class="navbar-link" data-nav-link>Shoes</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#reviews" class="navbar-link" data-nav-link>Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contacts" class="navbar-link" data-nav-link>Contacts</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="header-btn-group">
-            <button class="search-btn" aria-label="Search" data-search-btn>
-                <ion-icon name="search-outline"></ion-icon>
-            </button>
-
-            <a href="pages/login.html">
-                <button class="btn1 btn-hover">Login</button>
-            </a>
-
-            <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
-                <span class="line top"></span>
-                <span class="line middle"></span>
-                <span class="line bottom"></span>
-            </button>
-        </div>
+<!-- SignIn & SignUp Header -->
+<header id="header">
+  <nav class="navbar navbar-expand-lg <!--bg-white--> nav-bar container-fluid d-flex " style="height: 60px; padding-right: 20px">
+    <div class="col-md-2">
+      <svg class="svg-set" viewBox="0 0 800 600">
+        <title>Day And Night Toggle</title>
+        <defs>
+          <filter id="shadow" x="-100%" y="-100%" width="250%" height="250%">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+            <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+            <feFlood id="glowAlpha" flood-color="#000" flood-opacity="0.07"></feFlood>
+            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <mask id="moonMask">
+            <rect id="outlineFill"  x="225" y="215" width="350" height="170" rx="86" ry="86" fill="#FFF" stroke="#000" stroke-width="0"/>
+            <circle class="moonMask" cx="487" cy="300" r="66" fill="#06070B"/>
+          </mask>
+          <clipPath id="outlineMask">
+            <use xlink:href="#outlineFill"/>
+          </clipPath>
+          <path id="cloud" d="M20.67,42.52h39c22,0,18-16.52,11.19-17.51,1.93-7.5-1.94-25-23.19-25s-24,18-24,18S12.75,13.2,5,18.83C-3.8,25.15-2.33,42.52,20.67,42.52Z"/>
+        </defs>
+        <g class="whole" >
+          <rect class="outline" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="#85E8FE" stroke="#FCFDFE" stroke-width="10"/>
+          <g class="starGroup" fill="#FFF" clip-path="url(#outlineMask)">
+            <polygon points="405 248.25 406.58 254.42 412.75 256 406.58 257.58 405 263.75 403.42 257.58 397.25 256 403.42 254.42 405 248.25"/>
+            <path d="M427.33,301.9a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+            <path d="M402.59,367.21a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+            <polygon points="447 325.5 450.17 337.83 462.5 341 450.17 344.17 447 356.5 443.83 344.17 431.5 341 443.83 337.83 447 325.5"/>
+            <path d="M464,241.53a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+            <polygon points="496 274.25 497.58 280.42 503.75 282 497.58 283.58 496 289.75 494.42 283.58 488.25 282 494.42 280.42 496 274.25"/>
+            <path d="M503.53,351.38a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+            <path d="M537.18,249.45a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+            <path d="M553,322.68a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+          </g>
+          <circle class="sun" cx="486" cy="300" r="66" fill="#FEC100"/>
+          <g mask="url(#moonMask)">
+            <circle class="moon" cx="403" cy="300" r="66" fill="#FFF" opacity="0"/>
+          </g>
+          <g class="planeGroup" fill="#FFF" clip-path="url(#outlineMask)" opacity="1">
+            <path class="plane" d="M611.12,262.15l-7.16,0-6.48-5.43-1.06.58,1.93,4.88-3.67.06-3.48-3.37-.78.36,1.26,3.05h-.58a27.07,27.07,0,0,0,4.6,2.24s8.57,0,12.37,0H611c.65,0,2.19,0,2.19-1.25C613.19,262.26,612.05,262.15,611.12,262.15Z"  fill="#fff"/>
+            <line class="contrail" x1="590.17" y1="264" x2="246.51" y2="264" fill="none" stroke="#fff" stroke-width="1" opacity="0.53"/>
+          </g>
+          <g class="cloudGroup" fill="#FFF" clip-path="url(#outlineMask)">
+            <g class="cloud" filter="url(#shadow)">
+              <rect x="515.79" y="314.92" width="47.15" height="10.37" rx="5.19" ry="5.19"/>
+              <circle cx="521.45" cy="313.98" r="11.32"/>
+              <circle cx="540.84" cy="305.91" r="15.61"/>
+              <circle cx="556.82" cy="316.34" r="8.96"/>
+            </g>
+            <g class="cloud"  filter="url(#shadow)">
+              <rect x="397.85" y="349.02" width="92.34" height="10.37" rx="5.19" ry="5.19" transform="translate(888.03 708.41) rotate(180)"/>
+              <circle cx="484.53" cy="348.08" r="11.32"/>
+              <circle cx="432.65" cy="332.46" r="24.66"/>
+              <circle cx="464.35" cy="338.11" r="17.51"/>
+              <circle cx="404.21" cy="348.19" r="11.32"/>
+            </g>
+          </g>
+        </g>
+        <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
+      </svg>
     </div>
+    <div class="ms-auto">
+        <button type="button" class="btn" id="signIn">Sign In</button>
+        <button type="button" class="btn" id="signUp">Sign Up</button>
+      </div>
+  </nav>
 </header>
 
-<!-- Search -->
-<div class="search-container" data-search-container>
+<main id="main-container">
 
-    <div class="search-box">
-        <input type="search" name="search" aria-label="Search here" placeholder="Search Here" class="search-input">
+  <!-- SignIn & SignUp View -->
+  <section id="main-view">
+    <section class="container-fluid" >
+      <div class="background"><div id="particles-js"></div></div>
+      <div class="container" style="position: relative">
+        <img src="assets/images/sport-shoe.png" style="width: 50%; position: absolute; top: 3vh; left: 45vw">
+        <h1 class="dark-h1" style="position: absolute; top: 20vh; left: 5vw; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 60px">Walk In</h1>
+        <h1 style="position: absolute; top: 28vh; left: 5vw; font-family: 'Fira Sans', sans-serif; font-weight: 900; font-size: 80px; color: #FFA633">Confidently</h1>
+        <h7 style="width: 30vw; position: absolute; top: 42vh; left: 5.3vw; font-family: 'Fira Sans', sans-serif; font-size: 18px; color: #9FA0A0">Experience footwear that seamlessly blends style and comfort. Step into shoes that perfectly match your lifestyle and needs.</h7>
+        <button type="button" class="btn" id="btn-log" style="position: absolute; top: 52vh; left: 5.3vw">Shop Now</button>
+      </div>
+    </section>
+  </section>
 
-        <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
-            <ion-icon name="search-outline"></ion-icon>
-        </button>
+  <!-- SignIn -->
+  <section id="log-in-page">
+    <img src="assets/images/sport-shoe.png" style="width: 47.5%; position: absolute; top: 3vh; left: 5.5vw">
+    <div id="log-in-container">
+      <h1 class="mt-5 mb-5 dark-h1 text-center" style="font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 40px">Sign In</h1>
+      <div class="col-md-6 ms-5 mt-4">
+        <label for="log-in-Username" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Username</label>
+        <input type="username" class="form-control" id="log-in-Username" style="width: 350px">
+        <p class="position-absolute m-0"><small class="text-danger" id="log-in-UsernameError"></small></p>
+      </div>
+      <div class="col-md-6 ms-5 mt-4 mb-4">
+        <label for="log-in-Password" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Password</label>
+        <input type="password" class="form-control" id="log-in-Password" style="width: 350px">
+        <p class="position-absolute m-0"><small class="text-danger" id="log-in-PasswordError"></small></p>
+      </div>
+      <button id="btnSignIn" type="button" class="btn  ms-5 mt-4" style="background-color: rgba(59, 59, 59, 0.9); color: #ffffff; width: 350px">Sign In</button>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 class="ms-5 mt-5" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; cursor: pointer;">Don't have an Account?</h1>
+        <h1 class="me-5 mt-5" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; cursor: pointer;">Forgot Password?</h1>
+      </div>
     </div>
+  </section>
 
-    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
-</div>
+  <!-- SignUp -->
+  <section id="sign-up-page">
+    <img src="assets/images/sport-shoe.png" style="width: 47.5%; position: absolute; top: 3vh; left: 5.5vw">
+    <form id="sign-up-form">
+      <div id="sign-up-container" class="sign-up-dark">
+        <h1 class="mt-4 dark-h1 text-center" style="font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 40px; color: black;">Create Account</h1>
+        <div class="ms-5 mt-3" style="width: 90%; height: 48vh">
+          <div class="col-sm">
+            <label for="inputEmail" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Email</label>
+            <input type="email" class="form-control" id="inputEmail" style="width: 350px">
+            <p class="position-absolute m-0"><small class="text-danger" id="inputEmailError"></small></p>
+          </div>
+          <div class="col-sm mt-3">
+            <label for="inputPassword" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Password</label>
+            <input type="password" class="form-control" id="inputPassword" style="width: 350px">
+            <p class="position-absolute m-0"><small class="text-danger" id="inputPasswordError"></small></p>
+          </div>
+          <div class="col-sm mt-3">
+            <label for="reInputPassword" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Confirm Password</label>
+            <input type="password" class="form-control" id="reInputPassword" style="width: 350px">
+            <p class="position-absolute m-0"><small class="text-danger" id="reInputPasswordError"></small></p>
+          </div>
+          <div class="col-sm mt-3 mb-2">
+            <label for="inputRole" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Role</label>
+            <select aria-label="Default select example" class="form-select" id="inputRole" style="width: 350px">
+              <option value="ADMIN" selected>Admin</option>
+              <option value="USER">User</option>
+            </select>
+          </div>
+          <button id="signup-page-signup" type="button" class="btn mt-4" style="background-color: rgba(59, 59, 59, 0.9); color: #ffffff; width: 350px">Sign Up</button>
+        </div>
+      </div>
+      </form>
+  </section>
 
-<main>
-    <!-- Home -->
-    <section class="hero" id="home" style="background-image: url('assets/images/home-bg.jpg')">
-        <div class="container">
+  <!-- Admin Header & Sidebar -->
+  <section id="admin-container">
 
-            <div class="hero-content">
-                <p class="hero-subtitle">Walk In Confidently</p>
-                <h2 class="h1 hero-title">Explore Our Newest Shoe Collection!</h2>
-                <p class="hero-text">Experience footwear that seamlessly blends style and comfort. Step into shoes that
-                    perfectly match your lifestyle and needs.</p>
-                <button class="btn1">Shop Now</button>
+    <!-- Header -->
+    <header id="admin-header">
+      <nav  class="navbar header-dark navbar-expand-lg <!--bg-white--> nav-bar container-fluid d-flex sectionBorder" style="height: 60px; padding-right: 20px;padding-left: 50px">
+        <label id="formIcon" class="form-label m-0 position-absolute" style="left: 8vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 20px;width: 20vw;"></label>
+        <div class="d-flex justify-content-evenly">
+          <div class="nav-item d-flex justify-content-center" style="padding-left:58.25vw ">
+            <span>Time</span><div class="nav-link active currTime" aria-current="page" href="#" style="z-index:5; font-weight: 600; font-size: 16px;" ></div>
+          </div>
+          <div class="nav-item position-absolute d-flex justify-content-center" style="left: 74vw;">
+            <span>Date</span><div class="nav-link active currDate" aria-current="page" href="#" style="z-index:5;font-weight: 600; font-size: 16px;"></div>
+          </div>
+        </div>
+        <div class="ms-auto" style="position: relative;left: 16%;">
+          <div class="d-inline" >
+            <svg class="svg-set-2 me-4" viewBox="0 0 800 600">
+              <title>Day And Night Toggle</title>
+              <defs>
+                <filter id="shadow" x="-100%" y="-100%" width="250%" height="250%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                  <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+                  <feFlood id="glowAlpha" flood-color="#000" flood-opacity="0.07"></feFlood>
+                  <feComposite in2="offsetblur" operator="in"></feComposite>
+                  <feMerge>
+                    <feMergeNode/>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+                <mask id="moonMask">
+                  <rect id="outlineFill"  x="225" y="215" width="350" height="170" rx="86" ry="86" fill="#FFF" stroke="#000" stroke-width="0"/>
+                  <circle class="moonMask" cx="487" cy="300" r="66" fill="#06070B"/>
+                </mask>
+                <clipPath id="outlineMask">
+                  <use xlink:href="#outlineFill"/>
+                </clipPath>
+                <path id="cloud" d="M20.67,42.52h39c22,0,18-16.52,11.19-17.51,1.93-7.5-1.94-25-23.19-25s-24,18-24,18S12.75,13.2,5,18.83C-3.8,25.15-2.33,42.52,20.67,42.52Z"/>
+              </defs>
+              <g class="whole" >
+                <rect class="outline" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="#85E8FE" stroke="#FCFDFE" stroke-width="10"/>
+                <g class="starGroup" fill="#FFF" clip-path="url(#outlineMask)">
+                  <polygon points="405 248.25 406.58 254.42 412.75 256 406.58 257.58 405 263.75 403.42 257.58 397.25 256 403.42 254.42 405 248.25"/>
+                  <path d="M427.33,301.9a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M402.59,367.21a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <polygon points="447 325.5 450.17 337.83 462.5 341 450.17 344.17 447 356.5 443.83 344.17 431.5 341 443.83 337.83 447 325.5"/>
+                  <path d="M464,241.53a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <polygon points="496 274.25 497.58 280.42 503.75 282 497.58 283.58 496 289.75 494.42 283.58 488.25 282 494.42 280.42 496 274.25"/>
+                  <path d="M503.53,351.38a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M537.18,249.45a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M553,322.68a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                </g>
+                <circle class="sun" cx="486" cy="300" r="66" fill="#FEC100"/>
+                <g mask="url(#moonMask)">
+                  <circle class="moon" cx="403" cy="300" r="66" fill="#FFF" opacity="0"/>
+                </g>
+                <g class="cloudGroup" fill="#FFF" clip-path="url(#outlineMask)">
+                  <g class="cloud" filter="url(#shadow)">
+                    <rect x="515.79" y="314.92" width="47.15" height="10.37" rx="5.19" ry="5.19"/>
+                    <circle cx="521.45" cy="313.98" r="11.32"/>
+                    <circle cx="540.84" cy="305.91" r="15.61"/>
+                    <circle cx="556.82" cy="316.34" r="8.96"/>
+                  </g>
+                  <g class="cloud"  filter="url(#shadow)">
+                    <rect x="397.85" y="349.02" width="92.34" height="10.37" rx="5.19" ry="5.19" transform="translate(888.03 708.41) rotate(180)"/>
+                    <circle cx="484.53" cy="348.08" r="11.32"/>
+                    <circle cx="432.65" cy="332.46" r="24.66"/>
+                    <circle cx="464.35" cy="338.11" r="17.51"/>
+                    <circle cx="404.21" cy="348.19" r="11.32"/>
+                  </g>
+                </g>
+              </g>
+              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
+            </svg>
+          </div>
+          <button type="button" class="btn position-relative" id="adminLogOut" style="z-index: 5; left: -12%;">Log Out</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-lg-3 col-10 nav-bar-dark" id="nav-bar">
+          <div id="side-bar-icon" class="d-flex justify-content-center align-items-center"><img id="bar-icon" class="admin-icon" style="width: 45px; padding-right:10px; padding-top: 8px; z-index: 5;" src="assets/images/nav-toggle.png"></div>
+          <nav class="nav">
+            <div class="nav_list d-lg-flex flex-lg-column align-items-center justify-content-between" style="padding-top: 9.1vh; padding-left:0.3vh; height: 41.1vw;">
+              <a href="#" id="btnDashboard" class="nav_link active admin-icon position-relative"><img style="width: 35px; padding-left:0.6vh; z-index: 10;" src="assets/images/dashboard.png"><label for="btnDashboard" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.2vw;top: 20%;width: max-content; color: black">Admin Panel</label></a>
+              <a href="#" id="btnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px;z-index: 10;" src="assets/images/customer.png"><label for="btnCustomer" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customer</label></a>
+              <a href="#" id="btnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/inventory.png"><label for="btnInventory" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Inventory</label></a>
+              <a href="#" id="btnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="btnSupplier" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Supplier</label></a>
+              <a href="#" id="btnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/employee.png"><label for="btnEmployee" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employee</label></a>
+              <a href="#" id="btnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="btnSales" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Payment</label></a>
+              <a href="#" id="btnAdminPanel" class="nav_link admin-icon position-relative"><img style="width: 35px; padding-left:0.4vh; z-index: 10;" src="assets/images/admin.png"><label for="btnAdminPanel" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Admin</label></a>
+              <a href="#" id="btnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/users.png"><label for="btnUsers" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Users</label></a>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-9">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Header & Sidebar -->
+  <section id="user-container">
+
+    <!-- Header -->
+    <header id="user-header">
+      <nav class="navbar header-dark navbar-expand-lg <!--bg-white--> nav-bar container-fluid d-flex sectionBorder" style="height: 60px; padding-right: 20px;padding-left: 50px">
+        <label id="userFormIcon" class="form-label m-0 position-absolute" style="left: 8vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 20px;width: 20vw; z-index: 5"></label>
+        <div class="d-flex justify-content-evenly">
+          <div class="nav-item d-flex justify-content-center" style="padding-left:58.25vw ">
+            <span>Time</span><div class="nav-link active currTime" aria-current="page" href="#" style="z-index:5; font-weight: 600; font-size: 16px;" ></div>
+          </div>
+          <div class="nav-item position-absolute d-flex justify-content-center" style="left: 74vw;">
+            <span>Date</span><div class="nav-link active currDate" aria-current="page" href="#" style="z-index:5;font-weight: 600; font-size: 16px;"></div>
+          </div>
+        </div>
+        <div class="ms-auto" style="position: relative;left: 16%;">
+          <div class="d-inline" >
+            <svg class="svg-set-2 me-4" viewBox="0 0 800 600">
+              <title>Day And Night Toggle</title>
+              <defs>
+                <filter id="shadow" x="-100%" y="-100%" width="250%" height="250%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                  <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+                  <feFlood id="glowAlpha" flood-color="#000" flood-opacity="0.07"></feFlood>
+                  <feComposite in2="offsetblur" operator="in"></feComposite>
+                  <feMerge>
+                    <feMergeNode/>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+                <mask id="moonMask">
+                  <rect id="outlineFill"  x="225" y="215" width="350" height="170" rx="86" ry="86" fill="#FFF" stroke="#000" stroke-width="0"/>
+                  <circle class="moonMask" cx="487" cy="300" r="66" fill="#06070B"/>
+                </mask>
+                <clipPath id="outlineMask">
+                  <use xlink:href="#outlineFill"/>
+                </clipPath>
+                <path id="cloud" d="M20.67,42.52h39c22,0,18-16.52,11.19-17.51,1.93-7.5-1.94-25-23.19-25s-24,18-24,18S12.75,13.2,5,18.83C-3.8,25.15-2.33,42.52,20.67,42.52Z"/>
+              </defs>
+              <g class="whole" >
+                <rect class="outline" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="#85E8FE" stroke="#FCFDFE" stroke-width="10"/>
+                <g class="starGroup" fill="#FFF" clip-path="url(#outlineMask)">
+                  <polygon points="405 248.25 406.58 254.42 412.75 256 406.58 257.58 405 263.75 403.42 257.58 397.25 256 403.42 254.42 405 248.25"/>
+                  <path d="M427.33,301.9a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M402.59,367.21a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <polygon points="447 325.5 450.17 337.83 462.5 341 450.17 344.17 447 356.5 443.83 344.17 431.5 341 443.83 337.83 447 325.5"/>
+                  <path d="M464,241.53a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <polygon points="496 274.25 497.58 280.42 503.75 282 497.58 283.58 496 289.75 494.42 283.58 488.25 282 494.42 280.42 496 274.25"/>
+                  <path d="M503.53,351.38a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M537.18,249.45a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                  <path d="M553,322.68a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z"/>
+                </g>
+                <circle class="sun" cx="486" cy="300" r="66" fill="#FEC100"/>
+                <g mask="url(#moonMask)">
+                  <circle class="moon" cx="403" cy="300" r="66" fill="#FFF" opacity="0"/>
+                </g>
+                <g class="cloudGroup" fill="#FFF" clip-path="url(#outlineMask)">
+                  <g class="cloud" filter="url(#shadow)">
+                    <rect x="515.79" y="314.92" width="47.15" height="10.37" rx="5.19" ry="5.19"/>
+                    <circle cx="521.45" cy="313.98" r="11.32"/>
+                    <circle cx="540.84" cy="305.91" r="15.61"/>
+                    <circle cx="556.82" cy="316.34" r="8.96"/>
+                  </g>
+                  <g class="cloud"  filter="url(#shadow)">
+                    <rect x="397.85" y="349.02" width="92.34" height="10.37" rx="5.19" ry="5.19" transform="translate(888.03 708.41) rotate(180)"/>
+                    <circle cx="484.53" cy="348.08" r="11.32"/>
+                    <circle cx="432.65" cy="332.46" r="24.66"/>
+                    <circle cx="464.35" cy="338.11" r="17.51"/>
+                    <circle cx="404.21" cy="348.19" r="11.32"/>
+                  </g>
+                </g>
+              </g>
+              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
+            </svg>
+          </div>
+          <button type="button" class="btn position-relative" id="userLogOut" style="z-index: 5; left: -12%;">Log Out</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-lg-3 col-10 nav-bar-dark" id="user-nav-bar">
+          <div id="user-side-bar-icon" class="d-flex justify-content-center align-items-center"><img id="user-bar-icon" class="admin-icon" style="width: 45px; padding-right:10px; padding-top: 8px; z-index: 5;" src="assets/images/nav-toggle.png"></div>
+          <nav class="nav">
+            <div class="nav_list d-lg-flex flex-lg-column align-items-center justify-content-between" style="padding-top: 9.1vh; padding-left:0.3vh; height: 41.1vw;">
+              <a href="#" id="UserBtnDashboard" class="nav_link active admin-icon position-relative"><img style="width: 35px; padding-left:0.6vh; z-index: 10;" src="assets/images/dashboard.png"><label for="UserBtnDashboard" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.2vw;top: 20%;width: max-content; color: black">Dashboard</label></a>
+              <a href="#" id="userBtnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px; z-index: 10;" src="assets/images/customer.png"><label for="UserBtnCustomer" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customer</label></a>
+              <a href="#" id="userBtnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/inventory.png"><label for="UserBtnInventory" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Inventory</label></a>
+              <a href="#" id="userBtnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="UserBtnSupplier" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Supplier</label></a>
+              <a href="#" id="userBtnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/employee.png"><label for="UserBtnEmployee" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employee</label></a>
+              <a href="#" id="userBtnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="UserBtnSales" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Payment</label></a>
+              <a href="#" id="userBtnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/users.png"><label for="UserBtnUsers" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Users</label></a>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-9">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customer-container" class="container-fluid w-100 h-100 p-0">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="customer-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 "style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+                      <div class="col">
+                        <label for="cusId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Customer ID</label>
+                        <div class="row m-0 p-0">
+                          <input type="text" class="form-control" id="cusId" style="width: 12vw">
+                          <img class="admin-icon" id="cusAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add-icon.gif"></div>
+                        <p class="position-absolute mt-1"><small class="text-danger" id="cusIdError"></small></p>
+                        </div>
+                      <div class="col">
+                        <label for="cusGender" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Gender</label>
+                        <select aria-label="Default select example" class="form-select" id="cusGender" style="width: 16vw">
+                          <option value="MALE"selected>Male</option>
+                          <option value="FEMALE">Female</option>
+                        </select>
+                        <p class="position-absolute mt-1"><small class="text-danger" id="cusGenderError"></small></p>
+                      </div>
+                  </div>
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="cusName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Customer Name</label>
+                      <input type="text" class="form-control" id="cusName">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusNameError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="cusDob" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Date of Birth</label>
+                      <input type="date" class="form-control" id="cusDob" style="width: 20vw">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="container row ">
+                    <div class="col">
+                      <label for="cusBuildNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Building No or Name</label>
+                      <input type="text" class="form-control" id="cusBuildNo">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusBuildNoError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="cusLane" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Lane</label>
+                      <input type="text" class="form-control" id="cusLane" style="width: 20vw">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusLaneError"></small></p>
+                    </div>
+                  </div>
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="cusCity" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">City</label>
+                      <input type="text" class="form-control" id="cusCity" style="width: 13.5vw">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusCityError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="cusState" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">State</label>
+                      <input type="text" class="form-control" id="cusState" style="width: 13.5vw">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusStateError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="cusPostalCode" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Postal Code</label>
+                      <input type="text" class="form-control" id="cusPostalCode"style="width: 10vw">
+                      <p class="position-absolute mt-1"><small class="text-danger" id="cusPostalCodeError"></small></p>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="cusSave">Save</button>
+                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="cusUpdate">Update</button>
+                        <button type="button" class="btn btn-secondary"
+                                style="font-weight: bold;" id="cusSearch">Search</button>
+                        <button type="button" class="btn btn-danger"
+                                style="width: 66px;" id="cusDelete">Delete</button>
+                        <button type="button" class="btn btn-warning" id="cusClear">Clear</button>
+                        <button type="button" class="btn btn-secondary" id="getAllCus">All Customers</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-0">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="row h-100 m-0 p-0 d-flex justify-content-center">
+                    <div class="container row mt-4">
+                      <div class="col">
+                        <label for="cusEmail" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Email</label>
+                        <input type="email" class="form-control" id="cusEmail">
+                        <p class="position-absolute mt-1"><small class="text-danger" id="cusEmailError"></small></p>
+                      </div>
+                      <div class="col">
+                        <label for="cusContactNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Contact No</label>
+                        <input type="text" class="form-control" id="cusContactNo"style="width: 20vw">
+                        <p class="position-absolute mt-1"><small class="text-danger" id="cusContactNoError"></small></p>
+                      </div>
+                    </div>
+                    <div class="container row">
+                      <div class="col">
+                        <label for="loyaltyDate" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Loyalty Start Date</label>
+                        <input type="date" class="form-control" id="loyaltyDate" style="width: 10vw">
+                        <p class="position-absolute mt-1"><small class="text-danger" id="loyaltyDateError"></small></p>
+                      </div>
+                      <div class="col">
+                        <label for="totalPoints" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Total Points</label>
+                        <input type="number" class="form-control" id="totalPoints" style="width: 10vw">
+                      </div>
+                      <div class="col">
+                        <label for="lastPurchaseDate" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Last Purchase Date</label>
+                        <input type="text" class="form-control" id="lastPurchaseDate" style="width: 10vw" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-6 p-0">
+                  <div class="row h-50">
+                    <div class="container h-100">
+                      <label class="form-label" style="padding-left: 8.9vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 16px">Customer Level</label>
+                      <div class="row h-100">
+                        <div class="col p-0">
+                          <div class="h-100 w-100 "style="padding-left: 5.2vw;">
+                            <div class="rating" id="rating">
+                              <input type="radio" id="star4" name="rating" value="GOLD">
+                              <label for="star4" class="star-label"><img src="assets/images/first-icon.png" alt="Silver Medal"><span>★</span></label>
+                              <input type="radio" id="star3" name="rating" value="SILVER">
+                              <label for="star3" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                              <input type="radio" id="star2" name="rating" value="BRONZE">
+                              <label for="star2" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                              <input type="radio" id="star1" name="rating" value="NEW">
+                              <label for="star1" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row h-50 position-relative">
+                    <label id="level-label" class="position-absolute"style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size:1.5vw;top:52%;left:46%;right:54%;width:fit-content;height:fit-content;"></label>
+                  </div>
+                </div>
+                <div class="col-md-6 p-0">
+                  <div class="container h-100">
+                    <label class="form-label" style="padding-left: 6.6vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 16px;">Capture Image</label>
+                    <div class="row h-100">
+                      <div class="col p-0">
+                        <div class=" h-100 w-100 ">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                              <video id="cusVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
+                              <canvas id="cusCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
+                              <img src="assets/images/walk.gif" id="cusCapturedImage" class="web" width="200"  style="display:block;">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                              <button id="cusCaptureButton" class="btn btn-primary mt-3" style="display:block;" type="button">Capture</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="customer-list">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="row">
+              <div class="row mt-1 mt-lg-5 justify-content-start">
+                <div class="col-10">
+                  <button type="button" id="backToCus"  class="btn mt-3 ms-3 btn-white" style="color: rgba(59,59,59,0.9) ;position: absolute;top: 5.5vw;left: 6vw; margin: 0; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 12px"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                  <div class="customerTableDiv" style="width: 89.4vw;">
+                    <div style="max-height: 28vw; overflow-y:auto">
+                    <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
+                      <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
+                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="customer-thead">
+                        <th scope="col">Customer code</th>
+                        <th scope="col">Customer name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Loyalty Date</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Total Points</th>
+                        <th scope="col">Date of birth</th>
+                        <th scope="col">Build No</th>
+                        <th scope="col">lane</th>
+                        <th scope="col">city</th>
+                        <th scope="col">state</th>
+                        <th scope="col">code</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Recent purchase</th>
+                      </tr>
+                      </thead>
+                      <tbody id="customerTable">
+                      </tbody>
+                    </table>
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid position-absolute d-flex justify-content-center align-items-center" style="width: 91.2%; height: 4vw; bottom: 2vw">
+            <span id="cusListLabelSp" class="form-label m-0" style="color:#0A58CA;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 18px;"></span><label id="cusListLabel" class="form-label m-0" style="padding-left:0.3vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 17px; color: #4d5f71"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="employee-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="employee-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 "style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="empId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Employee ID</label>
+                      <div class="row m-0 p-0">
+                        <input type="text" class="form-control" id="empId" style="width: 12vw">
+                        <img class="admin-icon" id="empAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add-icon.gif"></div>
+                      <p class="position-absolute mt-1"><small class="text-danger" id="empIdError"></small></p>
+                    </div>
+
+                    <div class="col pb-3">
+                      <label for="empGender" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Gender</label>
+                      <select aria-label="Default select example" class="form-select" id="empGender" style="width: 16vw">
+                        <option value="MALE"selected>Male</option>
+                        <option value="FEMALE">Female</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="empName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Employee Name</label>
+                      <input type="text" class="form-control" id="empName">
+                      <p><small class="text-danger position-absolute mt-1" id="empNameError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="empStatus" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Status</label>
+                      <select aria-label="Default select example" class="form-select" id="empStatus" style="width: 16vw">
+                        <option value="ADMIN"selected>Married</option>
+                        <option value="USER">Unmarried</option>
+                      </select>
+                    </div>
+                    <p><small class="text-danger position-absolute mt-1" id="empStatusError"></small></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="container row ">
+                    <div class="col">
+                      <label for="empBranch" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Branch</label>
+                      <input type="text" class="form-control" id="empBranch" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empBranchError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="empBuildNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Building No or Name</label>
+                      <input type="text" class="form-control" id="empBuildNo" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empBuildNoError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="empLane" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Lane</label>
+                      <input type="text" class="form-control" id="empLane" style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empLaneError"></small></p>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="empCity" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">City</label>
+                      <input type="text" class="form-control" id="empCity" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empCityError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="empState" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">State</label>
+                      <input type="text" class="form-control" id="empState" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empStateError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="empPostalCode" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Postal Code</label>
+                      <input type="text" class="form-control" id="empPostalCode"style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="empPostalCodeError"></small></p>
+                    </div>
+
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="empSave">Save</button>
+                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="empUpdate">Update</button>
+                        <button type="button" class="btn btn-secondary"
+                                style="font-weight: bold;" id="empSearch">Search</button>
+                        <button type="button" class="btn btn-danger"
+                                style="width: 66px;" id="empDelete">Delete</button>
+                        <button type="button" class="btn btn-warning" id="empClear">Clear</button>
+                        <button type="button" class="btn btn-secondary" id="getAllEmp">All Employees</button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-0">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="row h-100 m-0 p-0 d-flex justify-content-center">
+                    <div class="container row mt-4">
+
+                      <div class="col">
+                        <label for="empDob" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Date of Birth</label>
+                        <input type="date" class="form-control" id="empDob" style="width: 20vw">
+                        <p><small class="text-danger position-absolute mt-1" id="empDobError"></small></p>
+                      </div>
+
+                      <div class="col">
+                        <label for="joinDate" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Date of Join</label>
+                        <input type="date" class="form-control" id="joinDate" style="width: 20vw">
+                        <p><small class="text-danger position-absolute mt-1" id="joinDateError"></small></p>
+                      </div>
+
+                    </div>
+                    <div class="container row">
+                      <div class="col">
+                        <label for="designation" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Designation</label>
+                        <input type="text" class="form-control" id="designation" style="width: 10vw">
+                        <p><small class="text-danger position-absolute mt-1" id="designationError"></small></p>
+                      </div>
+
+                      <div class="col">
+                        <label for="empRole" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Access Role</label>
+                        <select aria-label="Default select example" class="form-select" id="empRole" style="width: 10vw">
+                          <option value="ADMIN">Admin</option>
+                          <option value="USER"selected>User</option>
+                        </select>
+                        <p><small class="text-danger position-absolute mt-1" id="empRoleError"></small></p>
+                      </div>
+
+                      <div class="col">
+                        <label for="empContactNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Contact No</label>
+                        <input type="text" class="form-control" id="empContactNo" style="width: 18vw">
+                        <p><small class="text-danger position-absolute mt-1" id="empContactNoError"></small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-6 p-0">
+                  <div class="row h-50">
+                    <div class="container h-100" style="padding-left: 3.5vw;">
+                      <div class="row h-100">
+                        <div class="col p-0">
+                          <div class="h-100 w-100">
+
+                            <div class="col">
+                              <label for="empEmail" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Email</label>
+                              <input type="email" class="form-control" id="empEmail" style="width: 18vw">
+                              <p><small class="text-danger position-absolute mt-1" id="empEmailError"></small></p>
+                            </div>
+
+                            <div class="col mt-1">
+                              <label for="guardianName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Name of Guardian</label>
+                              <input type="text" class="form-control" id="guardianName" >
+                              <p><small class="text-danger position-absolute mt-1" id="guardianNameError"></small></p>
+                            </div>
+
+                            <div class="col mt-1">
+                              <label for="emergencyContact" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Emergency Contact</label>
+                              <input type="text" class="form-control" id="emergencyContact" >
+                              <p><small class="text-danger position-absolute mt-1" id="emergencyContactError"></small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row h-50">
+
+                  </div>
+                </div>
+                <div class="col-md-6 p-0">
+                  <div class="container h-100">
+                    <label class="form-label" style="padding-left: 6.6vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 16px;">Capture Image</label>
+                    <div class="row h-100">
+                      <div class="col p-0">
+                        <div class=" h-100 w-100 ">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                              <video id="empVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
+                              <canvas id="empCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
+                              <img src="assets/images/walk.gif" id="empCapturedImage" class="web" width="200"  style="display:block;">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                              <button id="empCaptureButton" class="btn btn-primary mt-3" style="display:block;" type="button">Capture</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="employee-list">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="row">
+              <div class="row mt-1 mt-lg-5 justify-content-start">
+                <div class="col-10">
+                  <button type="button" id="backToEmp"  class="btn mt-3 ms-3 btn-white" style="color: rgba(59,59,59,0.9) ;position: absolute;top: 5.5vw;left: 6vw; margin: 0; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 12px"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                  <div class="employeeTableDiv" style="width: 89.4vw;">
+                    <div style="max-height: 28vw; overflow-y:auto">
+                    <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
+                      <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
+                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="employee-thead">
+                        <th scope="col">Emp ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Date of Birth</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Join Date</th>
+                        <th scope="col">Guardian</th>
+                        <th scope="col">Em Contact</th>
+                        <th scope="col">Build No</th>
+                        <th scope="col">Lane</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Code</th>
+                      </tr>
+                      </thead>
+                      <tbody id="employeeTable">
+
+                      </tbody>
+                    </table>
+                  </div>
+
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid position-absolute d-flex justify-content-center align-items-center" style="width: 91.2%; height: 4vw; bottom: 2vw">
+            <span id="empListLabelSp" class="form-label m-0" style="color:#0A58CA;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 18px;"></span><label id="empListLabel" class="form-label m-0" style="padding-left:0.3vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 17px; color: #4d5f71"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  id="supplier-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;"id="supplier-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 "style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="supId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Supplier ID</label>
+                      <div class="row m-0 p-0">
+                        <input type="text" class="form-control" id="supId" style="width: 12vw">
+                        <img class="admin-icon" id="supIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add-icon.gif"></div>
+                      <p class="position-absolute mt-1"><small class="text-danger" id="supIdError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="supCategory" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Category</label>
+                      <select aria-label="Default select example" class="form-select" id="supCategory" style="width: 16vw">
+                        <option value="INTERNATIONAL"selected>International</option>
+                        <option value="LOCAL">Local</option>
+                      </select>
+                      <p class="position-absolute mt-1"><small class="text-danger" id="supCategoryError"></small></p>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="supName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Supplier Name</label>
+                      <input type="text" class="form-control" id="supName">
+                      <p><small class="text-danger position-absolute mt-1" id="supNameError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="supBuildNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Building No or Name</label>
+                      <input type="text" class="form-control" id="supBuildNo" style="width: 20vw">
+                      <p><small class="text-danger position-absolute mt-1" id="supBuildNoError"></small></p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="container row ">
+
+                    <div class="col">
+                      <label for="supLane" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Lane</label>
+                      <input type="text" class="form-control" id="supLane">
+                      <p><small class="text-danger position-absolute mt-1" id="supLaneError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="supCity" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">City</label>
+                      <input type="text" class="form-control" id="supCity" style="width: 20vw">
+                      <p><small class="text-danger position-absolute mt-1" id="supCityError"></small></p>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="supState" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">State</label>
+                      <input type="text" class="form-control" id="supState" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="supStateError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="supPostalCode" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Postal Code</label>
+                      <input type="text" class="form-control" id="supPostalCode"style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="supPostalCodeError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="supCountry" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Origin Country</label>
+                      <input type="text" class="form-control" id="supCountry"style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="supCountryError"></small></p>
+                    </div>
+
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="supSave">Save</button>
+                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="supUpdate">Update</button>
+                        <button type="button" class="btn btn-secondary"
+                                style="font-weight: bold;" id="supSearch">Search</button>
+                        <button type="button" class="btn btn-danger"
+                                style="width: 66px;" id="supDelete">Delete</button>
+                        <button type="button" class="btn btn-warning" id="supClear">Clear</button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-0">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="row h-100 m-0 p-0 d-flex justify-content-center">
+                    <div class="container row mt-4">
+                      <div class="col">
+                        <label for="supEmail" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Email</label>
+                        <input type="email" class="form-control" id="supEmail" style="width: 25vw">
+                        <p><small class="text-danger position-absolute mt-1" id="supEmailError"></small></p>
+                      </div>
+
+                    </div>
+                    <div class="container row">
+                      <div class="col">
+                        <label for="supMobileNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Mobile No</label>
+                        <input type="text" class="form-control" id="supMobileNo"style="width: 20vw">
+                        <p><small class="text-danger position-absolute mt-1" id="supMobileNoError"></small></p>
+                      </div>
+
+                      <div class="col">
+                        <label for="supLandNo" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Landline No</label>
+                        <input type="text" class="form-control" id="supLandNo"style="width: 20vw">
+                        <p><small class="text-danger position-absolute mt-1" id="supLandNoError"></small></p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-6 p-0">
+                  <div class="row h-50">
+                    <div class="container h-100">
+                      <div class="row h-100">
+                        <div class="col p-0">
+                          <div class="h-100 w-100 d-flex justify-content-center align-items-center" style="padding-bottom:4.5vh; padding-left:0.5vw; ">
+
+                            <button type="button" class="btn btn-primary" style="font-weight: bold;" id="getAllSup">Get All Suppliers</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row h-50">
+
+                  </div>
+                </div>
+                <div class="col-md-6 p-0">
+                  <div class="container h-100">
+                    <div class="row h-100">
+                      <div class="col p-0">
+                        <div class=" h-100 w-100 ">
+
+                          <img src="assets/images/sup.gif" width="220"  style="display:block; padding-left: 3%">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="supplier-list">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="row">
+              <div class="row mt-1 mt-lg-5 justify-content-start">
+                <div class="col-10">
+                  <button type="button" id="backToSup"  class="btn mt-3 ms-3 btn-white" style="color: rgba(59,59,59,0.9) ;position: absolute;top: 5.5vw;left: 6vw; margin: 0; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 12px"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                  <div class="supplierTableDiv" style="width: 89.4vw;">
+                    <div style="max-height: 28vw; overflow-y:auto">
+                    <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
+                      <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
+                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="supplier-thead">
+                        <th scope="col">Sup ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Build No</th>
+                        <th scope="col">Lane</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Mobile No</th>
+                        <th scope="col">Land No</th>
+                        <th scope="col">Email</th>
+                      </tr>
+                      </thead>
+                      <tbody id="supplierTable">
+
+                      </tbody>
+                    </table>
+                  </div>
+
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid position-absolute d-flex justify-content-center align-items-center" style="width: 91.2%; height: 4vw; bottom: 2vw">
+            <span id="supListLabelSp" class="form-label m-0" style="color:#0A58CA;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 18px;"></span><label id="supListLabel" class="form-label m-0" style="padding-left:0.3vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 17px; color: #4d5f71"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="inventory-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 "style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="itmCode" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Item Code</label>
+                      <input type="text" class="form-control" id="itmCode" >
+                      <p><small class="text-danger position-absolute mt-1" id="itmCodeError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="itmCat" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Item Category</label>
+                      <input type="text" class="form-control" id="itmCat">
+                      <p><small class="text-danger position-absolute mt-1" id="itmCatError"></small></p>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="itmName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Item Description</label>
+                      <input type="text" class="form-control" id="itmName" style="width: 20vw">
+                      <p><small id="itmNameError" class="text-danger position-absolute mt-1" ></small></p>
+                    </div>
+                    <div class="row">
+                    <div class="col" style="width: 9vw;">
+                      <label for="itmSize" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Size</label>
+                      <input type="number" class="form-control" id="itmSize" style="width: 9vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itmSizeError"></small></p>
+                    </div>
+
+                    <div class="col"style="width: 9vw;">
+                      <label for="itmQty" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Qty</label>
+                      <input type="number" class="form-control" id="itmQty" style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itmQtyError"></small></p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="container row ">
+
+                    <div class="col">
+                      <label for="itmSupId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Supplier ID</label>
+                      <input type="text" class="form-control" id="itmSupId" style="width: 15vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itmSupIdError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="itmSupName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Supplier Name</label>
+                      <input type="text" class="form-control" id="itmSupName" style="width: 20vw" readonly>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-4">
+
+                    <div class="col">
+                      <label for="itmBuyPrice" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Buy Price</label>
+                      <input type="text" class="form-control" id="itmBuyPrice" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itmBuyPriceError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="itmSalePrice" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Sale Price</label>
+                      <input type="text" class="form-control" id="itmSalePrice" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itmSalePriceError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="itmProfit" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Expected Profit</label>
+                      <input type="text" class="form-control" id="itmProfit"style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="itemExcProfitError"></small></p>
+                    </div>
+
+                    <div class="row mt-2">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="itmSave">Save</button>
+                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="itmUpdate">Update</button>
+                        <button type="button" class="btn btn-secondary"
+                                style="font-weight: bold;" id="itmSearch">Search</button>
+                        <button type="button" class="btn btn-danger"
+                                style="width: 66px;" id="itmDelete">Delete</button>
+                        <button type="button" class="btn btn-warning" id="itmClear">Clear</button>
+                        <button type="button" class="btn btn-secondary" id="getAllItm">All Items</button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-0">
+              <div class="row h-50 m-0">
+                <div class="col-md-12 p-0">
+                  <div class="row h-100 m-0 p-0 d-flex justify-content-center">
+                    <div class="container row mt-4">
+
+                      <div class="col">
+                        <label for="itmProfitMargin" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Profit Margin</label>
+                        <input type="text" class="form-control" id="itmProfitMargin" style="width: 10vw">
+                        <p><small class="text-danger position-absolute mt-1" id="itmProfitMarginError"></small></p>
+                      </div>
+
+                      <div class="col">
+                        <label for="itmStatus" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Status</label>
+                        <select aria-label="Default select example" class="form-select" id="itmStatus" style="width: 10vw">
+                          <option value="Available">Available</option>
+                          <option value="Not Available">Not Available</option>
+                          <option value="Low">Low</option>
+                        </select>
+                      </div>
+
+                    </div>
+                    <div class="container row mt-5">
+                      <div class="col">
+                        <label for="itemImgFile" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Select Item Image</label>
+                        <input class="form-control" type="file" id="itemImgFile" style="width: 17.4vw">
+                        <p><small class="text-danger position-absolute mt-1" id="itemImgFileError"></small></p>
+                      </div>
+
+                      <div class="col"style="padding-right: 2vw;">
+                        <div class="container h-100">
+                          <label class="form-label" style="padding-left: 5vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 16px;">Capture Image</label>
+                          <div class="row h-100">
+                            <div class="col p-0">
+                              <div class=" h-100 w-100 ">
+                                <div class="row">
+                                  <div class="col-12 d-flex justify-content-center">
+                                    <video id="itmVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
+                                    <canvas id="itmCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
+                                    <img src="assets/images/walk.gif" id="itmCapturedImage" class="web" width="200"  style="display:block;">
+                                  </div>
+                                  <div class="col-12 d-flex justify-content-center">
+                                    <button id="itmCaptureButton" class="btn btn-primary mt-3" style="display:block; z-index: 5" type="button">Capture</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0">
+                <div class="col-md-6 p-0">
+                  <div class="row h-50">
+                    <div class="container h-100" style="padding-left: 3.5vw;">
+                      <div class="row h-100">
+                        <div class="col p-0">
+                          <div class="h-100 w-100">
+                            <!--space-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row h-50">
+
+                  </div>
+                </div>
+                <div class="col-md-6 p-0">
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="inventory-list">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="row">
+              <div class="row mt-1 mt-lg-5 justify-content-start">
+                <div class="col-10">
+                  <button type="button" id="backToItm"  class="btn mt-3 ms-3 btn-white" style="color: rgba(59,59,59,0.9) ;position: absolute;top: 5.5vw;left: 6vw; margin: 0; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 12px"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+                  <div class="itemTableDiv" style="width: 89.4vw;">
+                    <select aria-label="Default select example" class="form-select" id="itmFilter" style="width: 10vw">
+                      <option value="getAll">All</option>
+                      <option value="price">Price</option>
+                      <option value="itemDesc">Name</option>
+                      <option value="SM">Male</option>
+                      <option value="SW">Female</option>
+                      <option value="FS">Formal</option>
+                      <option value="CS">Casual</option>
+                    </select>
+                    <div style="max-height: 28vw; overflow-y:auto">
+                    <table style="font-size: small; " class="table table-bordered rounded bg-light table-hover">
+                      <thead class="table-secondary text-light text-center" style="position: sticky;top: 0;">
+                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;position: sticky;top: 0;"id="item-thead">
+                        <th scope="col">Item ID</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Supplier ID</th>
+                        <th scope="col">Supplier Name</th>
+                        <th scope="col">Sale Price</th>
+                        <th scope="col">Buy Price</th>
+                        <th scope="col">expectedProfit</th>
+                        <th scope="col">profitMargin</th>
+                        <th scope="col">status</th>
+                      </tr>
+                      </thead>
+                      <tbody id="itemTable">
+
+                      </tbody>
+                    </table>
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid position-absolute d-flex justify-content-center align-items-center" style="width: 91.2%; height: 4vw; bottom: 2vw">
+            <span id="inventoryListLabelSp" class="form-label m-0" style="color:#0A58CA;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 18px;"></span><label id="inventoryListLabel" class="form-label m-0" style="padding-left:0.3vw; font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 17px; color: #4d5f71"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="payment-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-12 "style="padding: 0 0 0 0.9vw;">
+              <div class="row">
+                <div class="col-lg-6 p-0 ">
+                  <div class="container row mt-2">
+
+                    <div class="col">
+                      <label for="orderId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Order ID</label>
+                      <div class="row m-0 p-0">
+                        <input type="text" class="form-control" id="orderId" style="width: 12vw">
+                        <img class="admin-icon" id="orderIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add-icon.gif"></div>
+                      <p class="position-absolute mt-1"><small class="text-danger" id="orderIdError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="OrdItmDes" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Item Description</label>
+                      <input type="text" class="form-control" id="OrdItmDes"readonly>
+                    </div>
+
+                  </div>
+                  <div class="container row mt-1">
+
+                    <div class="col">
+                      <label for="OrdItm" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Item Code</label>
+                      <input type="text" class="form-control" id="OrdItm"style="width: 12vw">
+                      <p><small class="text-danger position-absolute mt-1" id="OrdItmError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="ordItmPrice" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Unit price</label>
+                      <input type="text" class="form-control" id="ordItmPrice"style="width: 12vw" readonly>
+                    </div>
+
+                    <div class="col"style="width: 9vw;">
+                      <label for="qtyOnHand" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Qty on hand</label>
+                      <input type="number" class="form-control" id="qtyOnHand" style="width: 10vw" readonly>
+                      <p><small class="text-danger position-absolute mt-1" id="qtyOnHandError"></small></p>
+                    </div>
+
+                  </div>
+                  <div class="container row ">
+
+                    <div class="col">
+                      <label for="ordItmSize" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Size</label>
+                      <input type="text" class="form-control" id="ordItmSize" style="width: 10vw"readonly>
+                      <p><small class="text-danger position-absolute mt-1" id="ordItmSizeError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="ordItmQty" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">QTY</label>
+                      <input type="text" class="form-control" id="ordItmQty" style="width: 10vw">
+                      <p><small class="text-danger position-absolute mt-1" id="ordItmQtyError"></small></p>
+                    </div>
+
+                    <div class="col">
+                      <label for="ordDate" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Order Date</label>
+                      <input placeholder="Only for Search Orders" type="text" class="form-control" id="ordDate" style="width: 10vw" readonly>
+                    </div>
+                  </div>
+                  <div class="container row">
+
+                    <div class="col">
+                      <label for="ordCusId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Customer ID</label>
+                      <input type="text" class="form-control" id="ordCusId" style="width: 13.5vw">
+                      <p><small class="text-danger position-absolute mt-1" id="ordCusIdError"></small></p>
+                    </div>
+                    <div class="col">
+                      <label for="ordCusName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Customer Name</label>
+                      <input type="text" class="form-control" id="ordCusName" style="width: 13.5vw">
+                    </div>
+                    <div class="col">
+                      <label for="ordPoints" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Points</label>
+                      <input type="text" class="form-control" id="ordPoints"style="width: 10vw"readonly>
+                      <p><small class="text-danger position-absolute mt-1" id="ordPointsError"></small></p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                  <div class="col-md-12 p-0">
+                    <div class="row h-50 m-0">
+                      <div class="col-md-12 p-0">
+                        <div class="row h-100 m-0 p-0 d-flex justify-content-center">
+                          <div class="col"style="height: 330px; width: auto;">
+                            <section class="content-box-2 p-0 mt-2" style="padding: 40px;">
+
+                              <div class="row">
+                                <div class=" container col-6 d-flex justify-content-evenly align-items-center" style="padding-right: 3vw;">
+                                  <div id="cashImage" class="mt-2 d-flex flex-column align-items-center">
+                                    <label for="paymentCash" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; margin-bottom: 10px;">Cash Payment</label>
+                                    <img class="mt-1 admin-icon" src="assets/images/cash.gif" alt="Cash" id="paymentCash" style="width: 80px; z-index: 5;"/>
+                                  </div>
+
+                                  <div id="cardImage" class="mt-2 d-flex flex-column align-items-center">
+                                    <label for="paymentCard" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; margin-bottom: 10px;">Card Payment</label>
+                                    <img class="mt-1 admin-icon" src="assets/images/card.gif" alt="Card" id="paymentCard" style="width: 80px; z-index: 5;" />
+                                  </div>
+                                </div>
+
+
+                                <div class="container col-6">
+                                  <div class="col-12">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <span class="" id="total-text" style="color: #3d98ef;font-size: 13px;">Total : </span>
+                                      </div>
+                                      <div class="col-12">
+                                        <span id="total"style="font-size: 30px;color: #3d98ef;">0</span> Rs/=
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-12">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <span id="total-text1" style="color: #ef5350;font-size: 13px;">SubTotal : </span>
+                                      </div>
+                                      <div class="col-12">
+                                        <span id="subtotal" style="color: #ef5350;font-size: 30px;">0</span> Rs/=
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-6 mt-4">
+                                  <div class="form-group">
+                                    <label style="font-weight: bold;margin-right: 10px;">Cash</label>
+                                    <input class="form-control" id="txtCash" min="0" type="number">
+                                    <span class="control-error"
+                                          id="cash-empty-error"></span>
+                                  </div>
+                                </div>
+
+                                <div class="col-6 mt-4">
+                                  <div class="form-group">
+                                    <label style="font-weight: bold;margin-right: 10px;">Discount</label>
+                                    <input class="form-control" id="txtDiscount" min="0" type="number" style="width: 15vw">
+                                  </div>
+                                </div>
+
+                                <div class="col-8 mt-2" style="width: 200%;">
+                                  <label style="font-weight: bold;margin-right: 10px;">Balance</label>
+                                  <div class="form-group d-flex align-items-center">
+                                    <input class="form-control me-2" id="txtBalance" type="text" style="width: 21vw;">
+                                    <button class="ms-4 btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+                                  </div>
+
+                                  <div class="col mt-4">
+                                    <button id="order-add-item" class="btn btn-primary" style="" type="button">Add Item</button>
+                                    <button type="button" class="btn ms-2 btn-warning" id="order-clear" style="">Clear</button>
+                                    <button type="button" class="btn ms-2 btn-success" id="order-update" style="">Update</button>
+                                    <button type="button" class="btn ms-2 btn-danger" id="order-delete" style="">Delete</button>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                </div>
+              <div class="row">
+                <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+                  <div class="col-10">
+                    <div class="customeTableDiv">
+                      <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                        <thead class="bg-success text-light text-center">
+                        <tr class="table-secondary" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="order-thead">
+                          <th scope="col">Remove</th>
+                          <th scope="col">Item Code</th>
+                          <th scope="col">Item Name</th>
+                          <th scope="col">Item Size</th>
+                          <th scope="col">Unit Price</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="order-table" style="width: 101.8%;">
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
             </div>
 
-            <figure class="hero-banner">
-                <img src="assets/images/home-banner.png" width="820" height="716" aria-hidden="true"
-                     class="w-100 hero-img-bg">
-                <img src="assets/images/home-shoe.png" width="700" height="637" loading="lazy" alt="Home-Shoe"
-                     class="w-100 hero-img">
-            </figure>
-
+          </div>
         </div>
-    </section>
+      </div>
+    <div id="card-container" class="container-fluid p-0 " style="background-color:rgba(229,229,229,0.5); position:absolute; height: 91vh; z-index: 5;width: 95vw;left: 5vw; right:0; top: 4.4vw; bottom: 0; margin: auto">
+    <div style="border-radius: 10px; z-index: 15; width: 60vw;position: absolute; left: 0; right:0; top: 4.4vw; bottom: 0; margin: auto">
 
-    <!-- About -->
-    <section class="section section-divider gray about" id="about">
-        <div class="container">
+      <div class="container payment-con-dark" style="box-shadow: 0px 1px 10px #3aa7ee; border-radius: 10px;background-color:rgb(255,255,255);">
 
-            <div class="about-banner">
-                <img src="./assets/images/about-shoe.png" width="509" height="459" loading="lazy"
-                     alt="Burger with Drinks" class="w-100 about-img">
-                <img src="./assets/images/red-sale.png" width="216" height="226" alt="get up to 50% off now"
-                     class="abs-img scale-up-anim">
+        <div class="row " style="">
+
+          <div class="col-7 payment-dark" style="padding: 0;height: 72vh; /*background-color: #f1f1f1;*/  box-shadow: 0px 1px 10px #FFA633; border: 2px solid #FFA633; text-align: center; position: relative; border-radius: 10px">
+              <!--<img style="position: absolute; width: 30vw; z-index: 5; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" src="assets/images/banks.png">-->
+              <img style="position: absolute; width: 30vw; z-index: 5; top: 0; bottom: 2vh; left: 0.4vw; right: 0; margin: auto;" src="assets/images/banks2.png">
+            <div style="padding: 0;height: 72vh;">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
             </div>
+          </div>
 
-            <div class="about-content">
-                <h2 class="h2 section-title">
-                    Trendy Shoes
-                    <span class="span">for Every Occasion!</span>
-                </h2>
-
-                <p class="section-text">
-                    Our shoe shop offers a wide selection of footwear to suit your style and comfort
-                    preferences.Explore our range of shoes crafted for quality and durability.
-                </p>
-
-                <ul class="about-list">
-                    <li class="about-item">
-                        <ion-icon name="checkmark-outline"></ion-icon>
-                        <span class="span">Stylish & Comfortable Designs</span>
-                    </li>
-                    <li class="about-item">
-                        <ion-icon name="checkmark-outline"></ion-icon>
-                        <span class="span">Effortless Return Assistance</span>
-                    </li>
-                    <li class="about-item">
-                        <ion-icon name="checkmark-outline"></ion-icon>
-                        <span class="span">Swift Shoe Delivery Service</span>
-                    </li>
-                    <li class="about-item">
-                        <ion-icon name="checkmark-outline"></ion-icon>
-                        <span class="span">Specialized Collections for Men, Women & Kids</span>
-                    </li>
-                </ul>
-
-                <button class="btn1 btn-hover">Order Now</button>
+          <div class="col-5">
+            <div class="d-flex justify-content-center align-items-center position-relative">
+              <img src="assets/images/sendoffer.gif" style="height: 6vw; position: absolute; padding-top: 0.7vw; padding-left: 1.5vw;">
+              <h1 class="mt-2 dark-h1" style="padding-top: 2.1vh; padding-left: 0.7vw; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 30px; color: #434142;text-align: center;">Card Payment</h1>
             </div>
+            <!--<div class="mt-2"><h1 class="mt-2" style="padding-top: 2.1vh; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 30px; color: #434142;text-align: center;">Card Payment</h1>-->
+
+            <div class="ms-4 mt-2" style="width: 90%; height: 48vh">
+              <div class="col-sm d-flex flex-column align-items-center">
+                <label for="cardNum" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; color: #35393B;">Card Number</label>
+                <input type="email" class="form-control border border-info" id="cardNum"style="width: 18vw">
+              </div>
+              <div class="">
+
+                  <div class="row">
+
+                    <div class="mt-2 d-flex flex-column align-items-center">
+                      <label for="bankName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Bank Name</label>
+                      <input type="text" class="form-control border border-info" id="bankName" style="width: 250px">
+                    </div>
+
+
+                      <div class="container mt-2">
+                          <div class="row justify-content-center">
+                              <div class="col"style="text-align: center;">
+                                  <label class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;">Expiration Date</label>
+                                  <div class="d-flex align-items-center justify-content-center">
+                                      <input type="month" placeholder="Month" class="form-control border border-info me-2" id="cardMonth" style="width: 125px;">
+                                      <input type="text" placeholder="Year" class="form-control border border-info" id="cardYear" style="width: 125px;">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+
+                      <div class="mt-2 d-flex flex-column align-items-center">
+                          <label for="verifyNum" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Verification Number</label>
+                          <input type="password" class="form-control border border-info" id="verifyNum" style="width: 250px">
+                        </div>
+
+
+                          <div class="mt-2 d-flex flex-column ">
+                            <div class="col d-flex justify-content-center mt-2">
+                              <button id="card-payment" type="button" class="btn p-0 m-0" style="width: 12vw;height: 5.5vh;">CONFIRM AND PAY</button>
+                              <button id="cancel" type="button" class="p-0 m-0 pay-icon" style="width: 6vw;height: 5.5vh;">CANCEL</button>
+                                <!--padding: 0.593vw 1.112vw;text-decoration: none;font-weight: bold;color: #000000;display: inline-block;margin: 1.853vw 0;border-radius: 0.741vw;width: 6vw;font-size: 0.8vw;transition: 0.3s ease-out;border: 0.148vw solid #E9C54A;background:white-->
+                            </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div></div></div></div>
+    <div id="confirm-container" class="container-fluid p-0" style="background-color:rgba(229,229,229,0.5); position:absolute; height: 91vh; z-index: 5;width: 95vw;left: 5vw; right:0; top: 4.4vw; bottom: 0; margin: auto">
+      <div class="payment-con-dark" style="background-color:white; box-shadow:  0px 1px 10px #FFA633; z-index: 15; height: 31vw; width: 27.6vw;position: absolute; left: 0; right:0; top: 0vw; bottom: 0; margin: auto">
+        <div class="payment-con-dark" id="confirmAdmin" style="background-color:white">
+
+          <button type="button" id="backToPayment" class="btn mt-3 ms-3 btn-white" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 10px"><i class="fa-solid fa-arrow-left me-2"></i>Back</button>
+          <h1 class="mt-4 ms-5 dark-h1" style="font-family: 'Fira Sans', sans-serif; font-weight: 900; font-size: 2.95vw">Confirm Admin</h1>
+          <h1 class="ms-5" style="color: #FFA633 ;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 10px">Confirm to Access the Portal</h1>
+
+          <h1 class="visually-hidden" style="color: #FFA633 ;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">aaaa</h1>
+
+          <div class="col-md-6 ms-5 mt-2">
+            <label for="confirmUsername" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Username</label>
+            <input type="text" class="form-control" id="confirmUsername" style="width: 20vw">
+            <p class="position-absolute mt-1"><small class="text-danger" id="confirmUsernameError"></small></p>
+          </div>
+
+          <div class="col-md-6 ms-5 mt-3">
+            <label for="confirmPassword" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Password</label>
+            <input type="password" class="form-control" id="confirmPassword" style="width: 20vw">
+            <p class="position-absolute mt-1"><small class="text-danger" id="confirmPasswordError"></small></p>
+          </div>
+
+          <h1 class="mt-4" style="color: #FFA633 ;font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 10px; margin-inline-start: 10.5vw;">Forgot Password ?</h1>
+
+          <button id="btnConfirm" type="button" class="btn  ms-5" style="background-color: rgba(59, 59, 59, 0.9);color: #ffffff;width: 20vw;">Confirm Admin</button>
 
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Shoes -->
-    <section class="section food-menu" id="shoes">
-        <div class="container">
-
-            <h2 class="h2 section-title">
-                Our Stylish <span class="span">Shoe Collection!</span>
-            </h2>
-
-            <ul class="fiter-list">
-                <li>
-                    <button class="filter-btn  active">All</button>
-                </li>
-                <li>
-                    <button class="filter-btn">Casual</button>
-                </li>
-                <li>
-                    <button class="filter-btn">Formal</button>
-                </li>
-                <li>
-                    <button class="filter-btn">Sports</button>
-                </li>
-                <li>
-                    <button class="filter-btn">Boots</button>
-                </li>
-            </ul>
-
-            <ul class="food-menu-list">
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-1.png" width="300" height="300" loading="lazy"
-                                 alt="Casual Shoes" class="w-100">
-
-                            <div class="badge">-5%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Casual</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Casual Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price">RS.3200</data>
-
-                            <del class="del" value="69.00">RS.4500</del>
-
-                        </div>
-
+  <section id="admin-edit-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="admin-edit-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style="padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 m-0" style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0 m-lg-4">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="adminName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Admin Name</label>
+                      <div class="row m-0 p-0">
+                        <input type="text" class="form-control" id="adminName" style="width: 15vw">
+                      </div>
+                      <p class="position-absolute mt-1"><small class="text-danger" id="adminIdError"></small></p>
                     </div>
-                </li>
-
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-2.png" width="300" height="300" loading="lazy"
-                                 alt="Casual Shoes" class="w-100">
-
-                            <div class="badge">-10%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Casual</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Casual Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price" value="29.00">RS.62000</data>
-
-                            <del class="del">RS.8000</del>
-
-                        </div>
-
+                    <div class="row">
+                      <div>
+                        <label for="adminOldPassword" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Password for update or delete</label>
+                        <input placeholder="Update or Delete" type="password" class="form-control" id="adminOldPassword">
+                        <p class="position-absolute mt-1"><small class="text-danger" id="adminOldPasswordError" style="width: 15vw"></small></p>
+                      </div>
                     </div>
-                </li>
-
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-3.png" width="300" height="300" loading="lazy"
-                                 alt="Sport Shoes" class="w-100">
-
-                            <div class="badge">-15%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Sports</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Sport Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price" value="49.00">RS.11000</data>
-
-                            <del class="del">RS.12500</del>
-
-                        </div>
-
+                    <div class="row">
+                      <div>
+                        <label id="adminNewPassLabel" for="adminNewPass" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">New Password</label>
+                        <input placeholder="Update or Delete" type="password" class="form-control" id="adminNewPass">
+                        <p class="position-absolute mt-1"><small class="text-danger" id="adminNewPassError" style="width: 15vw"></small></p>
+                      </div>
                     </div>
-                </li>
-
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-4.png" width="300" height="300" loading="lazy"
-                                 alt="Formal Shoes" class="w-100">
-
-                            <div class="badge">-20%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Formal</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Formal Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price" value="59.00 ">RS.5200</data>
-
-                            <del class="del">RS.6000</del>
-
-                        </div>
-
+                  </div>
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="adminRole" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Role</label>
+                      <select aria-label="Default select example" class="form-select" id="adminRole" style="width: 16vw">
+                        <option value="ADMIN" selected>ADMIN</option>
+                        <option value="USER">USER</option>
+                      </select>
                     </div>
-                </li>
 
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-5.png" width="300" height="300" loading="lazy"
-                                 alt="Leather Shoes" class="w-100">
-
-                            <div class="badge">-25%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Leather</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Leather Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price" value="49.00">RS.8500</data>
-
-                            <del class="del">RS.9000</del>
-
-                        </div>
-
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0 d-flex align-items-center">
+                <div class="col-md-12 p-0">
+                  <div class="container row mt-4">
+                    <div class="row mt-5"></div>
+                    <div class="col-12 d-flex justify-content-evenly" style="padding-right: 2vw">
+                      <button type="button" class="btn btn-primary" style="font-weight: bold;" id="adminSave">Save</button>
+                      <button type="button" class="btn btn-success" style="font-weight: bold;" id="adminUpdate">Update</button>
+                      <button type="button" class="btn btn-danger" style="width: 66px;" id="adminDelete">Delete</button>
+                      <button type="button" class="btn btn-warning" id="adminClear">Clear</button>
                     </div>
-                </li>
-
-                <li>
-                    <div class="food-menu-card">
-
-                        <div class="card-banner">
-                            <img src="./assets/images/shoe-6.png" width="300" height="300" loading="lazy"
-                                 alt="Kids Shoe" class="w-100">
-
-                            <div class="badge">-30%</div>
-
-                            <button class="btn1 food-menu-btn">Order Now</button>
-                        </div>
-
-                        <div class="wrapper">
-                            <p class="category">Kids</p>
-
-                            <div class="rating-wrapper">
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-                        </div>
-
-                        <h3 class="h3 card-title">Kids Shoes</h3>
-
-                        <div class="price-wrapper">
-
-                            <p class="price-text">Price:</p>
-
-                            <data class="price" value="49.00">Rs.2000</data>
-
-                            <del class="del">RS.3200</del>
-
-                        </div>
-
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section section-divider gray cta"
-             style="background-image: url('./assets/images/home-bg.jpg')">
-        <div class="container">
-
-            <div class="cta-content">
-                <h2 class="h2 section-title">
-                    Discover Quality Shoes
-                    <span class="span">for Your Festivals!</span>
-                </h2>
-                <p class="section-text">
-                    Indulge in our carefully curated collection of shoes, meticulously crafted with an emphasis
-                    on both style and comfort. Whether you're seeking chic everyday sneakers, sophisticated
-                    formal loafers, or versatile boots for any occasion!
-                </p>
-                <button class="btn1 btn-hover">Order Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-md-6 m-0 d-flex justify-content-center align-items-center" style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0 m-lg-4 mt-4 d-flex justify-content-center">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw; height: 24vh;">
+                  <table style="font-size: small; height: 2%" class="table table-bordered rounded bg-light">
+                    <thead class="table-secondary text-light text-center">
+                    <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;" id="admin-thead">
+                      <th scope="col">User name</th>
+                      <th scope="col">Role</th>
+                    </tr>
+                    </thead>
+                    <tbody id="adminTable">
 
-            <figure class="cta-banner">
-                <img src="./assets/images/cta-shoe.png" width="700" height="637" loading="lazy" alt="Burger"
-                     class="w-100 cta-img">
-                <img src="./assets/images/white-sale.png" width="216" height="226" loading="lazy"
-                     alt="get up to 50% off now" class="abs-img scale-up-anim">
-            </figure>
-
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="section section-divider white testi">
-        <div class="container">
-
-            <h2 class="h2 section-title">
-                Customer <span class="span">Reviews</span>
-            </h2>
-
-            <p class="section-text">
-                Shoes are essential accessories designed to provide comfort and support for your feet.
-            </p>
-
-            <ul class="testi-list has-scrollbar">
-
-                <li class="testi-item">
-                    <div class="testi-card">
-                        <div class="profile-wrapper">
-                            <figure class="avatar">
-                                <img src="./assets/images/customer-1.jpg" width="80" height="100" loading="lazy"
-                                     alt="Robert William">
-                            </figure>
-                            <div>
-                                <h3 class="h4 testi-name">Robert William</h3>
-                                <p class="testi-title">CEO Kingfisher</p>
-                            </div>
-                        </div>
-                        <blockquote class="testi-text">
-                            "I would be lost without my favorite pair of shoes. I would like to personally thank
-                            you for your outstanding product."
-                        </blockquote>
-                        <div class="rating-wrapper">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </div>
+  <section id="user-edit-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="user-edit-main">
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style="padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0" style="box-shadow: 0px 1px 10px #909090; border-radius: 10px;">
+            <div class="col-md-6 m-0" style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0 m-lg-4">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw">
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="userName" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">User Name</label>
+                      <div class="row m-0 p-0">
+                        <input type="text" class="form-control" id="userName" style="width: 15vw">
+                      </div>
+                      <p class="position-absolute m-0"><small class="text-danger" id="userIdError"></small></p>
                     </div>
-                </li>
-
-                <li class="testi-item">
-                    <div class="testi-card">
-                        <div class="profile-wrapper">
-                            <figure class="avatar">
-                                <img src="./assets/images/customer-2.jpeg" width="80" height="80" loading="lazy"
-                                     alt="Thomas Josef">
-                            </figure>
-                            <div>
-                                <h3 class="h4 testi-name">Thomas Josef</h3>
-                                <p class="testi-title">CEO Getforce</p>
-                            </div>
+                    <div class="row" style="padding-top: 1.5vw;">
+                      <div >
+                        <label for="userOldPassword" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Password</label>
+                        <input placeholder="Update or Delete" type="password" class="form-control" id="userOldPassword">
+                        <p class="position-absolute m-0"><small class="text-danger" id="userOldPasswordError" style="width: 15vw"></small></p>
+                      </div>
+                      <div class="row"style="padding-top: 1.5vw;">
+                        <div >
+                          <label id="userNewPassLabel" for="userNewPass" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">New Password</label>
+                          <input placeholder="Update or Delete" type="password" class="form-control" id="userNewPass">
+                          <p class="position-absolute m-0"><small class="text-danger" id="userNewPassError" style="width: 15vw"></small></p>
                         </div>
-                        <blockquote class="testi-text">
-                            "I would be lost without my favorite pair of shoes. I would like to personally thank
-                            you for your outstanding product."
-                        </blockquote>
-                        <div class="rating-wrapper">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </div>
+                      </div>
                     </div>
-                </li>
-
-                <li class="testi-item">
-                    <div class="testi-card">
-                        <div class="profile-wrapper">
-                            <figure class="avatar">
-                                <img src="./assets/images/customer-3.jpg" width="80" height="80" loading="lazy"
-                                     alt="Charles Richard">
-                            </figure>
-                            <div>
-                                <h3 class="h4 testi-name">Charles Richard</h3>
-                                <p class="testi-title">CEO Angela</p>
-                            </div>
-                        </div>
-                        <blockquote class="testi-text">
-                            "I would be lost without my favorite pair of shoes. I would like to personally thank
-                            you for your outstanding product."
-                        </blockquote>
-                        <div class="rating-wrapper">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </div>
+                  </div>
+                  <div class="container row mt-4">
+                    <div class="col">
+                      <label for="adminRole" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Role</label>
+                      <select aria-label="Default select example" class="form-select" id="userRole" style="width: 16vw">
+<!--                        <option value="ADMIN" selected>ADMIN</option>-->
+                        <option value="USER">USER</option>
+                      </select>
                     </div>
-                </li>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50 m-0 d-flex align-items-center">
+                <div class="col-md-12 p-0">
+                  <div class="container row mt-4">
+                    <div class="row mt-5"></div>
+                    <div class="col-12 d-flex justify-content-evenly" style="padding-right: 2vw">
+                      <button type="button" class="btn btn-primary" style="font-weight: bold;" id="userSave">Save</button>
+                      <button type="button" class="btn btn-success" style="font-weight: bold;" id="userUpdate">Update</button>
+                      <button type="button" class="btn btn-danger" style="width: 66px;" id="userDelete">Delete</button>
+                      <button type="button" class="btn btn-warning" id="userClear">Clear</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-0 d-flex justify-content-center align-items-center" style="padding: 0 0 0 0.9vw;">
+              <div class="row h-50 m-0 m-lg-4 mt-4 d-flex justify-content-center">
+                <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw; height: 24vh;">
+                  <table style="font-size: small; height: 2%" class="table table-bordered rounded bg-light">
+                    <thead class="table-secondary text-light text-center">
+                    <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;" id="user-thead">
+                      <th scope="col">User name</th>
+                      <th scope="col">Role</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userTable">
 
-            </ul>
-
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Banner -->
-    <section class="section section-divider banner">
-        <div class="container">
-
-            <ul class="banner-list">
-
-                <li class="banner-item banner-lg">
-                    <div class="banner-card">
-                        <img src="./assets/images/banner-1.png" width="550" height="450" loading="lazy"
-                             alt="Discount For Delicious Tasty Burgers!" class="banner-img">
-                        <div class="banner-item-content">
-                            <p class="banner-subtitle">50% Off Now!</p>
-                            <h3 class="banner-title">Discount For Impressive Casual Shoe</h3>
-                            <p class="banner-text">Sale off 50% only this week</p>
-                            <button class="btn1">Order Now</button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="banner-item banner-sm">
-                    <div class="banner-card">
-                        <img src="./assets/images/banner-2.png" width="550" height="465" loading="lazy"
-                             alt="Delicious Pizza" class="banner-img">
-                        <div class="banner-item-content">
-                            <h3 class="banner-title">Aggressive Boot</h3>
-                            <p class="banner-text">50% off Now</p>
-                            <button class="btn1">Order Now</button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="banner-item banner-sm">
-                    <div class="banner-card">
-                        <img src="./assets/images/banner-3.png" width="550" height="465" loading="lazy"
-                             alt="American Burgers" class="banner-img">
-                        <div class="banner-item-content">
-                            <h3 class="banner-title">Sport Shoe</h3>
-                            <p class="banner-text">50% off Now</p>
-                            <button class="btn1">Order Now</button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="banner-item banner-md">
-                    <div class="banner-card">
-                        <img src="./assets/images/banner-4.png" width="550" height="220" loading="lazy"
-                             alt="Tasty Buzzed Pizza" class="banner-img">
-                        <div class="banner-item-content">
-                            <h3 class="banner-title">Soft Shoe</h3>
-                            <p class="banner-text">Sale off 50% only this week</p>
-                            <button class="btn1">Order Now</button>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-
+  <!-- User Dashboard -->
+  <section id="user-dashboard-container">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" >
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style="padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0 sign-up-dark sectionBorder">
+            <div class="container" style="position: relative">
+              <img src="assets/images/sport-shoe.png" style="width: 45%; position: absolute; top: 1vh; left: 45vw">
+              <h1 class="dark-h1" style="position: absolute; top: 20vh; left: 5vw; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 60px">Walk In</h1>
+              <h1 style="position: absolute; top: 27vh; left: 5vw; font-family: 'Fira Sans', sans-serif; font-weight: 900; font-size: 80px; color: #FFA633">Confidently</h1>
+              <h7 style="width: 30vw; position: absolute; top: 41vh; left: 5.3vw; font-family: 'Fira Sans', sans-serif; font-weight: bold; font-size: 20px; color: #9FA0A0">Experience footwear that seamlessly blends style and comfort. Step into shoes that perfectly match your lifestyle and needs.</h7>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Dashboard -->
+  <section id="admin-dashboard-container" class="position-relative">
+    <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" >
+      <div class="row h-100 m-0 w-100">
+        <div class="container m-0" style="padding: 1.9vw 1.9vw 1.5vw 7vw;">
+          <div class="row h-100 m-0 admin-dash-dark sectionBorder">
+            <div class="container" style="height: 37.5vw;">
+              <div class="row">
+                <div class="col-md-4 position-relative" style="height: 37.5vw;">
+                  <h4 class=" panel-label mt-5 mb-5"style="color:#4D5F71;margin: 0;text-align: center;position:absolute;right:0;left:0; top: 0.9vw" id="">Most Sale Item</h4>
+                  <div class="row m-3 position-relative mt-5 mb-4" style="border-radius: 1vw; height: 20vw; top: 4vw;">
+                    <img src="assets/images/sport-shoe.png" id="panelImg" class="web" style="display:block;width: 36vh; display: block;left: 0;right: 0;bottom: 1vw;top: 0;margin: auto;">
+                  </div>
+                  <div class="row d-flex justify-content-center mt-5" style="height: 10vw;" >
+                    <div class="row d-flex align-items-center panel-itm-dark">
+                      <div class="d-flex justify-content-lg-evenly"><h5 class="m-0 p-0 panel-itm-label" style="color:#4D5F71; text-align: center;width: calc(100% / 2);" >Item Code</h5><h5 id="dashItmCode" class="m-0 p-0 text-no-wrap itm-value"style="text-align: center;width: calc(100% / 2);"></h5></div>
+                    </div>
+                    <div class="row d-flex align-items-center panel-itm-dark">
+                      <div class="d-flex justify-content-lg-evenly"><h5 class="m-0 p-0 panel-itm-label" style="color:#4D5F71;text-align: center;width: calc(100% / 2);">Description</h5><h5 id="dashItmDesc" class="m-0 p-0 text-no-wrap itm-value"style="text-align: center;width: calc(100% / 2);"></h5></div>
+                    </div>
+                    <div class="row d-flex align-items-center panel-itm-dark">
+                      <div class="d-flex justify-content-lg-evenly"><h5 class="m-0 p-0 panel-itm-label" style="color:#4D5F71; text-align: center;width: calc(100% / 2);">Sale Price</h5><h5 id="dashItmSale" class="m-0 p-0 text-no-wrap itm-value"style="text-align: center;width: calc(100% / 2);"></h5></div>
+                    </div>
+                    <div class="row d-flex align-items-center panel-itm-dark">
+                      <div class="d-flex justify-content-lg-evenly"><h5 class="m-0 p-0 panel-itm-label" style="color:#4D5F71; text-align: center;width: calc(100% / 2);">Sale Qty</h5><h5  id="dashItmQTY" class="m-0 p-0 text-no-wrap itm-value"style="text-align: center;width: calc(100% / 2);"></h5></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 " style="height: 38vw;">
+                 <div class="row d-flex align-items-center position-relative" style="padding: 1.5vw; right: 2.8vw;width: 63vw; height: 38%">
+                   <div class="col-md-12 d-flex justify-content-between">
+                     <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                       <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                         <div class="row">
+                           <div class="col mt-0">
+                             <h5 class="card-title"style="color:#8E9AA5;">Total Sales</h5>
+                           </div>
+                         </div>
+                         <h1 class="mt-1 mb-3 panel-label"style="color:#4D5F71;" id="totalSale">$0.00</h1>
+                         <div class="mb-0">
+                           <span class="text-muted">Since last week</span>
+                         </div>
+                       </div>
+                       <div class="col-md-5 d-flex justify-content-center align-items-center">
+                         <img src="assets/images/total.png" style="width: 5vw;">
+                       </div>
+                     </div>
+                     <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                       <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                         <div class="row">
+                           <div class="col mt-0">
+                             <h5 class="card-title" style="color:#8E9AA5;">Total Profit</h5>
+                           </div>
+
+                         </div>
+                         <h1 class="mt-1 mb-3 panel-label"style="color:#4D5F71;"id="totalProfit">$0.00</h1>
+                         <div class="mb-0">
+                           <span class="text-muted">Since last week</span>
+                         </div>
+                       </div>
+                       <div class="col-md-5 d-flex justify-content-center align-items-center">
+                         <img src="assets/images/profit2.png" style="width: 6vw;">
+                       </div>
+                     </div>
+                     <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                       <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                         <div class="row">
+                           <div class="col mt-0">
+                             <h5 class="card-title" style="color:#8E9AA5;" >Total Orders</h5>
+                           </div>
+
+                         </div>
+                         <h1 class="mt-1 mb-3 panel-label" style="color:#4D5F71;" id="totalOrders">0</h1>
+                         <div class="mb-0">
+                           <span class="text-muted">Since last week</span>
+                         </div>
+                       </div>
+                       <div class="col-md-5 d-flex justify-content-center align-items-center">
+                         <img src="assets/images/cart.png" style="width: 5vw; padding-bottom: 0.5vw;">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                  <div class="row d-flex align-items-center position-relative" style="padding: 1.5vw; right: 2.8vw;width: 63vw; height: 38%; margin-top: -37px">
+                    <div class="col-md-12 d-flex justify-content-between">
+                      <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                        <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title"style="color:#8E9AA5;">Total Shoes</h5>
+                            </div>
+                          </div>
+                          <h1 class="mt-1 mb-3 panel-label"style="color:#4D5F71;" id="totalItems">$0.00</h1>
+                          <div class="mb-0">
+                            <span class="text-muted">Since last week</span>
+                          </div>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                          <img src="assets/images/total-shoes.png" style="width: 7vw;">
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                        <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title" style="color:#8E9AA5;">Total Customers</h5>
+                            </div>
+
+                          </div>
+                          <h1 class="mt-1 mb-3 panel-label"style="color:#4D5F71;"id="totalCustomers">$0.00</h1>
+                          <div class="mb-0">
+                            <span class="text-muted">Since last week</span>
+                          </div>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                          <img src="assets/images/total-customers.png" style="width: 6vw;">
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 18vw">
+                        <div class="card-body d-flex align-items-center justify-content-center"style="height: 10vw; flex-direction: column">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title" style="color:#8E9AA5;" >Total Employees</h5>
+                            </div>
+
+                          </div>
+                          <h1 class="mt-1 mb-3 panel-label" style="color:#4D5F71;" id="totalEmployees">0</h1>
+                          <div class="mb-0">
+                            <span class="text-muted">Since last week</span>
+                          </div>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                          <img src="assets/images/total-employees.png" style="width: 6vw; padding-bottom: 0.5vw;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-flex align-items-center position-relative" style="padding: 1.5vw; right: 2.8vw;width: 63vw; height: 38%; margin-top: -37px">
+                    <div class="col-md-12 d-flex justify-content-between">
+                      <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 28vw">
+                        <img src="assets/images/chart.gif" style="display:block; width: 30vw; height: 10vw;">
+                      </div>
+                      <div class="col-md-4 d-flex align-items-center panel-dark sectionBorder" style="height: 80%;width: 28vw">
+                        <div class="row h-50" style="padding-top: 2.3vw">
+                          <div class="col-md-5 d-flex align-items-center justify-content-center">
+                            <img src="assets/images/special-offer.png" style="width: 10vw; margin-top: -35px; margin-left: 35px;">
+                          </div>
+                          <div class="col-md-7 d-flex justify-content-center align-items-center">
+                            <div class="col d-flex justify-content-center" style="margin-top: -30px;">
+                              <button id="sendOffer" type="button" class="btn p-0 m-0" style="width: 12vw;height: 5.5vh;">Send Offers</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="offer-container" class="container-fluid p-0" style="background-color:rgba(229,229,229,0.5); position:absolute; top: 0 !important; height: 91vh; z-index: 5;width: 95vw;left: 5vw; right:0; top: 4.4vw; bottom: 0; margin: auto">
+      <div style="border-radius: 10px; z-index: 15; width: 60vw;position: absolute; left: 0; right:0; top: 4.4vw; bottom: 0; margin: auto">
+        <div class="container offer-dark" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0px 7px; border-radius: 8px;background-color:rgb(255,255,255); height: 30vw; width: 50vw;position: relative;top: 1vw;right: 0.5vw;">
+          <div class="col-12 d-flex" style="height: 29.5vw;">
+              <div class="mt-2" style="width: 50%; height: 85%">
+                <h1 class="mt-2 dark-h1 text-center" style="padding-top: 0.8vw; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 30px; color: #434142;">Send Offers</h1>
+                <div class="col-sm d-flex flex-column align-items-center">
+                  <label for="subject" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; color: #35393B;">Subject</label>
+                  <input type="text" class="form-control border border-info" id="subject"style="width: 18vw">
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="mt-2 d-flex flex-column align-items-center">
+                      <label for="message" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Message</label>
+                      <textarea class="form-control border border-info" id="message" style="width: 18vw; height: 12vw;resize: none;" required></textarea>
+                    </div>
+                    <div class="mt-2 d-flex flex-column ">
+                      <div class="col d-flex justify-content-center mt-2">
+                        <button id="offer-send" type="button" class="btn p-0 m-0" style="width: 12vw;height: 5vh;">Send</button>
+                        <button id="offerCancel" type="button" class="p-0 m-0 pay-icon" style="width: 6vw;height: 5vh;">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<!-- Footer -->
-<footer id="contacts" style="background-color: #292839">
+<!-- JQuery -->
+<script rel="script" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap5 -->
+<script rel="script" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Fontawesome -->
+<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+<!-- Sweetalert2 -->
+<script rel="script" src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script rel="script" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script rel="script" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <div class="footer-top">
-        <div class="container">
+<!-- Custom-Scripts -->
+<script rel="script" src="controller/signUpController.js"></script>
+<script rel="script" src="controller/signInController.js"></script>
+<script rel="script" src="controller/adminController.js"></script>
+<script rel="script" src="controller/userController.js"></script>
+<script rel="script" src="controller/adminUserController.js"></script>
+<script rel="script" src="controller/adminUserPageController.js"></script>
+<script rel="script" src="controller/dashboard.js"></script>
+<script rel="script" src="controller/indexController.js"></script>
+<script rel="script" src="controller/customerController.js"></script>
+<script rel="script" src="controller/employeeController.js"></script>
+<script rel="script" src="controller/supplierController.js"></script>
+<script rel="script" src="controller/inventoryController.js"></script>
+<script rel="script" src="controller/orderController.js"></script>
 
-            <div class="footer-brand">
-
-                <a href="#" class="logo">
-                    <h4 style="color: white;">Hello Shoes</h4>
-                </a>
-
-                <p class="footer-text">
-                    Shoes are essential accessories designed to provide comfort and support for your feet, ensuring
-                    you step confidently and stylishly throughout your day.
-                </p>
-
-                <ul class="social-list">
-
-                    <li>
-                        <a href="https://www.linkedin.com/in/kavithma-thushal-3b8a92260/" class="social-link"
-                           target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://twitter.com/Thushal25" class="social-link" target="_blank">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.instagram.com/kavithma_thushal/" class="social-link" target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://web.facebook.com/profile.php?id=100078869062566" class="social-link"
-                           target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-link-box">
-
-                <ul class="footer-list">
-
-                    <li>
-                        <p class="footer-item-title">ABOUT US</p>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Our Story</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Our Mission</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Latest Designs</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Press Coverage</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Craftsmanship</a>
-                    </li>
-
-                </ul>
-
-                <ul class="footer-list">
-
-                    <li>
-                        <p class="footer-item-title">COLLECTIONS</p>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Men's Shoes</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Women's Shoes</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Kids' Shoes</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Seasonal Trends</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Formal Trends</a>
-                    </li>
-
-                </ul>
-
-                <ul class="footer-list">
-
-                    <li>
-                        <p class="footer-item-title">SUPPORT</p>
-                    </li>
-
-                    <li>
-                        <a href="#" class="footer-link">FAQs</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Contact Us</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Size Guide</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Store Locator</a>
-                    </li>
-
-                    <li>
-                        <a class="footer-link">Returns & Exchanges</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="copyright">
-                &copy; 2024 <a href="https://github.com/Kavithma-Thushal" target="_blank">Kavithma Thushal</a>. All
-                Right Reserved
-            </p>
-        </div>
-    </div>
-
-</footer>
-
-<!-- Back to Top -->
-<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
-</a>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="assets/scripts/index.js"></script>
+<script rel="script" src="controller/validation/customerValidation.js"></script>
+<script rel="script" src="controller/validation/employeeValidation.js"></script>
+<script rel="script" src="controller/validation/supplierValidation.js"></script>
+<script rel="script" src="controller/validation/inventoryValidation.js"></script>
+<script rel="script" src="controller/validation/orderValidation.js"></script>
 </body>
-
 </html>
