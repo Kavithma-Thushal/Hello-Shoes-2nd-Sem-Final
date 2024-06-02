@@ -11,35 +11,34 @@ const itm_STATES_REGEX = /^[A-Za-z ]{3,}$/;
 const itm_QTY_REGEX = /^[1-9]\d*$/;
 
 const itm_vArray = new Array();
-itm_vArray.push({ field: $("#itmCode"), regEx: itm_ID_REGEX, error: $("#itmCodeError") });
-itm_vArray.push({ field: $("#itmName"), regEx: itm_DESC_REGEX, error: $("#itmNameError") });
-itm_vArray.push({ field: $("#itmCat"), regEx: itm_CAT_REGEX, error: $("#itmCatError") });
-itm_vArray.push({ field: $("#itmSize"), regEx: itm_SIZE_REGEX, error: $("#itmSizeError") });
-itm_vArray.push({ field: $("#itmSupId"), regEx: itm_SUP_ID_REGEX, error: $("#itmSupIdError") });
-itm_vArray.push({ field: $("#itmSalePrice"), regEx: itm_SALE_PRICE_REGEX, error: $("#itmSalePriceError") });
-itm_vArray.push({ field: $("#itmBuyPrice"), regEx: itm_BUY_PRICE_REGEX, error: $("#itmBuyPriceError") });
-itm_vArray.push({ field: $("#itmProfit"), regEx: itm_PROFIT_REGEX, error: $("#itmProfitError") });
-itm_vArray.push({ field: $("#itmProfitMargin"), regEx: itm_MARGIN_REGEX, error: $("#itmProfitMarginError") });
-itm_vArray.push({ field: $("#itmStatus"), regEx: itm_STATES_REGEX, error: $("#itmStatusError") });
-itm_vArray.push({ field: $("#itmQty"), regEx: itm_QTY_REGEX, error: $("#itmQtyError") });
-
-
+itm_vArray.push({field: $("#itmCode"), regEx: itm_ID_REGEX, error: $("#itmCodeError")});
+itm_vArray.push({field: $("#itmName"), regEx: itm_DESC_REGEX, error: $("#itmNameError")});
+itm_vArray.push({field: $("#itmCat"), regEx: itm_CAT_REGEX, error: $("#itmCatError")});
+itm_vArray.push({field: $("#itmSize"), regEx: itm_SIZE_REGEX, error: $("#itmSizeError")});
+itm_vArray.push({field: $("#itmSupId"), regEx: itm_SUP_ID_REGEX, error: $("#itmSupIdError")});
+itm_vArray.push({field: $("#itmSalePrice"), regEx: itm_SALE_PRICE_REGEX, error: $("#itmSalePriceError")});
+itm_vArray.push({field: $("#itmBuyPrice"), regEx: itm_BUY_PRICE_REGEX, error: $("#itmBuyPriceError")});
+itm_vArray.push({field: $("#itmProfit"), regEx: itm_PROFIT_REGEX, error: $("#itmProfitError")});
+itm_vArray.push({field: $("#itmProfitMargin"), regEx: itm_MARGIN_REGEX, error: $("#itmProfitMarginError")});
+itm_vArray.push({field: $("#itmStatus"), regEx: itm_STATES_REGEX, error: $("#itmStatusError")});
+itm_vArray.push({field: $("#itmQty"), regEx: itm_QTY_REGEX, error: $("#itmQtyError")});
 
 function clearItmInputFields() {
-    itm_vArray.forEach(function(item) {
+    itm_vArray.forEach(function (item) {
         item.field.val("");
         item.field.css("border", "1px solid #ced4da");
     });
     $("#itmCode").focus();
     setItmBtn();
 }
+
 //setSupBtn();
-function setItmClBtn(){
+function setItmClBtn() {
     var any = false;
     $("#itmCode,#itmName,#itmCat,#itmSize,#itmSupId,#itmSalePrice,#itmBuyPrice,#itmProfit,#itmProfitMargin,#itmStatus,#itmQty").each(function () {
         var value = $(this).val();
         if (value !== undefined && value !== null && value.trim() !== "") {
-            any= true;
+            any = true;
             return false;
         }
     });
@@ -49,6 +48,7 @@ function setItmClBtn(){
         $("#itmClear").prop("disabled", true);
     }
 }
+
 //setSupClBtn();
 function itmEvents(e) {
     setItmClBtn();
@@ -75,15 +75,16 @@ function itmEvents(e) {
         }
     }
 }
+
 $("#itmCode").on("keydown keyup", function (e) {
     itmEvents(e);
-    searchItem($("#itmCode").val()).then(function (res){
+    searchItem($("#itmCode").val()).then(function (res) {
         if (Object.keys(res).length !== 0) {
             $("#itmCode,#itmName,#itmCat,#itmSize,#itmSalePrice,#itmBuyPrice,#itmProfit,#itmProfitMargin,#itmStatus,#itmQty").css("border", "1px solid #ced4da");
             setItmBtn();
             itmCaptureClear();
             setAllItmVal(res);
-        }else {
+        } else {
             $("#itmCode,#itmName,#itmCat,#itmSize,#itmSalePrice,#itmBuyPrice,#itmProfit,#itmProfitMargin,#itmStatus,#itmQty").css("border", "1px solid #ced4da");
             setItmBtn();
             itmCaptureClear();
@@ -102,32 +103,32 @@ $("#itmCode").on("keydown keyup", function (e) {
         }
     });
 });
+
 $("#itmName,#itmCat,#itmSize,#itmSalePrice,#itmBuyPrice,#itmProfit,#itmProfitMargin,#itmStatus,#itmQty").on("keydown keyup change", function (e) {
     itmEvents(e);
 });
-/*$("#cusGender, #cusDob, #loyaltyDate").on("", function(e) {
-    events(e);
-});*/
+
 $("#itmSupId").on("keydown keyup", function (e) {
     let indexNo = itm_vArray.indexOf(itm_vArray.find((c) => c.field.attr("id") == e.target.id));
     if (itm_vArray[indexNo].regEx.test($("#itmSupId").val())) {
-        searchSupplier($("#itmSupId").val()).then(function (res){
-            if (res != null || res != undefined){
+        searchSupplier($("#itmSupId").val()).then(function (res) {
+            if (res != null || res != undefined) {
                 setItmBorder(true, itm_vArray[indexNo])
                 $("#itmSupName").val(res.supplierName);
             }
-            if( $("#itmSupName").val() == "" || $("#itmSupName").val() == null){
+            if ($("#itmSupName").val() == "" || $("#itmSupName").val() == null) {
                 $("#itmSupIdError").text("Supplier is not Exist");
                 $("#itmSupId").css("border", "2px solid red");
             }
         });
-    }else {
+    } else {
         setItmBorder(false, itm_vArray[indexNo])
     }
     setItmBtn();
     setItmClBtn();
 });
-$('#itemImgFile').change(function() {
+
+$('#itemImgFile').change(function () {
     var fileInput = $('#itemImgFile')[0];
     var file = fileInput.files[0];
 
@@ -159,7 +160,6 @@ function checkItmValidations(object) {
 }
 
 
-
 function checkAllItm() {
     for (let i = 0; i < itm_vArray.length; i++) {
         if (!checkItmValidations(itm_vArray[i])) {
@@ -169,7 +169,7 @@ function checkAllItm() {
     return true;
 }
 
-function setProfit(){
+function setProfit() {
     let salePrice = parseFloat($("#itmSalePrice").val());
     let buyPrice = parseFloat($("#itmBuyPrice").val());
     if (!isNaN(salePrice) && !isNaN(buyPrice)) {
@@ -181,30 +181,53 @@ function setProfit(){
     }
 }
 
-$("#itmBuyPrice").on("input", function() {
+$("#itmBuyPrice").on("input", function () {
     setProfit();
 });
 
-$("#itmSalePrice").on("input", function() {
+$("#itmSalePrice").on("input", function () {
     setProfit();
 });
+
 function setItmBorder(bol, ob) {
     if (!bol) {
         if (ob.field.val().length >= 1) {
             ob.field.css("border", "2px solid red");
             let check = ob.field.attr('id');
             switch (check) {
-                case "itmCode" : ob.error.text("itm-Code is a required field: Minimum 5"); break
-                case "itmName" : ob.error.text("itm-Name is a required field: Minimum 3"); break
-                case "itmCat" : ob.error.text("itmCat is a required field: Minimum 3"); break
-                case "itmSize" : ob.error.text("itm-Size is required"); break
-                case "itmSalePrice" : ob.error.text("Price is a required field: Pattern 100.00 or 100"); break
-                case "itmBuyPrice" : ob.error.text("Price is a required field: Pattern 100.00 or 100"); break
-                case "itmProfit" : ob.error.text("Price is a required in Pattern: 100.00"); break
-                case "itmProfitMargin" : ob.error.text("Profit Margin is not valid"); break;
-                case "itmStatus" : ob.error.text("Status is Minimum 2,Max"); break
-                case "itmSupId" : ob.error.text("sup-Id is a required field: S00-"); break
-                case "itmQty" : ob.error.text("Qty is required minimum 1"); break
+                case "itmCode" :
+                    ob.error.text("itm-Code is a required field: Minimum 5");
+                    break
+                case "itmName" :
+                    ob.error.text("itm-Name is a required field: Minimum 3");
+                    break
+                case "itmCat" :
+                    ob.error.text("itmCat is a required field: Minimum 3");
+                    break
+                case "itmSize" :
+                    ob.error.text("itm-Size is required");
+                    break
+                case "itmSalePrice" :
+                    ob.error.text("Price is a required field: Pattern 100.00 or 100");
+                    break
+                case "itmBuyPrice" :
+                    ob.error.text("Price is a required field: Pattern 100.00 or 100");
+                    break
+                case "itmProfit" :
+                    ob.error.text("Price is a required in Pattern: 100.00");
+                    break
+                case "itmProfitMargin" :
+                    ob.error.text("Profit Margin is not valid");
+                    break;
+                case "itmStatus" :
+                    ob.error.text("Status is Minimum 2,Max");
+                    break
+                case "itmSupId" :
+                    ob.error.text("sup-Id is a required field: S00-");
+                    break
+                case "itmQty" :
+                    ob.error.text("Qty is required minimum 1");
+                    break
             }
         } else {
             ob.field.css("border", "1px solid #ced4da");
@@ -221,6 +244,7 @@ function setItmBorder(bol, ob) {
     }
 
 }
+
 function setItmBtn() {
     setItmClBtn();
     $("#itmSave").prop("disabled", true);
@@ -228,9 +252,9 @@ function setItmBtn() {
     $("#itmUpdate").prop("disabled", true);
     $("#itmSearch").prop("disabled", true);
     let id = $("#itmCode").val();
-    if ($("#itmCode").val() != "" && itm_ID_REGEX.test($("#itmCode").val())){
+    if ($("#itmCode").val() != "" && itm_ID_REGEX.test($("#itmCode").val())) {
         $("#itmSearch").prop("disabled", false);
-    }else {
+    } else {
         $("#itmSearch").prop("disabled", true);
     }
     validItem(id)
@@ -243,7 +267,7 @@ function setItmBtn() {
                 } else {
                     $("#itmUpdate").prop("disabled", true);
                 }
-            }else {
+            } else {
                 $("#itmDelete").prop("disabled", true);
                 $("#itmUpdate").prop("disabled", true);
                 if (checkAllItm()) {
@@ -263,10 +287,11 @@ function setItmBtn() {
             }
         });
 }
+
 $("#itmClear").click(function () {
     $("#itmNameError").text("");
     clearItmInputFields();
-    itm_vArray.forEach(function(item) {
+    itm_vArray.forEach(function (item) {
         item.error.val("");
         item.error.text("");
     });
@@ -277,6 +302,7 @@ $("#itmClear").click(function () {
     setItmBtn();
     setItmClBtn();
 });
+
 function itmCaptureClear() {
     stopItmWebcamStream();
     $('#itmVideo').hide();
@@ -285,5 +311,4 @@ function itmCaptureClear() {
     $('#itmCaptureButton').css("border-color", "#007bff");
     $('#itmCaptureButton').text("Capture");
     $("#itmCapturedImage").attr('src', "assets/images/img-upload.png");
-
 }

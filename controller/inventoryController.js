@@ -6,6 +6,7 @@ $(document).ready(function () {
     $("#itmClear").prop("disabled", true);
 
 });
+
 $('#itmCaptureButton').click(function () {
     let text = $(this).text();
     var video = $('#itmVideo')[0];
@@ -65,7 +66,7 @@ function returnAllItmVal() {
         itemPicture: imageUrl,
         category: $("#itmCat").val(),
         size: parseInt($("#itmSize").val()),
-        supplier: { supplierCode: $("#itmSupId").val() },
+        supplier: {supplierCode: $("#itmSupId").val()},
         salePrice: parseFloat($("#itmSalePrice").val()),
         buyPrice: parseFloat($("#itmBuyPrice").val()),
         expectedProfit: parseFloat($("#itmProfit").val()),
@@ -76,6 +77,7 @@ function returnAllItmVal() {
 
     return formData;
 }
+
 function setAllItmVal(ar) {
     console.log(ar)
     $("#itmName").val(ar.itemDesc);
@@ -195,7 +197,7 @@ $("#itmUpdate").click(function () {
                             getAllItems("/getAll");
                         },
                         error: function (ob, textStatus, error) {
-                            console.log(ob ,textStatus, error)
+                            console.log(ob, textStatus, error)
                             swal("Error", textStatus + "Error Item Not Update", "error");
                         }
                     });
@@ -247,10 +249,12 @@ function saveItem() {
         }
     });
 }
+
 $("#itmFilter").on("change", function (e) {
     let val = $("#itmFilter").val();
-    getAllItems("/"+val);
+    getAllItems("/" + val);
 });
+
 function getAllItems(val) {
     console.log(val);
     performAuthenticatedRequest();
@@ -258,7 +262,7 @@ function getAllItems(val) {
     console.log(accessToken);
     $("#itemTable").empty();
     $.ajax({
-        url: "http://localhost:8080/helloshoes/api/v1/inventory/getAll"+val,
+        url: "http://localhost:8080/helloshoes/api/v1/inventory/getAll" + val,
         method: "GET",
         headers: {
             'Authorization': 'Bearer ' + accessToken
@@ -286,8 +290,8 @@ function getAllItems(val) {
                 $("#itemTable").append(row);
                 bindItmTrrEvents();
             }
-            if (mode){
-                $('#itemTable > tr').each(function() {
+            if (mode) {
+                $('#itemTable > tr').each(function () {
                     let bgColor = $(this).find('th').css('background-color');
                     let hasClass = $(this).find('th').hasClass('blinking')
                     if (bgColor === "rgb(250, 235, 215)" || hasClass) {
@@ -300,6 +304,7 @@ function getAllItems(val) {
         }
     });
 }
+
 function bindItmTrrEvents() {
     $('#itemTable>tr').click(function () {
         var itemCode = $(this).children().eq(0).text();
@@ -328,7 +333,7 @@ function bindItmTrrEvents() {
         $("#itmProfitMargin").val(profitMargin);
         $("#itmStatus").val(status);
         setItmBtn();
-        searchItem(itemCode).then(function (res){
+        searchItem(itemCode).then(function (res) {
             itmCaptureClear();
             $("#itmCapturedImage").attr('src', res.itemPicture);
         });
@@ -336,6 +341,7 @@ function bindItmTrrEvents() {
         $("#inventoryListLabel").text(" selected, Back to view details");
     });
 }
+
 function validItem(id) {
     return new Promise(function (resolve, reject) {
         performAuthenticatedRequest();
@@ -397,6 +403,7 @@ $('#itmSearch').click(function () {
     setItmClBtn();
     setItmBtn();
 });
+
 $('#backToItm').click(function () {
     itmList.css('display', 'none');
     itmMain.css('display', 'block');
