@@ -2,9 +2,9 @@ const QTY_REGEX = /^[1-9]\d*$/;
 const ord_itm_ID_REGEX = /^[A-Za-z0-9 ]{5,}$/;
 const ord_CUS_ID_REGEX = /^C00-(0*[1-9]\d{0,2})$/;
 let o_Array = new Array();
-o_Array.push({field: $("#ordItmQty"), regEx: QTY_REGEX });
-o_Array.push({field: $("#OrdItm"), regEx: ord_itm_ID_REGEX });
-o_Array.push({field: $("#ordCusId"), regEx: ord_CUS_ID_REGEX });
+o_Array.push({field: $("#ordItmQty"), regEx: QTY_REGEX});
+o_Array.push({field: $("#OrdItm"), regEx: ord_itm_ID_REGEX});
+o_Array.push({field: $("#ordCusId"), regEx: ord_CUS_ID_REGEX});
 
 $(document).ready(function () {
     $("#btnConfirm").prop("disabled", true);
@@ -30,26 +30,26 @@ $("#paymentCard").click(function () {
     allContainerHide();
     const role = localStorage.getItem('role');
     if (role == "USER") {
-        userPage.css('display','block');
+        userPage.css('display', 'block');
     }
     if (role == "ADMIN") {
-        adminPage.css('display','block');
+        adminPage.css('display', 'block');
     }
-    paymentPage.css('display','block');
-    cardPage.css('display','block');
+    paymentPage.css('display', 'block');
+    cardPage.css('display', 'block');
 });
 
 $("#cancel").click(function () {
     purchaseBtnHide(true);
-    cardPage.css('display','none');
+    cardPage.css('display', 'none');
     const role = localStorage.getItem('role');
     if (role == "USER") {
-        userPage.css('display','block');
+        userPage.css('display', 'block');
     }
     if (role == "ADMIN") {
-        adminPage.css('display','block');
+        adminPage.css('display', 'block');
     }
-    paymentPage.css('display','block');
+    paymentPage.css('display', 'block');
 });
 
 $("#paymentCash").click(function () {
@@ -63,7 +63,7 @@ $("#backToPayment").click(function () {
 $("#confirmPassword").on("keydown keyup", function (e) {
     $("#btnConfirm").prop("disabled", true);
     if ($("#confirmPassword").val() !== "") {
-        passwordCheck($("#confirmUsername").val(),$("#confirmPassword").val()).then(function (pass) {
+        passwordCheck($("#confirmUsername").val(), $("#confirmPassword").val()).then(function (pass) {
             if (pass) {
                 $("#confirmPasswordError").text("");
                 $("#confirmPassword").css("border", "2px solid green");
@@ -71,10 +71,10 @@ $("#confirmPassword").on("keydown keyup", function (e) {
                 if ($("#confirmUsername").val() !== "") {
                     getUserDetail($("#confirmUsername").val()).then(function (res) {
                         if (res !== false) {
-                            if (res.role === "ADMIN"){
-                            $("#confirmUsernameError").text("");
-                            $("#confirmUsername").css("border", "2px solid green");
-                            $("#btnConfirm").prop("disabled", false);
+                            if (res.role === "ADMIN") {
+                                $("#confirmUsernameError").text("");
+                                $("#confirmUsername").css("border", "2px solid green");
+                                $("#btnConfirm").prop("disabled", false);
                             } else {
                                 $("#confirmUsernameError").text("Invalid Admin username");
                                 $("#confirmUsername").css("border", "2px solid red");
@@ -96,7 +96,7 @@ $("#confirmPassword").on("keydown keyup", function (e) {
                 $("#btnConfirm").prop("disabled", true);
             }
         });
-    }else {
+    } else {
         $("#confirmPasswordError").text("");
         $("#confirmPassword").css("border", "1px solid #ced4da");
     }
@@ -127,11 +127,10 @@ $("#confirmUsername").on("keydown keyup", function (e) {
                     $("#confirmUsernameError").text("Invalid Admin username");
                     $("#confirmUsername").css("border", "2px solid red");
                 }
-            }else
-                {
-                    $("#confirmUsernameError").text("Invalid Username");
-                    $("#confirmUsername").css("border", "2px solid red");
-                }
+            } else {
+                $("#confirmUsernameError").text("Invalid Username");
+                $("#confirmUsername").css("border", "2px solid red");
+            }
         });
     } else {
         $("#confirmUsernameError").text("");
@@ -141,18 +140,18 @@ $("#confirmUsername").on("keydown keyup", function (e) {
 
 $("#btnConfirm").click(function () {
 
-    if ($("#order-update").prop("disabled") !== true){
-        if (cardPage.css('display') == "none"){
+    if ($("#order-update").prop("disabled") !== true) {
+        if (cardPage.css('display') == "none") {
             if (cashValidate()) {
                 updateOrder("Cash");
             } else {
                 swal("Error", "Insufficient Credit : Check Cash!", "error");
             }
-        }else if(cardPage.css('display') == "block"){
+        } else if (cardPage.css('display') == "block") {
             updateOrder("Card");
         }
 
-    }else if ($("#order-update").prop("disabled") === true && $("#order-delete").prop("disabled") !== true){
+    } else if ($("#order-update").prop("disabled") === true && $("#order-delete").prop("disabled") !== true) {
         deleteOrder();
     }
 });
@@ -196,7 +195,7 @@ $("#OrdItm").on("keydown keyup", function (e) {
         }
         setOrderBtn();
         setOrdClBtn();
-    }else {
+    } else {
         $("#OrdItmError").text("");
         $("#OrdItm").css("border", "1px solid #ced4da");
     }
@@ -204,35 +203,35 @@ $("#OrdItm").on("keydown keyup", function (e) {
 
 $("#ordCusId").on("keydown keyup", function (e) {
     if ($("#ordCusId").val() !== "") {
-    let indexNo = o_Array.indexOf(o_Array.find((c) => c.field.attr("id") == e.target.id));
-    if (o_Array[indexNo].regEx.test($("#ordCusId").val())) {
-        searchCustomer($("#ordCusId").val()).then(function (res){
-            if (res != null || res != undefined){
-                $("#ordCusId").css("border", "2px solid green");
-                $("#ordCusIdError").text("");
-                $("#ordCusName").val(res.customerName);
-                if (res.loyaltyDate == null && res == undefined){
-                    $("#ordPointsError").text("No Register at Loyalty");
-                }else {
-                    $("#ordPointsError").text("");
+        let indexNo = o_Array.indexOf(o_Array.find((c) => c.field.attr("id") == e.target.id));
+        if (o_Array[indexNo].regEx.test($("#ordCusId").val())) {
+            searchCustomer($("#ordCusId").val()).then(function (res) {
+                if (res != null || res != undefined) {
+                    $("#ordCusId").css("border", "2px solid green");
+                    $("#ordCusIdError").text("");
+                    $("#ordCusName").val(res.customerName);
+                    if (res.loyaltyDate == null && res == undefined) {
+                        $("#ordPointsError").text("No Register at Loyalty");
+                    } else {
+                        $("#ordPointsError").text("");
+                    }
+                    setAddItemBtn();
                 }
-                setAddItemBtn();
-            }
-            if( $("#ordCusName").val() == "" || $("#ordCusName").val() == null){
-                $("#ordCusIdError").text("Customer is not Exist");
-                $("#ordCusId").css("border", "2px solid red");
-            }
-        });
-    }else {
-        $("#ordCusIdError").text("Cus-Id is a required field: C00-");
-        $("#ordCusId").css("border", "2px solid red");
+                if ($("#ordCusName").val() == "" || $("#ordCusName").val() == null) {
+                    $("#ordCusIdError").text("Customer is not Exist");
+                    $("#ordCusId").css("border", "2px solid red");
+                }
+            });
+        } else {
+            $("#ordCusIdError").text("Cus-Id is a required field: C00-");
+            $("#ordCusId").css("border", "2px solid red");
+        }
+        setOrderBtn();
+        setOrdClBtn();
+    } else {
+        $("#ordCusIdError").text("");
+        $("#ordCusId").css("border", "1px solid #ced4da");
     }
-    setOrderBtn();
-    setOrdClBtn();
-}else {
-    $("#ordCusIdError").text("");
-    $("#ordCusId").css("border", "1px solid #ced4da");
-}
 });
 
 function searchOrder(id) {
@@ -241,7 +240,7 @@ function searchOrder(id) {
         performAuthenticatedRequest();
         const accessToken = localStorage.getItem('accessToken');
         $.ajax({
-            url: "http://localhost:8080/helloshoes/api/v1/sales/search/"+id,
+            url: "http://localhost:8080/helloshoes/api/v1/sales/search/" + id,
             method: "GET",
             headers: {
                 'Authorization': 'Bearer ' + accessToken
@@ -258,7 +257,7 @@ function searchOrder(id) {
     });
 }
 
-function placeOrder(payment,method) {
+function placeOrder(payment, method) {
     const cahier = localStorage.getItem('cashier');
     let order = {
         orderNo: "",
@@ -270,8 +269,7 @@ function placeOrder(payment,method) {
             customerId: "",
             customerName: ""
         },
-        saleDetails: [
-        ]
+        saleDetails: []
     }
 
     let cusId = $("#ordCusId").val();
@@ -301,7 +299,7 @@ function placeOrder(payment,method) {
     order.totalPoints = cusPoints;
     order.customerName.customerId = cusId;
     order.customerName.customerName = cusName;
-    order.total= total;
+    order.total = total;
 
     console.log(order)
     performAuthenticatedRequest();
@@ -321,7 +319,7 @@ function placeOrder(payment,method) {
             generateOrderId();
         },
         error: function (ob, textStatus, error) {
-            swal("Error","Error Order Not Added", "error");
+            swal("Error", "Error Order Not Added", "error");
         }
     });
 }
@@ -345,12 +343,12 @@ $("#order-update").click(function () {
 $("#order-delete").click(function () {
 
     const role = localStorage.getItem('role');
-        if (role == "USER") {
-            $('#confirm-container').show();
-        }
-        if (role == "ADMIN") {
-            deleteOrder();
-        }
+    if (role == "USER") {
+        $('#confirm-container').show();
+    }
+    if (role == "ADMIN") {
+        deleteOrder();
+    }
 });
 
 function updateOrder(payment) {
@@ -373,14 +371,14 @@ function updateOrder(payment) {
                 if (value === "confirm") {
 
                     if (itemValidate()) {
-                        if(payment == "Card"){
-                            placeOrder(payment,"PUT");
+                        if (payment == "Card") {
+                            placeOrder(payment, "PUT");
                             clearAll();
                             purchaseBtnHide(true);
                             generateOrderId();
-                        }else if (payment == "Cash"){
+                        } else if (payment == "Cash") {
                             if (cashValidate()) {
-                                placeOrder(payment,"PUT");
+                                placeOrder(payment, "PUT");
                                 clearAll();
                                 purchaseBtnHide(true);
                                 generateOrderId();
@@ -403,7 +401,7 @@ function updateOrder(payment) {
     });
 }
 
-function deleteOrder(){
+function deleteOrder() {
     let id = $("#orderId").val();
     searchOrder(id).then(function (isValid) {
         if (Object.keys(isValid).length === 0) {
@@ -442,7 +440,7 @@ function deleteOrder(){
                             generateOrderId();
                         },
                         error: function (ob, textStatus, error) {
-                            swal("Error","Error Order Not Delete", "error");
+                            swal("Error", "Error Order Not Delete", "error");
                         }
                     });
                 }
@@ -520,18 +518,18 @@ $("#order-add-item").click(function () {
     $("#total").text(allTotal);
     $("#subtotal").text(allTotal);
     points += Math.round(allTotal / 800);
-    searchCustomer($("#ordCusId").val()).then(function (res){
-        if (res != null || res != undefined){
-            if (res.loyaltyDate == null && res == undefined){
+    searchCustomer($("#ordCusId").val()).then(function (res) {
+        if (res != null || res != undefined) {
+            if (res.loyaltyDate == null && res == undefined) {
                 $("#ordPointsError").text("No Register at Loyalty");
-            }else {
+            } else {
                 $("#ordPointsError").text("");
-                if (allTotal > 800){
-                            $("#ordPoints").val(points);
+                if (allTotal > 800) {
+                    $("#ordPoints").val(points);
                 }
             }
         }
-        if( $("#ordCusName").val() == "" || $("#ordCusName").val() == null){
+        if ($("#ordCusName").val() == "" || $("#ordCusName").val() == null) {
             $("#ordCusIdError").text("Customer is not Exist");
             $("#ordCusId").css("border", "2px solid red");
         }
@@ -553,14 +551,14 @@ $("#txtDiscount").on("keydown keyup input", function (e) {
 });
 
 $("#txtCash").on("keydown keyup input", function () {
-    if ($("#txtCash").val() !== ""){
-        if (cashValidate()){
+    if ($("#txtCash").val() !== "") {
+        if (cashValidate()) {
             setBalance();
             $("#btnSubmitOrder").prop("disabled", false);
-        }else {
+        } else {
             $("#btnSubmitOrder").prop("disabled", true);
         }
-    }else {
+    } else {
         $("#txtCash").css("border", "1px solid #ced4da");
     }
 
@@ -616,14 +614,14 @@ function loadOrderId() {
 
 $("#btnSubmitOrder,#card-payment").click(function () {
     let oId = $("#orderId").val();
-    if ($(this).attr('id') == "btnSubmitOrder"){
+    if ($(this).attr('id') == "btnSubmitOrder") {
         searchOrder(oId).then(function (order) {
             if (Object.keys(order).length === 0) {
                 if (itemValidate()) {
                     if (cashValidate()) {
-                            placeOrder("Cash","POST");
-                            clearAll();
-                            generateOrderId();
+                        placeOrder("Cash", "POST");
+                        clearAll();
+                        generateOrderId();
 
                     } else {
                         swal("Error", "Insufficient Credit : Check Cash!", "error");
@@ -631,21 +629,21 @@ $("#btnSubmitOrder,#card-payment").click(function () {
                 } else {
                     swal("Error", "Please Add Items to Place Order", "error");
                 }
-            }else {
+            } else {
                 swal("Error", "Order Already Registered", "error");
             }
         });
-    }else if ($(this).attr('id') == "card-payment"){
+    } else if ($(this).attr('id') == "card-payment") {
 
-        if ($("#order-update").prop("disabled") !== true){
-                updateOrder("Card");
-        }else if ($("#order-update").prop("disabled") === true){
+        if ($("#order-update").prop("disabled") !== true) {
+            updateOrder("Card");
+        } else if ($("#order-update").prop("disabled") === true) {
 
             searchOrder(oId).then(function (order) {
                 if (Object.keys(order).length === 0) {
                     if (itemValidate()) {
-                        if ($("#cardNum").val() !== "" && $("#bankName").val() !== "" && $("#cardMonth").val() !== "" && $("#cardYear").val() !== ""  && $("#verifyNum").val() !== "" ){
-                            placeOrder("Card","POST");
+                        if ($("#cardNum").val() !== "" && $("#bankName").val() !== "" && $("#cardMonth").val() !== "" && $("#cardYear").val() !== "" && $("#verifyNum").val() !== "") {
+                            placeOrder("Card", "POST");
                             clearAll();
                             purchaseBtnHide(true);
                             generateOrderId();
@@ -655,7 +653,7 @@ $("#btnSubmitOrder,#card-payment").click(function () {
                     } else {
                         swal("Error", "Please Add Items to Place Order", "error");
                     }
-                }else {
+                } else {
                     swal("Error", "Order Already Registered", "error");
                 }
             });
@@ -744,7 +742,7 @@ $("#orderId").on("keyup input change", async function (e) {
         $("#total").text(allTotal);
         $("#subtotal").text(allTotal);
         setOrdClBtn();
-    }else {
+    } else {
         $("#btnSubmitOrder").prop("disabled", true);
         $("#order-delete").prop("disabled", true);
         $("#order-update").prop("disabled", true);
@@ -753,7 +751,7 @@ $("#orderId").on("keyup input change", async function (e) {
 
 function tableChange(details) {
 
-    $("#order-table").on("DOMNodeInserted DOMNodeRemoved", "tr",async function (event) {
+    $("#order-table").on("DOMNodeInserted DOMNodeRemoved", "tr", async function (event) {
 
         if (event.type === "DOMNodeInserted") {
             if ($("#orderId").val() !== "") {
@@ -828,8 +826,8 @@ function bindRemove(details) {
                             if (code == tableItm) {
                                 $("#btnSubmitOrder").prop("disabled", true);
                                 $("#order-update").prop("disabled", true);
-                                 setOrdUpdateBtn();
-                            }else {
+                                setOrdUpdateBtn();
+                            } else {
                                 setOrdUpdateBtn();
                                 $("#order-update").prop("disabled", false);
                             }
@@ -860,16 +858,16 @@ async function setOrdUpdateBtn() {
         $("#order-update").prop("disabled", false);
 
         //updateAddedItemTable(order);
-    }else {
+    } else {
         $("#btnSubmitOrder").prop("disabled", false);
         $("#order-update").prop("disabled", true);
     }
     setOrdClBtn();
 }
 
-function setOrdClBtn(){
+function setOrdClBtn() {
     var empty = true;
-    $("#orderId,#OrdItmDes, #OrdItm, #ordItmPrice, #ordItmSize, #ordItmQty, #ordDate, #ordCusId, #ordCusName, #ordPoints,#txtCash").each(function() {
+    $("#orderId,#OrdItmDes, #OrdItm, #ordItmPrice, #ordItmSize, #ordItmQty, #ordDate, #ordCusId, #ordCusName, #ordPoints,#txtCash").each(function () {
         if ($(this).val() !== "") {
             empty = false;
             return true;
