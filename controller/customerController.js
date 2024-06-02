@@ -1,12 +1,10 @@
 $(document).ready(function () {
-
     cusFieldSet(true);
     $("#cusSave").prop("disabled", true);
     $("#cusDelete").prop("disabled", true);
     $("#cusUpdate").prop("disabled", true);
     $("#cusSearch").prop("disabled", true);
     $("#cusClear").prop("disabled", true);
-
 });
 
 $('#cusCaptureButton').click(function () {
@@ -354,7 +352,6 @@ $("#cusUpdate").click(function () {
                             setBtn();
                         },
                         error: function (ob, textStatus, error) {
-                            //alert(textStatus+" : Error Customer Not Update");
                             swal("Error", textStatus + "Error Customer Not Update", "error");
                         }
                     });
@@ -363,10 +360,8 @@ $("#cusUpdate").click(function () {
 
         } else {
             swal("Error", "No such Customer..please check the ID", "error");
-
         }
     });
-
 });
 
 function saveCustomer() {
@@ -390,7 +385,6 @@ function saveCustomer() {
                 contentType: "application/json",
                 success: function (res, textStatus, jsXH) {
                     console.log(res);
-                    // alert("Customer Added Successfully");
                     swal("Saved", "Customer Added Successfully", "success");
                     clearCus();
                     getAllCustomers();
@@ -398,14 +392,11 @@ function saveCustomer() {
                     setBtn();
                 },
                 error: function (ob, textStatus, error) {
-                    //alert(textStatus + " : Error Customer Not Added")
                     swal("Error", "Error Customer Not Added", "error");
                 }
             });
 
-
         } else {
-            //alert("Customer already exits.!");
             swal("Error", "Customer already exits.!", "error");
             clearCustomerInputFields();
         }

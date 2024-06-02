@@ -12,18 +12,18 @@ const CUS_CONTACT_REGEX = /^[^\p{L}]{10,}$/u;
 const CUS_DOB_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
 let c_vArray = new Array();
-c_vArray.push({ field: $("#cusId"), regEx: CUS_ID_REGEX, error: $("#cusIdError") });
-c_vArray.push({ field: $("#cusName"), regEx: CUS_NAME_REGEX, error: $("#cusNameError") });
-c_vArray.push({ field: $("#cusBuildNo"), regEx: CUS_ADDRESS_BUILD_REGEX, error: $("#cusBuildNoError") });
-c_vArray.push({ field: $("#cusLane"), regEx: CUS_ADDRESS_LANE_REGEX, error: $("#cusLaneError") });
-c_vArray.push({ field: $("#cusCity"), regEx: CUS_ADDRESS_CITY_REGEX, error: $("#cusCityError") });
-c_vArray.push({ field: $("#cusState"), regEx: CUS_ADDRESS_STATE_REGEX, error: $("#cusStateError") });
-c_vArray.push({ field: $("#cusPostalCode"), regEx: CUS_ADDRESS_CODE_REGEX, error: $("#cusPostalCodeError") });
-c_vArray.push({ field: $("#cusEmail"), regEx: CUS_EMAIL_REGEX, error: $("#cusEmailError") });
+c_vArray.push({field: $("#cusId"), regEx: CUS_ID_REGEX, error: $("#cusIdError")});
+c_vArray.push({field: $("#cusName"), regEx: CUS_NAME_REGEX, error: $("#cusNameError")});
+c_vArray.push({field: $("#cusBuildNo"), regEx: CUS_ADDRESS_BUILD_REGEX, error: $("#cusBuildNoError")});
+c_vArray.push({field: $("#cusLane"), regEx: CUS_ADDRESS_LANE_REGEX, error: $("#cusLaneError")});
+c_vArray.push({field: $("#cusCity"), regEx: CUS_ADDRESS_CITY_REGEX, error: $("#cusCityError")});
+c_vArray.push({field: $("#cusState"), regEx: CUS_ADDRESS_STATE_REGEX, error: $("#cusStateError")});
+c_vArray.push({field: $("#cusPostalCode"), regEx: CUS_ADDRESS_CODE_REGEX, error: $("#cusPostalCodeError")});
+c_vArray.push({field: $("#cusEmail"), regEx: CUS_EMAIL_REGEX, error: $("#cusEmailError")});
 
-c_vArray.push({ field: $("#cusGender"), regEx: CUS_GENDER_REGEX, error: $("#cusGenderError") });
-c_vArray.push({ field: $("#cusDob"), regEx: CUS_DOB_REGEX, error: $("#cusDobError") });
-c_vArray.push({ field: $("#cusContactNo"), regEx: CUS_CONTACT_REGEX, error: $("#cusContactNoError") });
+c_vArray.push({field: $("#cusGender"), regEx: CUS_GENDER_REGEX, error: $("#cusGenderError")});
+c_vArray.push({field: $("#cusDob"), regEx: CUS_DOB_REGEX, error: $("#cusDobError")});
+c_vArray.push({field: $("#cusContactNo"), regEx: CUS_CONTACT_REGEX, error: $("#cusContactNoError")});
 
 function clearCustomerInputFields() {
     $("#cusId,#cusName,#cusBuildNo,#cusLane,#cusCity,#cusState,#cusPostalCode,#cusEmail,#cusDob,#cusGender,#cusContactNo,#totalPoints").val("");
@@ -32,13 +32,14 @@ function clearCustomerInputFields() {
     $('input[name="rating"]').prop('checked', false);
     setBtn();
 }
+
 //setBtn();
-function setClBtn(){
+function setClBtn() {
     var any = false;
     $("#cusId,#cusName,#cusBuildNo,#cusLane,#cusCity,#cusState,#cusPostalCode,#cusEmail,#cusDob,#loyaltyDate,#cusContactNo,#totalPoints").each(function () {
         var value = $(this).val();
-        if (value !== undefined && value !== null||$('input[name="rating"]:checked').prop('checked') == true) {
-            any= true;
+        if (value !== undefined && value !== null || $('input[name="rating"]:checked').prop('checked') == true) {
+            any = true;
             return false;
         }
     });
@@ -48,6 +49,7 @@ function setClBtn(){
         $("#cusClear").prop("disabled", true);
     }
 }
+
 //setClBtn();
 function events(e) {
     setClBtn();
@@ -58,11 +60,9 @@ function events(e) {
     }
 
     checkValidations(c_vArray[indexNo]);
-
     setBtn();
 
     if (e.key == "Enter") {
-
         if (e.target.id != c_vArray[c_vArray.length - 1].field.attr("id")) {
             if (checkValidations(c_vArray[indexNo])) {
                 c_vArray[indexNo + 1].field.focus();
@@ -78,17 +78,16 @@ function events(e) {
 $("#cusName,#cusBuildNo,#cusLane,#cusCity,#cusState,#cusPostalCode,#cusEmail,#cusContactNo,#cusGender, #cusDob,#loyaltyDate,#totalPoints").on("keydown keyup change", function (e) {
     events(e);
 });
-$("input[name='rating']").on("change", function(e) {
+
+$("input[name='rating']").on("change", function (e) {
     setBtn();
 });
+
 $("#cusId").on("keydown keyup", function (e) {
     events(e)
-    searchCustomer($("#cusId").val()).then(function (res){
-        //setBtn();
+    searchCustomer($("#cusId").val()).then(function (res) {
         captureClear();
         setAllCusVal(res);
-        // $("#cusId,#cusName,#cusBuildNo,#cusLane,#cusCity,#cusState,#cusPostalCode,#cusEmail,#cusDob,#cusGender,#cusContactNo,#totalPoints").css("border", "1px solid #ced4da");
-
     });
 });
 
@@ -102,29 +101,49 @@ function checkValidations(object) {
 }
 
 
-
 function checkAll() {
     for (let i = 0; i < c_vArray.length; i++) {
         if (!checkValidations(c_vArray[i])) return false;
     }
     return true;
 }
+
 function setBorder(bol, ob) {
     if (!bol) {
         if (ob.field.val().length >= 1) {
             ob.field.css("border", "2px solid red");
             let check = ob.field.attr('id');
             switch (check) {
-                case "cusId" : ob.error.text("cus-Id is a required field: C00-"); break
-                case "cusName" : ob.error.text("cus-Name is a required field: Minimum 5,Max 20,Spaces Allowed"); break
-                case "cusBuildNo" : ob.error.text("BuildNo is a required field: Minimum 3"); break
-                case "cusLane" : ob.error.text("Lane is a required field: Minimum 3"); break
-                case "cusCity" : ob.error.text("City is a required field: Minimum 3"); break
-                case "cusState" : ob.error.text("State is a required field: Minimum 3"); break
-                case "cusPostalCode" : ob.error.text("PostalCode is a required field: Minimum 3"); break
-                case "cusEmail" : ob.error.text("Email is not valid"); break;
-                case "cusDob" : ob.error.text("Dob is not valid"); break
-                case "cusContactNo" : ob.error.text("ContactNo is not valid: Minimum 10"); break
+                case "cusId" :
+                    ob.error.text("cus-Id is a required field: C00-");
+                    break
+                case "cusName" :
+                    ob.error.text("cus-Name is a required field: Minimum 5,Max 20,Spaces Allowed");
+                    break
+                case "cusBuildNo" :
+                    ob.error.text("BuildNo is a required field: Minimum 3");
+                    break
+                case "cusLane" :
+                    ob.error.text("Lane is a required field: Minimum 3");
+                    break
+                case "cusCity" :
+                    ob.error.text("City is a required field: Minimum 3");
+                    break
+                case "cusState" :
+                    ob.error.text("State is a required field: Minimum 3");
+                    break
+                case "cusPostalCode" :
+                    ob.error.text("PostalCode is a required field: Minimum 3");
+                    break
+                case "cusEmail" :
+                    ob.error.text("Email is not valid");
+                    break;
+                case "cusDob" :
+                    ob.error.text("Dob is not valid");
+                    break
+                case "cusContactNo" :
+                    ob.error.text("ContactNo is not valid: Minimum 10");
+                    break
             }
         } else {
             ob.field.css("border", "1px solid #ced4da");
@@ -141,6 +160,7 @@ function setBorder(bol, ob) {
     }
 
 }
+
 function setBtn() {
     setClBtn();
     $("#cusSave").prop("disabled", true);
@@ -148,9 +168,9 @@ function setBtn() {
     $("#cusUpdate").prop("disabled", true);
     $("#cusSearch").prop("disabled", true);
     let id = $("#cusId").val();
-    if ($("#cusId").val() != "" && CUS_ID_REGEX.test($("#cusId").val())){
+    if ($("#cusId").val() != "" && CUS_ID_REGEX.test($("#cusId").val())) {
         $("#cusSearch").prop("disabled", false);
-    }else {
+    } else {
         $("#cusSearch").prop("disabled", true);
     }
     validCustomer(id)
@@ -163,7 +183,7 @@ function setBtn() {
                 } else {
                     $("#cusUpdate").prop("disabled", true);
                 }
-            }else {
+            } else {
                 $("#cusDelete").prop("disabled", true);
                 $("#cusUpdate").prop("disabled", true);
                 if (checkAll()) {
@@ -187,16 +207,17 @@ function setBtn() {
 $("#cusClear").click(function () {
     clearCus();
 });
+
 function clearCus() {
     $('#lastPurchaseDate').val("")
     $('#loyaltyDate').val("")
-    var ids = ["cusId", "cusGender", "cusName","cusDob","cusBuildNo", "cusLane", "cusCity","cusState","cusPostalCode",
-        "cusEmail", "cusContactNo","loyaltyDate","totalPoints", "lastPurchaseDate","rating"];
-    ids.forEach(function(id) {
-        $("#" + id +"Error").val("");
+    var ids = ["cusId", "cusGender", "cusName", "cusDob", "cusBuildNo", "cusLane", "cusCity", "cusState", "cusPostalCode",
+        "cusEmail", "cusContactNo", "loyaltyDate", "totalPoints", "lastPurchaseDate", "rating"];
+    ids.forEach(function (id) {
+        $("#" + id + "Error").val("");
     });
     clearCustomerInputFields();
-    c_vArray.forEach(function(item) {
+    c_vArray.forEach(function (item) {
         item.error.val("");
     });
     stopWebcamStream();
@@ -205,6 +226,7 @@ function clearCus() {
     setClBtn();
     $("#cusClear").prop("disabled", true);
 }
+
 function captureClear() {
     stopWebcamStream();
     $('#video').hide();

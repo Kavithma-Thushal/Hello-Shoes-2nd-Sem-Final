@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Images Added">
-      <change afterPath="$PROJECT_DIR$/assets/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/img-upload.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/add-icon.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/card.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cash.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/sendoffer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/sup.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/walk.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/HomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/adminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/inventoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/inventoryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/customerValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/customerValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/employeeValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/employeeValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Images Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,23 +24,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets\images" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets" />
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets\images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -86,6 +65,7 @@
       <workItem from="1717266785128" duration="522000" />
       <workItem from="1717267389938" duration="6907000" />
       <workItem from="1717275157761" duration="1339000" />
+      <workItem from="1717292751728" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="New">
       <option name="closed" value="true" />
@@ -175,20 +155,36 @@
       <option name="project" value="LOCAL" />
       <updated>1717266814043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="New">
+      <option name="closed" value="true" />
+      <created>1717292883077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717292883077</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Images Added">
+      <option name="closed" value="true" />
+      <created>1717292992437</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717292992437</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New" />
     <MESSAGE value="New 2" />
     <MESSAGE value="New 3" />
     <MESSAGE value="New 4" />
     <MESSAGE value="New 5" />
     <MESSAGE value="Add Images 1" />
     <MESSAGE value="Index Refactored" />
+    <MESSAGE value="New" />
     <MESSAGE value="Images Added" />
     <option name="LAST_COMMIT_MESSAGE" value="Images Added" />
   </component>
