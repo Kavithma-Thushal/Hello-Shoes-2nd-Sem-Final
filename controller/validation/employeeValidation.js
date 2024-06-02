@@ -18,27 +18,27 @@ const EMP_GUARDIAN_REGEX = /^[A-Za-z ]{5,}$/;
 const EMP_GUARDIAN_CONTACT_REGEX = /^[^\p{L}]{10,}$/u;
 
 let em_vArray = new Array();
-em_vArray.push({ field: $("#empId"), regEx: EMP_ID_REGEX, error: $("#empIdError") });
-em_vArray.push({ field: $("#empName"), regEx: EMP_NAME_REGEX, error: $("#empNameError") });
-em_vArray.push({ field: $("#empBuildNo"), regEx: EMP_ADDRESS_BUILD_REGEX, error: $("#empBuildNoError") });
-em_vArray.push({ field: $("#empLane"), regEx: EMP_ADDRESS_LANE_REGEX, error: $("#empLaneError") });
-em_vArray.push({ field: $("#empCity"), regEx: EMP_ADDRESS_CITY_REGEX, error: $("#empCityError") });
-em_vArray.push({ field: $("#empState"), regEx: EMP_ADDRESS_STATE_REGEX, error: $("#empStateError") });
-em_vArray.push({ field: $("#empPostalCode"), regEx: EMP_ADDRESS_CODE_REGEX, error: $("#empPostalCodeError") });
-em_vArray.push({ field: $("#empEmail"), regEx: EMP_EMAIL_REGEX, error: $("#empEmailError") });
-em_vArray.push({ field: $("#empGender"), regEx: EMP_GENDER_REGEX, error: $("#empGenderError") });
-em_vArray.push({ field: $("#empDob"), regEx: EMP_DOB_REGEX, error: $("#empDobError") });
-em_vArray.push({ field: $("#empStatus"), regEx: EMP_STATUS_REGEX , error: $("#empStatusError") });
-em_vArray.push({ field: $("#designation"), regEx: EMP_DESIGNATION_REGEX, error: $("#designationError") });
-em_vArray.push({ field: $("#empRole"), regEx: EMP_ROLE_REGEX , error: $("#empRoleError") });
-em_vArray.push({ field: $("#joinDate"), regEx: EMP_JOIN_REGEX , error: $("#joinDateError") });
-em_vArray.push({ field: $("#empBranch"), regEx: EMP_BRANCH_REGEX, error: $("#empBranchError") });
-em_vArray.push({ field: $("#empContactNo"), regEx: EMP_CONTACT_REGEX, error: $("#empContactNoError") });
-em_vArray.push({ field: $("#guardianName"), regEx: EMP_GUARDIAN_REGEX , error: $("#guardianNameError") });
-em_vArray.push({ field: $("#emergencyContact"), regEx: EMP_GUARDIAN_CONTACT_REGEX , error: $("#emergencyContactError") });
+em_vArray.push({field: $("#empId"), regEx: EMP_ID_REGEX, error: $("#empIdError")});
+em_vArray.push({field: $("#empName"), regEx: EMP_NAME_REGEX, error: $("#empNameError")});
+em_vArray.push({field: $("#empBuildNo"), regEx: EMP_ADDRESS_BUILD_REGEX, error: $("#empBuildNoError")});
+em_vArray.push({field: $("#empLane"), regEx: EMP_ADDRESS_LANE_REGEX, error: $("#empLaneError")});
+em_vArray.push({field: $("#empCity"), regEx: EMP_ADDRESS_CITY_REGEX, error: $("#empCityError")});
+em_vArray.push({field: $("#empState"), regEx: EMP_ADDRESS_STATE_REGEX, error: $("#empStateError")});
+em_vArray.push({field: $("#empPostalCode"), regEx: EMP_ADDRESS_CODE_REGEX, error: $("#empPostalCodeError")});
+em_vArray.push({field: $("#empEmail"), regEx: EMP_EMAIL_REGEX, error: $("#empEmailError")});
+em_vArray.push({field: $("#empGender"), regEx: EMP_GENDER_REGEX, error: $("#empGenderError")});
+em_vArray.push({field: $("#empDob"), regEx: EMP_DOB_REGEX, error: $("#empDobError")});
+em_vArray.push({field: $("#empStatus"), regEx: EMP_STATUS_REGEX, error: $("#empStatusError")});
+em_vArray.push({field: $("#designation"), regEx: EMP_DESIGNATION_REGEX, error: $("#designationError")});
+em_vArray.push({field: $("#empRole"), regEx: EMP_ROLE_REGEX, error: $("#empRoleError")});
+em_vArray.push({field: $("#joinDate"), regEx: EMP_JOIN_REGEX, error: $("#joinDateError")});
+em_vArray.push({field: $("#empBranch"), regEx: EMP_BRANCH_REGEX, error: $("#empBranchError")});
+em_vArray.push({field: $("#empContactNo"), regEx: EMP_CONTACT_REGEX, error: $("#empContactNoError")});
+em_vArray.push({field: $("#guardianName"), regEx: EMP_GUARDIAN_REGEX, error: $("#guardianNameError")});
+em_vArray.push({field: $("#emergencyContact"), regEx: EMP_GUARDIAN_CONTACT_REGEX, error: $("#emergencyContactError")});
 
 function clearEmpInputFields() {
-    em_vArray.forEach(function(item) {
+    em_vArray.forEach(function (item) {
         item.field.val("");
         item.field.css("border", "1px solid #ced4da");
     });
@@ -46,11 +46,13 @@ function clearEmpInputFields() {
         ",#empContactNo,#empStatus,#designation,#empRole,#joinDate,#empBranch,#empContactNo,#guardianName,#emergencyContact").val("");
     $("#empId,#empName,#empBuildNo,#empLane,#empCity,#empState,#empPostalCode,#empEmail,#empDob,#empGender" +
         ",#empContactNo,#empStatus,#designation,#empRole,#joinDate,#empBranch,#empContactNo,#guardianName,#emergencyContact").css("border", "1px solid #ced4da");
-    */$("#empId").focus();
+    */
+    $("#empId").focus();
     setEmpBtn();
 }
+
 //setEmpBtn();
-function setEmpClBtn(){
+function setEmpClBtn() {
     var any = false;
     $("#empId,#empName,#empBuildNo,#empLane,#empCity,#empState,#empPostalCode,#empEmail,#empDob,#empGender,#empContactNo,#empStatus,#designation,#empRole,#joinDate,#empBranch,#guardianName,#emergencyContact").each(function () {
         var value = $(this).val();
@@ -65,6 +67,7 @@ function setEmpClBtn(){
         $("#empClear").prop("disabled", true);
     }
 }
+
 //setEmpClBtn();
 function empEvents(e) {
     setEmpClBtn();
@@ -98,7 +101,7 @@ $("#empName,#empBuildNo,#empLane,#empCity,#empState,#empPostalCode,#empEmail,#em
 });
 $("#empId").on("keydown keyup", function (e) {
     empEvents(e);
-    searchEmployee($("#empId").val()).then(function (res){
+    searchEmployee($("#empId").val()).then(function (res) {
         $("#empId,#empName,#empBuildNo,#empLane,#empCity,#empState,#empPostalCode,#empEmail,#empDob,#empGender" +
             ",#empContactNo,#empStatus,#designation,#empRole,#joinDate,#empBranch,#empContactNo,#guardianName,#emergencyContact").css("border", "1px solid #ced4da");
         setEmpBtn();
@@ -122,28 +125,61 @@ function checkAllEmp() {
     }
     return true;
 }
+
 function setEmpBorder(bol, ob) {
     if (!bol) {
         if (ob.field.val().length >= 1) {
             ob.field.css("border", "2px solid red");
             let check = ob.field.attr('id');
             switch (check) {
-                case "empId" : ob.error.text("emp-Id is a required field: C00-"); break
-                case "empName" : ob.error.text("emp-Name is a required field: Minimum 5,Max 20,Spaces Allowed"); break
-                case "empBuildNo" : ob.error.text("BuildNo is a required field: Minimum 3"); break
-                case "empLane" : ob.error.text("Lane is a required field: Minimum 3"); break
-                case "empCity" : ob.error.text("City is a required field: Minimum 3"); break
-                case "empState" : ob.error.text("State is a required field: Minimum 3"); break
-                case "empPostalCode" : ob.error.text("PostalCode is a required field: Minimum 3"); break
-                case "empEmail" : ob.error.text("Email is not valid"); break;
-                case "empDob" : ob.error.text("Dob is not valid"); break
-                case "empContactNo" : ob.error.text("ContactNo is not valid: Minimum 10"); break
-                case "empStatus":ob.error.text("Status is required field: Minimum 3");break;
-                case "designation":ob.error.text("Designation is required field: Minimum 3");break;
-                case "joinDate":ob.error.text("Date is not valid");break;
-                case "empBranch":ob.error.text("Branch is required field: Minimum 3");break;
-                case "guardianName":ob.error.text("Name is required field: Minimum 3");break;
-                case "emergencyContact":ob.error.text("Contact is not valid: Minimum 10");break;
+                case "empId" :
+                    ob.error.text("emp-Id is a required field: C00-");
+                    break
+                case "empName" :
+                    ob.error.text("emp-Name is a required field: Minimum 5,Max 20,Spaces Allowed");
+                    break
+                case "empBuildNo" :
+                    ob.error.text("BuildNo is a required field: Minimum 3");
+                    break
+                case "empLane" :
+                    ob.error.text("Lane is a required field: Minimum 3");
+                    break
+                case "empCity" :
+                    ob.error.text("City is a required field: Minimum 3");
+                    break
+                case "empState" :
+                    ob.error.text("State is a required field: Minimum 3");
+                    break
+                case "empPostalCode" :
+                    ob.error.text("PostalCode is a required field: Minimum 3");
+                    break
+                case "empEmail" :
+                    ob.error.text("Email is not valid");
+                    break;
+                case "empDob" :
+                    ob.error.text("Dob is not valid");
+                    break
+                case "empContactNo" :
+                    ob.error.text("ContactNo is not valid: Minimum 10");
+                    break
+                case "empStatus":
+                    ob.error.text("Status is required field: Minimum 3");
+                    break;
+                case "designation":
+                    ob.error.text("Designation is required field: Minimum 3");
+                    break;
+                case "joinDate":
+                    ob.error.text("Date is not valid");
+                    break;
+                case "empBranch":
+                    ob.error.text("Branch is required field: Minimum 3");
+                    break;
+                case "guardianName":
+                    ob.error.text("Name is required field: Minimum 3");
+                    break;
+                case "emergencyContact":
+                    ob.error.text("Contact is not valid: Minimum 10");
+                    break;
 
             }
         } else {
@@ -161,6 +197,7 @@ function setEmpBorder(bol, ob) {
     }
 
 }
+
 function setEmpBtn() {
     setEmpClBtn();
     $("#empSave").prop("disabled", true);
@@ -168,9 +205,9 @@ function setEmpBtn() {
     $("#empUpdate").prop("disabled", true);
     $("#empSearch").prop("disabled", true);
     let id = $("#empId").val();
-    if ($("#empId").val() != "" && EMP_ID_REGEX.test($("#empId").val())){
+    if ($("#empId").val() != "" && EMP_ID_REGEX.test($("#empId").val())) {
         $("#empSearch").prop("disabled", false);
-    }else {
+    } else {
         $("#empSearch").prop("disabled", true);
     }
     validEmployee(id)
@@ -183,7 +220,7 @@ function setEmpBtn() {
                 } else {
                     $("#empUpdate").prop("disabled", true);
                 }
-            }else {
+            } else {
                 $("#empDelete").prop("disabled", true);
                 $("#empUpdate").prop("disabled", true);
                 if (checkAllEmp()) {
@@ -205,12 +242,12 @@ function setEmpBtn() {
 }
 
 $("#empClear").click(function () {
-    em_vArray.forEach(function(item) {
+    em_vArray.forEach(function (item) {
         item.field.val("");
         item.field.css("border", "1px solid #ced4da");
     });
     clearEmpInputFields();
-    em_vArray.forEach(function(item) {
+    em_vArray.forEach(function (item) {
         item.error.val("");
     });
     stopEmpWebcamStream();

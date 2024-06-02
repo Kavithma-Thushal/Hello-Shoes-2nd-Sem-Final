@@ -65,7 +65,7 @@ $('#empAdd').click(function () {
 });
 
 function empFieldSet(state) {
-    em_vArray.forEach(function(item) {
+    em_vArray.forEach(function (item) {
         item.field.prop('disabled', state);
     });
     $(this).find("#empId").focus();
@@ -102,6 +102,7 @@ function returnAllEmpVal() {
 
     return formData;
 }
+
 function setAllEmpVal(ar) {
     console.log(ar)
     $("#empName").val(ar.employeeName);
@@ -239,7 +240,7 @@ function bindEmpTrrEvents() {
         $("#emergencyContact").val(emergencyContact);
 
         setEmpBtn();
-        searchEmployee(employeeId).then(function (res){
+        searchEmployee(employeeId).then(function (res) {
             empCaptureClear();
             $("#empCapturedImage").attr('src', res.proPic);
 
