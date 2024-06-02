@@ -97,7 +97,7 @@ $("#itmSave").click(function () {
     if (checkAllItm()) {
         var image = $("#itmCapturedImage");
         var imageUrl = image.attr('src');
-        if (!imageUrl || imageUrl === 'assets/images/walk.gif') {
+        if (!imageUrl || imageUrl === 'assets/images/img-upload.png') {
 
             swal("Error", "Take Item Photo.!", "error");
         } else {

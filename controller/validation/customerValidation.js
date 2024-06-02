@@ -212,7 +212,7 @@ function captureClear() {
     $('#cusCaptureButton').css("background-color", "#007bff");
     $('#cusCaptureButton').css("border-color", "#007bff");
     $('#cusCaptureButton').text("Capture");
-    $("#cusCapturedImage").attr('src', "assets/images/walk.gif");
+    $("#cusCapturedImage").attr('src', "assets/images/img-upload.png");
     $('input[name="rating"]:checked').prop('checked', false);
     $("#level-label").text('');
 }

@@ -284,6 +284,6 @@ function itmCaptureClear() {
     $('#itmCaptureButton').css("background-color", "#007bff");
     $('#itmCaptureButton').css("border-color", "#007bff");
     $('#itmCaptureButton').text("Capture");
-    $("#itmCapturedImage").attr('src', "assets/images/walk.gif");
+    $("#itmCapturedImage").attr('src', "assets/images/img-upload.png");
 
 }

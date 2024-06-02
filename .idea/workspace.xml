@@ -4,40 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Index Refactored">
-      <change afterPath="$PROJECT_DIR$/assets/images/add-icon.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/admin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banks2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/card.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cash.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/chart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/customer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/delete3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/employee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/first-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/inventory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/nav-toggle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/nav-togglee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/profit2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/resetCardgif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sendoffer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/special-offer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sport-shoe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sup.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/supplier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/total-customers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/total-employees.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/total-shoes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/total.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/users.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/walk.gif" afterDir="false" />
+    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Images Added">
+      <change afterPath="$PROJECT_DIR$/assets/images/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/img-upload.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/add-icon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sendoffer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sup.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/walk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/HomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/adminController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/inventoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/inventoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/customerValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/customerValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/employeeValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/employeeValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets\images" />
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -96,6 +83,9 @@
       <workItem from="1717263319122" duration="262000" />
       <workItem from="1717263589436" duration="2103000" />
       <workItem from="1717265778235" duration="623000" />
+      <workItem from="1717266785128" duration="522000" />
+      <workItem from="1717267389938" duration="6907000" />
+      <workItem from="1717275157761" duration="1339000" />
     </task>
     <task id="LOCAL-00001" summary="New">
       <option name="closed" value="true" />
@@ -177,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717266025492</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Images Added">
+      <option name="closed" value="true" />
+      <created>1717266814043</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717266814043</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +189,7 @@
     <MESSAGE value="New 5" />
     <MESSAGE value="Add Images 1" />
     <MESSAGE value="Index Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Index Refactored" />
+    <MESSAGE value="Images Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Images Added" />
   </component>
 </project>

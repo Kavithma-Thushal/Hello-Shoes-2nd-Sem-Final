@@ -39,8 +39,8 @@
 
 <!-- SignIn & SignUp Header -->
 <header id="header">
-  <nav class="navbar navbar-expand-lg <!--bg-white--> nav-bar container-fluid d-flex " style="height: 60px; padding-right: 20px">
-    <div class="col-md-2">
+  <nav class="navbar navbar-expand-lg <!--bg-white--> nav-bar container-fluid d-flex" style="height: 60px; padding-right: 20px">
+    <!--<div class="col-md-2">
       <svg class="svg-set" viewBox="0 0 800 600">
         <title>Day And Night Toggle</title>
         <defs>
@@ -102,7 +102,7 @@
         </g>
         <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
       </svg>
-    </div>
+    </div>-->
     <div class="ms-auto">
         <button type="button" class="btn" id="signIn">Sign In</button>
         <button type="button" class="btn" id="signUp">Sign Up</button>
@@ -132,7 +132,7 @@
     <div id="log-in-container">
       <h1 class="mt-5 mb-5 dark-h1 text-center" style="font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 40px">Sign In</h1>
       <div class="col-md-6 ms-5 mt-4">
-        <label for="log-in-Username" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Username</label>
+        <label for="log-in-Username" class="form-label m-0" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px">Email</label>
         <input type="username" class="form-control" id="log-in-Username" style="width: 350px">
         <p class="position-absolute m-0"><small class="text-danger" id="log-in-UsernameError"></small></p>
       </div>
@@ -203,7 +203,7 @@
           <div class="d-inline" >
             <svg class="svg-set-2 me-4" viewBox="0 0 800 600">
               <title>Day And Night Toggle</title>
-              <defs>
+              <!--<defs>
                 <filter id="shadow" x="-100%" y="-100%" width="250%" height="250%">
                   <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                   <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -256,7 +256,7 @@
                   </g>
                 </g>
               </g>
-              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
+              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>-->
             </svg>
           </div>
           <button type="button" class="btn position-relative" id="adminLogOut" style="z-index: 5; left: -12%;">Log Out</button>
@@ -271,14 +271,14 @@
           <div id="side-bar-icon" class="d-flex justify-content-center align-items-center"><img id="bar-icon" class="admin-icon" style="width: 45px; padding-right:10px; padding-top: 8px; z-index: 5;" src="assets/images/nav-toggle.png"></div>
           <nav class="nav">
             <div class="nav_list d-lg-flex flex-lg-column align-items-center justify-content-between" style="padding-top: 9.1vh; padding-left:0.3vh; height: 41.1vw;">
-              <a href="#" id="btnDashboard" class="nav_link active admin-icon position-relative"><img style="width: 35px; padding-left:0.6vh; z-index: 10;" src="assets/images/dashboard.png"><label for="btnDashboard" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.2vw;top: 20%;width: max-content; color: black">Admin Panel</label></a>
-              <a href="#" id="btnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px;z-index: 10;" src="assets/images/customer.png"><label for="btnCustomer" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customer</label></a>
-              <a href="#" id="btnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/inventory.png"><label for="btnInventory" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Inventory</label></a>
-              <a href="#" id="btnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="btnSupplier" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Supplier</label></a>
-              <a href="#" id="btnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/employee.png"><label for="btnEmployee" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employee</label></a>
-              <a href="#" id="btnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="btnSales" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Payment</label></a>
+              <a href="#" id="btnDashboard" class="nav_link active admin-icon position-relative"><img style="width: 35px; padding-left:0.6vh; z-index: 10;" src="assets/images/dashboard.png"><label for="btnDashboard" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.2vw;top: 20%;width: max-content; color: black">Dashboard</label></a>
+              <a href="#" id="btnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px;z-index: 10;" src="assets/images/customer.png"><label for="btnCustomer" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customers</label></a>
+              <a href="#" id="btnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/employee.png"><label for="btnEmployee" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employees</label></a>
+              <a href="#" id="btnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="btnSupplier" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Suppliers</label></a>
+              <a href="#" id="btnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/inventory.png"><label for="btnInventory" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Shoes</label></a>
+              <a href="#" id="btnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="btnSales" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Sales</label></a>
               <a href="#" id="btnAdminPanel" class="nav_link admin-icon position-relative"><img style="width: 35px; padding-left:0.4vh; z-index: 10;" src="assets/images/admin.png"><label for="btnAdminPanel" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Admin</label></a>
-              <a href="#" id="btnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/users.png"><label for="btnUsers" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Users</label></a>
+              <a href="#" id="btnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/users.png"><label for="btnUsers" class="form-label p-0 m-0 lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">User</label></a>
             </div>
           </nav>
         </div>
@@ -307,7 +307,7 @@
           <div class="d-inline" >
             <svg class="svg-set-2 me-4" viewBox="0 0 800 600">
               <title>Day And Night Toggle</title>
-              <defs>
+              <!--<defs>
                 <filter id="shadow" x="-100%" y="-100%" width="250%" height="250%">
                   <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                   <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -360,7 +360,7 @@
                   </g>
                 </g>
               </g>
-              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>
+              <rect class="hit" x="220" y="210" width="360" height="180" rx="90" ry="90" fill="transparent" stroke="none" stroke-width="0"/>-->
             </svg>
           </div>
           <button type="button" class="btn position-relative" id="userLogOut" style="z-index: 5; left: -12%;">Log Out</button>
@@ -376,12 +376,12 @@
           <nav class="nav">
             <div class="nav_list d-lg-flex flex-lg-column align-items-center justify-content-between" style="padding-top: 9.1vh; padding-left:0.3vh; height: 41.1vw;">
               <a href="#" id="UserBtnDashboard" class="nav_link active admin-icon position-relative"><img style="width: 35px; padding-left:0.6vh; z-index: 10;" src="assets/images/dashboard.png"><label for="UserBtnDashboard" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.2vw;top: 20%;width: max-content; color: black">Dashboard</label></a>
-              <a href="#" id="userBtnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px; z-index: 10;" src="assets/images/customer.png"><label for="UserBtnCustomer" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customer</label></a>
-              <a href="#" id="userBtnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/inventory.png"><label for="UserBtnInventory" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Inventory</label></a>
-              <a href="#" id="userBtnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="UserBtnSupplier" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Supplier</label></a>
-              <a href="#" id="userBtnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/employee.png"><label for="UserBtnEmployee" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employee</label></a>
-              <a href="#" id="userBtnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="UserBtnSales" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Payment</label></a>
-              <a href="#" id="userBtnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/users.png"><label for="UserBtnUsers" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Users</label></a>
+              <a href="#" id="userBtnCustomer" class="nav_link admin-icon position-relative"><img style="width: 30px; z-index: 10;" src="assets/images/customer.png"><label for="UserBtnCustomer" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Customers</label></a>
+              <a href="#" id="userBtnEmployee" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/employee.png"><label for="UserBtnEmployee" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Employees</label></a>
+              <a href="#" id="userBtnSupplier" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/supplier.png"><label for="UserBtnSupplier" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.4vw;top: 20%;width: max-content; color: black">Suppliers</label></a>
+              <a href="#" id="userBtnInventory" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/inventory.png"><label for="UserBtnInventory" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Shoes</label></a>
+              <a href="#" id="userBtnSales" class="nav_link admin-icon position-relative"><img style="width: 35px;  z-index: 10;" src="assets/images/payment.png"><label for="UserBtnSales" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">Sales</label></a>
+              <a href="#" id="userBtnUsers" class="nav_link admin-icon position-relative"><img style="width: 35px; z-index: 10;" src="assets/images/users.png"><label for="UserBtnUsers" class="form-label p-0 m-0 user-lb-hide" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 0px;position: absolute;left: 7.3vw;top: 20%;width: max-content; color: black">User</label></a>
             </div>
           </nav>
         </div>
@@ -391,7 +391,8 @@
     </div>
   </section>
 
-  <section id="customer-container" class="container-fluid w-100 h-100 p-0">
+  <!-- Customer Management -->
+  <section id="customer-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="customer-main">
       <div class="row h-100 m-0 w-100">
         <div class="container m-0" style=" padding: 1.9vw 1.9vw 1.5vw 7vw;">
@@ -404,7 +405,7 @@
                         <label for="cusId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Customer ID</label>
                         <div class="row m-0 p-0">
                           <input type="text" class="form-control" id="cusId" style="width: 12vw">
-                          <img class="admin-icon" id="cusAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add-icon.gif"></div>
+                          <img class="admin-icon" id="cusAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add.png"></div>
                         <p class="position-absolute mt-1"><small class="text-danger" id="cusIdError"></small></p>
                         </div>
                       <div class="col">
@@ -459,16 +460,14 @@
                       <input type="text" class="form-control" id="cusPostalCode"style="width: 10vw">
                       <p class="position-absolute mt-1"><small class="text-danger" id="cusPostalCodeError"></small></p>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mt-5">
                       <div class="col-12">
-                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="cusSave">Save</button>
-                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="cusUpdate">Update</button>
-                        <button type="button" class="btn btn-secondary"
-                                style="font-weight: bold;" id="cusSearch">Search</button>
-                        <button type="button" class="btn btn-danger"
-                                style="width: 66px;" id="cusDelete">Delete</button>
-                        <button type="button" class="btn btn-warning" id="cusClear">Clear</button>
-                        <button type="button" class="btn btn-secondary" id="getAllCus">All Customers</button>
+                        <button type="button" class="btn btn-outline-primary" id="cusSave">Save</button>
+                        <button type="button" class="btn btn-outline-success" id="cusSearch">Search</button>
+                        <button type="button" class="btn btn-outline-warning" id="cusUpdate">Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="cusDelete">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" id="cusClear">Clear</button>
+                        <button type="button" class="btn btn-outline-info" id="getAllCus">All Customers</button>
                       </div>
                     </div>
                   </div>
@@ -519,13 +518,13 @@
                           <div class="h-100 w-100 "style="padding-left: 5.2vw;">
                             <div class="rating" id="rating">
                               <input type="radio" id="star4" name="rating" value="GOLD">
-                              <label for="star4" class="star-label"><img src="assets/images/first-icon.png" alt="Silver Medal"><span>★</span></label>
+                              <label for="star4" class="star-label"><!--<img src="assets/images/first-icon.png" alt="Silver Medal">--><span>★</span></label>
                               <input type="radio" id="star3" name="rating" value="SILVER">
-                              <label for="star3" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                              <label for="star3" class="star-label"><!--<img src="assets/images/first-icon.png" alt="Bronze Medal">--><span>★</span></label>
                               <input type="radio" id="star2" name="rating" value="BRONZE">
-                              <label for="star2" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                              <label for="star2" class="star-label"><!--<img src="assets/images/first-icon.png" alt="Bronze Medal">--><span>★</span></label>
                               <input type="radio" id="star1" name="rating" value="NEW">
-                              <label for="star1" class="star-label"><img src="assets/images/first-icon.png" alt="Bronze Medal"><span>★</span></label>
+                              <label for="star1" class="star-label"><!--<img src="assets/images/first-icon.png" alt="Bronze Medal">--><span>★</span></label>
                             </div>
                           </div>
                         </div>
@@ -544,9 +543,9 @@
                         <div class=" h-100 w-100 ">
                           <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                              <video id="cusVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
-                              <canvas id="cusCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
-                              <img src="assets/images/walk.gif" id="cusCapturedImage" class="web" width="200"  style="display:block;">
+                              <video id="cusVideo" class="web" width="200" height="150" style="display:none; border-radius: 10px;" autoplay></video>
+                              <canvas id="cusCanvas" class="web" width="200" height="150" style="display:none; border-radius: 10px;"></canvas>
+                              <img src="assets/images/img-upload.png" id="cusCapturedImage" class="web" width="200" style="display:block; border-radius: 10px;">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                               <button id="cusCaptureButton" class="btn btn-primary mt-3" style="display:block;" type="button">Capture</button>
@@ -576,7 +575,7 @@
                     <div style="max-height: 28vw; overflow-y:auto">
                     <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
                       <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
-                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="customer-thead">
+                      <tr id="customer-thead">
                         <th scope="col">Customer code</th>
                         <th scope="col">Customer name</th>
                         <th scope="col">Gender</th>
@@ -611,6 +610,7 @@
     </div>
   </section>
 
+  <!-- Employee Management -->
   <section id="employee-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="employee-main">
       <div class="row h-100 m-0 w-100">
@@ -625,7 +625,7 @@
                       <label for="empId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Employee ID</label>
                       <div class="row m-0 p-0">
                         <input type="text" class="form-control" id="empId" style="width: 12vw">
-                        <img class="admin-icon" id="empAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add-icon.gif"></div>
+                        <img class="admin-icon" id="empAdd" style="width: 4.5vw; z-index: 10;" src="assets/images/add.png"></div>
                       <p class="position-absolute mt-1"><small class="text-danger" id="empIdError"></small></p>
                     </div>
 
@@ -698,16 +698,14 @@
                       <p><small class="text-danger position-absolute mt-1" id="empPostalCodeError"></small></p>
                     </div>
 
-                    <div class="row mt-2">
+                    <div class="row mt-4">
                       <div class="col-12">
-                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="empSave">Save</button>
-                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="empUpdate">Update</button>
-                        <button type="button" class="btn btn-secondary"
-                                style="font-weight: bold;" id="empSearch">Search</button>
-                        <button type="button" class="btn btn-danger"
-                                style="width: 66px;" id="empDelete">Delete</button>
-                        <button type="button" class="btn btn-warning" id="empClear">Clear</button>
-                        <button type="button" class="btn btn-secondary" id="getAllEmp">All Employees</button>
+                        <button type="button" class="btn btn-outline-primary" id="empSave">Save</button>
+                        <button type="button" class="btn btn-outline-success" id="empSearch">Search</button>
+                        <button type="button" class="btn btn-outline-warning" id="empUpdate">Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="empDelete">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" id="empClear">Clear</button>
+                        <button type="button" class="btn btn-outline-info" id="getAllEmp">All Employees</button>
 
                       </div>
 
@@ -806,7 +804,7 @@
                             <div class="col-12 d-flex justify-content-center">
                               <video id="empVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
                               <canvas id="empCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
-                              <img src="assets/images/walk.gif" id="empCapturedImage" class="web" width="200"  style="display:block;">
+                              <img src="assets/images/img-upload.png" id="empCapturedImage" class="web" width="200" style="display:block;">
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                               <button id="empCaptureButton" class="btn btn-primary mt-3" style="display:block;" type="button">Capture</button>
@@ -836,7 +834,7 @@
                     <div style="max-height: 28vw; overflow-y:auto">
                     <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
                       <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
-                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="employee-thead">
+                      <tr id="employee-thead">
                         <th scope="col">Emp ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Gender</th>
@@ -876,6 +874,7 @@
     </div>
   </section>
 
+  <!-- Supplier Management -->
   <section  id="supplier-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;"id="supplier-main">
       <div class="row h-100 m-0 w-100">
@@ -890,7 +889,7 @@
                       <label for="supId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Supplier ID</label>
                       <div class="row m-0 p-0">
                         <input type="text" class="form-control" id="supId" style="width: 12vw">
-                        <img class="admin-icon" id="supIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add-icon.gif"></div>
+                        <img class="admin-icon" id="supIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add.png"></div>
                       <p class="position-absolute mt-1"><small class="text-danger" id="supIdError"></small></p>
                     </div>
 
@@ -957,16 +956,14 @@
                       <p><small class="text-danger position-absolute mt-1" id="supCountryError"></small></p>
                     </div>
 
-                    <div class="row mt-2">
+                    <div class="row mt-4">
                       <div class="col-12">
-                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="supSave">Save</button>
-                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="supUpdate">Update</button>
-                        <button type="button" class="btn btn-secondary"
-                                style="font-weight: bold;" id="supSearch">Search</button>
-                        <button type="button" class="btn btn-danger"
-                                style="width: 66px;" id="supDelete">Delete</button>
-                        <button type="button" class="btn btn-warning" id="supClear">Clear</button>
-
+                        <button type="button" class="btn btn-outline-primary" id="supSave">Save</button>
+                        <button type="button" class="btn btn-outline-success" id="supSearch">Search</button>
+                        <button type="button" class="btn btn-outline-warning" id="supUpdate">Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="supDelete">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" id="supClear">Clear</button>
+                        <button type="button" class="btn btn-outline-info" id="getAllSup">All Suppliers</button>
                       </div>
 
                     </div>
@@ -1013,7 +1010,7 @@
                         <div class="col p-0">
                           <div class="h-100 w-100 d-flex justify-content-center align-items-center" style="padding-bottom:4.5vh; padding-left:0.5vw; ">
 
-                            <button type="button" class="btn btn-primary" style="font-weight: bold;" id="getAllSup">Get All Suppliers</button>
+
 
                           </div>
                         </div>
@@ -1030,7 +1027,7 @@
                       <div class="col p-0">
                         <div class=" h-100 w-100 ">
 
-                          <img src="assets/images/sup.gif" width="220"  style="display:block; padding-left: 3%">
+                          <!--<img src="assets/images/sup.gif" width="220"  style="display:block; padding-left: 3%">-->
 
                         </div>
                       </div>
@@ -1056,7 +1053,7 @@
                     <div style="max-height: 28vw; overflow-y:auto">
                     <table style="font-size: xx-small;" class="table table-bordered rounded bg-light table-hover ">
                       <thead class="table-secondary text-light text-center"style="position: sticky;top: 0;">
-                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="supplier-thead">
+                      <tr id="supplier-thead">
                         <th scope="col">Sup ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Category</th>
@@ -1090,6 +1087,7 @@
     </div>
   </section>
 
+  <!-- Inventory Management -->
   <section id="inventory-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="inventory-main">
       <div class="row h-100 m-0 w-100">
@@ -1171,16 +1169,14 @@
                       <p><small class="text-danger position-absolute mt-1" id="itemExcProfitError"></small></p>
                     </div>
 
-                    <div class="row mt-2">
+                    <div class="row mt-4">
                       <div class="col-12">
-                        <button type="button" class="btn btn-primary" style="font-weight: bold;" id="itmSave">Save</button>
-                        <button type="button" class="btn btn-success" style="font-weight: bold;" id="itmUpdate">Update</button>
-                        <button type="button" class="btn btn-secondary"
-                                style="font-weight: bold;" id="itmSearch">Search</button>
-                        <button type="button" class="btn btn-danger"
-                                style="width: 66px;" id="itmDelete">Delete</button>
-                        <button type="button" class="btn btn-warning" id="itmClear">Clear</button>
-                        <button type="button" class="btn btn-secondary" id="getAllItm">All Items</button>
+                        <button type="button" class="btn btn-outline-primary" id="itmSave">Save</button>
+                        <button type="button" class="btn btn-outline-success" id="itmSearch">Search</button>
+                        <button type="button" class="btn btn-outline-warning" id="itmUpdate">Update</button>
+                        <button type="button" class="btn btn-outline-danger" id="itmDelete">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" id="itmClear">Clear</button>
+                        <button type="button" class="btn btn-outline-info" id="getAllItm">All Shoes</button>
 
                       </div>
 
@@ -1230,7 +1226,7 @@
                                   <div class="col-12 d-flex justify-content-center">
                                     <video id="itmVideo" class="web" width="200" height="150" style="display:none;" autoplay></video>
                                     <canvas id="itmCanvas" class="web" width="200" height="150" style="display:none;"></canvas>
-                                    <img src="assets/images/walk.gif" id="itmCapturedImage" class="web" width="200"  style="display:block;">
+                                    <img src="assets/images/img-upload.png" id="itmCapturedImage" class="web" width="200" style="display:block;">
                                   </div>
                                   <div class="col-12 d-flex justify-content-center">
                                     <button id="itmCaptureButton" class="btn btn-primary mt-3" style="display:block; z-index: 5" type="button">Capture</button>
@@ -1294,7 +1290,7 @@
                     <div style="max-height: 28vw; overflow-y:auto">
                     <table style="font-size: small; " class="table table-bordered rounded bg-light table-hover">
                       <thead class="table-secondary text-light text-center" style="position: sticky;top: 0;">
-                      <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;position: sticky;top: 0;"id="item-thead">
+                      <tr style="position: sticky;top: 0;"id="item-thead">
                         <th scope="col">Item ID</th>
                         <th scope="col">Desc</th>
                         <th scope="col">Category</th>
@@ -1328,6 +1324,7 @@
     </div>
   </section>
 
+  <!-- Payment Management -->
   <section id="payment-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;">
       <div class="row h-100 m-0 w-100">
@@ -1342,7 +1339,7 @@
                       <label for="orderId" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px;width: 20vw;">Order ID</label>
                       <div class="row m-0 p-0">
                         <input type="text" class="form-control" id="orderId" style="width: 12vw">
-                        <img class="admin-icon" id="orderIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add-icon.gif"></div>
+                        <img class="admin-icon" id="orderIdAdd" style="width: 4.5vw; z-index: 5;" src="assets/images/add.png"></div>
                       <p class="position-absolute mt-1"><small class="text-danger" id="orderIdError"></small></p>
                     </div>
 
@@ -1422,12 +1419,12 @@
                                 <div class=" container col-6 d-flex justify-content-evenly align-items-center" style="padding-right: 3vw;">
                                   <div id="cashImage" class="mt-2 d-flex flex-column align-items-center">
                                     <label for="paymentCash" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; margin-bottom: 10px;">Cash Payment</label>
-                                    <img class="mt-1 admin-icon" src="assets/images/cash.gif" alt="Cash" id="paymentCash" style="width: 80px; z-index: 5;"/>
+                                    <img class="mt-1 admin-icon" src="assets/images/cash.png" alt="Cash" id="paymentCash" style="width: 80px; z-index: 5;"/>
                                   </div>
 
                                   <div id="cardImage" class="mt-2 d-flex flex-column align-items-center">
                                     <label for="paymentCard" class="form-label" style="font-family: 'Fira Sans', sans-serif; font-weight: 500; font-size: 15px; margin-bottom: 10px;">Card Payment</label>
-                                    <img class="mt-1 admin-icon" src="assets/images/card.gif" alt="Card" id="paymentCard" style="width: 80px; z-index: 5;" />
+                                    <img class="mt-1 admin-icon" src="assets/images/card.png" alt="Card" id="paymentCard" style="width: 80px; z-index: 5;" />
                                   </div>
                                 </div>
 
@@ -1476,14 +1473,14 @@
                                   <label style="font-weight: bold;margin-right: 10px;">Balance</label>
                                   <div class="form-group d-flex align-items-center">
                                     <input class="form-control me-2" id="txtBalance" type="text" style="width: 21vw;">
-                                    <button class="ms-4 btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+                                    <button class="ms-4 btn btn-outline-success" id="btnSubmitOrder" type="button">Purchase</button>
                                   </div>
 
                                   <div class="col mt-4">
-                                    <button id="order-add-item" class="btn btn-primary" style="" type="button">Add Item</button>
-                                    <button type="button" class="btn ms-2 btn-warning" id="order-clear" style="">Clear</button>
-                                    <button type="button" class="btn ms-2 btn-success" id="order-update" style="">Update</button>
-                                    <button type="button" class="btn ms-2 btn-danger" id="order-delete" style="">Delete</button>
+                                    <button id="order-add-item" class="btn btn-outline-primary" type="button">Add To Cart</button>
+                                    <button type="button" class="btn ms-2 btn-outline-warning" id="order-update" style="">Update</button>
+                                    <button type="button" class="btn ms-2 btn-outline-danger" id="order-delete" style="">Delete</button>
+                                    <button type="button" class="btn ms-2 btn-outline-secondary" id="order-clear" style="">Clear</button>
                                   </div>
                                 </div>
 
@@ -1503,7 +1500,7 @@
                     <div class="customeTableDiv">
                       <table class="table bg-light table-bordered w-100 h-100 table-hover">
                         <thead class="bg-success text-light text-center">
-                        <tr class="table-secondary" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;"id="order-thead">
+                        <tr class="table-secondary" id="order-thead">
                           <th scope="col">Remove</th>
                           <th scope="col">Item Code</th>
                           <th scope="col">Item Name</th>
@@ -1530,11 +1527,11 @@
     <div id="card-container" class="container-fluid p-0 " style="background-color:rgba(229,229,229,0.5); position:absolute; height: 91vh; z-index: 5;width: 95vw;left: 5vw; right:0; top: 4.4vw; bottom: 0; margin: auto">
     <div style="border-radius: 10px; z-index: 15; width: 60vw;position: absolute; left: 0; right:0; top: 4.4vw; bottom: 0; margin: auto">
 
-      <div class="container payment-con-dark" style="box-shadow: 0px 1px 10px #3aa7ee; border-radius: 10px;background-color:rgb(255,255,255);">
+      <div class="container payment-con-dark sectionBorder" style="background-color:rgb(255,255,255);">
 
         <div class="row " style="">
 
-          <div class="col-7 payment-dark" style="padding: 0;height: 72vh; /*background-color: #f1f1f1;*/  box-shadow: 0px 1px 10px #FFA633; border: 2px solid #FFA633; text-align: center; position: relative; border-radius: 10px">
+          <div class="col-7 payment-dark sectionBorder" style="padding: 0;height: 72vh; /*background-color: #f1f1f1;*/ text-align: center; position: relative;">
               <!--<img style="position: absolute; width: 30vw; z-index: 5; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" src="assets/images/banks.png">-->
               <img style="position: absolute; width: 30vw; z-index: 5; top: 0; bottom: 2vh; left: 0.4vw; right: 0; margin: auto;" src="assets/images/banks2.png">
             <div style="padding: 0;height: 72vh;">
@@ -1547,7 +1544,7 @@
 
           <div class="col-5">
             <div class="d-flex justify-content-center align-items-center position-relative">
-              <img src="assets/images/sendoffer.gif" style="height: 6vw; position: absolute; padding-top: 0.7vw; padding-left: 1.5vw;">
+              <!--<img src="assets/images/sendoffer.gif" style="height: 6vw; position: absolute; padding-top: 0.7vw; padding-left: 1.5vw;">-->
               <h1 class="mt-2 dark-h1" style="padding-top: 2.1vh; padding-left: 0.7vw; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 30px; color: #434142;text-align: center;">Card Payment</h1>
             </div>
             <!--<div class="mt-2"><h1 class="mt-2" style="padding-top: 2.1vh; font-family: 'Fira Sans', sans-serif; font-weight: 700; font-size: 30px; color: #434142;text-align: center;">Card Payment</h1>-->
@@ -1631,6 +1628,7 @@
     </div>
   </section>
 
+  <!-- Admin Management -->
   <section id="admin-edit-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="admin-edit-main">
       <div class="row h-100 m-0 w-100">
@@ -1678,11 +1676,11 @@
                 <div class="col-md-12 p-0">
                   <div class="container row mt-4">
                     <div class="row mt-5"></div>
-                    <div class="col-12 d-flex justify-content-evenly" style="padding-right: 2vw">
-                      <button type="button" class="btn btn-primary" style="font-weight: bold;" id="adminSave">Save</button>
-                      <button type="button" class="btn btn-success" style="font-weight: bold;" id="adminUpdate">Update</button>
-                      <button type="button" class="btn btn-danger" style="width: 66px;" id="adminDelete">Delete</button>
-                      <button type="button" class="btn btn-warning" id="adminClear">Clear</button>
+                    <div class="col-12 d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-primary" id="adminSave">Save</button>
+                      <button type="button" class="btn btn-outline-warning" id="adminUpdate">Update</button>
+                      <button type="button" class="btn btn-outline-danger" id="adminDelete">Delete</button>
+                      <button type="button" class="btn btn-outline-secondary" id="adminClear">Clear</button>
                     </div>
                   </div>
                 </div>
@@ -1693,7 +1691,7 @@
                 <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw; height: 24vh;">
                   <table style="font-size: small; height: 2%" class="table table-bordered rounded bg-light">
                     <thead class="table-secondary text-light text-center">
-                    <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;" id="admin-thead">
+                    <tr id="admin-thead">
                       <th scope="col">User name</th>
                       <th scope="col">Role</th>
                     </tr>
@@ -1711,6 +1709,7 @@
     </div>
   </section>
 
+  <!-- User Management -->
   <section id="user-edit-container">
     <div class="container-fluid p-0" style="height: 90.5vh; z-index: 5;" id="user-edit-main">
       <div class="row h-100 m-0 w-100">
@@ -1757,11 +1756,11 @@
                 <div class="col-md-12 p-0">
                   <div class="container row mt-4">
                     <div class="row mt-5"></div>
-                    <div class="col-12 d-flex justify-content-evenly" style="padding-right: 2vw">
-                      <button type="button" class="btn btn-primary" style="font-weight: bold;" id="userSave">Save</button>
-                      <button type="button" class="btn btn-success" style="font-weight: bold;" id="userUpdate">Update</button>
-                      <button type="button" class="btn btn-danger" style="width: 66px;" id="userDelete">Delete</button>
-                      <button type="button" class="btn btn-warning" id="userClear">Clear</button>
+                    <div class="col-12 d-flex justify-content-evenly">
+                      <button type="button" class="btn btn-outline-primary" id="userSave">Save</button>
+                      <button type="button" class="btn btn-outline-warning" id="userUpdate">Update</button>
+                      <button type="button" class="btn btn-outline-danger" id="userDelete">Delete</button>
+                      <button type="button" class="btn btn-outline-secondary" id="userClear">Clear</button>
                     </div>
                   </div>
                 </div>
@@ -1772,7 +1771,7 @@
                 <div class="col-md-12 p-0 d-flex justify-content-center justify-content-evenly" style="width: 24.4vw; height: 24vh;">
                   <table style="font-size: small; height: 2%" class="table table-bordered rounded bg-light">
                     <thead class="table-secondary text-light text-center">
-                    <tr class="" style="border: 1px solid #FFA633FF; box-shadow: inset 1px 1px #FFA633, 0 0 4px #FFA633;" id="user-thead">
+                    <tr id="user-thead">
                       <th scope="col">User name</th>
                       <th scope="col">Role</th>
                     </tr>

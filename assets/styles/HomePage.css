@@ -63,8 +63,8 @@ html {
 }
 
 .swal-modal {
-    background-color: rgba(106, 135, 135, 0.7);
-    border: 3px solid #7bb4c2;
+    background-color: rgba(135, 128, 106, 0.7);
+    border: 3px solid #FFA633;
 }
 
 .swal-overlay {
@@ -83,11 +83,11 @@ html {
 
 .swal-button {
     color: #ffffff;
-    background-color: #406668;
+    background-color: #FFA633;
 }
 
 .swal-button:hover {
-    background-color: #7bb4c2 !important;
+    background-color: #ff8f00 !important;
 }
 
 .custom-cancel-btn{
@@ -105,7 +105,7 @@ html {
 
 .custom-tooltip {
     --bs-tooltip-bg: rgb(21, 21, 21);
-    --bs-tooltip-color: rgb(123, 180, 194);
+    --bs-tooltip-color: rgb(255, 166, 51);
 }
 .swal2-loading{
     left: 5vw;

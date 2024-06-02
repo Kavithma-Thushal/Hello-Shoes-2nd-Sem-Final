@@ -97,7 +97,7 @@ $("#btnCustomer, #btnInventory, #btnSupplier, #btnEmployee, #btnSales,#btnAdminP
     switch ($(this).attr('id')) {
         case 'btnCustomer':
             checkLabel();
-            $("#formIcon").text("Customer page");
+            $("#formIcon").text("Customer Management");
             cusList.css('display', 'none');
             cusMain.css('display', 'block');
             customerPage.css('display', 'block');
@@ -105,7 +105,7 @@ $("#btnCustomer, #btnInventory, #btnSupplier, #btnEmployee, #btnSales,#btnAdminP
             break;
         case 'btnInventory':
             checkLabel();
-            $("#formIcon").text("Inventory page");
+            $("#formIcon").text("Shoes Management");
             itmList.css('display', 'none');
             itmMain.css('display', 'block');
             inventoryPage.css('display', 'block');
@@ -113,7 +113,7 @@ $("#btnCustomer, #btnInventory, #btnSupplier, #btnEmployee, #btnSales,#btnAdminP
             break;
         case 'btnSupplier':
             checkLabel();
-            $("#formIcon").text("Supplier page");
+            $("#formIcon").text("Supplier Management");
             supList.css('display', 'none');
             supMain.css('display', 'block');
             supplierPage.css('display', 'block');
@@ -121,7 +121,7 @@ $("#btnCustomer, #btnInventory, #btnSupplier, #btnEmployee, #btnSales,#btnAdminP
             break;
         case 'btnEmployee':
             checkLabel();
-            $("#formIcon").text("Employee page");
+            $("#formIcon").text("Employee Management");
             empList.css('display', 'none');
             empMain.css('display', 'block');
             employeePage.css('display', 'block');
@@ -129,27 +129,27 @@ $("#btnCustomer, #btnInventory, #btnSupplier, #btnEmployee, #btnSales,#btnAdminP
             break;
         case 'btnAdminPanel':
             checkLabel();
-            $("#formIcon").text("Admin page");
+            $("#formIcon").text("Admin Management");
             adminEditPage.css('display', 'block');
             getAllAdmins();
             allCaptureClear();
             break;
         case 'btnSales':
             checkLabel();
-            $("#formIcon").text("Sales page");
+            $("#formIcon").text("Sales Management");
             paymentPage.css('display', 'block');
             allCaptureClear();
             break;
         case 'btnUsers':
             checkLabel();
-            $("#formIcon").text("Users page");
+            $("#formIcon").text("Users Management");
             userEditPage.css('display', 'block');
             getAllUsers();
             allCaptureClear();
             break;
         case 'btnDashboard':
             checkLabel();
-            $("#formIcon").text("Admin Panel");
+            $("#formIcon").text("Admin Dashboard");
             adminDashboard.css('display', 'block');
             setAdminPanel();
             allCaptureClear();

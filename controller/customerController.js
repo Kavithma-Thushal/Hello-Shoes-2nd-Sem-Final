@@ -82,7 +82,7 @@ function returnAllCusVal() {
 
     var image = $("#cusCapturedImage");
     let purchase = $("#lastPurchaseDate").val();
-    if ( purchase == "No orders"){
+    if (purchase == "No orders") {
         purchase = null;
     }
     var imageUrl = image.attr('src');
@@ -108,6 +108,7 @@ function returnAllCusVal() {
     };
     return formData;
 }
+
 function setLevel(value) {
     console.log(value)
     $('#level-label').text('');
@@ -130,17 +131,19 @@ function setLevel(value) {
             break;
     }
 }
+
 $("input[name='rating']").change(function () {
     $("#level-label").css('left', '46%');
     var value = $("input[name='rating']:checked").val();
-    if (value === "SILVER" || value === "BRONZE"){
+    if (value === "SILVER" || value === "BRONZE") {
         $("#level-label").css('left', '41%');
     }
-    if (value === "GOLD"){
+    if (value === "GOLD") {
         $("#level-label").css('left', '45%');
     }
     $("#level-label").text(value);
 })
+
 function setAllCusVal(ar) {
 
     setLevel(ar.level);
@@ -156,7 +159,7 @@ function setAllCusVal(ar) {
     $("#cusPostalCode").val(ar.address.postalCode);
     $("#cusContactNo").val(ar.contactNo);
     $("#cusEmail").val(ar.email);
-    if (ar.recentPurchase == null){
+    if (ar.recentPurchase == null) {
         ar.recentPurchase = "No orders";
     }
     $("#lastPurchaseDate").val(ar.recentPurchase);
@@ -249,7 +252,7 @@ function bindTrrEvents() {
         $("#cusEmail").val(email);
         $("#lastPurchaseDate").val(recentPurchase);
 
-        searchCustomer(customerId).then(function (res){
+        searchCustomer(customerId).then(function (res) {
             captureClear();
             setLevel(res.level);
             $("#cusCapturedImage").attr('src', res.proPic);
@@ -302,7 +305,7 @@ $("#cusDelete").click(function () {
                             setBtn();
                         },
                         error: function (ob, textStatus, error) {
-                            swal("Error","Error Customer Not Delete", "error");
+                            swal("Error", "Error Customer Not Delete", "error");
                         }
                     });
                 }
@@ -423,7 +426,7 @@ function getAllCustomers() {
         success: function (res) {
             console.log(res);
             for (var r of res) {
-                if (r.recentPurchase == null){
+                if (r.recentPurchase == null) {
                     r.recentPurchase = "No orders";
                 }
                 let row = `<tr>
@@ -511,6 +514,7 @@ $('#cusSearch').click(function () {
     setClBtn();
     setBtn();
 });
+
 $('#backToCus').click(function () {
     cusList.css('display', 'none');
     cusMain.css('display', 'block');

@@ -227,6 +227,6 @@ function empCaptureClear() {
     $('#empCaptureButton').css("background-color", "#007bff");
     $('#empCaptureButton').css("border-color", "#007bff");
     $('#empCaptureButton').text("Capture");
-    $("#empCapturedImage").attr('src', "assets/images/walk.gif");
+    $("#empCapturedImage").attr('src', "assets/images/img-upload.png");
 
 }

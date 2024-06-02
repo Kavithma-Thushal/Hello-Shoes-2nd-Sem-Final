@@ -3,7 +3,7 @@ $("#userBtnCustomer, #userBtnInventory, #userBtnSupplier, #userBtnEmployee, #use
     switch ($(this).attr('id')) {
         case 'userBtnCustomer':
             checkUserLabel();
-            $("#userFormIcon").text("Customer page");
+            $("#userFormIcon").text("Customer Management");
             cusList.css('display', 'none');
             cusMain.css('display', 'block');
             customerPage.css('display', 'block');
@@ -11,7 +11,7 @@ $("#userBtnCustomer, #userBtnInventory, #userBtnSupplier, #userBtnEmployee, #use
             break;
         case 'userBtnInventory':
             checkUserLabel();
-            $("#userFormIcon").text("Inventory page");
+            $("#userFormIcon").text("Shoes Management");
             itmList.css('display', 'none');
             itmMain.css('display', 'block');
             inventoryPage.css('display', 'block');
@@ -19,7 +19,7 @@ $("#userBtnCustomer, #userBtnInventory, #userBtnSupplier, #userBtnEmployee, #use
             break;
         case 'userBtnSupplier':
             checkUserLabel();
-            $("#userFormIcon").text("Supplier page");
+            $("#userFormIcon").text("Supplier Management");
             supList.css('display', 'none');
             supMain.css('display', 'block');
             supplierPage.css('display', 'block');
@@ -27,7 +27,7 @@ $("#userBtnCustomer, #userBtnInventory, #userBtnSupplier, #userBtnEmployee, #use
             break;
         case 'userBtnEmployee':
             checkUserLabel();
-            $("#userFormIcon").text("Employee page");
+            $("#userFormIcon").text("Employee Management");
             empList.css('display', 'none');
             empMain.css('display', 'block');
             employeePage.css('display', 'block');
@@ -35,20 +35,20 @@ $("#userBtnCustomer, #userBtnInventory, #userBtnSupplier, #userBtnEmployee, #use
             break;
         case 'userBtnSales':
             checkUserLabel();
-            $("#userFormIcon").text("Sales page");
+            $("#userFormIcon").text("Sales Management");
             paymentPage.css('display', 'block');
             allCaptureClear();
             break;
         case 'userBtnUsers':
             getAllUsers();
             checkUserLabel();
-            $("#userFormIcon").text("Users page");
+            $("#userFormIcon").text("User Management");
             userEditPage.css('display', 'block');
             allCaptureClear();
             break;
         case 'UserBtnDashboard':
             checkUserLabel();
-            $("#userFormIcon").text("Dashboard");
+            $("#userFormIcon").text("User Dashboard");
             userDashboard.css('display', 'block');
             allCaptureClear();
             break;
