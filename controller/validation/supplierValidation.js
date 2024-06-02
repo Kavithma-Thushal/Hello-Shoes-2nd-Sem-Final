@@ -12,19 +12,19 @@ const SUP_MOBILE_REGEX = /^[^\p{L}]{10,}$/u;
 const SUP_LAND_NO_REGEX = /^[^\p{L}]{10,}$/u;
 
 let sp_vArray = new Array();
-sp_vArray.push({ field: $("#supId"), regEx: SUP_ID_REGEX, error: $("#supIdError") });
-sp_vArray.push({ field: $("#supName"), regEx: SUP_NAME_REGEX, error: $("#supNameError") });
-sp_vArray.push({ field: $("#supBuildNo"), regEx: SUP_ADDRESS_BUILD_REGEX, error: $("#supBuildNoError") });
-sp_vArray.push({ field: $("#supLane"), regEx: SUP_ADDRESS_LANE_REGEX, error: $("#supLaneError") });
-sp_vArray.push({ field: $("#supCity"), regEx: SUP_ADDRESS_CITY_REGEX, error: $("#supCityError") });
-sp_vArray.push({ field: $("#supState"), regEx: SUP_ADDRESS_STATE_REGEX, error: $("#supStateError") });
-sp_vArray.push({ field: $("#supPostalCode"), regEx: SUP_ADDRESS_CODE_REGEX, error: $("#supPostalCodeError") });
-sp_vArray.push({ field: $("#supEmail"), regEx: SUP_EMAIL_REGEX, error: $("#supEmailError") });
+sp_vArray.push({field: $("#supId"), regEx: SUP_ID_REGEX, error: $("#supIdError")});
+sp_vArray.push({field: $("#supName"), regEx: SUP_NAME_REGEX, error: $("#supNameError")});
+sp_vArray.push({field: $("#supBuildNo"), regEx: SUP_ADDRESS_BUILD_REGEX, error: $("#supBuildNoError")});
+sp_vArray.push({field: $("#supLane"), regEx: SUP_ADDRESS_LANE_REGEX, error: $("#supLaneError")});
+sp_vArray.push({field: $("#supCity"), regEx: SUP_ADDRESS_CITY_REGEX, error: $("#supCityError")});
+sp_vArray.push({field: $("#supState"), regEx: SUP_ADDRESS_STATE_REGEX, error: $("#supStateError")});
+sp_vArray.push({field: $("#supPostalCode"), regEx: SUP_ADDRESS_CODE_REGEX, error: $("#supPostalCodeError")});
+sp_vArray.push({field: $("#supEmail"), regEx: SUP_EMAIL_REGEX, error: $("#supEmailError")});
 
-sp_vArray.push({ field: $("#supCategory"), regEx: SUP_CATEGORY_REGEX, error: $("#supCategoryError") });
-sp_vArray.push({ field: $("#supMobileNo"), regEx: SUP_MOBILE_REGEX, error: $("#supMobileNoError") });
-sp_vArray.push({ field: $("#supLandNo"), regEx: SUP_LAND_NO_REGEX, error: $("#supLandNoError") });
-sp_vArray.push({ field: $("#supCountry"), regEx: SUP_COUNTRY_REGEX, error: $("#supCountryError") });
+sp_vArray.push({field: $("#supCategory"), regEx: SUP_CATEGORY_REGEX, error: $("#supCategoryError")});
+sp_vArray.push({field: $("#supMobileNo"), regEx: SUP_MOBILE_REGEX, error: $("#supMobileNoError")});
+sp_vArray.push({field: $("#supLandNo"), regEx: SUP_LAND_NO_REGEX, error: $("#supLandNoError")});
+sp_vArray.push({field: $("#supCountry"), regEx: SUP_COUNTRY_REGEX, error: $("#supCountryError")});
 
 function clearSupInputFields() {
     $("#supId, #supCategory, #supName, #supBuildNo, #supLane, #supCity, #supState, #supPostalCode, #supCountry, #supEmail, #supMobileNo, #supLandNo").val("");
@@ -32,13 +32,14 @@ function clearSupInputFields() {
     $("#supId").focus();
     setSupBtn();
 }
+
 //setSupBtn();
-function setSupClBtn(){
+function setSupClBtn() {
     var any = false;
     $("#supId, #supCategory, #supName, #supBuildNo, #supLane, #supCity, #supState, #supPostalCode, #supCountry, #supEmail, #supMobileNo, #supLandNo").each(function () {
         var value = $(this).val();
         if (value !== undefined && value !== null && value.trim() !== "") {
-            any= true;
+            any = true;
             return false;
         }
     });
@@ -48,6 +49,7 @@ function setSupClBtn(){
         $("#supClear").prop("disabled", true);
     }
 }
+
 //setSupClBtn();
 function supEvents(e) {
     setSupClBtn();
@@ -83,7 +85,7 @@ $("#supCategory, #supName, #supBuildNo, #supLane, #supCity, #supState, #supPosta
 });*/
 $("#supId").on("keydown keyup", function (e) {
     supEvents(e);
-    searchSupplier($("#supId").val()).then(function (res){
+    searchSupplier($("#supId").val()).then(function (res) {
         $("#supId, #supCategory, #supName, #supBuildNo, #supLane, #supCity, #supState, #supPostalCode, #supCountry, #supEmail, #supMobileNo, #supLandNo").css("border", "1px solid #ced4da");
         setSupBtn();
         setAllSupVal(res);
@@ -105,7 +107,7 @@ function checkSupValidations(object) {
                 $("#supLandNo").css("border", "2px solid green");
                 $("#supLandNoError").text("");
             }
-        }else {
+        } else {
             $("#supMobileNo").css("border", "1px solid #ced4da");
             $("#supMobileNoError").text("");
             $("#supLandNo").css("border", "1px solid #ced4da");
@@ -117,7 +119,6 @@ function checkSupValidations(object) {
     setSupBorder(false, object)
     return false;
 }
-
 
 
 function checkAllSup() {
@@ -133,17 +134,39 @@ function setSupBorder(bol, ob) {
             ob.field.css("border", "2px solid red");
             let check = ob.field.attr('id');
             switch (check) {
-                case "supId" : ob.error.text("sup-Id is a required field: S00-"); break
-                case "supName" : ob.error.text("sup-Name is a required field: Minimum 5,Max 20,Spaces Allowed"); break
-                case "supBuildNo" : ob.error.text("BuildNo is a required field: Minimum 3"); break
-                case "supLane" : ob.error.text("Lane is a required field: Minimum 3"); break
-                case "supCity" : ob.error.text("City is a required field: Minimum 3"); break
-                case "supState" : ob.error.text("State is a required field: Minimum 3"); break
-                case "supPostalCode" : ob.error.text("PostalCode is a required field: Minimum 3"); break
-                case "supEmail" : ob.error.text("Email is not valid"); break;
-                case "supCountry" : ob.error.text("Country is not valid"); break
-                case "supMobileNo" : ob.error.text("MobileNo is not valid: Minimum 10"); break
-                case "supLandNo" : ob.error.text("LandNo is not valid: Minimum 10"); break
+                case "supId" :
+                    ob.error.text("sup-Id is a required field: S00-");
+                    break
+                case "supName" :
+                    ob.error.text("sup-Name is a required field: Minimum 5,Max 20,Spaces Allowed");
+                    break
+                case "supBuildNo" :
+                    ob.error.text("BuildNo is a required field: Minimum 3");
+                    break
+                case "supLane" :
+                    ob.error.text("Lane is a required field: Minimum 3");
+                    break
+                case "supCity" :
+                    ob.error.text("City is a required field: Minimum 3");
+                    break
+                case "supState" :
+                    ob.error.text("State is a required field: Minimum 3");
+                    break
+                case "supPostalCode" :
+                    ob.error.text("PostalCode is a required field: Minimum 3");
+                    break
+                case "supEmail" :
+                    ob.error.text("Email is not valid");
+                    break;
+                case "supCountry" :
+                    ob.error.text("Country is not valid");
+                    break
+                case "supMobileNo" :
+                    ob.error.text("MobileNo is not valid: Minimum 10");
+                    break
+                case "supLandNo" :
+                    ob.error.text("LandNo is not valid: Minimum 10");
+                    break
             }
         } else {
             ob.field.css("border", "1px solid #ced4da");
@@ -160,6 +183,7 @@ function setSupBorder(bol, ob) {
     }
 
 }
+
 function setSupBtn() {
     setSupClBtn();
     $("#supSave").prop("disabled", true);
@@ -167,9 +191,9 @@ function setSupBtn() {
     $("#supUpdate").prop("disabled", true);
     $("#supSearch").prop("disabled", true);
     let id = $("#supId").val();
-    if ($("#supId").val() != "" && SUP_ID_REGEX.test($("#supId").val())){
+    if ($("#supId").val() != "" && SUP_ID_REGEX.test($("#supId").val())) {
         $("#supSearch").prop("disabled", false);
-    }else {
+    } else {
         $("#supSearch").prop("disabled", true);
     }
     validSupplier(id)
@@ -182,7 +206,7 @@ function setSupBtn() {
                 } else {
                     $("#supUpdate").prop("disabled", true);
                 }
-            }else {
+            } else {
                 $("#supDelete").prop("disabled", true);
                 $("#supUpdate").prop("disabled", true);
                 if (checkAllSup()) {
@@ -202,14 +226,15 @@ function setSupBtn() {
             }
         });
 }
+
 $("#supClear").click(function () {
     var ids = ["supId", "supCategory", "supName", "supBuildNo", "upLane",
-        "supCity","supState", "supPostalCode", "supCountry", "supEmail", "supMobileNo", "supLandNo"];
-    ids.forEach(function(id) {
-        $("#" + id +"Error").val("");
+        "supCity", "supState", "supPostalCode", "supCountry", "supEmail", "supMobileNo", "supLandNo"];
+    ids.forEach(function (id) {
+        $("#" + id + "Error").val("");
     });
     clearSupInputFields();
-    sp_vArray.forEach(function(item) {
+    sp_vArray.forEach(function (item) {
         item.error.val("");
     });
     setSupBtn();

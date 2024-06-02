@@ -21,9 +21,10 @@ $('#supIdAdd').click(function () {
     generateSupplierId();
     //setSupClBtn();
 });
+
 function supFieldSet(state) {
     var ids = ["supId", "supCategory", "supName", "supBuildNo", "supLane",
-        "supCity","supState", "supPostalCode", "supCountry", "supEmail", "supMobileNo", "supLandNo"];
+        "supCity", "supState", "supPostalCode", "supCountry", "supEmail", "supMobileNo", "supLandNo"];
     ids.forEach(function (id) {
         $("#" + id).prop('disabled', state);
     });
@@ -54,8 +55,9 @@ function returnAllSupVal() {
 
     return formData;
 }
+
 function setAllSupVal(ar) {
-    console.log("add "+ar)
+    console.log("add " + ar)
     $("#supName").val(ar.supplierName);
     $("#supCategory").val(ar.category);
     $("#supBuildNo").val(ar.address.buildNo);
@@ -73,7 +75,7 @@ function setAllSupVal(ar) {
 $("#supSave").click(function () {
 
     if (checkAllSup()) {
-            saveSupplier();
+        saveSupplier();
     } else {
         alert("Error");
         swal("Error", "Error Supplier Save.!", "error");
@@ -209,7 +211,7 @@ $("#supDelete").click(function () {
                             setSupBtn();
                         },
                         error: function (ob, textStatus, error) {
-                            swal("Error","Error Supplier Not Delete", "error");
+                            swal("Error", "Error Supplier Not Delete", "error");
                         }
                     });
                 }
@@ -251,12 +253,13 @@ $("#supUpdate").click(function () {
                         contentType: "application/json",
                         success: function (res) {
                             console.log(res);
-                            swal("Updated", "Supplier Update Successfully", "success");;
+                            swal("Updated", "Supplier Update Successfully", "success");
+                            ;
                             getAllSuppliers();
                             setSupBtn();
                         },
                         error: function (ob, textStatus, error) {
-                            swal("Error","Error Supplier Not Update", "error");
+                            swal("Error", "Error Supplier Not Update", "error");
                         }
                     });
                 }
