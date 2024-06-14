@@ -4,7 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="Images Added" />
+    <list default="true" id="dfbf13bb-ad41-4245-b975-7c31e5a1cbc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Hello-Shoes-AAD-CW.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hello-Shoes-FrontEnd/Hello-Shoes-FrontEnd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Hello-Shoes-FrontEnd.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/banks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/banks2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/chart.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/customer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/dashboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/delete3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/employee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/first-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/img-upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/inventory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/nav-toggle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/nav-togglee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/payment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/profit2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/resetCardgif.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/special-offer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sport-shoe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/supplier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/total-customers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/total-employees.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/total-shoes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/total.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/users.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/AdminPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/CustomerPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/HomePage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/LogInPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/SignUpPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/UserPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/adminController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/adminUserController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/adminUserPageController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/customerController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/employeeController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/indexController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/inventoryController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/orderController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/signInController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/signUpController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/supplierController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/customerValidation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/employeeValidation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/orderValidation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/validation/supplierValidation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +83,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2hHuRgYU6njogkRrhPwSyKQoExi" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2hr7RKhkZ7NvvXEuwmImZ7QNUez" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -26,166 +96,61 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.WebAppInitializer.executor": "Run",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-FrontEnd/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-AAD-CW/Hello-Shoes-FrontEnd",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets" />
-      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-FrontEnd\assets\images" />
-    </key>
+  <component name="RunManager">
+    <configuration name="WebAppInitializer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Hello-Shoes-BackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lk.ijse.gdse66.helloshoes.WebAppInitializer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="89d06f54-1c72-4234-b5ee-721c8eead18a" name="Changes" comment="" />
-      <created>1717263317962</created>
+      <changelist id="dfbf13bb-ad41-4245-b975-7c31e5a1cbc3" name="Changes" comment="" />
+      <created>1718340332442</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717263317962</updated>
-      <workItem from="1717263319122" duration="262000" />
-      <workItem from="1717263589436" duration="2103000" />
-      <workItem from="1717265778235" duration="623000" />
-      <workItem from="1717266785128" duration="522000" />
-      <workItem from="1717267389938" duration="6907000" />
-      <workItem from="1717275157761" duration="1339000" />
-      <workItem from="1717292751728" duration="322000" />
+      <updated>1718340332442</updated>
+      <workItem from="1718340333614" duration="170000" />
     </task>
-    <task id="LOCAL-00001" summary="New">
-      <option name="closed" value="true" />
-      <created>1717263736907</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1717263736907</updated>
-    </task>
-    <task id="LOCAL-00002" summary="New 2">
-      <option name="closed" value="true" />
-      <created>1717263795469</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717263795469</updated>
-    </task>
-    <task id="LOCAL-00003" summary="New 3">
-      <option name="closed" value="true" />
-      <created>1717263969816</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717263969816</updated>
-    </task>
-    <task id="LOCAL-00004" summary="New 4">
-      <option name="closed" value="true" />
-      <created>1717264295054</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717264295054</updated>
-    </task>
-    <task id="LOCAL-00005" summary="New 5">
-      <option name="closed" value="true" />
-      <created>1717264688341</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717264688341</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Add Images 1">
-      <option name="closed" value="true" />
-      <created>1717264923375</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717264923375</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Index Refactored">
-      <option name="closed" value="true" />
-      <created>1717265154434</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1717265154434</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Index Refactored">
-      <option name="closed" value="true" />
-      <created>1717265643750</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1717265643750</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Index Refactored">
-      <option name="closed" value="true" />
-      <created>1717265820694</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1717265820694</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Index Refactored">
-      <option name="closed" value="true" />
-      <created>1717266025492</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1717266025492</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Images Added">
-      <option name="closed" value="true" />
-      <created>1717266814043</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1717266814043</updated>
-    </task>
-    <task id="LOCAL-00012" summary="New">
-      <option name="closed" value="true" />
-      <created>1717292883077</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1717292883077</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Images Added">
-      <option name="closed" value="true" />
-      <created>1717292992437</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1717292992437</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New 2" />
-    <MESSAGE value="New 3" />
-    <MESSAGE value="New 4" />
-    <MESSAGE value="New 5" />
-    <MESSAGE value="Add Images 1" />
-    <MESSAGE value="Index Refactored" />
-    <MESSAGE value="New" />
-    <MESSAGE value="Images Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Images Added" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
