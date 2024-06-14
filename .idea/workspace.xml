@@ -4,77 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfbf13bb-ad41-4245-b975-7c31e5a1cbc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Hello-Shoes-AAD-CW.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hello-Shoes-FrontEnd/Hello-Shoes-FrontEnd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hello-Shoes-FrontEnd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/banks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/banks2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/chart.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/customer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/delete3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/employee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/first-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/img-upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/inventory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/nav-toggle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/nav-togglee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/payment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/profit2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/resetCardgif.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/special-offer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/sport-shoe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/supplier.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/total-customers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/total-employees.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/total-shoes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/total.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/users.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/AdminPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/CustomerPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/HomePage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/LogInPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/SignUpPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/UserPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/adminController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/adminUserController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/adminUserPageController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/customerController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/employeeController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/indexController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/inventoryController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/orderController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/signInController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/signUpController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/supplierController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/userController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/customerValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/employeeValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/inventoryValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/orderValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/validation/supplierValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-    </list>
+    <list default="true" id="dfbf13bb-ad41-4245-b975-7c31e5a1cbc3" name="Changes" comment="FrontEnd &amp; BAckEnd Combined in Same Project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2hr7RKhkZ7NvvXEuwmImZ7QNUez" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -94,29 +24,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.WebAppInitializer.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-AAD-CW/Hello-Shoes-FrontEnd",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.WebAppInitializer.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-AAD-CW/Hello-Shoes-FrontEnd&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="WebAppInitializer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -144,7 +74,17 @@
       <option name="presentableId" value="Default" />
       <updated>1718340332442</updated>
       <workItem from="1718340333614" duration="170000" />
+      <workItem from="1718340577925" duration="152000" />
     </task>
+    <task id="LOCAL-00001" summary="FrontEnd &amp; BAckEnd Combined in Same Project">
+      <option name="closed" value="true" />
+      <created>1718340705504</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718340705504</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,5 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="FrontEnd &amp; BAckEnd Combined in Same Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd &amp; BAckEnd Combined in Same Project" />
   </component>
 </project>
