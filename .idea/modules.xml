@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hello-Shoes-2nd-Sem-Final.iml" filepath="$PROJECT_DIR$/.idea/Hello-Shoes-2nd-Sem-Final.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hello-Shoes-FrontEnd/Hello-Shoes-FrontEnd.iml" filepath="$PROJECT_DIR$/Hello-Shoes-FrontEnd/Hello-Shoes-FrontEnd.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Shoeshop-Management-System-2nd-Sem-Final.iml" filepath="$PROJECT_DIR$/.idea/Shoeshop-Management-System-2nd-Sem-Final.iml" />
     </modules>
   </component>
 </project>
