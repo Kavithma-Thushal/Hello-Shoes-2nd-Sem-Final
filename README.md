@@ -1,41 +1,35 @@
-# Hello Shoes (PVT) LTD. 👟
+# 🌟 Hello Shoes (PVT) LTD.
 
 The Hello Shoes (PVT) LTD. repositories comprise the comprehensive Shoe Shop Management System. The frontend repository,
 built with modern web technologies, delivers an engaging and intuitive interface for customers to explore the shoe
 catalog, place orders, and manage their accounts, while also providing administrative features for inventory management,
 order processing, and sales data analysis. This frontend pairs seamlessly with the backend repository, which is
-implemented using Spring Boot. The backend offers robust RESTful APIs that handle inventory management, order
+implemented using Spring Boot. The backend offers robust RESTFul APIs that handle inventory management, order
 processing, customer management, and authentication. Leveraging Spring Boot's powerful features, such as dependency
 injection and JPA, it ensures efficient and scalable operations, supporting the frontend with a strong foundation for a
 smooth and responsive shoe shopping experience.
 
-## Technologies Used
+## 🛠️ Tech Stack
 
 ### FrontEnd
 
-✅HTML<br/>
-✅CSS<br/>
-✅JS<br/>
-✅Bootstrap<br/>
-✅JQuery<br/>
-✅AJAX<br/>
+✅ **HTML**<br/>
+✅ **CSS**<br/>
+✅ **JS**<br/>
+✅ **AJAX**<br/>
+✅ **jQuery**<br/>
+✅ **Bootstrap**<br/>
 
 ### BackEnd
 
-✅Spring Boot<br/>
-✅Spring Web MVC<br/>
-✅Spring Data<br/>
-✅Spring Validation<br/>
-✅Spring Security<br/>
-✅Lombok<br/>
-✅Model Mapper<br/>
-✅Jackson<br/>
-✅MySQL<br/>
-✅Hibernate<br/>
-✅Hibernate Validator<br/>
-✅JSON Web Token (JWT)<br/>
+✅ **Spring Boot**<br/>
+✅ **Spring Data JPA**<br/>
+✅ **Spring Validation**<br/>
+✅ **Spring Security**<br/>
+✅ **JSON Web Token (JWT)**<br/>
+✅ **MySQL**<br/>
 
-## Key Features
+## 🚀 Features
 
 ### FrontEnd
 
@@ -53,23 +47,40 @@ smooth and responsive shoe shopping experience.
 ✅Implementation of validation and exception handling for robust error management<br/>
 ✅Documentation and testing using Swagger UI and JUnit for maintaining code quality<br/>
 
-## Usage
+## 🔐 Usage
 
-1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-AAD-CW.git`
+1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-2nd-Sem-Final.git`
 2. Install backend dependencies using the `pom.xml`
 3. Launch the application by opening the `index.html` file in your preferred web browser.
 
-## Version
+## 📸 Screenshots
 
-1.0.0
+### Home
 
-⭐️If you hava any bugs or issues ,If you want to explain code please contact me on :<br/>
-[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/><br/>
+<img src="ss/Home.png">
+
+### SignUp
+
+<img src="ss/SignUp.png">
+
+### SignIn
+
+<img src="ss/SignIn.png">
+
+## 📝 Version
+
+**1.0.0**
+
+## 📬 Get in Touch
+
+Got any bugs, issues, or need help understanding the code? Feel free to reach out!
+
+📧 [kavithmathushal9007@gmail.com](mailto:kavithmathushal9007@gmail.com)
 
 <div align="center">
 
 #### This project is licensed under the [Apache License](LICENSE)
 
-#### © 2024 All Right Reserved, Designed By [Kavithma Thushal](https://github.com/Kavithma-Thushal)
+#### © 2024 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
 
 </div>

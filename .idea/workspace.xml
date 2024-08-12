@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="application.properties Refactored">
+    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="signInController.js Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,8 @@
       <workItem from="1723426012317" duration="387000" />
       <workItem from="1723426604340" duration="774000" />
       <workItem from="1723427386767" duration="522000" />
-      <workItem from="1723427916227" duration="2392000" />
+      <workItem from="1723427916227" duration="2959000" />
+      <workItem from="1723431976448" duration="1547000" />
     </task>
     <task id="LOCAL-00001" summary="README.md Updated 6">
       <option name="closed" value="true" />
@@ -124,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723427907240</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="signInController.js Refactored">
+      <option name="closed" value="true" />
+      <created>1723431476012</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723431476012</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +146,7 @@
     <MESSAGE value="Email Refactored" />
     <MESSAGE value="SignYp Form Refactored" />
     <MESSAGE value="application.properties Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="application.properties Refactored" />
+    <MESSAGE value="signInController.js Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="signInController.js Refactored" />
   </component>
 </project>
