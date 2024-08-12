@@ -35,7 +35,7 @@ public class WebAppInitializer {
         mailSender.setPort(587);
 
         mailSender.setUsername("kaviyabro9007@gmail.com");
-        mailSender.setPassword("sfzfzpskrmpqjtdr");
+        mailSender.setPassword("bqwyuqfskxeekomn");
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");

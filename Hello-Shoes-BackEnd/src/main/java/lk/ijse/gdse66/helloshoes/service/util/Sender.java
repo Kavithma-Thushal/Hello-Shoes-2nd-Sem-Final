@@ -46,13 +46,13 @@ public class Sender {
 
         Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("kaviyabro9007@gmail.com", "sfzfzpskrmpqjtdr");
+                return new PasswordAuthentication("kaviyabro9007@gmail.com", "bqwyuqfskxeekomn");
             }
         });
 
         try {
             Transport transport = session.getTransport("smtp");
-            transport.connect(host, "kaviyabro9007@gmail.com", "sfzfzpskrmpqjtdr");
+            transport.connect(host, "kaviyabro9007@gmail.com", "bqwyuqfskxeekomn");
             transport.close();
             return true; // Connection Successful
         } catch (MessagingException e) {

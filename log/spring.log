@@ -58,3 +58,492 @@
 2024-06-14T11:35:36.873+05:30  INFO 1124 --- [Hello-Shoes-BackEnd-SpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-14T11:35:36.875+05:30  INFO 1124 --- [Hello-Shoes-BackEnd-SpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-06-14T11:35:36.885+05:30  INFO 1124 --- [Hello-Shoes-BackEnd-SpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-12T06:49:52.117+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Starting WebAppInitializer using Java 17.0.7 with PID 4076 (D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes started by kavit in D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final)
+2024-08-12T06:49:52.117+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T06:49:52.503+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T06:49:52.668+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 8 JPA repository interfaces.
+2024-08-12T06:49:52.818+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-12T06:49:52.820+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-12T06:49:52.820+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-12T06:49:52.841+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring embedded WebApplicationContext
+2024-08-12T06:49:52.841+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 721 ms
+2024-08-12T06:49:52.895+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-12T06:49:52.915+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b4b38ce
+2024-08-12T06:49:52.915+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-12T06:49:52.917+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T06:49:52.923+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T06:49:52.931+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T06:49:52.934+05:30  WARN 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-12T06:49:53.175+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T06:49:53.901+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T06:49:53.948+05:30 ERROR 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtConfigurationFilter' defined in file [D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes\lk\ijse\gdse66\helloshoes\config\JwtConfigurationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtServiceImpl': Unsatisfied dependency expressed through field 'mapper': Error creating bean with name 'modelMapper' defined in lk.ijse.gdse66.helloshoes.WebAppInitializer: Failed to instantiate [org.modelmapper.ModelMapper]: Illegal factory instance for factory method 'modelMapper'; instance: lk.ijse.gdse66.helloshoes.WebAppInitializer$$SpringCGLIB$$0
+2024-08-12T06:49:53.950+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-12T06:49:53.952+05:30  WARN 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [helloshoes] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2024-08-12T06:49:53.952+05:30  WARN 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [helloshoes] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2024-08-12T06:49:53.953+05:30  WARN 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-08-12T06:49:53.953+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T06:49:53.954+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-12T06:49:53.959+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-12T06:49:53.963+05:30  INFO 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-12T06:49:53.966+05:30 ERROR 4076 --- [Hello-Shoes-BackEnd-SpringBoot] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at lk.ijse.gdse66.helloshoes.WebAppInitializer.main(WebAppInitializer.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:145) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.2.5.jar:3.2.5]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtConfigurationFilter' defined in file [D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes\lk\ijse\gdse66\helloshoes\config\JwtConfigurationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtServiceImpl': Unsatisfied dependency expressed through field 'mapper': Error creating bean with name 'modelMapper' defined in lk.ijse.gdse66.helloshoes.WebAppInitializer: Failed to instantiate [org.modelmapper.ModelMapper]: Illegal factory instance for factory method 'modelMapper'; instance: lk.ijse.gdse66.helloshoes.WebAppInitializer$$SpringCGLIB$$0
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4880) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-3.2.5.jar:3.2.5]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtServiceImpl': Unsatisfied dependency expressed through field 'mapper': Error creating bean with name 'modelMapper' defined in lk.ijse.gdse66.helloshoes.WebAppInitializer: Failed to instantiate [org.modelmapper.ModelMapper]: Illegal factory instance for factory method 'modelMapper'; instance: lk.ijse.gdse66.helloshoes.WebAppInitializer$$SpringCGLIB$$0
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'modelMapper' defined in lk.ijse.gdse66.helloshoes.WebAppInitializer: Failed to instantiate [org.modelmapper.ModelMapper]: Illegal factory instance for factory method 'modelMapper'; instance: lk.ijse.gdse66.helloshoes.WebAppInitializer$$SpringCGLIB$$0
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 74 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.modelmapper.ModelMapper]: Illegal factory instance for factory method 'modelMapper'; instance: lk.ijse.gdse66.helloshoes.WebAppInitializer$$SpringCGLIB$$0
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:159) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 87 common frames omitted
+Caused by: java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 88 common frames omitted
+
+2024-08-12T06:59:03.723+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Starting WebAppInitializer using Java 17.0.7 with PID 10112 (D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes started by kavit in D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final)
+2024-08-12T06:59:03.726+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T06:59:03.787+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12T06:59:03.787+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12T06:59:04.723+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T06:59:04.820+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 8 JPA repository interfaces.
+2024-08-12T06:59:05.396+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-12T06:59:05.407+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-12T06:59:05.407+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-12T06:59:05.461+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring embedded WebApplicationContext
+2024-08-12T06:59:05.462+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1673 ms
+2024-08-12T06:59:05.557+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-12T06:59:05.861+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6da72954
+2024-08-12T06:59:05.863+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-12T06:59:05.900+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T06:59:05.952+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-12T06:59:05.995+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T06:59:06.280+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T06:59:06.366+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-12T06:59:07.676+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T06:59:08.423+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T06:59:08.828+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-12T06:59:09.488+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-12T06:59:09.752+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68526cbb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21762eff, org.springframework.security.web.context.SecurityContextHolderFilter@3682b4a4, org.springframework.security.web.header.HeaderWriterFilter@6317a8d3, org.springframework.web.filter.CorsFilter@1d8af473, org.springframework.security.web.authentication.logout.LogoutFilter@25e4f2f2, lk.ijse.gdse66.helloshoes.config.JwtConfigurationFilter$$SpringCGLIB$$0@31a88020, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c45d832, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23060ec6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b8c27a6, org.springframework.security.web.session.SessionManagementFilter@24490a72, org.springframework.security.web.access.ExceptionTranslationFilter@78732303, org.springframework.security.web.access.intercept.AuthorizationFilter@1b7a52fc]
+2024-08-12T06:59:09.955+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-12T06:59:10.003+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/helloshoes'
+2024-08-12T06:59:10.011+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Started WebAppInitializer in 6.814 seconds (process running for 8.259)
+2024-08-12T06:59:30.985+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12T06:59:30.986+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-12T06:59:30.990+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-12T06:59:31.158+05:30 ERROR 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/helloshoes] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2024-07-31T13:43:25Z. Current time: 2024-08-12T01:29:31Z, a difference of 992766155 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.getAllClaims(JwtServiceImpl.java:65) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.extractClaims(JwtServiceImpl.java:69) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.extractUserName(JwtServiceImpl.java:34) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.config.JwtConfigurationFilter.doFilterInternal(JwtConfigurationFilter.java:34) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-12T06:59:31.158+05:30 ERROR 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/helloshoes] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2024-07-31T13:43:25Z. Current time: 2024-08-12T01:29:31Z, a difference of 992766155 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.getAllClaims(JwtServiceImpl.java:65) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.extractClaims(JwtServiceImpl.java:69) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.service.impl.JwtServiceImpl.extractUserName(JwtServiceImpl.java:34) ~[classes/:na]
+	at lk.ijse.gdse66.helloshoes.config.JwtConfigurationFilter.doFilterInternal(JwtConfigurationFilter.java:34) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-12T06:59:33.642+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-12T06:59:34.399+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T06:59:34.415+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-12T06:59:34.549+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-12T06:59:34.919+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Starting WebAppInitializer using Java 17.0.7 with PID 10112 (D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes started by kavit in D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final)
+2024-08-12T06:59:34.920+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T06:59:36.100+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T06:59:36.183+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 8 JPA repository interfaces.
+2024-08-12T06:59:36.421+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-12T06:59:36.422+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-12T06:59:36.422+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-12T06:59:36.456+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring embedded WebApplicationContext
+2024-08-12T06:59:36.456+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1527 ms
+2024-08-12T06:59:36.532+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-12T06:59:36.560+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a1deedc
+2024-08-12T06:59:36.560+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-12T06:59:36.561+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T06:59:36.566+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T06:59:36.575+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T06:59:36.579+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-12T06:59:36.970+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T06:59:37.078+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T06:59:37.534+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-12T06:59:37.716+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c37faa6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56dfdd51, org.springframework.security.web.context.SecurityContextHolderFilter@153774dd, org.springframework.security.web.header.HeaderWriterFilter@5c79c889, org.springframework.web.filter.CorsFilter@56f5bdee, org.springframework.security.web.authentication.logout.LogoutFilter@6fd0ba53, lk.ijse.gdse66.helloshoes.config.JwtConfigurationFilter$$SpringCGLIB$$0@d47773e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@654e24b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77618511, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fdf37be, org.springframework.security.web.session.SessionManagementFilter@65da6c5e, org.springframework.security.web.access.ExceptionTranslationFilter@5a154381, org.springframework.security.web.access.intercept.AuthorizationFilter@9d2bcd]
+2024-08-12T06:59:38.015+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-12T06:59:38.110+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/helloshoes'
+2024-08-12T06:59:38.121+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Started WebAppInitializer in 3.296 seconds (process running for 36.37)
+2024-08-12T06:59:38.126+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-12T06:59:55.061+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12T06:59:55.061+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-12T06:59:55.063+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-12T06:59:55.121+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T06:59:55.251+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T06:59:55.317+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T06:59:55.740+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T06:59:55.806+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T06:59:56.050+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:08.961+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:09.191+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:09.305+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:09.507+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:09.577+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:14.977+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:15.411+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:15.501+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:15.806+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:15.878+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.185+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.222+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.313+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.437+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.512+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:23.964+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.032+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.116+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.225+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.302+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.364+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.627+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.706+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.796+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:24.864+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:25.358+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:25.468+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:25.520+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:25.585+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:25.983+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.044+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.484+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.556+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.584+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.675+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.906+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:26.959+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.162+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.223+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.622+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.683+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.773+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:27.841+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:28.018+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:28.076+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:28.251+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:00:34.725+05:30  WARN 10112 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: Admin Panel is Empty]
+2024-08-12T07:00:50.594+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T07:00:50.595+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-12T07:00:50.630+05:30  INFO 10112 --- [Hello-Shoes-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-12T07:00:56.867+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Starting WebAppInitializer using Java 17.0.7 with PID 9308 (D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\Hello-Shoes-BackEnd\target\classes started by kavit in D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final)
+2024-08-12T07:00:56.872+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T07:00:56.946+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12T07:00:56.946+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12T07:00:58.071+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T07:00:58.197+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 8 JPA repository interfaces.
+2024-08-12T07:00:58.848+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-12T07:00:58.861+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-12T07:00:58.861+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-12T07:00:58.921+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring embedded WebApplicationContext
+2024-08-12T07:00:58.921+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1974 ms
+2024-08-12T07:00:59.035+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-12T07:00:59.369+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78cd84d1
+2024-08-12T07:00:59.371+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-12T07:00:59.412+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T07:00:59.466+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-12T07:00:59.509+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T07:00:59.806+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T07:00:59.898+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-12T07:01:01.076+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T07:01:01.161+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T07:01:01.846+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-12T07:01:02.679+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-12T07:01:03.037+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7876c429, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@779d14a5, org.springframework.security.web.context.SecurityContextHolderFilter@b62a96b, org.springframework.security.web.header.HeaderWriterFilter@4347e421, org.springframework.web.filter.CorsFilter@19054523, org.springframework.security.web.authentication.logout.LogoutFilter@6f69130a, lk.ijse.gdse66.helloshoes.config.JwtConfigurationFilter$$SpringCGLIB$$0@43f1161c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f0fcb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e0dac9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ba08e7b, org.springframework.security.web.session.SessionManagementFilter@45607315, org.springframework.security.web.access.ExceptionTranslationFilter@761e2f74, org.springframework.security.web.access.intercept.AuthorizationFilter@607de329]
+2024-08-12T07:01:03.275+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-12T07:01:03.316+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/helloshoes'
+2024-08-12T07:01:03.325+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [restartedMain] l.i.gdse66.helloshoes.WebAppInitializer  : Started WebAppInitializer in 7.513 seconds (process running for 9.445)
+2024-08-12T07:01:32.878+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/helloshoes]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12T07:01:32.879+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-12T07:01:32.880+05:30  INFO 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-12T07:01:38.479+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:38.515+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:38.600+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.104+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.226+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.558+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.609+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.683+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.788+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.897+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:39.957+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:40.327+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:40.397+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:40.428+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:40.505+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.030+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.152+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.234+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.279+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.733+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:41.776+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.247+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.335+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.424+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.477+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.631+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.694+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.901+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:42.958+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.383+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.460+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.583+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.688+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.834+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:43.862+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:44.060+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: User Not Exist]
+2024-08-12T07:01:49.975+05:30  WARN 9308 --- [Hello-Shoes-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [lk.ijse.gdse66.helloshoes.service.exception.NotFoundException: Admin Panel is Empty]
