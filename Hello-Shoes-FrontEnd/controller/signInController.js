@@ -103,7 +103,7 @@ function signIn() {
                     if (res.role === "ADMIN") {
                         userlimitOff();
                         allContainerHide();
-                        showAlert("Admin");
+                        // showAlert("Admin");
                         adminPage.css('display','block');
                         adminDashboard.css('display','block');
                         setAdminPanel();
@@ -112,7 +112,7 @@ function signIn() {
                     } else if(res.role === "USER"){
                         userLimits();
                         allContainerHide();
-                        showAlert("User");
+                        // showAlert("User");
                         userPage.css('display','block');
                         userDashboard.css('display','block');
                         $("#userFormIcon").text("Dashboard");
