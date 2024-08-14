@@ -65,34 +65,6 @@ smooth and responsive shoe shopping experience.
 
 <img src="ss/Admin-Dashboard.png">
 
-### Customer Management
-
-<img src="ss/Customer.png">
-
-### Employee Management
-
-<img src="ss/Employee.png">
-
-### Supplier Management
-
-<img src="ss/Supplier.png">
-
-### Inventory Management
-
-<img src="ss/Inventory.png">
-
-### Sales Management
-
-<img src="ss/Sales.png">
-
-### Admin Management
-
-<img src="ss/Admin.png">
-
-### User Management
-
-<img src="ss/User.png">
-
 ### Codes
 
 <img src="ss/Codes.png">
