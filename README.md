@@ -34,7 +34,6 @@ smooth and responsive shoe shopping experience.
 ### FrontEnd
 
 ✅Single-page application (SPA) architecture for smooth navigation and enhanced user experience<br/>
-✅Responsive design using CSS frameworks like Bootstrap for optimal display across devices<br/>
 ✅Integration with backend RESTFul APIs to fetch and update shoe inventory and order information<br/>
 ✅Interactive components for browsing products, adding items to cart, and completing checkout processes<br/>
 ✅Admin dashboard with data visualization tools for monitoring sales, inventory levels, and customer metrics<br/>
@@ -45,7 +44,6 @@ smooth and responsive shoe shopping experience.
 ✅Integration with Spring Security for secure userEntity authentication and role-based access control<br/>
 ✅Utilization of Spring Data JPA for interacting with the underlying database<br/>
 ✅Implementation of validation and exception handling for robust error management<br/>
-✅Documentation and testing using Swagger UI and JUnit for maintaining code quality<br/>
 
 ## 📸 Screenshots
 
