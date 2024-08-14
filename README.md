@@ -17,7 +17,7 @@ smooth and responsive shoe shopping experience.
 ✅ **CSS**<br/>
 ✅ **JS**<br/>
 ✅ **AJAX**<br/>
-✅ **jQuery**<br/>
+✅ **JQuery**<br/>
 ✅ **Bootstrap**<br/>
 
 ### BackEnd
