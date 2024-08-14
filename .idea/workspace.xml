@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="README.md Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8ed67e7a-1dd6-414e-a9fe-28f2d04e53a6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8ed67e7a-1dd6-414e-a9fe-28f2d04e53a6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello-Shoes-BackEnd/target/classes/lk/ijse/gdse66/helloshoes/service/util/Sender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Hello-Shoes-BackEnd/target/classes/lk/ijse/gdse66/helloshoes/service/util/Sender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello-Shoes-BackEnd/target/classes/lk/ijse/gdse66/helloshoes/service/util/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/Hello-Shoes-BackEnd/target/classes/lk/ijse/gdse66/helloshoes/service/util/Sender.class" afterDir="false" />
+    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="More ss Added">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,32 +26,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebAppInitializer.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-2nd-Sem-Final/ss&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.WebAppInitializer.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/Course Work/Hello-Shoes-2nd-Sem-Final/ss",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\Course Work\Hello-Shoes-2nd-Sem-Final\ss" />
@@ -100,7 +98,7 @@
       <workItem from="1723480988694" duration="28000" />
       <workItem from="1723566828664" duration="143000" />
       <workItem from="1723567195363" duration="80000" />
-      <workItem from="1723622804941" duration="2982000" />
+      <workItem from="1723622804941" duration="3967000" />
     </task>
     <task id="LOCAL-00001" summary="README.md Updated 6">
       <option name="closed" value="true" />
@@ -158,13 +156,22 @@
       <option name="project" value="LOCAL" />
       <updated>1723436606052</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="More ss Added">
+      <option name="closed" value="true" />
+      <created>1723626664994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723626664994</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="README.md Updated 6" />
     <MESSAGE value="README.md Updated 7" />
     <MESSAGE value="Email Refactored" />
@@ -172,6 +179,7 @@
     <MESSAGE value="application.properties Refactored" />
     <MESSAGE value="signInController.js Refactored" />
     <MESSAGE value="README.md Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
+    <MESSAGE value="More ss Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="More ss Added" />
   </component>
 </project>

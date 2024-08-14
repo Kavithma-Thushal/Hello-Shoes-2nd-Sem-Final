@@ -7,7 +7,7 @@ order processing, and sales data analysis. This frontend pairs seamlessly with t
 implemented using Spring Boot. The backend offers robust RESTFul APIs that handle inventory management, order
 processing, customer management, and authentication. Leveraging Spring Boot's powerful features, such as dependency
 injection and JPA, it ensures efficient and scalable operations, supporting the frontend with a strong foundation for a
-smooth and responsive shoe shopping experience
+smooth and responsive shoe shopping experience.
 
 ## 🛠️ Tech Stack
 
