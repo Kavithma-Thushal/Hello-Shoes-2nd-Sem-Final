@@ -47,12 +47,6 @@ smooth and responsive shoe shopping experience.
 ✅Implementation of validation and exception handling for robust error management<br/>
 ✅Documentation and testing using Swagger UI and JUnit for maintaining code quality<br/>
 
-## 🔐 Usage
-
-1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-2nd-Sem-Final.git`
-2. Install backend dependencies using the `pom.xml`
-3. Launch the application by opening the `index.html` file in your preferred web browser.
-
 ## 📸 Screenshots
 
 ### Home
@@ -66,6 +60,48 @@ smooth and responsive shoe shopping experience.
 ### SignIn
 
 <img src="ss/SignIn.png">
+
+### Admin Dashboard
+
+<img src="ss/Admin-Dashboard.png">
+
+### Customer Management
+
+<img src="ss/Customer.png">
+
+### Employee Management
+
+<img src="ss/Employee.png">
+
+### Supplier Management
+
+<img src="ss/Supplier.png">
+
+### Inventory Management
+
+<img src="ss/Inventory.png">
+
+### Sales Management
+
+<img src="ss/Sales.png">
+
+### Admin Management
+
+<img src="ss/Admin.png">
+
+### User Management
+
+<img src="ss/User.png">
+
+### Codes
+
+<img src="ss/Codes.png">
+
+## 🔐 Usage
+
+1. Clone the repository `git clone https://github.com/Kavithma-Thushal/Hello-Shoes-2nd-Sem-Final.git`
+2. Install backend dependencies using the `pom.xml`
+3. Launch the application by opening the `index.html` file in your preferred web browser.
 
 ## 📝 Version
 
