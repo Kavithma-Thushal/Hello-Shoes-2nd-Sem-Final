@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="README.md Updated 2">
+    <list default="true" id="19dc98fb-88fc-45a1-8dc5-a291e3284215" name="Changes" comment="Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,9 @@
       <workItem from="1723622804941" duration="4015000" />
       <workItem from="1723628234380" duration="130000" />
       <workItem from="1723628384894" duration="489000" />
-      <workItem from="1723631839012" duration="15000" />
+      <workItem from="1723631839012" duration="48000" />
+      <workItem from="1723649110731" duration="25000" />
+      <workItem from="1723770603705" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="README.md Updated 6">
       <option name="closed" value="true" />
@@ -184,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723628355436</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactored">
+      <option name="closed" value="true" />
+      <created>1723631872513</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723631872513</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +210,7 @@
     <MESSAGE value="More ss Added" />
     <MESSAGE value="README.md Updated" />
     <MESSAGE value="README.md Updated 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated 2" />
+    <MESSAGE value="Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
   </component>
 </project>
